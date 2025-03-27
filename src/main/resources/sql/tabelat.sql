@@ -9,3 +9,15 @@ adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
 data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 */
+
+CREATE TABLE Veturat (
+    vetura_id SERIAL PRIMARY KEY,
+    prodhuesi VARCHAR(50) NOT NULL,
+    modeli VARCHAR(50) NOT NULL,
+    viti_prodhimit INT CHECK (viti_prodhimit >= 1900 AND viti_prodhimit <= EXTRACT(YEAR FROM CURRENT_DATE)),
+    ngjyra VARCHAR(30),
+    cmimi DECIMAL(10,2) CHECK (cmimi >= 0),
+    gjendja VARCHAR(20) CHECK (gjendja IN ('E re', 'E përdorur')),
+    kilometrazha INT CHECK (kilometrazha >= 0),
+    tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
+);
