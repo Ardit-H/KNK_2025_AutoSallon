@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases User">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Klientet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases Klientet">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743085212146</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Krijimi i klases Klientet">
+      <option name="closed" value="true" />
+      <created>1743086060632</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743086060632</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -180,6 +187,7 @@
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
     <MESSAGE value="Krijimi i klases User" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases User" />
+    <MESSAGE value="Krijimi i klases Klientet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases Klientet" />
   </component>
 </project>

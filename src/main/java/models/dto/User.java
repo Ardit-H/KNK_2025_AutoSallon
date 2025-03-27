@@ -1,4 +1,4 @@
-package dto;
+package models.dto;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
