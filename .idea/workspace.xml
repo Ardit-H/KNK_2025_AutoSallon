@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtova tabelen Veturat ne databaze">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Veturat.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases Veturat">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/CreateVeturatDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743104267212</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Krijimi i klases Veturat">
+      <option name="closed" value="true" />
+      <created>1743105949386</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743105949386</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -210,6 +219,7 @@
     <MESSAGE value="Krijimi i klases Klientet" />
     <MESSAGE value="Organizimi i dto brenda models" />
     <MESSAGE value="Shtova tabelen Veturat ne databaze" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtova tabelen Veturat ne databaze" />
+    <MESSAGE value="Krijimi i klases Veturat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases Veturat" />
   </component>
 </project>
