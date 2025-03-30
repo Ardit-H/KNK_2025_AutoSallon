@@ -28,7 +28,7 @@ public class KlientetRepository {
         return klientet;
     }
     public Klientet getById(int id){
-        String query="SELECT * FROM KLIENTET WHERE ID = ?";
+        String query="SELECT * FROM KLIENTET WHERE KID = ?";
         try{
             PreparedStatement statement=this.connection.prepareStatement(query);
             statement.setInt(1,id);
@@ -69,7 +69,7 @@ public class KlientetRepository {
         String query= """
                 UPDATE KLIENTET 
                 SET EMAIL=?
-                WHERE ID=?
+                WHERE KID=?
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query);
@@ -87,7 +87,7 @@ public class KlientetRepository {
     public boolean delete(int id){
         String query= """
                 DELETE FROM KLIENTET 
-                WHERE ID=?
+                WHERE KID=?
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query);
