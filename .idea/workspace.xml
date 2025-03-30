@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases UpdateKlientetEmailDto">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshim ne klasen CreateKlientetDto">
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743352102332</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Ndryshim ne klasen CreateKlientetDto">
+      <option name="closed" value="true" />
+      <created>1743352801022</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743352801022</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -227,6 +236,7 @@
     <MESSAGE value="Shtova tabelen Veturat ne databaze" />
     <MESSAGE value="Krijimi i klases Veturat" />
     <MESSAGE value="Krijimi i klases UpdateKlientetEmailDto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases UpdateKlientetEmailDto" />
+    <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshim ne klasen CreateKlientetDto" />
   </component>
 </project>
