@@ -21,3 +21,14 @@ CREATE TABLE Veturat (
     kilometrazha INT CHECK (kilometrazha >= 0),
     tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
 );
+
+CREATE TABLE Punetoret (
+    punetor_id SERIAL PRIMARY KEY,
+    emri VARCHAR(50) NOT NULL,
+    mbiemri VARCHAR(50) NOT NULL,
+    pozita VARCHAR(50) NOT NULL,
+    telefoni VARCHAR(15) UNIQUE,
+    email VARCHAR(100) UNIQUE,
+    paga DECIMAL(10,2) CHECK (paga >= 0),
+    data_punesimit DATE NOT NULL
+);
