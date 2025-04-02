@@ -22,6 +22,7 @@ CREATE TABLE Veturat (
     tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
 );
 
+
 CREATE TABLE Punetoret (
     punetor_id SERIAL PRIMARY KEY,
     emri VARCHAR(50) NOT NULL,
