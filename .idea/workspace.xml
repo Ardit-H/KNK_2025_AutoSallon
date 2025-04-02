@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="/* */">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases KlientetRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Punetoret/UpdatePunetoretEmailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/PunetoretRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Veturat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Veturat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/CreateVeturatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/CreateVeturatDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Punetoret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Punetoret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Punetoret/CreatePunetoretDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Punetoret/CreatePunetoretDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Punetoret/UpdatePunetoretDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2ufmVEA1vs1fsRe3Q1WZ4IdEH4n" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -247,43 +251,8 @@
       <option name="project" value="LOCAL" />
       <updated>1743354835243</updated>
     </task>
-    <task id="LOCAL-00016" summary="Krijimi i klases VeturatRepository">
-      <option name="closed" value="true" />
-      <created>1743575894549</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1743575894549</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Krijimi i klases VeturatRepositoryTest">
-      <option name="closed" value="true" />
-      <created>1743576776748</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1743576776748</updated>
-    </task>
-    <task id="LOCAL-00018" summary="/* */">
-      <option name="closed" value="true" />
-      <created>1743576874247</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1743576874247</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="16" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
@@ -300,9 +269,6 @@
     <MESSAGE value="Krijimi i klases UpdateKlientetEmailDto" />
     <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
-    <MESSAGE value="Krijimi i klases VeturatRepository" />
-    <MESSAGE value="Krijimi i klases VeturatRepositoryTest" />
-    <MESSAGE value="/* */" />
-    <option name="LAST_COMMIT_MESSAGE" value="/* */" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases KlientetRepository" />
   </component>
 </project>
