@@ -1,9 +1,7 @@
 package repository;
 
 import Database.DBConnector;
-import models.Klientet;
 import models.Veturat;
-import models.dto.Klientet.UpdateKlientetEmailDto;
 import models.dto.Veturat.CreateVeturatDto;
 import models.dto.Veturat.UpdateVeturatDto;
 
@@ -47,7 +45,7 @@ public class VeturatRepository {
 
     public Veturat create (CreateVeturatDto veturatDto){
         String query = """
-                INSERT INTO VETURAT(prodhuesi, modeli, viti_prodhimit, ngjyra, cmimi, gjendja, kilometrazha, tipi_karburant)
+                INSERT INTO VETURAT(prodhuesi, modeli, vitiprodhimit, ngjyra, cmimi, gjendja, kilometrazha, tipikarburant)
                 VALUES (?,?,?,?,?,?,?,?)
                 """ ;
                try {
@@ -55,12 +53,12 @@ public class VeturatRepository {
                            query,Statement.RETURN_GENERATED_KEYS);
                    pstm.setString(1, veturatDto.getProdhuesi());
                    pstm.setString(2, veturatDto.getModeli());
-                   pstm.setInt(3, veturatDto.getViti_prodhimit());
+                   pstm.setInt(3, veturatDto.getVitiprodhimit());
                    pstm.setString(4, veturatDto.getNgjyra());
                    pstm.setDouble(5,veturatDto.getCmimi());
                    pstm.setString(6, veturatDto.getGjendja());
                    pstm.setInt(7, veturatDto.getKilometrazha());
-                   pstm.setString(8, veturatDto.getTipi_karburant());
+                   pstm.setString(8, veturatDto.getTipikarburant());
                    pstm.execute();
                    ResultSet resultSet=pstm.getGeneratedKeys();
                    if(resultSet.next()){
@@ -82,10 +80,10 @@ public class VeturatRepository {
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query);
             pstm.setString(1, veturatDto.getNgjyra());
-            pstm.setInt(2,veturatDto.getVetura_id());
+            pstm.setInt(2,veturatDto.getVeturaid());
             int updateRecords=pstm.executeUpdate();
             if(updateRecords==1){
-                return this.getById(veturatDto.getVetura_id());
+                return this.getById(veturatDto.getVeturaid());
             }
         }catch (SQLException e){
             e.printStackTrace();

@@ -3,22 +3,22 @@ package models.dto.Veturat;
 public class CreateVeturatDto {
     private String prodhuesi;
     private String modeli;
-    private int viti_prodhimit;
+    private int vitiprodhimit;
     private String ngjyra;
     private double cmimi;
     private String gjendja;
     private int kilometrazha;
-    private String tipi_karburant;
+    private String tipikarburant;
 
-    public CreateVeturatDto(String prodhuesi, String modeli, int viti_prodhimit, String ngjyra, double cmimi, String gjendja, int kilometrazha, String tipi_karburant){
+    public CreateVeturatDto(String prodhuesi, String modeli, int vitiprodhimit, String ngjyra, double cmimi, String gjendja, int kilometrazha, String tipikarburant){
         this.prodhuesi = prodhuesi;
         this.modeli = modeli;
-        this.viti_prodhimit = viti_prodhimit;
+        this.vitiprodhimit = vitiprodhimit;
         this.ngjyra = ngjyra;
         this.cmimi = cmimi;
         this.gjendja = gjendja;
         this.kilometrazha = kilometrazha;
-        this.tipi_karburant = tipi_karburant;
+        this.tipikarburant = tipikarburant;
     }
 
     public String getProdhuesi() {
@@ -29,8 +29,8 @@ public class CreateVeturatDto {
         return modeli;
     }
 
-    public int getViti_prodhimit() {
-        return viti_prodhimit;
+    public int getVitiprodhimit() {
+        return vitiprodhimit;
     }
 
     public String getNgjyra() {
@@ -48,8 +48,8 @@ public class CreateVeturatDto {
         return kilometrazha;
     }
 
-    public String getTipi_karburant() {
-        return tipi_karburant;
+    public String getTipikarburant() {
+        return tipikarburant;
     }
 
     public void setProdhuesi(String prodhuesi) {
@@ -60,8 +60,8 @@ public class CreateVeturatDto {
         this.modeli = modeli;
     }
 
-    public void setViti_prodhimit(int viti_prodhimit) {
-        this.viti_prodhimit = viti_prodhimit;
+    public void setViti_prodhimit(int vitiprodhimit) {
+        this.vitiprodhimit = vitiprodhimit;
     }
 
     public void setNgjyra(String ngjyra) {
@@ -80,7 +80,7 @@ public class CreateVeturatDto {
         this.kilometrazha = kilometrazha;
     }
 
-    public void setTipi_karburant(String tipi_karburant) {
-        this.tipi_karburant = tipi_karburant;
+    public void setTipikarburant(String tipikarburant) {
+        this.tipikarburant = tipikarburant;
     }
 }

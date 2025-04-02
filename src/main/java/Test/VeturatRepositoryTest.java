@@ -20,7 +20,7 @@ public class VeturatRepositoryTest {
             ResultSet result=stm.executeQuery(query);
             if(result.next()){
                 Veturat vetura=Veturat.getInstance(result);
-                System.out.println("Id: "+vetura.getVetura_id());
+                System.out.println("Id: "+vetura.getVeturaid());
                 System.out.println("Modeli: "+vetura.getModeli());
             }
         }catch (SQLException e){
@@ -29,7 +29,7 @@ public class VeturatRepositoryTest {
         VeturatRepository veturatRepository = new VeturatRepository();
         Veturat vetura = veturatRepository.getById(15);
         if(vetura!=null){
-            System.out.println("id "+vetura.getVetura_id());
+            System.out.println("id "+vetura.getVeturaid());
         }
         veturatRepository.delete(3);
     }
