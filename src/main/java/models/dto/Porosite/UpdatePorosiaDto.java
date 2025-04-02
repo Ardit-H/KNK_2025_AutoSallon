@@ -1,33 +1,33 @@
 package models.dto.Porosite;
 
 public class UpdatePorosiaDto {
-    private int porosia_id;
-    private double cmimi_ofruar;
-    private String statusi_porosise;
+    private int porosiaId;
+    private double cmimiOfruar;
+    private String statusiPorosise;
 
-    public UpdatePorosiaDto(int porosia_id, double cmimi_ofruar, String statusi_porosise) {
-        this.porosia_id = porosia_id;
-        this.cmimi_ofruar = cmimi_ofruar;
-        this.statusi_porosise = statusi_porosise;
+    public UpdatePorosiaDto(int porosiaId, double cmimiOfruar, String statusiPorosise) {
+        this.porosiaId = porosiaId;
+        this.cmimiOfruar = cmimiOfruar;
+        this.statusiPorosise = statusiPorosise;
     }
 
-    public int getPorosia_id() {
-        return porosia_id;
+    public int getPorosiaId() {
+        return porosiaId;
     }
 
-    public double getCmimi_ofruar() {
-        return cmimi_ofruar;
+    public double getCmimiOfruar() {
+        return cmimiOfruar;
     }
 
-    public String getStatusi_porosise() {
-        return statusi_porosise;
+    public String getStatusiPorosise() {
+        return statusiPorosise;
     }
 
-    public void setCmimi_ofruar(double cmimi_ofruar) {
-        this.cmimi_ofruar = cmimi_ofruar;
+    public void setCmimiOfruar(double cmimiOfruar) {
+        this.cmimiOfruar = cmimiOfruar;
     }
 
-    public void setStatusi_porosise(String statusi_porosise) {
-        this.statusi_porosise = statusi_porosise;
+    public void setStatusiPorosise(String statusiPorosise) {
+        this.statusiPorosise = statusiPorosise;
     }
 }
