@@ -98,6 +98,6 @@ public class KlientetRepository {
         }
         return false;
 
-        
+
     }
 }
