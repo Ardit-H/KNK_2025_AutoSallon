@@ -1,7 +1,9 @@
 package repository;
 
 import Database.DBConnector;
+import models.Klientet;
 import models.Veturat;
+import models.dto.Klientet.UpdateKlientetEmailDto;
 import models.dto.Veturat.CreateVeturatDto;
 import models.dto.Veturat.UpdateVeturatDto;
 
@@ -71,4 +73,38 @@ public class VeturatRepository {
                return null;
     }
 
+    public Veturat updateNgjyra(UpdateVeturatDto veturatDto){
+        String query= """
+                UPDATE VETURAT 
+                SET NGJYRA=?
+                WHERE KID=?
+                """;
+        try{
+            PreparedStatement pstm=this.connection.prepareStatement(query);
+            pstm.setString(1, veturatDto.getNgjyra());
+            pstm.setInt(2,veturatDto.getVetura_id());
+            int updateRecords=pstm.executeUpdate();
+            if(updateRecords==1){
+                return this.getById(veturatDto.getVetura_id());
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public boolean delete(int id){
+        String query= """
+                DELETE FROM VETURAT 
+                WHERE KID=?
+                """;
+        try{
+            PreparedStatement pstm=this.connection.prepareStatement(query);
+            pstm.setInt(1,id);
+            return pstm.executeUpdate()==1;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

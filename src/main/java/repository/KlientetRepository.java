@@ -87,6 +87,7 @@ public class KlientetRepository {
         }
         return null;
     }
+
     public boolean delete(int id){
         String query= """
                 DELETE FROM KLIENTET 
@@ -100,7 +101,5 @@ public class KlientetRepository {
             e.printStackTrace();
         }
         return false;
-
-
     }
 }
