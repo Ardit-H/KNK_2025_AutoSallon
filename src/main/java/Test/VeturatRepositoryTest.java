@@ -1,7 +1,6 @@
 package Test;
 
 import Database.DBConnector;
-import models.Klientet;
 import models.Veturat;
 import models.dto.Veturat.CreateVeturatDto;
 import models.dto.Veturat.UpdateVeturatDto;

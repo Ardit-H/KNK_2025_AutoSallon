@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases KlientetRepository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases VeturatRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
@@ -244,8 +245,27 @@
       <option name="project" value="LOCAL" />
       <updated>1743354835243</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Krijimi i klases VeturatRepository">
+      <option name="closed" value="true" />
+      <created>1743575894549</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743575894549</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
@@ -262,6 +282,7 @@
     <MESSAGE value="Krijimi i klases UpdateKlientetEmailDto" />
     <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases KlientetRepository" />
+    <MESSAGE value="Krijimi i klases VeturatRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases VeturatRepository" />
   </component>
 </project>

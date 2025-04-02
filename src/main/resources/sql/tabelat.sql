@@ -10,6 +10,7 @@ data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 */
 
+/*
 CREATE TABLE Veturat (
     vetura_id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
@@ -21,6 +22,7 @@ CREATE TABLE Veturat (
     kilometrazha INT CHECK (kilometrazha >= 0),
     tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
 );
+*/
 
 /*
 CREATE TABLE Porosite (
