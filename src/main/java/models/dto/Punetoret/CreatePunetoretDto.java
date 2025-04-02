@@ -9,6 +9,8 @@ public class CreatePunetoretDto {
     private double paga;
     private String data_punesimit;
 
+
+
     public CreatePunetoretDto (String emri,String mbiemri,String pozita, String telefoni, String email, double paga, String data_punesimit){
         this.emri = emri;
         this.mbiemri = mbiemri;
