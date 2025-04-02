@@ -27,6 +27,7 @@ public class KlientetRepository {
         }
         return klientet;
     }
+
     public Klientet getById(int id){
         String query="SELECT * FROM KLIENTET WHERE KID = ?";
         try{
@@ -41,6 +42,7 @@ public class KlientetRepository {
         }
         return null;
     }
+
     public Klientet create(CreateKlientetDto klientetDto){
         String query ="""
                 INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa)
@@ -65,6 +67,7 @@ public class KlientetRepository {
         }
         return null;
     }
+
     public Klientet updateEmail(UpdateKlientetEmailDto klientetDto){
         String query= """
                 UPDATE KLIENTET 
@@ -84,6 +87,7 @@ public class KlientetRepository {
         }
         return null;
     }
+
     public boolean delete(int id){
         String query= """
                 DELETE FROM KLIENTET 

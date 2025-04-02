@@ -38,6 +38,5 @@ public class KlientRepositoryTest {
 //        UpdateKlientetEmailDto updateEmail=new UpdateKlientetEmailDto(2,"update@gmail.com");
 //        klientetRepository.updateEmail(updateEmail);
 
-
     }
 }

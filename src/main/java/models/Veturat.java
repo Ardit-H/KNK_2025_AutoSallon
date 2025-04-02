@@ -4,43 +4,43 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Veturat {
-    private int vetura_id;
+    private int veturaid;
     private String prodhuesi;
     private String modeli;
-    private int viti_prodhimit;
+    private int vitiprodhimit;
     private String ngjyra;
     private double cmimi;
     private String gjendja;
     private int kilometrazha;
-    private String tipi_karburant;
+    private String tipikarburant;
 
-    private Veturat(int vetura_id, String prodhuesi, String modeli, int viti_prodhimit, String ngjyra, double cmimi, String gjendja, int kilometrazha, String tipi_karburant) {
-        this.vetura_id = vetura_id;
+    private Veturat(int veturaid, String prodhuesi, String modeli, int vitiprodhimit, String ngjyra, double cmimi, String gjendja, int kilometrazha, String tipikarburant) {
+        this.veturaid = veturaid;
         this.prodhuesi = prodhuesi;
         this.modeli = modeli;
-        this.viti_prodhimit = viti_prodhimit;
+        this.vitiprodhimit = vitiprodhimit;
         this.ngjyra = ngjyra;
         this.cmimi = cmimi;
         this.gjendja = gjendja;
         this.kilometrazha = kilometrazha;
-        this.tipi_karburant = tipi_karburant;
+        this.tipikarburant = tipikarburant;
     }
 
     public static Veturat getInstance(ResultSet resultSet) throws SQLException {
-        int vetura_id = resultSet.getInt("vetura_id");
+        int veturaid = resultSet.getInt("veturaid");
         String prodhuesi = resultSet.getString("prodhuesi");
         String modeli = resultSet.getString("modeli");
-        int viti_prodhimit = resultSet.getInt("viti_prodhimit");
+        int vitiprodhimit = resultSet.getInt("vitiprodhimit");
         String ngjyra = resultSet.getString("ngjyra");
         double cmimi = resultSet.getDouble("cmimi");
         String gjendja = resultSet.getString("gjendja");
         int kilometrazha = resultSet.getInt("kilometrazha");
-        String tipi_karburant = resultSet.getString("tipi_karburant");
-        return new Veturat(vetura_id, prodhuesi, modeli, viti_prodhimit, ngjyra, cmimi, gjendja, kilometrazha, tipi_karburant);
+        String tipikarburant = resultSet.getString("tipikarburant");
+        return new Veturat(veturaid, prodhuesi, modeli, vitiprodhimit, ngjyra, cmimi, gjendja, kilometrazha, tipikarburant);
     }
 
-    public int getVetura_id() {
-        return vetura_id;
+    public int getVeturaid() {
+        return veturaid;
     }
 
     public String getProdhuesi() {
@@ -51,8 +51,8 @@ public class Veturat {
         return modeli;
     }
 
-    public int getViti_prodhimit() {
-        return viti_prodhimit;
+    public int getVitiprodhimit() {
+        return vitiprodhimit;
     }
 
     public String getNgjyra() {
@@ -70,7 +70,7 @@ public class Veturat {
         return kilometrazha;
     }
 
-    public String getTipi_karburant() {
-        return tipi_karburant;
+    public String getTipikarburant() {
+        return tipikarburant;
     }
 }
