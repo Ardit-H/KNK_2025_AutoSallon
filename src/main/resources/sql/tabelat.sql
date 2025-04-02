@@ -21,3 +21,15 @@ CREATE TABLE Veturat (
     kilometrazha INT CHECK (kilometrazha >= 0),
     tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
 );
+
+/*
+CREATE TABLE Porosite (
+    porosi_id SERIAL PRIMARY KEY,
+    kid INTEGER NOT NULL,
+    vetura_id INTEGER NOT NULL,
+    cmimi_ofruar NUMERIC(10, 2) CHECK (cmimi_ofruar > 0),
+    statusi_porosise VARCHAR(20) CHECK (statusi_porosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
+    FOREIGN KEY (kid) REFERENCES Klientet(kid),
+    FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id)
+);
+*/
