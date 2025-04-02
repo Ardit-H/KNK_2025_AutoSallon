@@ -24,6 +24,7 @@ public class CreatePunetoretDto {
         return emri;
     }
 
+
     public String getMbiemri(){
         return mbiemri;
     }
