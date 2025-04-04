@@ -2,46 +2,46 @@ package models.dto.Porosite;
 
 public class CreatePorosiaDto {
     private int kid;
-    private int vetura_id;
-    private double cmimi_ofruar;
-    private String statusi_porosise;
+    private int veturaId;
+    private double cmimiOfruar;
+    private String statusiPorosise;
 
-    public CreatePorosiaDto(int kid, int vetura_id, double cmimi_ofruar, String statusi_porosise) {
+    public CreatePorosiaDto(int kid, int veturaId, double cmimiOfruar, String statusiPorosise) {
         this.kid = kid;
-        this.vetura_id = vetura_id;
-        this.cmimi_ofruar = cmimi_ofruar;
-        this.statusi_porosise = statusi_porosise;
+        this.veturaId = veturaId;
+        this.cmimiOfruar = cmimiOfruar;
+        this.statusiPorosise = statusiPorosise;
     }
 
     public int getKid() {
         return kid;
     }
 
-    public int getVetura_id() {
-        return vetura_id;
+    public int getVeturaId() {
+        return veturaId;
     }
 
-    public double getCmimi_ofruar() {
-        return cmimi_ofruar;
+    public double getCmimiOfruar() {
+        return cmimiOfruar;
     }
 
-    public String getStatusi_porosise() {
-        return statusi_porosise;
+    public String getStatusiPorosise() {
+        return statusiPorosise;
     }
 
     public void setKid(int kid) {
         this.kid = kid;
     }
 
-    public void setVetura_id(int vetura_id) {
-        this.vetura_id = vetura_id;
+    public void setVeturaId(int veturaId) {
+        this.veturaId = veturaId;
     }
 
-    public void setCmimi_ofruar(double cmimi_ofruar) {
-        this.cmimi_ofruar = cmimi_ofruar;
+    public void setCmimiOfruar(double cmimiOfruar) {
+        this.cmimiOfruar = cmimiOfruar;
     }
 
-    public void setStatusi_porosise(String statusi_porosise) {
-        this.statusi_porosise = statusi_porosise;
+    public void setStatusiPorosise(String statusiPorosise) {
+        this.statusiPorosise = statusiPorosise;
     }
 }
