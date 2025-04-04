@@ -3,7 +3,6 @@ package repository;
 import Database.DBConnector;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.CreateKlientetDto;
-import models.dto.Klientet.UpdateKlientetEmailDto;
 import models.dto.Klientet.UpdateKlientiDto;
 
 import java.sql.*;
@@ -66,16 +65,48 @@ public class KlientetRepository {
         }
         return null;
     }
-//    public Klientet update(UpdateKlientiDto klientetDto){
-//        String query= """
-//                UPDATE KLIENTET
-//                """;
-//        if(klientetDto.getEmail().equals("")){
-//            query += " SET email = ?";
-//        }
+    public Klientet update(UpdateKlientiDto klientetDto){
+        StringBuilder query = new StringBuilder("UPDATE KLIENTET SET ");
+        ArrayList<Object> params = new ArrayList<>();
+
+        if (klientetDto.getEmail() != null) {
+            query.append("EMAIL = ?, ");
+            params.add(klientetDto.getEmail());
+        }
+        if (klientetDto.getNrtelefonit() != null) {
+            query.append("NRTELEFONIT = ?, ");
+            params.add(klientetDto.getNrtelefonit());
+        }
+        if (klientetDto.getAdresa() != null) {
+            query.append("ADRESA = ?, ");
+            params.add(klientetDto.getAdresa());
+        }
+        if (params.isEmpty()) {
+            return getById(klientetDto.getId());
+        }
+
+        query.setLength(query.length() - 2);
+        query.append(" WHERE KID = ?");
+        params.add(klientetDto.getId());
+
+        try {
+            PreparedStatement pstm = this.connection.prepareStatement(query.toString());
+            for (int i = 0; i < params.size(); i++) {
+                pstm.setObject(i + 1, params.get(i));
+            }
+            int updated = pstm.executeUpdate();
+            if (updated == 1) {
+                return this.getById(klientetDto.getId());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+   /*
     public Klientet updateEmail(UpdateKlientetEmailDto klientetDto){
         String query= """
-                UPDATE KLIENTET 
+                UPDATE KLIENTET
                 SET EMAIL=?
                 WHERE KID=?
                 """;
@@ -92,6 +123,8 @@ public class KlientetRepository {
         }
         return null;
     }
+
+    */
     public boolean delete(int id){
         String query= """
                 DELETE FROM KLIENTET 

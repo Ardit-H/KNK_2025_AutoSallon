@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Sherbimet/CreateSherbimetDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Sherbimet/Sherbimet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Sherbimet/UpdateSherbimetDto.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles tek resources">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Klientet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/Klientet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -257,7 +254,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743357946849</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Krijimi i modelit Sherbimet me dto perkatese">
+      <option name="closed" value="true" />
+      <created>1743750658690</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743750658690</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Shtimi i tabeles tek resources">
+      <option name="closed" value="true" />
+      <created>1743750698264</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743750698264</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -276,6 +289,8 @@
     <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
+    <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
+    <MESSAGE value="Shtimi i tabeles tek resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i tabeles tek resources" />
   </component>
 </project>
