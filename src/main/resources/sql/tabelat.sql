@@ -9,6 +9,12 @@ adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
 data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 */
+CREATE TABLE sherbimet(
+id SERIAL PRIMARY KEY,
+emri VARCHAR(100) NOT NULL,
+pershkrimi VARCHAR(500),
+çmimi DECIMAL(10,2) DEFAULT 0 CHECK (çmimi>=0)
+)
 
 CREATE TABLE Veturat (
     vetura_id SERIAL PRIMARY KEY,
