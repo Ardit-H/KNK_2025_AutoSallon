@@ -1,9 +1,10 @@
 package repository;
 
 import Database.DBConnector;
-import models.Klientet;
+import models.dto.Klientet.Klientet;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.UpdateKlientetEmailDto;
+import models.dto.Klientet.UpdateKlientiDto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -65,6 +66,13 @@ public class KlientetRepository {
         }
         return null;
     }
+//    public Klientet update(UpdateKlientiDto klientetDto){
+//        String query= """
+//                UPDATE KLIENTET
+//                """;
+//        if(klientetDto.getEmail().equals("")){
+//            query += " SET email = ?";
+//        }
     public Klientet updateEmail(UpdateKlientetEmailDto klientetDto){
         String query= """
                 UPDATE KLIENTET 

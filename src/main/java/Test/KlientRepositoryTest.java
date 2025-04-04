@@ -1,9 +1,7 @@
 package Test;
 
 import Database.DBConnector;
-import models.Klientet;
-import models.dto.Klientet.CreateKlientetDto;
-import models.dto.Klientet.UpdateKlientetEmailDto;
+import models.dto.Klientet.Klientet;
 import repository.KlientetRepository;
 
 import java.sql.Connection;
