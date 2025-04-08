@@ -53,6 +53,7 @@ CREATE TABLE Punetoret (
     paga DECIMAL(10,2) CHECK (paga >= 0),
     data_punesimit DATE NOT NULL
 );
+<<<<<<< HEAD
 
 CREATE TABLE faturat (
     fatureId SERIAL PRIMARY KEY,
@@ -63,3 +64,21 @@ CREATE TABLE faturat (
 
 	FOREIGN KEY (shitjeId) REFERENCES shitjet(shitje_id) ON DELETE CASCADE
 );
+=======
+*/
+
+
+CREATE TABLE Shitjet (
+       shitje_id SERIAL PRIMARY KEY,
+	   kid INTEGER NOT NULL,
+	   vetura_id INTEGER NOT NULL ,
+	   punetor_id INTEGER NOT NULL,
+	   data_shitjes DATE NOT NULL,
+	   cmimi_final DECIMAL(10,2) CHECK (cmimi_final > 0),
+	   FOREIGN KEY (kid) REFERENCES Klientet(kid),
+	   FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id),
+	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(punetor_id)
+);
+*/
+
+>>>>>>> 1ab7ca986b7f47ad2aa447a3abf0b82d0d6e3ca1
