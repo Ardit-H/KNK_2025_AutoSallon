@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetDto, UpdateKlientiDto>{
     public KlientetRepository(){
-        super("users");
+        super("klientet");
     }
 
     public Klientet fromResultSet(ResultSet result) throws SQLException{
@@ -18,10 +18,9 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
     }
 
     public Klientet create(CreateKlientetDto klientetDto){
-        String query = """
-                INSERT INTO 
-                USERS (NAME, EMAIL, AGE)
-                VALUES (?, ?, ?)
+        String query ="""
+                INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa)
+                 VALUES(?,?,?,?,?)
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(
@@ -44,23 +43,41 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
     }
 
     public Klientet update(UpdateKlientiDto klientetDto){
-        String query = """
-                UPDATE USERS 
-                SET EMAIL = ?
-                WHERE ID = ?
-                """;
+        StringBuilder query=new StringBuilder("UPDATE KLIENTET SET ");
+        ArrayList<Object> params=new ArrayList<>();
+
+        if(klientetDto.getEmail() != null){
+            query.append("EMAIL = ?, ");
+            params.add(klientetDto.getEmail());
+        }
+        if(klientetDto.getNrtelefonit() != null){
+            query.append("NRTELEFONIT = ?, ");
+            params.add(klientetDto.getNrtelefonit());
+        }
+        if(klientetDto.getAdresa() != null){
+            query.append("ADRESA = ?, ");
+            params.add(klientetDto.getAdresa());
+        }
+        if(params.isEmpty()){
+            return getById(klientetDto.getId());
+        }
+
+        query.setLength(query.length() - 2);
+        query.append(" WHERE ID = ?");
+        params.add(klientetDto.getId());
+
         try{
-            PreparedStatement pstm=this.connection.prepareStatement(query);
-            pstm.setString(1, klientetDto.getEmail());
-            pstm.setInt(2,klientetDto.getId());
-            int updateRecords=pstm.executeUpdate();
-            if(updateRecords==1){
+            PreparedStatement pstm=this.connection.prepareStatement(query.toString());
+            for(int i = 0; i < params.size(); i++){
+                pstm.setObject(i + 1, params.get(i));
+            }
+            int updated=pstm.executeUpdate();
+            if(updated == 1) {
                 return this.getById(klientetDto.getId());
             }
-        }catch (SQLException e){
+        }catch(SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
-
 }
