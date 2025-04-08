@@ -15,7 +15,7 @@ public class KlientRepositoryTest {
         Connection connection = DBConnector.getConnection();
         try {
             Statement stm=connection.createStatement();
-            String query="SELECT * FROM KLIENTET ORDER BY KID DESC LIMIT 1";
+            String query="SELECT * FROM KLIENTET ORDER BY ID DESC LIMIT 1";
             ResultSet result=stm.executeQuery(query);
             if(result.next()){
                 Klientet klient=Klientet.getInstance(result);
@@ -33,8 +33,8 @@ public class KlientRepositoryTest {
 //        klientetRepository.delete(5);
           UpdateKlientiDto update=new UpdateKlientiDto();
           update.setId(2);
-          update.setAdresa("Podujeve");
-//        update.setEmail("student1.krasniqi@gmail.com");
+          update.setEmail("afrim.gashi@gmail.com");
+//          update.setAdresa("Podujeve");
 //        update.setNrtelefonit("044198652");
         klientetRepository.update(update);
 
