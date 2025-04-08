@@ -4,49 +4,47 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Porosia {
-    private int porosia_id;
+    private int porosiaId;
     private int kid;
-    private int vetura_id;
-    private double cmimi_ofruar;
-    private String statusi_porosise;
+    private int veturaId;
+    private double cmimiOfruar;
+    private String statusiPorosise;
 
-    public Porosia(int porosia_id, int kid, int vetura_id, double cmimi_ofruar, String statusi_porosise) {
-        this.porosia_id = porosia_id;
+    public Porosia(int porosiaId, int kid, int veturaId, double cmimiOfruar, String statusiPorosise) {
+        this.porosiaId = porosiaId;
         this.kid = kid;
-        this.vetura_id = vetura_id;
-        this.cmimi_ofruar = cmimi_ofruar;
-        this.statusi_porosise = statusi_porosise;
+        this.veturaId = veturaId;
+        this.cmimiOfruar = cmimiOfruar;
+        this.statusiPorosise = statusiPorosise;
     }
 
     public static Porosia getInstance(ResultSet rs)throws SQLException {
-        int porosia_id = rs.getInt("porosi_id");
+        int porosiaId = rs.getInt("porosi_id");
         int kid = rs.getInt("kid");
-        int vetura_id = rs.getInt("vetura_id");
-        double cmimi_ofruar = rs.getDouble("cmimi_ofruar");
-        String statusi_porosise = rs.getString("statusi_porosise");
+        int veturaId = rs.getInt("vetura_id");
+        double cmimiOfruar = rs.getDouble("cmimi_ofruar");
+        String statusiPorosise = rs.getString("statusi_porosise");
 
-       return new Porosia(porosia_id, kid, vetura_id, cmimi_ofruar, statusi_porosise);
+       return new Porosia(porosiaId, kid, veturaId, cmimiOfruar, statusiPorosise);
     }
 
-    public int getPorosia_id() {
-        return porosia_id;
+    public int getPorosiaId() {
+        return porosiaId;
     }
 
     public int getKid() {
         return kid;
     }
 
-    public int getVetura_id() {
-        return vetura_id;
+    public int getVeturaId() {
+        return veturaId;
     }
 
-    public double getCmimi_ofruar() {
-        return cmimi_ofruar;
+    public double getCmimiOfruar() {
+        return cmimiOfruar;
     }
 
-    public String getStatusi_porosise() {
-        return statusi_porosise;
+    public String getStatusiPorosise() {
+        return statusiPorosise;
     }
-
-
 }

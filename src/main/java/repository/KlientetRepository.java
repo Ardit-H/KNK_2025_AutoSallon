@@ -1,52 +1,27 @@
 package repository;
 
 import Database.DBConnector;
-import models.Klientet;
+import models.dto.Klientet.Klientet;
 import models.dto.Klientet.CreateKlientetDto;
-import models.dto.Klientet.UpdateKlientetEmailDto;
+import models.dto.Klientet.UpdateKlientiDto;
 
 import java.sql.*;
 import java.util.ArrayList;
 
-public class KlientetRepository {
-    private Connection connection;
+public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetDto, UpdateKlientiDto>{
     public KlientetRepository(){
-        this.connection= DBConnector.getConnection();
-    }
-    public ArrayList<Klientet> getKlientet() {
-        ArrayList<Klientet> klientet = new ArrayList<>();
-        String query = "SELECT * FROM KLIENTET";
-        try {
-            Statement statement=this.connection.createStatement();
-            ResultSet resultSet= statement.executeQuery(query);
-            while(resultSet.next()){
-                klientet.add(Klientet.getInstance(resultSet));
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return klientet;
+        super("users");
     }
 
-    public Klientet getById(int id){
-        String query="SELECT * FROM KLIENTET WHERE KID = ?";
-        try{
-            PreparedStatement statement=this.connection.prepareStatement(query);
-            statement.setInt(1,id);
-            ResultSet result= statement.executeQuery();
-            if(result.next()){
-                return Klientet.getInstance(result);
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return null;
+    public Klientet fromResultSet(ResultSet result) throws SQLException{
+        return Klientet.getInstance(result);
     }
 
     public Klientet create(CreateKlientetDto klientetDto){
-        String query ="""
-                INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa)
-                 VALUES(?,?,?,?,?)
+        String query = """
+                INSERT INTO 
+                USERS (NAME, EMAIL, AGE)
+                VALUES (?, ?, ?)
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(
@@ -68,11 +43,11 @@ public class KlientetRepository {
         return null;
     }
 
-    public Klientet updateEmail(UpdateKlientetEmailDto klientetDto){
-        String query= """
-                UPDATE KLIENTET 
-                SET EMAIL=?
-                WHERE KID=?
+    public Klientet update(UpdateKlientiDto klientetDto){
+        String query = """
+                UPDATE USERS 
+                SET EMAIL = ?
+                WHERE ID = ?
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query);
@@ -88,18 +63,4 @@ public class KlientetRepository {
         return null;
     }
 
-    public boolean delete(int id){
-        String query= """
-                DELETE FROM KLIENTET 
-                WHERE KID=?
-                """;
-        try{
-            PreparedStatement pstm=this.connection.prepareStatement(query);
-            pstm.setInt(1,id);
-            return pstm.executeUpdate()==1;
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return false;
-    }
 }

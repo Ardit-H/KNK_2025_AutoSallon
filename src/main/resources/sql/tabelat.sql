@@ -9,6 +9,12 @@ adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
 data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 */
+CREATE TABLE sherbimet(
+id SERIAL PRIMARY KEY,
+emri VARCHAR(100) NOT NULL,
+pershkrimi VARCHAR(500),
+çmimi DECIMAL(10,2) DEFAULT 0 CHECK (çmimi>=0)
+)
 
 /*
 CREATE TABLE Veturat (
@@ -35,3 +41,15 @@ CREATE TABLE Porosite (
     FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id)
 );
 */
+
+
+CREATE TABLE Punetoret (
+    punetor_id SERIAL PRIMARY KEY,
+    emri VARCHAR(50) NOT NULL,
+    mbiemri VARCHAR(50) NOT NULL,
+    pozita VARCHAR(50) NOT NULL,
+    telefoni VARCHAR(15) UNIQUE,
+    email VARCHAR(100) UNIQUE,
+    paga DECIMAL(10,2) CHECK (paga >= 0),
+    data_punesimit DATE NOT NULL
+);

@@ -1,9 +1,8 @@
 package Test;
 
 import Database.DBConnector;
-import models.Klientet;
-import models.dto.Klientet.CreateKlientetDto;
-import models.dto.Klientet.UpdateKlientetEmailDto;
+import models.dto.Klientet.Klientet;
+import models.dto.Klientet.UpdateKlientiDto;
 import repository.KlientetRepository;
 
 import java.sql.Connection;
@@ -31,7 +30,14 @@ public class KlientRepositoryTest {
         if(klient!=null){
             System.out.println("id "+klient.getKid());
         }
-        klientetRepository.delete(5);
+//        klientetRepository.delete(5);
+          UpdateKlientiDto update=new UpdateKlientiDto();
+          update.setId(2);
+          update.setAdresa("Podujeve");
+//        update.setEmail("student1.krasniqi@gmail.com");
+//        update.setNrtelefonit("044198652");
+        klientetRepository.update(update);
+
 //        klientetRepository.delete(4);
 //        CreateKlientetDto klientDto=new CreateKlientetDto("Studenti 2", "Haliti","student2@gmail.com","+38349834896","Prishtine");
 //        klientetRepository.create(klientDto);
