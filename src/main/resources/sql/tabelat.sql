@@ -53,3 +53,13 @@ CREATE TABLE Punetoret (
     paga DECIMAL(10,2) CHECK (paga >= 0),
     data_punesimit DATE NOT NULL
 );
+
+CREATE TABLE faturat (
+    fatureId SERIAL PRIMARY KEY,
+    shitjeId INTEGER NOT NULL,
+    dataFatures DATE NOT NULL,
+    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0),
+    llojiPageses TEXT NOT NULL CHECK (llojiPageses IN ('CASH', 'KARTE', 'BANK', 'TJETER')),
+
+	FOREIGN KEY (shitjeId) REFERENCES shitjet(shitje_id) ON DELETE CASCADE
+);
