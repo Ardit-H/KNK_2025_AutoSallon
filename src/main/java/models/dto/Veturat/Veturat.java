@@ -1,4 +1,4 @@
-package models;
+package models.dto.Veturat;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
