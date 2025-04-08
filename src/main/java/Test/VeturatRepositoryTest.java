@@ -1,9 +1,7 @@
 package Test;
 
 import Database.DBConnector;
-import models.Veturat;
-import models.dto.Veturat.CreateVeturatDto;
-import models.dto.Veturat.UpdateVeturatDto;
+import models.dto.Veturat.Veturat;
 import repository.VeturatRepository;
 
 import java.sql.Connection;

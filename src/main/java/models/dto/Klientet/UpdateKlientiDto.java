@@ -1,10 +1,19 @@
 package models.dto.Klientet;
 
 public class UpdateKlientiDto {
+    private int id;
     private String email;
     private String adresa;
-    private int nrtelefonit;
+    private String nrtelefonit;
 
+    public UpdateKlientiDto(){}
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getEmail() {
         return email;
     }
@@ -13,7 +22,7 @@ public class UpdateKlientiDto {
         return adresa;
     }
 
-    public int getNrtelefonit() {
+    public String  getNrtelefonit() {
         return nrtelefonit;
     }
 
@@ -25,7 +34,7 @@ public class UpdateKlientiDto {
         this.adresa = adresa;
     }
 
-    public void setNrtelefonit(int nrtelefonit) {
+    public void setNrtelefonit(String nrtelefonit) {
         this.nrtelefonit = nrtelefonit;
     }
 }
