@@ -8,7 +8,7 @@ nrtelefonit VARCHAR(15) CHECK(nrtelefonit ~ '^\+?[0-9]{7,15}$'),
 adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
 data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-*/
+
 CREATE TABLE sherbimet(
 id SERIAL PRIMARY KEY,
 emri VARCHAR(100) NOT NULL,
@@ -53,3 +53,11 @@ CREATE TABLE Punetoret (
     paga DECIMAL(10,2) CHECK (paga >= 0),
     data_punesimit DATE NOT NULL
 );
+
+-- CREATE TABLE Shitjet (
+--     shitje_id SERIAL PRIMARY KEY,
+--     kid INT NOT NULL,
+--     vetura_id INT NOT NULL,
+--     punetor_id INT NOT NULL,
+--     data_shitjes DATE NOT NULL DEFAULT CURRENT_DATE,
+--     cmimi_final NUMERIC(10, 2) NOT NULL CHECK (cmimi_final > 0),
