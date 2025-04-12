@@ -53,14 +53,19 @@ CREATE TABLE Punetoret (
     paga DECIMAL(10,2) CHECK (paga >= 0),
     data_punesimit DATE NOT NULL
 );
-
-/*
-CREATE TABLE Garancite (
-      id SERIAL PRIMARY KEY,
-      v_id INT REFERENCES Veturat(vetura_id),
-      klienti_id INT REFERENCES Klientet(kid),
-      lloji_garancise VARCHAR(10) CHECK (lloji_garancise IN ('6 muaj', '1 vit', '2 vite')),
-      data_fillimit DATE,
-      data_mbarimit DATE
-  );
 */
+
+
+CREATE TABLE Shitjet (
+       shitje_id SERIAL PRIMARY KEY,
+	   kid INTEGER NOT NULL,
+	   vetura_id INTEGER NOT NULL ,
+	   punetor_id INTEGER NOT NULL,
+	   data_shitjes DATE NOT NULL,
+	   cmimi_final DECIMAL(10,2) CHECK (cmimi_final > 0),
+	   FOREIGN KEY (kid) REFERENCES Klientet(kid),
+	   FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id),
+	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(punetor_id)
+);
+*/
+
