@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="&#10;Ndryshimi i emrit te kolones nga kid ne id ne SQL">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/SherbimetRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/SherbimetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_1_2025_2_30_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_1_2025_2_30_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Sherbimet/UpdateSherbimetDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Sherbimet/UpdateSherbimetDto.java" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,16 +55,15 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
-    "Application.SherbimetRepositoryTest.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SherbimetRepositoryTest">
+  <component name="RunManager" selected="Application.KlientRepositoryTest">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.knk_2025_autosallon.HelloApplication" />
       <module name="KNK_2025_AutoSallon" />
@@ -98,19 +90,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SherbimetRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.SherbimetRepositoryTest" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.test" />
       <module name="KNK_2025_AutoSallon" />
@@ -126,7 +105,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SherbimetRepositoryTest" />
         <item itemvalue="Application.KlientRepositoryTest" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.HelloApplication" />
@@ -262,31 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743354835243</updated>
     </task>
-    <task id="LOCAL-00016" summary="Krijimi i klases VeturatRepository">
+    <task id="LOCAL-00016" summary="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository">
       <option name="closed" value="true" />
-      <created>1743575894549</created>
+      <created>1743357946849</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1743575894549</updated>
+      <updated>1743357946849</updated>
     </task>
-    <task id="LOCAL-00017" summary="Krijimi i klases VeturatRepositoryTest">
-      <option name="closed" value="true" />
-      <created>1743576776748</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1743576776748</updated>
-    </task>
-    <task id="LOCAL-00018" summary="/* */">
-      <option name="closed" value="true" />
-      <created>1743576874247</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1743576874247</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,9 +277,7 @@
     <MESSAGE value="Krijimi i klases UpdateKlientetEmailDto" />
     <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
-    <MESSAGE value="Krijimi i klases VeturatRepository" />
-    <MESSAGE value="Krijimi i klases VeturatRepositoryTest" />
-    <MESSAGE value="/* */" />
-    <option name="LAST_COMMIT_MESSAGE" value="/* */" />
+    <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
   </component>
 </project>

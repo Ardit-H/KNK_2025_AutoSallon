@@ -1,4 +1,4 @@
-package models;
+package models.dto.Punetoret;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class Punetoret {
