@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/VleresimetRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/CreateVleresimetDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/UpdateVleresimetDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/Vleresimet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/VleresimetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,15 +65,16 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
+    "Application.VleresimetRepositoryTest.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.KlientRepositoryTest">
+  <component name="RunManager" selected="Application.VleresimetRepositoryTest">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.knk_2025_autosallon.HelloApplication" />
       <module name="KNK_2025_AutoSallon" />
@@ -90,6 +101,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VleresimetRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.VleresimetRepositoryTest" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.test" />
       <module name="KNK_2025_AutoSallon" />
@@ -105,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VleresimetRepositoryTest" />
         <item itemvalue="Application.KlientRepositoryTest" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.HelloApplication" />
