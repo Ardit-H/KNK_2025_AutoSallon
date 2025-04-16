@@ -24,7 +24,7 @@ public class Klientet {
     }
 
 public static Klientet getInstance(ResultSet resultSet)throws SQLException{
-    int kid=resultSet.getInt("kid");
+    int kid=resultSet.getInt("id");
     String emri=resultSet.getString("emri");
     String mbiemri=resultSet.getString("mbiemri");
     String email=resultSet.getString("email");

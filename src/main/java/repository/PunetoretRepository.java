@@ -1,6 +1,6 @@
 package repository;
 import Database.DBConnector;
-import models.Punetoret;
+import models.dto.Punetoret.Punetoret;
 import models.dto.Punetoret.CreatePunetoretDto;
 import models.dto.Punetoret.UpdatePunetoretEmailDto;
 import java.sql.Statement;
