@@ -1,7 +1,5 @@
 package models.dto.Veturat;
 
-import models.dto.Garancia.Garancia;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

@@ -27,7 +27,7 @@ public class VeturatRepositoryTest {
         VeturatRepository veturatRepository = new VeturatRepository();
         Veturat vetura = veturatRepository.getById(15);
         if(vetura!=null){
-//            System.out.println("id "+vetura.getVeturaid());
+            System.out.println("id "+vetura.getVeturaId());
         }
 //        veturatRepository.delete(3);
     }
