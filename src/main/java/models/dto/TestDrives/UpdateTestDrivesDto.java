@@ -1,10 +1,19 @@
 package models.dto.TestDrives;
 
 public class UpdateTestDrivesDto {
+    private int tid;
     private String statusi;
     private String feedback;
     private int duration;
     private String location;
+
+    public int getTid() {
+        return tid;
+    }
+
+    public void setTid(int tid) {
+        this.tid = tid;
+    }
 
     public String getStatusi() {
         return statusi;
