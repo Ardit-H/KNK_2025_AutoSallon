@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles tek resources">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/GaranciaRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/CreateTestDrivesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/TestDrives.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/UpdateTestDrivesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/TestDrivesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/CreateRezervimetDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/Rezervimet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/UpdateRezervimetDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/Veturat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/Veturat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +64,7 @@
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }

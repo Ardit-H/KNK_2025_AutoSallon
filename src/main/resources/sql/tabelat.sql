@@ -94,3 +94,11 @@ CREATE TABLE testDrives (
         REFERENCES Veturat(vetura_id) ON DELETE CASCADE
 );
 */
+/*
+CREATE TABLE rezervimet (
+    rezervimi_id SERIAL PRIMARY KEY,
+    klienti_id INTEGER REFERENCES Klientet(kid),
+    vetura_id INTEGER REFERENCES Veturat(vetura_id),
+    data_rezervimit DATE NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
+);*/
