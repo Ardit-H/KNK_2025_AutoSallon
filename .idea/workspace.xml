@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles tek resources">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/KlientetServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Kriji i klases KlientetService">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/SherbimetServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/SherbimetService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/KlientetServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/KlientetServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +63,7 @@
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
     "Application.KlientetServiceTest.executor": "Run",
+    "Application.SherbimetServiceTest.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -109,6 +112,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SherbimetServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.SherbimetServiceTest" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.test" />
       <module name="KNK_2025_AutoSallon" />
@@ -125,6 +141,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.KlientetServiceTest" />
+        <item itemvalue="Application.SherbimetServiceTest" />
         <item itemvalue="Application.KlientRepositoryTest" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.HelloApplication" />
@@ -284,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743750698264</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Kriji i klases KlientetService">
+      <option name="closed" value="true" />
+      <created>1745072765219</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1745072765219</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -305,6 +330,7 @@
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i tabeles tek resources" />
+    <MESSAGE value="Kriji i klases KlientetService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kriji i klases KlientetService" />
   </component>
 </project>

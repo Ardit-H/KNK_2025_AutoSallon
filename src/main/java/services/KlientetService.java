@@ -96,4 +96,14 @@ public class KlientetService {
 
         return updated;
     }
+    public boolean delete(int id) throws Exception{
+        if (id <= 0) {
+            throw new IllegalArgumentException("ID e klientit është e pavlefshme.Duhet te jete>0 !");
+        }
+        Klientet klienti=klientetRepository.getById(id);
+        if(klienti==null){
+            throw new Exception("Klienti nuk ekzistone!");
+        }
+        return klientetRepository.delete(id);
+    }
 }

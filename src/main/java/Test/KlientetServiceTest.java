@@ -35,6 +35,7 @@ public class KlientetServiceTest {
 //            update.setAdresa("Ferizaj");
 //            update.setNrtelefonit("049586724");
 //          klientetService.update(update);
+            klientetService.delete(8);
         } catch (Exception e) {
             e.printStackTrace();
         }
