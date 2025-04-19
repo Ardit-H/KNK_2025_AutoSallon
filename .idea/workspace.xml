@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i TestDrivesRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/TestDrives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/TestDrives.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/UpdateTestDrivesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/UpdateTestDrivesDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +268,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745056962678</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto, plotsimi i ketyre klasave">
+      <option name="closed" value="true" />
+      <created>1745057628903</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1745057628903</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Krijimi i TestDrivesRepository">
+      <option name="closed" value="true" />
+      <created>1745058402814</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1745058402814</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +316,8 @@
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
     <MESSAGE value="Shtimi i tabeles testDrives" />
     <MESSAGE value="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto" />
+    <MESSAGE value="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto, plotsimi i ketyre klasave" />
+    <MESSAGE value="Krijimi i TestDrivesRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i TestDrivesRepository" />
   </component>
 </project>
