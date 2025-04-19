@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="&#10;Krijimi i Vleresimet,CreateVleresimetDto,UpdateVleresimetDto, VleresimetRepository">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles tek resources">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/KlientRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,6 @@
   &quot;keyToString&quot;: {
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.VleresimetRepositoryTest.executor&quot;: &quot;Run&quot;,
     &quot;Application.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -66,7 +69,7 @@
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.VleresimetRepositoryTest">
+  <component name="RunManager" selected="Application.KlientRepositoryTest">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.knk_2025_autosallon.HelloApplication" />
       <module name="KNK_2025_AutoSallon" />
@@ -93,19 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VleresimetRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.VleresimetRepositoryTest" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.test" />
       <module name="KNK_2025_AutoSallon" />
@@ -121,7 +111,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VleresimetRepositoryTest" />
         <item itemvalue="Application.KlientRepositoryTest" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.HelloApplication" />
@@ -265,27 +254,24 @@
       <option name="project" value="LOCAL" />
       <updated>1743357946849</updated>
     </task>
-    <task id="LOCAL-00017" summary="&#10;Krijimi i Vleresimet,CreateVleresimetDto,UpdateVleresimetDto, VleresimetRepository">
+    <task id="LOCAL-00017" summary="Krijimi i modelit Sherbimet me dto perkatese">
       <option name="closed" value="true" />
-      <created>1744665694611</created>
+      <created>1743750658690</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1744665694611</updated>
+      <updated>1743750658690</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Shtimi i tabeles tek resources">
+      <option name="closed" value="true" />
+      <created>1743750698264</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743750698264</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
@@ -303,7 +289,8 @@
     <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
-    <MESSAGE value="&#10;Krijimi i Vleresimet,CreateVleresimetDto,UpdateVleresimetDto, VleresimetRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Krijimi i Vleresimet,CreateVleresimetDto,UpdateVleresimetDto, VleresimetRepository" />
+    <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
+    <MESSAGE value="Shtimi i tabeles tek resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i tabeles tek resources" />
   </component>
 </project>

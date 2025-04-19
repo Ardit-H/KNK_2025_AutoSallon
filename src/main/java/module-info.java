@@ -4,6 +4,9 @@ module com.example.knk_2025_autosallon {
     requires java.sql;
 
 
+
     opens com.example.knk_2025_autosallon to javafx.fxml;
     exports com.example.knk_2025_autosallon;
+
+
 }
