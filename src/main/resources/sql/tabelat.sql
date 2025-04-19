@@ -79,3 +79,26 @@ CREATE TABLE Vleresimet(
 );
 */
 
+/*
+CREATE TABLE testDrives (
+    id SERIAL PRIMARY KEY,
+    kid INT NOT NULL,
+    vetura_id INT NOT NULL,
+    status VARCHAR(50),
+    feedback TEXT,
+    duration INT,
+    location VARCHAR(255),
+    CONSTRAINT fk_klient FOREIGN KEY (kid)
+        REFERENCES Klientet(kid) ON DELETE CASCADE,
+    CONSTRAINT fk_vetura FOREIGN KEY (vetura_id)
+        REFERENCES Veturat(vetura_id) ON DELETE CASCADE
+);
+*/
+/*
+CREATE TABLE rezervimet (
+    rezervimi_id SERIAL PRIMARY KEY,
+    klienti_id INTEGER REFERENCES Klientet(kid),
+    vetura_id INTEGER REFERENCES Veturat(vetura_id),
+    data_rezervimit DATE NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
+);*/
