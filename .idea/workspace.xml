@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Kriji i klases KlientetService">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/SherbimetServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/SherbimetService.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klases SherbimetService">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/VleresimetServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/KlientetServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/KlientetServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/Veturat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/Veturat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,8 @@
     "Application.KlientRepositoryTest.executor": "Run",
     "Application.KlientetServiceTest.executor": "Run",
     "Application.SherbimetServiceTest.executor": "Run",
+    "Application.VleresimetRepositoryTest.executor": "Run",
+    "Application.VleresimetServiceTest.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -72,20 +72,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.KlientetServiceTest">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.knk_2025_autosallon.HelloApplication" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.knk_2025_autosallon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.VleresimetServiceTest">
     <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
       <module name="KNK_2025_AutoSallon" />
@@ -125,8 +112,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.test" />
+    <configuration name="VleresimetRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.VleresimetRepositoryTest" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VleresimetServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.VleresimetServiceTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
@@ -140,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.VleresimetServiceTest" />
+        <item itemvalue="Application.VleresimetRepositoryTest" />
         <item itemvalue="Application.KlientetServiceTest" />
         <item itemvalue="Application.SherbimetServiceTest" />
         <item itemvalue="Application.KlientRepositoryTest" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745072765219</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Krijimi i klases SherbimetService">
+      <option name="closed" value="true" />
+      <created>1745081169150</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1745081169150</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -331,6 +339,7 @@
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Kriji i klases KlientetService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kriji i klases KlientetService" />
+    <MESSAGE value="Krijimi i klases SherbimetService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klases SherbimetService" />
   </component>
 </project>
