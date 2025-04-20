@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TestDrives {
-    private int tid;
+    private int id;
     private int kid;
     private int vid;
     private String statusi;
@@ -12,8 +12,8 @@ public class TestDrives {
     private int duration;
     private String location;
 
-    public TestDrives(int tid, int kid, int vid, String statusi, String feedback, int duration, String location) {
-        this.tid = tid;
+    public TestDrives(int id, int kid, int vid, String statusi, String feedback, int duration, String location) {
+        this.id = id;
         this.kid = kid;
         this.vid = vid;
         this.statusi = statusi;
@@ -23,18 +23,18 @@ public class TestDrives {
     }
 
     public static TestDrives getInstance(ResultSet resultSet)throws SQLException{
-        int tid=resultSet.getInt("tid");
+        int id=resultSet.getInt("id");
         int kid=resultSet.getInt("kid");
         int vid=resultSet.getInt("vid");
         String statusi=resultSet.getString("statusi");
         String feedback=resultSet.getString("feedback");
         int duration=resultSet.getInt("kohezgjatja");
         String location=resultSet.getString("location");
-        return new TestDrives(tid,kid,vid,statusi,feedback,duration,location);
+        return new TestDrives(id,kid,vid,statusi,feedback,duration,location);
     }
 
-    public int getTid() {
-        return tid;
+    public int getId() {
+        return id;
     }
 
     public int getKid() {
