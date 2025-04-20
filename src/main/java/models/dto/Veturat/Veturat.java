@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Veturat {
-    private int veturaId;
+    private int id;
     private String prodhuesi;
     private String modeli;
     private int vitiProdhimit;
@@ -14,8 +14,8 @@ public class Veturat {
     private int kilometrazha;
     private String tipiKarburant;
 
-    public Veturat(int veturaId, String prodhuesi, String modeli, int vitiProdhimit, String ngjyra, double cmimi, String gjendja, int kilometrazha, String tipiKarburant) {
-        this.veturaId = veturaId;
+    public Veturat(int id, String prodhuesi, String modeli, int vitiProdhimit, String ngjyra, double cmimi, String gjendja, int kilometrazha, String tipiKarburant) {
+        this.id = id;
         this.prodhuesi = prodhuesi;
         this.modeli = modeli;
         this.vitiProdhimit = vitiProdhimit;
@@ -27,7 +27,7 @@ public class Veturat {
     }
 
     public static Veturat getInstance(ResultSet resultSet)throws SQLException{
-        int veturaId = resultSet.getInt("id");
+        int id = resultSet.getInt("id");
         String prodhuesi = resultSet.getString("prodhuesi");
         String modeli = resultSet.getString("modeli");
         int vitiPordhimit = resultSet.getInt("viti_prodhimit");
@@ -36,12 +36,12 @@ public class Veturat {
         String gjendja = resultSet.getString("gjendja");
         int kilometrazha = resultSet.getInt("kilometrazha");
         String tipiKarburant = resultSet.getString("tipi_karburant");
-        return new Veturat(veturaId,prodhuesi,modeli,vitiPordhimit,ngjyra,cmimi,gjendja,kilometrazha,tipiKarburant);
+        return new Veturat(id,prodhuesi,modeli,vitiPordhimit,ngjyra,cmimi,gjendja,kilometrazha,tipiKarburant);
     }
 
 
-    public int getVeturaId() {
-        return veturaId;
+    public int getId() {
+        return id;
     }
 
     public String getProdhuesi() {

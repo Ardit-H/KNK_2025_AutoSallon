@@ -57,12 +57,12 @@ public class TestDrivesRepository extends BaseRepository<TestDrives, CreateTestD
             params.add(testDrivesDto.getLocation());
         }
         if(params.isEmpty()){
-            return getById(testDrivesDto.getTid());
+            return getById(testDrivesDto.getId());
         }
 
         query.setLength(query.length() - 2);
         query.append(" WHERE ID = ?");
-        params.add(testDrivesDto.getTid());
+        params.add(testDrivesDto.getId());
 
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query.toString());
@@ -71,7 +71,7 @@ public class TestDrivesRepository extends BaseRepository<TestDrives, CreateTestD
             }
             int updated=pstm.executeUpdate();
             if(updated == 1) {
-                return this.getById(testDrivesDto.getTid());
+                return this.getById(testDrivesDto.getId());
             }
         }catch(SQLException e) {
             e.printStackTrace();

@@ -44,7 +44,7 @@ CREATE TABLE Porosite (
 
 
 CREATE TABLE Punetoret (
-    id SERIAL PRIMARY KEY,
+    punetor_id SERIAL PRIMARY KEY,
     emri VARCHAR(50) NOT NULL,
     mbiemri VARCHAR(50) NOT NULL,
     pozita VARCHAR(50) NOT NULL,
@@ -96,19 +96,9 @@ CREATE TABLE testDrives (
 */
 /*
 CREATE TABLE rezervimet (
-    id SERIAL PRIMARY KEY,
+    rezervimi_id SERIAL PRIMARY KEY,
     klienti_id INTEGER REFERENCES Klientet(kid),
     vetura_id INTEGER REFERENCES Veturat(vetura_id),
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
 );*/
-
-/*
-CREATE TABLE perdoruesit (
-    id SERIAL PRIMARY KEY,
-    emri VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    fjalekalimi TEXT NOT NULL,
-    roli VARCHAR(50) CHECK (roli IN ('admin', 'punetor', 'klient', 'menaxher', 'shites')) NOT NULL
-);
-*/

@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles tek resources">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/CreatePerdoruesitDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/Perdoruesit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/UpdatePerdoruesitDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PunetoretService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/RezervimetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/CreateRezervimetDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/Rezervimet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/UpdateRezervimetDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/PunetoretRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/PunetoretRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/RezervimetRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/RezervimetRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/UpdateKlientiDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Punetoret/UpdatePunetoretDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Punetoret/UpdatePunetoretDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PunetoretRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PunetoretRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,12 +32,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
-    "accountId": "2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -70,21 +61,15 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
-    "Application.PunetoretRepositoryTest.executor": "Run",
-    "Application.RezervimetRepositoryTest.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.RezervimetRepositoryTest">
+  <component name="RunManager" selected="Application.KlientRepositoryTest">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.knk_2025_autosallon.HelloApplication" />
       <module name="KNK_2025_AutoSallon" />
@@ -111,32 +96,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PunetoretRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.PunetoretRepositoryTest" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RezervimetRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.RezervimetRepositoryTest" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.test" />
       <module name="KNK_2025_AutoSallon" />
@@ -152,8 +111,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RezervimetRepositoryTest" />
-        <item itemvalue="Application.PunetoretRepositoryTest" />
         <item itemvalue="Application.KlientRepositoryTest" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.HelloApplication" />

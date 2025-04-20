@@ -54,12 +54,12 @@ public class GaranciaRepository extends BaseRepository<Garancia, CreateGaranciaD
             params.add(garanciaDto.getDataMbarimit());
         }
         if(params.isEmpty()){
-            return getById(garanciaDto.getGid());
+            return getById(garanciaDto.getId());
         }
 
         query.setLength(query.length() - 2);
         query.append(" WHERE ID = ?");
-        params.add(garanciaDto.getGid());
+        params.add(garanciaDto.getId());
 
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query.toString());
@@ -68,7 +68,7 @@ public class GaranciaRepository extends BaseRepository<Garancia, CreateGaranciaD
             }
             int updated=pstm.executeUpdate();
             if(updated == 1) {
-                return this.getById(garanciaDto.getGid());
+                return this.getById(garanciaDto.getId());
             }
         }catch(SQLException e) {
             e.printStackTrace();
