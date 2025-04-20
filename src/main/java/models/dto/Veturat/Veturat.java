@@ -27,15 +27,15 @@ public class Veturat {
     }
 
     public static Veturat getInstance(ResultSet resultSet)throws SQLException{
-        int veturaId = resultSet.getInt("VeturaDd");
-        String prodhuesi = resultSet.getString("Prodhuesi");
-        String modeli = resultSet.getString("Modeli");
-        int vitiPordhimit = resultSet.getInt("Viti i prodhimit");
-        String ngjyra = resultSet.getString("Ngjyra");
-        double cmimi = resultSet.getDouble("Cmimi");
-        String gjendja = resultSet.getString("Gjendja");
-        int kilometrazha = resultSet.getInt("Kilometrazha");
-        String tipiKarburant = resultSet.getString("Tipi i karburantit");
+        int veturaId = resultSet.getInt("id");
+        String prodhuesi = resultSet.getString("prodhuesi");
+        String modeli = resultSet.getString("modeli");
+        int vitiPordhimit = resultSet.getInt("viti_prodhimit");
+        String ngjyra = resultSet.getString("ngjyra");
+        double cmimi = resultSet.getDouble("cmimi");
+        String gjendja = resultSet.getString("gjendja");
+        int kilometrazha = resultSet.getInt("kilometrazha");
+        String tipiKarburant = resultSet.getString("tipi_karburant");
         return new Veturat(veturaId,prodhuesi,modeli,vitiPordhimit,ngjyra,cmimi,gjendja,kilometrazha,tipiKarburant);
     }
 

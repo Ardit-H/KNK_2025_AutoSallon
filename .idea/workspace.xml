@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i GaranciaDrivesRepositoryTest">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i TestDrivesRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +30,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;711373e8-4a25-43d9-a88d-666b1d812423&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "711373e8-4a25-43d9-a88d-666b1d812423"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -282,23 +284,7 @@
       <option name="project" value="LOCAL" />
       <updated>1745058402814</updated>
     </task>
-    <task id="LOCAL-00021" summary="Krijimi i TestDrivesRepositoryTest">
-      <option name="closed" value="true" />
-      <created>1745058754002</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1745058754002</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Krijimi i GaranciaDrivesRepositoryTest">
-      <option name="closed" value="true" />
-      <created>1745058997259</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1745058997259</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,8 +318,6 @@
     <MESSAGE value="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto" />
     <MESSAGE value="Krijimi i klasave: TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto, plotsimi i ketyre klasave" />
     <MESSAGE value="Krijimi i TestDrivesRepository" />
-    <MESSAGE value="Krijimi i TestDrivesRepositoryTest" />
-    <MESSAGE value="Krijimi i GaranciaDrivesRepositoryTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i GaranciaDrivesRepositoryTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i TestDrivesRepository" />
   </component>
 </project>

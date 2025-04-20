@@ -14,7 +14,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class VleresimetRepositoryTest {
+public class
+VleresimetRepositoryTest {
     public static void main(String[] args) {
         Connection connection = DBConnector.getConnection();
         try {
