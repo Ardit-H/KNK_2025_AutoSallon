@@ -1,14 +1,14 @@
 package models.dto.Veturat;
 
 public class UpdateVeturatDto {
-    private int veturaId;
+    private int id;
     private String gjendja;
 
-    public UpdateVeturatDto(int veturaId){
-        this.veturaId = veturaId;
+    public UpdateVeturatDto(int id){
+        this.id = id;
     }
-    public int getVeturaid(){
-        return veturaId;
+    public int getId(){
+        return id;
     }
 
     public String getGjendja() {

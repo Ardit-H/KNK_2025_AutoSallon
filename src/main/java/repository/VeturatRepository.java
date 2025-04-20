@@ -57,12 +57,12 @@ public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto,
 
 
         if(params.isEmpty()){
-            return getById(veturatDto.getVeturaid());
+            return getById(veturatDto.getId());
         }
 
         query.setLength(query.length() - 2);
         query.append(" WHERE ID = ?");
-        params.add(veturatDto.getVeturaid());
+        params.add(veturatDto.getId());
 
         try{
             PreparedStatement pstm=this.connection.prepareStatement(query.toString());
@@ -71,7 +71,7 @@ public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto,
             }
             int updated=pstm.executeUpdate();
             if(updated == 1) {
-                return this.getById(veturatDto.getVeturaid());
+                return this.getById(veturatDto.getId());
             }
         }catch(SQLException e) {
             e.printStackTrace();
