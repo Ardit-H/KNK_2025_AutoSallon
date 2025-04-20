@@ -4,15 +4,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Garancia {
-    private int gid;
+    private int id;
     private int vid;
     private int kid;
     private String llojiGarancise;
     private String dataFillimit;
     private String dataMbarimit;
 
-    public Garancia(int gid, int vid, int kid, String llojiGarancise, String dataFillimit, String dataMbarimit) {
-        this.gid = gid;
+    public Garancia(int id, int vid, int kid, String llojiGarancise, String dataFillimit, String dataMbarimit) {
+        this.id = id;
         this.vid = vid;
         this.kid = kid;
         this.llojiGarancise = llojiGarancise;
@@ -21,17 +21,17 @@ public class Garancia {
     }
 
     public static Garancia getInstance(ResultSet resultSet)throws SQLException{
-        int gid = resultSet.getInt("id");
-        int vid = resultSet.getInt("Vetura ID");
-        int kid = resultSet.getInt("Klienti ID");
+        int id = resultSet.getInt("id");
+        int vid = resultSet.getInt("vid");
+        int kid = resultSet.getInt("kid");
         String llojiGarancise = resultSet.getString("Lloji i garancise");
         String dataFillimit = resultSet.getString("Data e fillimit");
         String dataMbarimit = resultSet.getString("Data e mbarimit");
-        return new Garancia(gid,vid,kid,llojiGarancise,dataFillimit,dataMbarimit);
+        return new Garancia(id,vid,kid,llojiGarancise,dataFillimit,dataMbarimit);
     }
 
-    public int getGid() {
-        return gid;
+    public int getId() {
+        return id;
     }
 
     public int getVid() {

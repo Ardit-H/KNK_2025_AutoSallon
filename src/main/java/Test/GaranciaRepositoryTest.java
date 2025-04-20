@@ -18,7 +18,7 @@ public class GaranciaRepositoryTest {
             ResultSet result=stm.executeQuery(query);
             if(result.next()){
                 Garancia garancia=Garancia.getInstance(result);
-                System.out.println("Id: "+garancia.getGid());
+                System.out.println("Id: "+garancia.getId());
                 System.out.println("Lloji i garancise: "+garancia.getLlojiGarancise());
             }
         }catch (SQLException e){
@@ -27,7 +27,7 @@ public class GaranciaRepositoryTest {
         GaranciaRepository garanciaRepository = new GaranciaRepository();
         Garancia garancia = garanciaRepository.getById(3);
         if(garancia!=null){
-            System.out.println("id "+garancia.getGid());
+            System.out.println("id "+garancia.getId());
         }
 //        garanciaRepository.delete(3);
     }
