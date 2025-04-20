@@ -18,7 +18,7 @@ CREATE TABLE sherbimet(
 
 /*
 CREATE TABLE Veturat (
-    vetura_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
     modeli VARCHAR(50) NOT NULL,
     viti_prodhimit INT CHECK (viti_prodhimit >= 1900 AND viti_prodhimit <= EXTRACT(YEAR FROM CURRENT_DATE)),
@@ -83,15 +83,13 @@ CREATE TABLE Vleresimet(
 CREATE TABLE testDrives (
     id SERIAL PRIMARY KEY,
     kid INT NOT NULL,
-    vetura_id INT NOT NULL,
+    vid INT NOT NULL,
     status VARCHAR(50),
     feedback TEXT,
     duration INT,
     location VARCHAR(255),
-    CONSTRAINT fk_klient FOREIGN KEY (kid)
-        REFERENCES Klientet(kid) ON DELETE CASCADE,
-    CONSTRAINT fk_vetura FOREIGN KEY (vetura_id)
-        REFERENCES Veturat(vetura_id) ON DELETE CASCADE
+    FOREIGN KEY (kid) REFERENCES Klientet(id) ON DELETE CASCADE,
+    FOREIGN KEY (vid) REFERENCES Veturat(id) ON DELETE CASCADE
 );
 */
 /*
@@ -102,3 +100,18 @@ CREATE TABLE rezervimet (
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
 );*/
+/*
+CREATE TABLE Garancia (
+    id SERIAL PRIMARY KEY,
+    vid INTEGER,
+    kid INTEGER,
+    lloji_garancise VARCHAR(40),
+    data_fillimit DATE,
+    data_mbarimit DATE,
+    FOREIGN KEY (vid) REFERENCES veturat(id),
+    FOREIGN KEY (kid) REFERENCES klientet(id),
+    CHECK (
+        lloji_garancise IN ('6 muaj', '1 vit', '2 vite')
+    )
+);
+*/

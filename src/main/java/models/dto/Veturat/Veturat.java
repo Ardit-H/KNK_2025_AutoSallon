@@ -27,7 +27,7 @@ public class Veturat {
     }
 
     public static Veturat getInstance(ResultSet resultSet)throws SQLException{
-        int veturaId = resultSet.getInt("id");
+        int veturaId = resultSet.getInt("vetura_id");
         String prodhuesi = resultSet.getString("prodhuesi");
         String modeli = resultSet.getString("modeli");
         int vitiPordhimit = resultSet.getInt("viti_prodhimit");
