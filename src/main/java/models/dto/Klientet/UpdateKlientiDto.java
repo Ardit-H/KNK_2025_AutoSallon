@@ -1,6 +1,7 @@
 package models.dto.Klientet;
 
-public class UpdateKlientiDto {
+public class
+UpdateKlientiDto {
     private int id;
     private String email;
     private String adresa;

@@ -21,7 +21,7 @@ public class UpdatePunetoretDto {
         return id;
     }
 
-    public void setPunetorId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 

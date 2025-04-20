@@ -18,7 +18,7 @@ public class RezervimetRepositoryTest {
 
         try {
             Statement stm = connection.createStatement();
-            String query = "SELECT * FROM rezervimet ORDER BY rezervimi_id DESC LIMIT 1";
+            String query = "SELECT * FROM rezervimet ORDER BY id DESC LIMIT 1";
             ResultSet result = stm.executeQuery(query);
 
             if (result.next()) {

@@ -14,10 +14,10 @@ public class PunetoretRepositoryTest {
     public static void main(String[] args) {
         Connection connection = DBConnector.getConnection();
 
-        
+
         try {
             Statement stm = connection.createStatement();
-            String query = "SELECT * FROM punetoret ORDER BY punetor_id DESC LIMIT 1";
+            String query = "SELECT * FROM punetoret ORDER BY id DESC LIMIT 1";
             ResultSet result = stm.executeQuery(query);
 
             if (result.next()) {
@@ -45,7 +45,7 @@ public class PunetoretRepositoryTest {
 
         // Përditëso një punëtor
         UpdatePunetoretDto update = new UpdatePunetoretDto();
-        update.setPunetorId(1);
+        update.setId(1);
         update.setPaga(750.0);
         update.setPozita("Menaxher");
         punetoretRepository.update(update);

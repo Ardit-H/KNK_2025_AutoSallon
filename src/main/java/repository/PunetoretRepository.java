@@ -71,7 +71,7 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
 
 
         query.setLength(query.length() - 2);
-        query.append(" WHERE PUNETOR_ID = ?");
+        query.append(" WHERE ID = ?");
         params.add(dto.getId());
 
         try {
