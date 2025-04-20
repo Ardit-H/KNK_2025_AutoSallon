@@ -24,7 +24,7 @@ CREATE TABLE Veturat (
     viti_prodhimit INT CHECK (viti_prodhimit >= 1900 AND viti_prodhimit <= EXTRACT(YEAR FROM CURRENT_DATE)),
     ngjyra VARCHAR(30),
     cmimi DECIMAL(10,2) CHECK (cmimi >= 0),
-    gjendja VARCHAR(20) CHECK (gjendja IN ('E re', 'E përdorur')),
+    gjendja VARCHAR(20) CHECK (gjendja IN ('E re', 'E perdorur')),
     kilometrazha INT CHECK (kilometrazha >= 0),
     tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
 );
