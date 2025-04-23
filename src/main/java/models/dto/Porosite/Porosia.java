@@ -19,11 +19,11 @@ public class Porosia {
     }
 
     public static Porosia getInstance(ResultSet rs)throws SQLException {
-        int porosiaId = rs.getInt("porosi_id");
+        int porosiaId = rs.getInt("id");
         int kid = rs.getInt("kid");
-        int veturaId = rs.getInt("vetura_id");
-        double cmimiOfruar = rs.getDouble("cmimi_ofruar");
-        String statusiPorosise = rs.getString("statusi_porosise");
+        int veturaId = rs.getInt("veturaId");
+        double cmimiOfruar = rs.getDouble("cmimiOfruar");
+        String statusiPorosise = rs.getString("statusiPorosise");
 
        return new Porosia(porosiaId, kid, veturaId, cmimiOfruar, statusiPorosise);
     }
