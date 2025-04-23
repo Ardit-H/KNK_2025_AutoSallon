@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klientet.fxml dhe KlientetController">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshim ne klasen KlientetController, per ta mundesuar update te cilave do kolona">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pamja/Sherbimet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Pamja/sherbimet.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pamja/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pamja/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pamja/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pamja/Klientet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -61,10 +62,12 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Klientet.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
+    "Application.Sherbimet.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -76,22 +79,9 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Pamja.Main" />
+  <component name="RunManager" selected="Application.Sherbimet">
+    <configuration name="Klientet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pamja.Klientet" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
@@ -142,13 +132,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sherbimet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pamja.Sherbimet" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Pamja.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Sherbimet" />
+        <item itemvalue="Application.Klientet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
         <item itemvalue="Application.PerdoruesitRepositoryTest" />
-        <item itemvalue="Application.KlientRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745417640801</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ndryshim ne klasen KlientetController, per ta mundesuar update te cilave do kolona">
+      <option name="closed" value="true" />
+      <created>1745431157936</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1745431157936</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -335,6 +346,7 @@
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i klientet.fxml dhe KlientetController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klientet.fxml dhe KlientetController" />
+    <MESSAGE value="Ndryshim ne klasen KlientetController, per ta mundesuar update te cilave do kolona" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshim ne klasen KlientetController, per ta mundesuar update te cilave do kolona" />
   </component>
 </project>
