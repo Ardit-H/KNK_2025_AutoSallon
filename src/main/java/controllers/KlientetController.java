@@ -72,10 +72,12 @@ public class KlientetController {
 
             UpdateKlientiDto dto = new UpdateKlientiDto();
             dto.setId(selectedId);
-            dto.setEmail(txtEmail.getText());
-            dto.setNrtelefonit(txtNrTelefonit.getText());
-            dto.setAdresa(txtAdresa.getText());
-
+            if (!txtEmail.getText().trim().isEmpty())
+                dto.setEmail(txtEmail.getText().trim());
+            if (!txtNrTelefonit.getText().trim().isEmpty())
+                dto.setNrtelefonit(txtNrTelefonit.getText().trim());
+            if (!txtAdresa.getText().trim().isEmpty())
+                dto.setAdresa(txtAdresa.getText().trim());
             klientetService.update(dto);
             messageLabel.setText("Klienti u përditësua me sukses.");
             loadKlientet();
