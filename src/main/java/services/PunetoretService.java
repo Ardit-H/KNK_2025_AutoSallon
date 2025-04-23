@@ -88,4 +88,9 @@ public class PunetoretService {
         }
         return punetoretRepository.delete(id);
     }
+
+    public List<Punetoret> getAll() {
+        return punetoretRepository.getAll();
+    }
+
 }

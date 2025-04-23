@@ -16,15 +16,15 @@ public class PunetoretServiceTest {
             Punetoret punetori = punetoretService.getById(2);
             System.out.println(punetori.getEmri());
 
-            /*List<Punetoret> list = punetoretService.getAll();
+            List<Punetoret> list = punetoretService.getAll();
             for (Punetoret p : list) {
-                System.out.println("ID: " + p.getPid());
+                System.out.println("ID: " + p.getPunetor_id());
                 System.out.println("Emri: " + p.getEmri());
                 System.out.println("Mbiemri: " + p.getMbiemri());
                 System.out.println("Email: " + p.getEmail());
                 System.out.println("Paga: " + p.getPaga());
                 System.out.println("------------------------");
-            }*/
+            }
 
             //CreatePunetoretDto create = new CreatePunetoretDto("Arta", "Mehmeti", "arta@gmail.com", 450.0);
             //punetoretService.create(create);
