@@ -67,6 +67,15 @@ CREATE TABLE Shitjet (
 	   FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id),
 	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(punetor_id)
 );
+
+CREATE TABLE faturat(
+    id SERIAL PRIMARY KEY,
+    shitje_id INTEGER  NOT NULL,
+    dataFatures DATE NOT NULL,
+    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0);
+    llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
+    FOREIGN KEY (shitje_id) REFERENCES Shitjet(shitje_id) ON DELETE CASCADE
+);
 CREATE TABLE Vleresimet(
     vleresimi_id SERIAL PRIMARY KEY,
     klienti_id INT NOT NULL,
