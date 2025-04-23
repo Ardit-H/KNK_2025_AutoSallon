@@ -6,12 +6,7 @@ public class UpdatePagesaDto {
     private double shuma;
     private String dataPageses;
 
-    public UpdatePagesaDto(int pagesaId, String metodaPageses, double shuma, String dataPageses) {
-        this.pagesaId = pagesaId;
-        this.metodaPageses = metodaPageses;
-        this.shuma = shuma;
-        this.dataPageses = dataPageses;
-    }
+    public UpdatePagesaDto() {}
 
     public int getPagesaId() {
         return pagesaId;
