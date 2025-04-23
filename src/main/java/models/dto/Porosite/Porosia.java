@@ -1,4 +1,4 @@
-package models;
+package models.dto.Porosite;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

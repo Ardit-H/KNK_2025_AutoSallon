@@ -42,7 +42,7 @@ abstract class BaseRepository<Model,CreateModelDto,UpdateModelDto> {
         }
         return models;
     }
-    boolean delete(int id){
+    public boolean delete(int id){
         String query = "DELETE FROM " + this.tableName + " WHERE ID = ?";
         try{
             PreparedStatement pstm =

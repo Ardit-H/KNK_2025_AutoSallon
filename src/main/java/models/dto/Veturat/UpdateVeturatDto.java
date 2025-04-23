@@ -1,31 +1,22 @@
 package models.dto.Veturat;
 
 public class UpdateVeturatDto {
-    private int veturaid;
-    private String ngjyra;
-    private double cmimi;
+    private int id;
+    private String gjendja;
 
-    public UpdateVeturatDto(int veturaid){
-        this.veturaid = veturaid;
+    public UpdateVeturatDto(int id){
+        this.id = id;
     }
-    public int getVeturaid(){
-        return veturaid;
-    }
-
-    public String getNgjyra() {
-        return ngjyra;
+    public int getId(){
+        return id;
     }
 
-    public void setNgjyra(String ngjyra) {
-        this.ngjyra = ngjyra;
+    public String getGjendja() {
+        return gjendja;
     }
 
-    public double getCmimi() {
-        return cmimi;
-    }
-
-    public void setCmimi(double cmimi) {
-        this.cmimi = cmimi;
+    public void setGjendja(String gjendja) {
+        this.gjendja = gjendja;
     }
 }
 

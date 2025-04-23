@@ -1,9 +1,10 @@
 package models.dto.Sherbimet;
 
 public class UpdateSherbimetDto {
+    private int id;
     private String emri;
     private String pershkrimi;
-    private double çmimi;
+    private Double çmimi;
 
     public void setEmri(String emri) {
         this.emri = emri;
@@ -13,8 +14,16 @@ public class UpdateSherbimetDto {
         this.pershkrimi = pershkrimi;
     }
 
-    public void setÇmimi(double çmimi) {
+    public void setÇmimi(Double çmimi) {
         this.çmimi = çmimi;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getEmri() {
@@ -25,7 +34,7 @@ public class UpdateSherbimetDto {
         return pershkrimi;
     }
 
-    public double getÇmimi() {
+    public Double getÇmimi() {
         return çmimi;
     }
 }
