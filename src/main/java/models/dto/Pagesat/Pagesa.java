@@ -10,7 +10,7 @@ public class Pagesa {
     private double shuma;
     private String dataPageses;
 
-    public Pagesa(int pagesaId, int porosiaId, String metodaPageses, double shuma, String dataPageses) {
+    private Pagesa(int pagesaId, int porosiaId, String metodaPageses, double shuma, String dataPageses) {
         this.pagesaId = pagesaId;
         this.porosiaId = porosiaId;
         this.metodaPageses = metodaPageses;

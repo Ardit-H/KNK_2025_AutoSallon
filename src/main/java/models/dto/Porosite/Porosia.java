@@ -10,7 +10,7 @@ public class Porosia {
     private double cmimiOfruar;
     private String statusiPorosise;
 
-    public Porosia(int porosiaId, int kid, int veturaId, double cmimiOfruar, String statusiPorosise) {
+    private Porosia(int porosiaId, int kid, int veturaId, double cmimiOfruar, String statusiPorosise) {
         this.porosiaId = porosiaId;
         this.kid = kid;
         this.veturaId = veturaId;

@@ -5,11 +5,7 @@ public class UpdatePorosiaDto {
     private double cmimiOfruar;
     private String statusiPorosise;
 
-    public UpdatePorosiaDto(int porosiaId, double cmimiOfruar, String statusiPorosise) {
-        this.porosiaId = porosiaId;
-        this.cmimiOfruar = cmimiOfruar;
-        this.statusiPorosise = statusiPorosise;
-    }
+    public UpdatePorosiaDto() {}
 
     public int getPorosiaId() {
         return porosiaId;
