@@ -14,11 +14,11 @@ public class VeturatRepositoryTest {
         Connection connection = DBConnector.getConnection();
         try {
             Statement stm=connection.createStatement();
-            String query="SELECT * FROM VETURAT ORDER BY VETURA_ID DESC LIMIT 1";
+            String query="SELECT * FROM VETURAT ORDER BY ID DESC LIMIT 1";
             ResultSet result=stm.executeQuery(query);
             if(result.next()){
                 Veturat vetura=Veturat.getInstance(result);
-//                System.out.println("Id: "+vetura.getVeturaid());
+                System.out.println("Id: "+vetura.getId());
                 System.out.println("Modeli: "+vetura.getModeli());
             }
         }catch (SQLException e){
@@ -27,7 +27,7 @@ public class VeturatRepositoryTest {
         VeturatRepository veturatRepository = new VeturatRepository();
         Veturat vetura = veturatRepository.getById(15);
         if(vetura!=null){
-            System.out.println("id "+vetura.getVeturaId());
+            System.out.println("id "+vetura.getId());
         }
 //        veturatRepository.delete(3);
     }

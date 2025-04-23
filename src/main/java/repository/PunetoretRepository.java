@@ -1,104 +1,91 @@
 package repository;
+
 import Database.DBConnector;
 import models.dto.Punetoret.Punetoret;
 import models.dto.Punetoret.CreatePunetoretDto;
-import models.dto.Punetoret.UpdatePunetoretEmailDto;
-import java.sql.Statement;
-
+import models.dto.Punetoret.UpdatePunetoretDto;
 
 import java.sql.*;
 import java.util.ArrayList;
-public class PunetoretRepository {
-private Connection connection;
-public PunetoretRepository(){
-    this.connection = DBConnector.getConnection();
-}
-public ArrayList<Punetoret> getPunetoret(){
-    ArrayList<Punetoret> punetoret = new ArrayList<>();
-    String query = "SELECT * FROM PUNETORET";
-    try{
-        Statement statement = this.connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(query);
-        while(resultSet.next()){
-            punetoret.add(Punetoret.getInstance(resultSet));
-        }
-    }catch (SQLException e){
-        e.printStackTrace();
-    }
-    return punetoret;
-}
 
-public Punetoret getById(int id){
-    String query = "SELECT * FROM PUNETORET WHERE PUNETOR_ID = ?";
-    try{
-        PreparedStatement statement = this.connection.prepareStatement(query);
-        ResultSet result = statement.executeQuery();
-        if(result.next()){
-            return Punetoret.getInstance(result);
-        }
-    }catch (SQLException e){
-        e.printStackTrace();
+public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetoretDto, UpdatePunetoretDto> {
+    public PunetoretRepository() {
+        super("punetoret");
     }
-    return null;
-}
 
-public Punetoret create(CreatePunetoretDto punetoretDto){
-    String query = """
-    INSERT INTO PUNETORET (emri, mbiemri, pozita, telefoni, email, paga, dataPunesimit )
-    VALUES (?,?,?,?,?,?,?)""";
-    try{
-        PreparedStatement pstm = this.connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-        pstm.setString(1, punetoretDto.getEmri());
-        pstm.setString(2, punetoretDto.getMbiemri());
-        pstm.setString(3, punetoretDto.getPozita());
-        pstm.setString(4, punetoretDto.getTelefoni());
-        pstm.setString(5, punetoretDto.getEmail());
-        pstm.setDouble(6, punetoretDto.getPaga());
-        pstm.setString(7, punetoretDto.getDataPunesimit());
-        pstm.execute();
-        ResultSet resultSet = pstm.getGeneratedKeys();
-        if(resultSet.next()){
-            int id = resultSet.getInt(1);
-            return this.getById(id);
-        }
-    }catch (SQLException e){
-        e.printStackTrace();
+    @Override
+    public Punetoret fromResultSet(ResultSet result) throws SQLException {
+        return Punetoret.getInstance(result);
     }
-return null;
-}
 
-public Punetoret updateEmail(UpdatePunetoretEmailDto punetoretDto){
-    String query = """
-            UPDATE PUNETORET
-            SET EMAIL = ?
-            WHERE PUNETORETID = ?
-            """;
-    try{
-        PreparedStatement pstm = this.connection.prepareStatement(query);
-        pstm.setString(1, punetoretDto.getEmail());
-        pstm.setInt(2, punetoretDto.getId());
-        int updateRecords = pstm.executeUpdate();
-        if(updateRecords==1){
-            return this.getById(punetoretDto.getId());
+    @Override
+    public Punetoret create(CreatePunetoretDto dto) {
+        String query = """
+            INSERT INTO PUNETORET (emri, mbiemri, pozita, telefoni, email, paga, dataPunesimit)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """;
+        try {
+            PreparedStatement pstm = this.connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            pstm.setString(1, dto.getEmri());
+            pstm.setString(2, dto.getMbiemri());
+            pstm.setString(3, dto.getPozita());
+            pstm.setString(4, dto.getTelefoni());
+            pstm.setString(5, dto.getEmail());
+            pstm.setDouble(6, dto.getPaga());
+            pstm.setString(7, dto.getDataPunesimit());
+            pstm.execute();
+
+            ResultSet rs = pstm.getGeneratedKeys();
+            if (rs.next()) {
+                return this.getById(rs.getInt(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Punetoret update(UpdatePunetoretDto dto) {
+        StringBuilder query = new StringBuilder("UPDATE PUNETORET SET ");
+        ArrayList<Object> params = new ArrayList<>();
+
+        if (dto.getEmail() != null) {
+            query.append("EMAIL = ?, ");
+            params.add(dto.getEmail());
         }
 
-    }catch (SQLException e){
-        e.printStackTrace();
-    }
-    return null;
-}
-public boolean delete(int id){
-    String query = """
-            DELETE FROM PUNETORET
-            WHERE PUNETORETID = ?
-            """;
-    try{ PreparedStatement pstm = this.connection.prepareStatement(query);
-        pstm.setInt(1, id);
-        return pstm.executeUpdate()==1;
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-   return false;
-}
+        if (dto.getPozita() != null) {
+            query.append("POZITA = ?, ");
+            params.add(dto.getPozita());
+        }
 
+        if (dto.getPaga() != 0) {
+            query.append("PAGA = ?, ");
+            params.add(dto.getPaga());
+        }
+
+        if (params.isEmpty()) {
+            return getById(dto.getId());
+        }
+
+
+        query.setLength(query.length() - 2);
+        query.append(" WHERE ID = ?");
+        params.add(dto.getId());
+
+        try {
+            PreparedStatement pstm = this.connection.prepareStatement(query.toString());
+            for (int i = 0; i < params.size(); i++) {
+                pstm.setObject(i + 1, params.get(i));
+            }
+            int updated = pstm.executeUpdate();
+            if (updated == 1) {
+                return getById(dto.getId());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

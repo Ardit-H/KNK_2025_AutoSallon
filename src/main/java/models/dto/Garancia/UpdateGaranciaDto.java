@@ -1,20 +1,18 @@
 package models.dto.Garancia;
 
-import models.dto.Klientet.UpdateKlientiDto;
-
 public class UpdateGaranciaDto {
-    private int gid;
+    private int id;
     private String dataFillimit;
     private String dataMbarimit;
 
     public UpdateGaranciaDto(){}
 
-    public int getGid() {
-        return gid;
+    public int getId() {
+        return id;
     }
 
-    public void setGid(int gid) {
-        this.gid = gid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDataFillimit() {
