@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/PunetoretController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/PerdoruesitController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/PunetoretServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/PunetoretServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PunetoretRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PunetoretRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PunetoretService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PunetoretService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
