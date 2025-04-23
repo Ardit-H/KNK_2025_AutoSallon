@@ -32,13 +32,13 @@ CREATE TABLE Veturat (
 
 /*
 CREATE TABLE Porosite (
-    porosi_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     kid INTEGER NOT NULL,
-    vetura_id INTEGER NOT NULL,
-    cmimi_ofruar NUMERIC(10, 2) CHECK (cmimi_ofruar > 0),
-    statusi_porosise VARCHAR(20) CHECK (statusi_porosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
-    FOREIGN KEY (kid) REFERENCES Klientet(kid),
-    FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id)
+    veturaId INTEGER NOT NULL,
+    cmimiOfruar NUMERIC(10, 2) CHECK (cmimi_ofruar > 0),
+    statusiPorosise VARCHAR(20) CHECK (statusi_porosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
+    FOREIGN KEY (kid) REFERENCES Klientet(id),
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id)
 );
 */
 
@@ -119,4 +119,23 @@ CREATE TABLE Riparimet (
     statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
     kostoRiparimit NUMERIC(10,2) NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES veturat(id)
+);
+
+CREATE TABLE Pagesat (
+    id SERIAL PRIMARY KEY,
+    porosiaId INTEGER NOT NULL,
+    metodaPageses VARCHAR(20) CHECK (metodaPageses IN ('KARTELE', 'CASH', 'KREDI', 'TJETER')),
+    shuma NUMERIC(10, 2) NOT NULL CHECK (shuma >= 0),
+    dataPageses DATE DEFAULT CURRENT_DATE,
+    FOREIGN KEY (porosiaId) REFERENCES Porosite(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Ofertat (
+    id SERIAL PRIMARY KEY,
+    veturaId INT NOT NULL,
+    zbritja DECIMAL(5,2) CHECK (Zbritja >= 0),
+    cmimiFinal DECIMAL(10,2) CHECK (CmimiFinal >= 0),
+    dataFillimit DATE NOT NULL,
+    dataMbarimit DATE NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
 );
