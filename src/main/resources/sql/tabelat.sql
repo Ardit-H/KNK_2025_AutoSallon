@@ -18,7 +18,7 @@ CREATE TABLE sherbimet(
 
 /*
 CREATE TABLE Veturat (
-    vetura_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
     modeli VARCHAR(50) NOT NULL,
     viti_prodhimit INT CHECK (viti_prodhimit >= 1900 AND viti_prodhimit <= EXTRACT(YEAR FROM CURRENT_DATE)),
@@ -111,3 +111,12 @@ CREATE TABLE rezervimet (
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
 );*/
+
+CREATE TABLE Riparimet (
+    id SERIAL PRIMARY KEY,
+    veturaId INTEGER NOT NULL,
+    pershkrimi TEXT NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
+    kostoRiparimit NUMERIC(10,2) NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES veturat(id)
+);
