@@ -30,7 +30,7 @@ public class PagesaRepository extends BaseRepository <Pagesa, CreatePagesaDto, U
             pstm.setString(2, pagesaDto.getMetodaPageses());
             pstm.setDouble(3, pagesaDto.getShuma());
             pstm.setString(4, pagesaDto.getDataPageses());
-            pstm.executeUpdate();
+            pstm.execute();
 
             ResultSet rs = pstm.getGeneratedKeys();
             if(rs.next()){

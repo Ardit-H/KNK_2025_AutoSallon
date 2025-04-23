@@ -1,13 +1,13 @@
 package models.dto.Ofertat;
 
 public class UpdateOfertaDto {
-    private double ofertaId;
+    private int ofertaId;
     private double zbritja;
     private double cmimiFinal;
     private String dataFillimit;
     private String dataMbarimit;
 
-    public double getOfertaId() {
+    public int getOfertaId() {
         return ofertaId;
     }
 
@@ -27,7 +27,7 @@ public class UpdateOfertaDto {
         return dataMbarimit;
     }
 
-    public void setOfertaId(double ofertaId) {
+    public void setOfertaId(int ofertaId) {
         this.ofertaId = ofertaId;
     }
 
