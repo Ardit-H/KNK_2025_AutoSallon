@@ -7,18 +7,18 @@ public class CreatePunetoretDto {
     private String telefoni;
     private String email;
     private double paga;
-    private String data_punesimit;
+    private String dataPunesimit;
 
 
 
-    public CreatePunetoretDto (String emri,String mbiemri,String pozita, String telefoni, String email, double paga, String data_punesimit){
+    public CreatePunetoretDto (String emri,String mbiemri,String pozita, String telefoni, String email, double paga, String dataPunesimit){
         this.emri = emri;
         this.mbiemri = mbiemri;
         this.pozita = pozita;
         this.telefoni = telefoni;
         this.email = email;
         this.paga = paga;
-        this.data_punesimit = data_punesimit;
+        this.dataPunesimit = dataPunesimit;
     }
 
 
@@ -42,8 +42,12 @@ public class CreatePunetoretDto {
         return email;
     }
 
-    public String getData_punesimit(){
-        return data_punesimit;
+    public double getPaga(){
+        return paga;
+    }
+
+    public String getDataPunesimit(){
+        return dataPunesimit;
     }
 
     public void setEmri(){
@@ -71,7 +75,7 @@ public class CreatePunetoretDto {
     }
 
     public void setData_punesimit(){
-        this.data_punesimit = data_punesimit;
+        this.dataPunesimit = dataPunesimit;
     }
 }
 

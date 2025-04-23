@@ -1,42 +1,42 @@
-package models;
+package models.dto.Punetoret;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class Punetoret {
-    private int punetor_id;
+    private int punetorId;
     private String emri;
     private String mbiemri;
     private String pozita;
     private String telefoni;
     private String email;
     private double paga;
-    private String data_punesimit;
+    private String dataPunesimit;
 
-    private Punetoret(int punetor_id, String emri, String mbiemri, String pozita, String telefoni,String email, double paga, String data_punesimit){
-        this.punetor_id = punetor_id;
+    private Punetoret(int punetorId, String emri, String mbiemri, String pozita, String telefoni,String email, double paga, String dataPunesimit){
+        this.punetorId = punetorId;
         this.emri = emri;
         this.mbiemri = mbiemri;
         this.pozita = pozita;
         this.telefoni = telefoni;
         this.email = email;
         this.paga = paga;
-        this.data_punesimit = data_punesimit;
+        this.dataPunesimit = dataPunesimit;
     }
 
     public static Punetoret getInstance(ResultSet resultSet) throws SQLException{
-        int punetor_id = resultSet.getInt("punetor_id");
+        int punetorId = resultSet.getInt("punetor_id");
         String emri = resultSet.getString("emri");
         String mbiemri = resultSet.getString("mbiemri");
         String pozita = resultSet.getString("pozita");
         String telefoni = resultSet.getString("telefoni");
         String email = resultSet.getString("email");
         double paga = resultSet.getDouble("paga");
-        String data_punesimit = resultSet.getString("data_punesimit");
-        return new Punetoret(punetor_id, emri, mbiemri, pozita, telefoni, email, paga, data_punesimit);
+        String dataPunesimit = resultSet.getString("data_punesimit");
+        return new Punetoret(punetorId, emri, mbiemri, pozita, telefoni, email, paga, dataPunesimit);
 
     }
 
     public int getPunetor_id(){
-        return punetor_id;
+        return punetorId;
     }
 
     public String getEmri(){
@@ -63,6 +63,6 @@ public class Punetoret {
     }
 
     public String getData_punesimit(){
-        return data_punesimit;
+        return dataPunesimit;
     }
 }

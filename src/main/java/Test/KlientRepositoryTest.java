@@ -1,9 +1,8 @@
 package Test;
 
 import Database.DBConnector;
-import models.Klientet;
-import models.dto.Klientet.CreateKlientetDto;
-import models.dto.Klientet.UpdateKlientetEmailDto;
+import models.dto.Klientet.Klientet;
+import models.dto.Klientet.UpdateKlientiDto;
 import repository.KlientetRepository;
 
 import java.sql.Connection;
@@ -16,7 +15,7 @@ public class KlientRepositoryTest {
         Connection connection = DBConnector.getConnection();
         try {
             Statement stm=connection.createStatement();
-            String query="SELECT * FROM KLIENTET ORDER BY KID DESC LIMIT 1";
+            String query="SELECT * FROM KLIENTET ORDER BY ID DESC LIMIT 1";
             ResultSet result=stm.executeQuery(query);
             if(result.next()){
                 Klientet klient=Klientet.getInstance(result);
@@ -31,7 +30,14 @@ public class KlientRepositoryTest {
         if(klient!=null){
             System.out.println("id "+klient.getKid());
         }
-        klientetRepository.delete(5);
+//        klientetRepository.delete(5);
+          UpdateKlientiDto update=new UpdateKlientiDto();
+          update.setId(2);
+          update.setEmail("afrim.gashi@gmail.com");
+//          update.setAdresa("Podujeve");
+//        update.setNrtelefonit("044198652");
+        klientetRepository.update(update);
+
 //        klientetRepository.delete(4);
 //        CreateKlientetDto klientDto=new CreateKlientetDto("Studenti 2", "Haliti","student2@gmail.com","+38349834896","Prishtine");
 //        klientetRepository.create(klientDto);
