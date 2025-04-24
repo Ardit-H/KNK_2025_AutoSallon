@@ -1,20 +1,20 @@
 package models.dto.Pagesat;
 
 public class CreatePagesaDto {
-    private int pororsiaId;
+    private int porosiaId;
     private String metodaPageses;
     private double shuma;
     private String dataPageses;
 
-    public CreatePagesaDto(int pororsiaId, String metodaPageses, double shuma, String dataPageses) {
-        this.pororsiaId = pororsiaId;
+    public CreatePagesaDto(int porosiaId, String metodaPageses, double shuma, String dataPageses) {
+        this.porosiaId = porosiaId;
         this.metodaPageses = metodaPageses;
         this.shuma = shuma;
         this.dataPageses = dataPageses;
     }
 
-    public int getPororsiaId() {
-        return pororsiaId;
+    public int getPorosiaId() {
+        return porosiaId;
     }
 
     public String getMetodaPageses() {
@@ -29,8 +29,8 @@ public class CreatePagesaDto {
         return shuma;
     }
 
-    public void setPororsiaId(int pororsiaId) {
-        this.pororsiaId = pororsiaId;
+    public void setPorosiaId(int porosiaId) {
+        this.porosiaId = porosiaId;
     }
 
     public void setMetodaPageses(String metodaPageses) {
