@@ -38,6 +38,9 @@ public class PorosiaService {
         if(createPorosiaDto.getVeturaId() < 0){
             throw new IllegalArgumentException("ID e vetures nuk duhet te jete numer negativ!");
         }
+        if(eshteShiturVetura(createPorosiaDto.getVeturaId())){
+            throw new IllegalArgumentException("Vetura ka porosine e kompletuar dhe eshte shitur!");
+        }
         if(createPorosiaDto.getCmimiOfruar() < 0){
             throw new IllegalArgumentException("Cmimi i ofruar nuk duhet te jete numer negativ!");
         }
@@ -47,6 +50,16 @@ public class PorosiaService {
         }
     }
 
+    public boolean eshteShiturVetura(int veturaId) {
+        List<Porosia> gjithaPorosite = this.porositeRepository.getAll();
+
+        for (Porosia p : gjithaPorosite) {
+            if (p.getVeturaId() == veturaId && p.getStatusiPorosise().equals("E kompletuar")) {
+                return true;
+            }
+        }
+        return false;
+    }
     public boolean isValidStatusiPorosise(String statusi){
         switch(statusi){
             case "Ne pritje":
@@ -75,7 +88,7 @@ public class PorosiaService {
 
         if(updatePorosiaDto.getCmimiOfruar() != 0){
             if(updatePorosiaDto.getCmimiOfruar() < 0){
-                throw new IllegalArgumentException("Cmimi ofruar nuk guxon te jete numer negativ!");
+                throw new IllegalArgumentException("Cmimi ofruar nuk mund te jete numer negativ!");
             }
             changes = true;
         }
