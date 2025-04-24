@@ -35,8 +35,8 @@ CREATE TABLE Porosite (
     id SERIAL PRIMARY KEY,
     kid INTEGER NOT NULL,
     veturaId INTEGER NOT NULL,
-    cmimiOfruar NUMERIC(10, 2) CHECK (cmimi_ofruar > 0),
-    statusiPorosise VARCHAR(20) CHECK (statusi_porosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
+    cmimiOfruar NUMERIC(10, 2) CHECK (cmimiOfruar > 0),
+    statusiPorosise VARCHAR(20) CHECK (statusiPorosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
     FOREIGN KEY (kid) REFERENCES Klientet(id),
     FOREIGN KEY (veturaId) REFERENCES Veturat(id)
 );
@@ -133,8 +133,8 @@ CREATE TABLE Pagesat (
 CREATE TABLE Ofertat (
     id SERIAL PRIMARY KEY,
     veturaId INT NOT NULL,
-    zbritja DECIMAL(5,2) CHECK (Zbritja >= 0),
-    cmimiFinal DECIMAL(10,2) CHECK (CmimiFinal >= 0),
+    zbritja DECIMAL(5,2) CHECK (zbritja >= 0),
+    cmimiFinal DECIMAL(10,2) CHECK (cmimiFinal >= 0),
     dataFillimit DATE NOT NULL,
     dataMbarimit DATE NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
