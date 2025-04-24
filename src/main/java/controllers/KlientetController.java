@@ -41,7 +41,7 @@ public class KlientetController {
         txtKlientetList.getItems().clear();
         List<Klientet> klientet = klientetService.getAll();
         for (Klientet k : klientet) {
-            txtKlientetList.getItems().add(k.getKid() + " - " + k.getEmri() + " " + k.getMbiemri());
+            txtKlientetList.getItems().add(k.getKid() + " - " + k.getEmri() + " " + k.getMbiemri()+" - "+k.getEmail() + " - " + k.getNrtelefonit()+" - "+k.getAdresa());
         }
     }
 
