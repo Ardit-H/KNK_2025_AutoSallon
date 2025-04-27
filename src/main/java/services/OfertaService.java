@@ -6,7 +6,9 @@ import models.dto.Ofertat.UpdateOfertaDto;
 import models.dto.Porosite.Porosia;
 import repository.OfertaRepository;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
@@ -50,15 +52,18 @@ public class OfertaService {
             throw new IllegalArgumentException("CmimiFinal nuk te jete negative!");
         }
         try {
-            LocalDate dataFillimit = LocalDate.parse(ofertaCreateDto.getDataFillimit());
-            LocalDate dataMbarimit = LocalDate.parse(ofertaCreateDto.getDataMbarimit());
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+            LocalDate dataFillimit = LocalDate.parse(ofertaCreateDto.getDataFillimit(), formatter);
+            LocalDate dataMbarimit = LocalDate.parse(ofertaCreateDto.getDataMbarimit(), formatter);
+
+
 
             if (dataMbarimit.isBefore(dataFillimit)) {
                 throw new IllegalArgumentException("Data e mbarimit nuk mund te jete para dates se fillimit.");
             }
 
         } catch (DateTimeParseException e) {
-            throw new IllegalArgumentException("Format i pavlefshem i dates! Perdor formatin yyyy-MM-dd.");
+            throw new IllegalArgumentException("Format i pavlefshem i dates! Perdor formatin yyyy/MM/dd.");
         }
 
     }
@@ -88,7 +93,8 @@ public class OfertaService {
         }
         if(updateOfertaDto.getDataFillimit() != null){
             try {
-                LocalDate.parse(updateOfertaDto.getDataFillimit().trim());
+                DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+                LocalDate.parse(updateOfertaDto.getDataFillimit().trim(), formater);
                 hasChanges = true;
             } catch (DateTimeParseException e) {
                 throw new IllegalArgumentException("Data e fillimit te ofertes nuk eshte ne formatin e sakte yyyy-MM-dd.");
@@ -96,7 +102,8 @@ public class OfertaService {
         }
         if(updateOfertaDto.getDataMbarimit() != null){
             try {
-                LocalDate.parse(updateOfertaDto.getDataMbarimit().trim());
+                DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+                LocalDate.parse(updateOfertaDto.getDataMbarimit().trim(), formater);
                 hasChanges = true;
             } catch (DateTimeParseException e) {
                 throw new IllegalArgumentException("Data e mbarimit te ofertes nuk eshte ne formatin e sakte yyyy-MM-dd.");
