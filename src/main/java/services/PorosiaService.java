@@ -5,6 +5,7 @@ import models.dto.Porosite.Porosia;
 import models.dto.Porosite.UpdatePorosiaDto;
 import repository.PorositeRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PorosiaService {
@@ -21,6 +22,7 @@ public class PorosiaService {
         Porosia porosia = this.porositeRepository.getById(id);
 
         if(porosia == null){
+            System.out.println("Vlera e porosise: " + porosia);
             throw new Exception("Porosia me ID:" + id + " nuk ekziston!");
         }
         return porosia;
@@ -45,8 +47,8 @@ public class PorosiaService {
             throw new IllegalArgumentException("Cmimi i ofruar nuk duhet te jete numer negativ!");
         }
         if(!isValidStatusiPorosise(createPorosiaDto.getStatusiPorosise())){
-            throw new IllegalArgumentException("Statusi i porosise duhet te jete njera prej opsioneve:\n 1. Ne pritje\n " +
-                    " 2. Ne proces \n 3. E kompletuar \n4. E refuzuar");
+            throw new IllegalArgumentException("Statusi i porosise duhet te jete njera prej opsioneve:\n 1. Ne pritje\n" +
+                    " 2. Ne proces\n 3. E kompletuar\n 4. E refuzuar");
         }
     }
 
@@ -66,7 +68,7 @@ public class PorosiaService {
                 return true;
             case "Ne proces":
                 return true;
-            case "E kompletura":
+            case "E kompletuar":
                 return true;
             case "E refuzuar":
                 return true;
