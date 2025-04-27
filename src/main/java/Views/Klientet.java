@@ -1,17 +1,16 @@
-package Pamja;
+package Views;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Punetoret extends Application{
+public class Klientet extends Application {
     public void start(Stage stage) throws Exception{
-        FXMLLoader fxmlLoader = new FXMLLoader(
-                Punetoret.class.getResource("punetoret.fxml")
+        FXMLLoader fxmlLoader=new FXMLLoader(
+                Klientet.class.getResource("/Views/klientet.fxml")
         );
-
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+        Scene scene=new Scene(fxmlLoader.load(),700,500);
         stage.setScene(scene);
         stage.show();
     }

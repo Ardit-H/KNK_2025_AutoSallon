@@ -1,15 +1,14 @@
 
 package controllers;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
+import models.dto.Sherbimet.Sherbimet;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
 import models.dto.Vleresimet.Vleresimet;
@@ -23,25 +22,34 @@ public class VleresimetController {
     @FXML
     private TextField klientiid;
     @FXML private TextField veturaId;
-    @FXML private TextField vleresimi;
+    @FXML private Spinner vleresimi;
     @FXML private TextField komenti;
     @FXML private Label messageLabel;
-    @FXML private ListView<String> txtVleresimetList;
+    @FXML private TableView<Vleresimet> VleresimetTableView;
+    @FXML private TableColumn<Vleresimet, String> colKlienti;
+    @FXML private TableColumn<Vleresimet, String> colVetura;
+    @FXML private TableColumn<Vleresimet, String> colVleresimi;
+    @FXML private TableColumn<Vleresimet, String> colKomenti;
+    @FXML private TableColumn<Vleresimet, String> colDataVleresimit;
     @FXML private VleresimetService vleresimetService;
     public VleresimetController(){
         this.vleresimetService=new VleresimetService();
     }
     @FXML
     public void initialize() {
+        colKlienti.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getKlientiId())));
+        colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVeturaId())));
+        colVleresimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVleresimi())));
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1);
+        vleresimi.setValueFactory(valueFactory);
+        colKomenti.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKomenti()));
+        colDataVleresimit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDataVleresimit()));
         loadVleresimet();
     }
 
     private void loadVleresimet() {
-        txtVleresimetList.getItems().clear();
         List<Vleresimet> vleresimet = vleresimetService.getAll();
-        for (Vleresimet v : vleresimet) {
-            txtVleresimetList.getItems().add(v.getVleresimiId()+ " - " + v.getKlientiId()+ " - " + v.getVeturaId()+" - "+v.getVleresimi() + " - " + v.getKomenti()+" - "+v.getDataVleresimit());
-        }
+        VleresimetTableView.getItems().setAll(vleresimet);
     }
 
     @FXML
@@ -49,7 +57,7 @@ public class VleresimetController {
         try {
             int klientiIdInt = Integer.parseInt(klientiid.getText().trim());
             int veturaIdInt = Integer.parseInt(veturaId.getText().trim());
-            int vleresimiInt = Integer.parseInt(vleresimi.getText().trim());
+            int vleresimiInt = (Integer) vleresimi.getValue();
 
             CreateVleresimetDto dto = new CreateVleresimetDto(
                     klientiIdInt,
@@ -80,8 +88,8 @@ public class VleresimetController {
                 veturaIdInt = Integer.parseInt(veturaId.getText().trim());
             }
             Integer vleresimiInt = null;
-            if (!vleresimi.getText().trim().isEmpty()) {
-                vleresimiInt = Integer.parseInt(vleresimi.getText().trim());
+            if (vleresimi.getValue() != null) {
+                vleresimiInt = (Integer) vleresimi.getValue();
             }
             UpdateVleresimetDto dto = new UpdateVleresimetDto();
             dto.setVleresimiId(selectedId);
@@ -119,18 +127,18 @@ public class VleresimetController {
     }
 
     private int getSelectedVleresimId() {
-        String selected = txtVleresimetList.getSelectionModel().getSelectedItem();
+        Vleresimet selected = VleresimetTableView.getSelectionModel().getSelectedItem();
         if (selected == null) {
             messageLabel.setText("Zgjidh një vlerësim në listë.");
             return -1;
         }
-        return Integer.parseInt(selected.split(" - ")[0]);
+        return selected.getVleresimiId();
     }
 
     private void clearForm() {
         klientiid.clear();
         veturaId.clear();
-        vleresimi.clear();
+        vleresimi.getValueFactory().setValue(1);
         komenti.clear();
 
     }
