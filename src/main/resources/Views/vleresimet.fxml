@@ -2,10 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -31,21 +33,29 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="130.0" prefWidth="600.0">
+      <AnchorPane prefHeight="147.0" prefWidth="600.0">
          <children>
-            <TextField fx:id="veturaId" layoutX="86.0" layoutY="73.0" promptText="Id e vetures" />
-            <TextField fx:id="vleresimi" layoutX="275.0" layoutY="34.0" promptText="Vleresimi (1-5)" />
-            <TextField fx:id="komenti" layoutX="275.0" layoutY="73.0" promptText="Komenti" />
-            <Button layoutX="195.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#handleCreateVleresim" text="Shto" />
-            <TextField fx:id="klientiid" layoutX="86.0" layoutY="34.0" promptText="Id e klientit" />
-            <Button layoutX="257.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#handleDeleteVleresim" text="Fshi" />
-            <Button layoutX="309.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#handleUpdateVleresim" text="Perditeso" />
+            <TextField fx:id="veturaId" layoutX="107.0" layoutY="66.0" promptText="Id e vetures" />
+            <TextField fx:id="komenti" layoutX="285.0" layoutY="66.0" promptText="Komenti" />
+            <Button layoutX="191.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#handleCreateVleresim" text="Shto" />
+            <TextField fx:id="klientiid" layoutX="107.0" layoutY="28.0" promptText="Id e klientit" />
+            <Button layoutX="248.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#handleDeleteVleresim" text="Fshi" />
+            <Button layoutX="300.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#handleUpdateVleresim" text="Perditeso" />
+            <Spinner fx:id="vleresimi" layoutX="285.0" layoutY="28.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="369.0" prefWidth="600.0">
          <children>
-            <ListView fx:id="txtVleresimetList" layoutX="14.0" layoutY="21.0" prefHeight="192.0" prefWidth="566.0" />
             <Label fx:id="messageLabel" layoutX="21.0" text="MessageLabel" />
+            <TableView fx:id="VleresimetTableView" layoutX="13.0" layoutY="25.0" prefHeight="190.0" prefWidth="574.0">
+              <columns>
+                <TableColumn fx:id="colKlienti" prefWidth="75.0" text="Klienti" />
+                <TableColumn fx:id="colVetura" prefWidth="75.0" text="Vetura" />
+                  <TableColumn fx:id="colVleresimi" prefWidth="75.0" text="Vlerësimi" />
+                  <TableColumn fx:id="colKomenti" prefWidth="241.59991455078125" text="Komenti" />
+                  <TableColumn fx:id="colDataVleresimit" prefWidth="107.20001220703125" text="Data e vlerësimit" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>

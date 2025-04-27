@@ -1,4 +1,4 @@
-package Pamja;
+package Views;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class Vleresimet extends Application {
     public void start(Stage stage) throws Exception{
         FXMLLoader fxmlLoader=new FXMLLoader(
-                Vleresimet.class.getResource("vleresimet.fxml")
+                Vleresimet.class.getResource("/Views/vleresimet.fxml")
         );
         Scene scene=new Scene(fxmlLoader.load(),700,500);
         stage.setScene(scene);

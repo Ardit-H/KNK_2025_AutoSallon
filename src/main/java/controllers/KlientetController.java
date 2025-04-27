@@ -1,9 +1,8 @@
 package controllers;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
@@ -23,8 +22,14 @@ public class KlientetController {
     private TextField txtNrTelefonit;
     @FXML
     private TextField txtAdresa;
-    @FXML
-    private ListView<String> txtKlientetList;
+
+    @FXML private TableView<Klientet> KlientetTableView;
+    @FXML private TableColumn<Klientet, String> colEmri;
+    @FXML private TableColumn<Klientet, String> colMbiemri;
+    @FXML private TableColumn<Klientet, String> colEmail;
+    @FXML private TableColumn<Klientet, String> colNrTelefonit;
+    @FXML private TableColumn<Klientet, String> colAdresa;
+    @FXML private TableColumn<Klientet, String> colDataRegjistrimit;
 
     @FXML
     private Label messageLabel;
@@ -33,17 +38,21 @@ public class KlientetController {
         this.klientetService=new KlientetService();
     }
     @FXML
+
     public void initialize() {
+        colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
+        colMbiemri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMbiemri()));
+        colEmail.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmail()));
+        colNrTelefonit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNrtelefonit()));
+        colAdresa.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAdresa()));
+        colDataRegjistrimit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getData_regjistrimit()));
         loadKlientet();
     }
 
-    private void loadKlientet() {
-        txtKlientetList.getItems().clear();
-        List<Klientet> klientet = klientetService.getAll();
-        for (Klientet k : klientet) {
-            txtKlientetList.getItems().add(k.getKid() + " - " + k.getEmri() + " " + k.getMbiemri()+" - "+k.getEmail() + " - " + k.getNrtelefonit()+" - "+k.getAdresa());
-        }
-    }
+private void loadKlientet() {
+    List<Klientet> klientet = klientetService.getAll();
+    KlientetTableView.getItems().setAll(klientet);
+}
 
     @FXML
     private void handleCreate(MouseEvent event) {
@@ -101,18 +110,17 @@ public class KlientetController {
     }
 
     private int getSelectedKlientId() {
-        String selected = txtKlientetList.getSelectionModel().getSelectedItem();
+        Klientet selected = KlientetTableView.getSelectionModel().getSelectedItem();
         if (selected == null) {
-            messageLabel.setText("Zgjidh një klient në listë.");
+            messageLabel.setText("Zgjidh një klient në tabelë.");
             return -1;
         }
-        return Integer.parseInt(selected.split(" - ")[0]);
+        return selected.getKid();
     }
-
     private void clearForm() {
         txtEmri.clear();
         txtMbiemri.clear();
-        txtAdresa.clear();
+        txtEmail.clear();
         txtNrTelefonit.clear();
         txtAdresa.clear();
     }
