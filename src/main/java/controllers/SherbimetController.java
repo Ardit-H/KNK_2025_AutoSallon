@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -17,12 +18,15 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class SherbimetController {
-    @FXML
-    private TextField txtEmri;
+    @FXML private TextField txtEmri;
     @FXML private TextField txtPershkrimi;
     @FXML private TextField txtCmimi;
-    @FXML private ListView<String> txtSherbimetList;
     @FXML private Label messageLabel;
+    @FXML private TableView<Sherbimet> SherbimetTableView;
+    @FXML private TableColumn<Sherbimet, String> colEmri;
+    @FXML private TableColumn<Sherbimet, String> colPershkrimi;
+    @FXML private TableColumn<Sherbimet, String> colCmimi;
+
 
     private SherbimetService sherbimetService;
     public SherbimetController(){
@@ -31,16 +35,16 @@ public class SherbimetController {
 
     @FXML
     public void initialize() {
+        colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
+        colPershkrimi.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getPershkrimi()));
+        colCmimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getÇmimi())));
         loadSherbimet();
     }
 
 
     private void loadSherbimet() {
-        txtSherbimetList.getItems().clear();
         List<Sherbimet> sherbimet = sherbimetService.getAll();
-        for (Sherbimet s : sherbimet) {
-            txtSherbimetList.getItems().add(s.getId() + " - " + s.getEmri() + " - " + s.getPershkrimi()+" - "+s.getÇmimi());
-        }
+        SherbimetTableView.getItems().setAll(sherbimet);
     }
 
     @FXML
@@ -94,12 +98,12 @@ public class SherbimetController {
     }
 
     private int getSelectedSherbimId() {
-        String selected = txtSherbimetList.getSelectionModel().getSelectedItem();
+        Sherbimet selected = SherbimetTableView.getSelectionModel().getSelectedItem();
         if (selected == null) {
             messageLabel.setText("Zgjidh një sherbim në listë.");
             return -1;
         }
-        return Integer.parseInt(selected.split(" - ")[0]);
+        return selected.getId();
     }
 
     private void clearForm() {

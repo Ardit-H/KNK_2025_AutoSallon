@@ -1,16 +1,14 @@
-package Pamja;
+package Views;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.FileWriter;
-
-public class Perdoruesit extends Application {
+public class Rezervimet extends Application {
     public void start(Stage stage) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader(
-                Perdoruesit.class.getResource("perdoruesit.fxml")
+                Rezervimet.class.getResource("rezervimet.fxml")
         );
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 500);

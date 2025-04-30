@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/PorosiaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +66,6 @@
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
-    "Application.Punetoret.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
     "Application.Vleresimet.executor": "Run",
@@ -67,7 +73,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -75,9 +81,9 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Punetoret">
-    <configuration name="PerdoruesitRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.PerdoruesitRepositoryTest" />
+  <component name="RunManager" selected="Application.Vleresimet">
+    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
@@ -89,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Punetoret" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Pamja.Punetoret" />
+    <configuration name="PerdoruesitRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.PerdoruesitRepositoryTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Pamja.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Punetoret" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
         <item itemvalue="Application.PerdoruesitRepositoryTest" />
+        <item itemvalue="Application.KlientRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

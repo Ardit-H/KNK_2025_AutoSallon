@@ -4,10 +4,10 @@ import models.dto.Pagesat.CreatePagesaDto;
 import models.dto.Pagesat.Pagesa;
 import models.dto.Pagesat.UpdatePagesaDto;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 
@@ -16,6 +16,17 @@ public class PagesaRepository extends BaseRepository <Pagesa, CreatePagesaDto, U
 
     public Pagesa fromResultSet(ResultSet resultSet) throws SQLException {
         return Pagesa.getInstance(resultSet);
+    }
+    public Date data(String data){
+        try {
+            DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+            LocalDate d = LocalDate.parse(data, formater);
+            Date date = Date.valueOf(d);
+            return date;
+        } catch (DateTimeParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public Pagesa create(CreatePagesaDto pagesaDto) {
@@ -29,7 +40,7 @@ public class PagesaRepository extends BaseRepository <Pagesa, CreatePagesaDto, U
             pstm.setInt(1, pagesaDto.getPorosiaId());
             pstm.setString(2, pagesaDto.getMetodaPageses());
             pstm.setDouble(3, pagesaDto.getShuma());
-            pstm.setString(4, pagesaDto.getDataPageses());
+            pstm.setDate(4, data(pagesaDto.getDataPageses()));
             pstm.execute();
 
             ResultSet rs = pstm.getGeneratedKeys();
@@ -50,7 +61,7 @@ public class PagesaRepository extends BaseRepository <Pagesa, CreatePagesaDto, U
         ArrayList<Object> params = new ArrayList<>();
 
         if(pagesaDto.getMetodaPageses() != null){
-            query.append("METODAPAGESE = ?, ");
+            query.append("METODAPAGESES = ?, ");
             params.add(pagesaDto.getMetodaPageses());
         }
         if(pagesaDto.getShuma() != 0){
@@ -59,14 +70,14 @@ public class PagesaRepository extends BaseRepository <Pagesa, CreatePagesaDto, U
         }
         if(pagesaDto.getDataPageses() != null){
             query.append("DATAPAGESES = ?, ");
-            params.add(pagesaDto.getDataPageses());
+            params.add(Date.valueOf(LocalDate.parse(pagesaDto.getDataPageses(), DateTimeFormatter.ofPattern("yyyy/MM/dd"))));
         }
         if(params.isEmpty()){
             return getById(pagesaDto.getPagesaId());
         }
 
         query.setLength(query.length()-2);
-        query.append(" WHERE = ?");
+        query.append(" WHERE ID = ?");
         params.add(pagesaDto.getPagesaId());
 
         try{

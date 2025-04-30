@@ -19,6 +19,10 @@ public class UpdatePorosiaDto {
         return statusiPorosise;
     }
 
+    public void setPorosiaId(int porosiaId) {
+        this.porosiaId = porosiaId;
+    }
+
     public void setCmimiOfruar(double cmimiOfruar) {
         this.cmimiOfruar = cmimiOfruar;
     }
