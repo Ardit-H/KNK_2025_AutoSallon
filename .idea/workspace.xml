@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi klases GaranciaService">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/GaranciaServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatServiceTest.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi klasave: TestDrivesServiceTest, VeturatServiceTest, GaranciaServiceTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -332,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745163407706</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Krijimi klasave: TestDrivesServiceTest, VeturatServiceTest, GaranciaServiceTest">
+      <option name="closed" value="true" />
+      <created>1745164183489</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1745164183489</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,6 +375,7 @@
     <MESSAGE value="Modifikimi i variables id tek tabela Veturat" />
     <MESSAGE value="Krijimi klases TestDrivesService" />
     <MESSAGE value="Krijimi klases GaranciaService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi klases GaranciaService" />
+    <MESSAGE value="Krijimi klasave: TestDrivesServiceTest, VeturatServiceTest, GaranciaServiceTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi klasave: TestDrivesServiceTest, VeturatServiceTest, GaranciaServiceTest" />
   </component>
 </project>
