@@ -7,6 +7,7 @@ import models.dto.Punetoret.UpdatePunetoretDto;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetoretDto, UpdatePunetoretDto> {
     public PunetoretRepository() {
@@ -88,4 +89,8 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
         }
         return null;
     }
+
+
+
+
 }

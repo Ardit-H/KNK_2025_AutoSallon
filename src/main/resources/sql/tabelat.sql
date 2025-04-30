@@ -18,7 +18,7 @@ CREATE TABLE sherbimet(
 
 /*
 CREATE TABLE Veturat (
-    vetura_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
     modeli VARCHAR(50) NOT NULL,
     viti_prodhimit INT CHECK (viti_prodhimit >= 1900 AND viti_prodhimit <= EXTRACT(YEAR FROM CURRENT_DATE)),
@@ -32,13 +32,13 @@ CREATE TABLE Veturat (
 
 /*
 CREATE TABLE Porosite (
-    porosi_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     kid INTEGER NOT NULL,
-    vetura_id INTEGER NOT NULL,
-    cmimi_ofruar NUMERIC(10, 2) CHECK (cmimi_ofruar > 0),
-    statusi_porosise VARCHAR(20) CHECK (statusi_porosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
-    FOREIGN KEY (kid) REFERENCES Klientet(kid),
-    FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id)
+    veturaId INTEGER NOT NULL,
+    cmimiOfruar NUMERIC(10, 2) CHECK (cmimiOfruar > 0),
+    statusiPorosise VARCHAR(20) CHECK (statusiPorosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
+    FOREIGN KEY (kid) REFERENCES Klientet(id),
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id)
 );
 */
 
@@ -66,6 +66,15 @@ CREATE TABLE Shitjet (
 	   FOREIGN KEY (kid) REFERENCES Klientet(kid),
 	   FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id),
 	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(punetor_id)
+);
+
+CREATE TABLE faturat(
+    id SERIAL PRIMARY KEY,
+    shitje_id INTEGER  NOT NULL,
+    dataFatures DATE NOT NULL,
+    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0);
+    llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
+    FOREIGN KEY (shitje_id) REFERENCES Shitjet(shitje_id) ON DELETE CASCADE
 );
 CREATE TABLE Vleresimet(
     vleresimi_id SERIAL PRIMARY KEY,
@@ -102,3 +111,31 @@ CREATE TABLE rezervimet (
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
 );*/
+
+CREATE TABLE Riparimet (
+    id SERIAL PRIMARY KEY,
+    veturaId INTEGER NOT NULL,
+    pershkrimi TEXT NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
+    kostoRiparimit NUMERIC(10,2) NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES veturat(id)
+);
+
+CREATE TABLE Pagesat (
+    id SERIAL PRIMARY KEY,
+    porosiaId INTEGER NOT NULL,
+    metodaPageses VARCHAR(20) CHECK (metodaPageses IN ('KARTELE', 'CASH', 'KREDI', 'TJETER')),
+    shuma NUMERIC(10, 2) NOT NULL CHECK (shuma >= 0),
+    dataPageses DATE DEFAULT CURRENT_DATE,
+    FOREIGN KEY (porosiaId) REFERENCES Porosite(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Ofertat (
+    id SERIAL PRIMARY KEY,
+    veturaId INT NOT NULL,
+    zbritja DECIMAL(5,2) CHECK (zbritja >= 0),
+    cmimiFinal DECIMAL(10,2) CHECK (cmimiFinal >= 0),
+    dataFillimit DATE NOT NULL,
+    dataMbarimit DATE NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
+);
