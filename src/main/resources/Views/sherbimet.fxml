@@ -37,9 +37,9 @@
             <TextField fx:id="txtEmri" layoutX="29.0" layoutY="28.0" promptText="%ServiceName" />
             <TextField fx:id="txtPershkrimi" layoutX="197.0" layoutY="28.0" prefHeight="26.0" prefWidth="177.0" promptText="%Description" />
             <TextField fx:id="txtCmimi" layoutX="394.0" layoutY="28.0" promptText="%Price" />
-            <Button layoutX="197.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_sherbim" />
-            <Button layoutX="252.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_sherbim" />
-            <Button layoutX="338.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_sherbim" />
+            <Button layoutX="197.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_service" />
+            <Button layoutX="252.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_service" />
+            <Button layoutX="338.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_service" />
             <Button layoutX="441.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" text="%language.english" />
             <Button layoutX="503.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" text="%language.albanian" />
          </children>
@@ -54,7 +54,7 @@
               </columns>
             </TableView>
             <Label fx:id="messageLabel" layoutX="61.0" layoutY="192.0" />
-            <Label layoutX="18.0" layoutY="192.0" text="%Comment" />
+            <Label layoutX="18.0" layoutY="192.0" text="%Comment1" />
          </children>
       </AnchorPane>
    </children>

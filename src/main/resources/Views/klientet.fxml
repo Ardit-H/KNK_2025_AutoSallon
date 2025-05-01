@@ -39,9 +39,9 @@
             <TextField fx:id="txtEmail" layoutX="198.0" layoutY="30.0" promptText="%Email" />
             <TextField fx:id="txtNrTelefonit" layoutX="198.0" layoutY="68.0" promptText="%Phone" />
             <TextField fx:id="txtAdresa" layoutX="376.0" layoutY="30.0" prefHeight="26.0" prefWidth="168.0" promptText="%Address" />
-            <Button layoutX="376.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_klient" />
-            <Button layoutX="429.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_klient" />
-            <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_klient" />
+            <Button layoutX="376.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_client" />
+            <Button layoutX="429.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_client" />
+            <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_client" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="270.0" prefWidth="600.0">
@@ -59,7 +59,7 @@
             </TableView>
             <Button layoutX="215.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" text="%language.english" />
             <Button layoutX="290.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" text="%language.albanian" />
-            <Label layoutX="43.0" layoutY="247.0" text="%Comment" />
+            <Label layoutX="43.0" layoutY="247.0" text="%Comment1" />
          </children>
       </AnchorPane>
    </children>
