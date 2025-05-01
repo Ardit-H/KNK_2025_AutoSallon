@@ -24,6 +24,10 @@ public class UpdatePagesaDto {
         return dataPageses;
     }
 
+    public void setPagesaId(int pagesaId) {
+        this.pagesaId = pagesaId;
+    }
+
     public void setMetodaPageses(String metodaPageses) {
         this.metodaPageses = metodaPageses;
     }

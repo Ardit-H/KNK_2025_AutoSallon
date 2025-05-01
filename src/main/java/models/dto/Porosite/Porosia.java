@@ -29,7 +29,7 @@ public class Porosia {
     }
 
     public int getPorosiaId() {
-        return porosiaId;
+        return this.porosiaId;
     }
 
     public int getKid() {

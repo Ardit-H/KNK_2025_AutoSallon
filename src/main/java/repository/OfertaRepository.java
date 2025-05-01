@@ -8,13 +8,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
+import java.sql.Date;
 
 public class OfertaRepository extends BaseRepository <Oferta, CreateOfertaDto, UpdateOfertaDto>{
     public OfertaRepository() {super("ofertat");};
 
     public Oferta fromResultSet(ResultSet rs) throws SQLException {
         return Oferta.getInstance(rs);
+    }
+    public Date data(String data){
+        try {
+            DateTimeFormatter formater = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+            LocalDate d = LocalDate.parse(data, formater);
+            Date date = Date.valueOf(d);
+            return date;
+        } catch (DateTimeParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public Oferta create(CreateOfertaDto ofertaDto) {
@@ -27,8 +42,8 @@ public class OfertaRepository extends BaseRepository <Oferta, CreateOfertaDto, U
             pstm.setInt(1, ofertaDto.getVeturaId());
             pstm.setDouble(2, ofertaDto.getZbritja());
             pstm.setDouble(3, ofertaDto.getCmimiFinal());
-            pstm.setString(4, ofertaDto.getDataFillimit());
-            pstm.setString(5, ofertaDto.getDataMbarimit());
+            pstm.setDate(4, this.data(ofertaDto.getDataFillimit()));
+            pstm.setDate(5, this.data(ofertaDto.getDataMbarimit()));
             pstm.execute();
 
             ResultSet rs = pstm.getGeneratedKeys();
@@ -57,10 +72,11 @@ public class OfertaRepository extends BaseRepository <Oferta, CreateOfertaDto, U
         }
         if(ofertaDto.getDataFillimit() != null){
             query.append("DATAFILLIMIT = ?, ");
+            params.add(Date.valueOf(LocalDate.parse(ofertaDto.getDataFillimit(), DateTimeFormatter.ofPattern("yyyy/MM/dd"))));
         }
         if(ofertaDto.getDataMbarimit() != null){
             query.append("DATAMBARIMIT = ?, ");
-            params.add(ofertaDto.getDataMbarimit());
+            params.add(Date.valueOf(LocalDate.parse(ofertaDto.getDataMbarimit(), DateTimeFormatter.ofPattern("yyyy/MM/dd"))));
         }
 
         query.setLength(query.length() - 2);

@@ -3,17 +3,17 @@ package services;
 import models.dto.Pagesat.CreatePagesaDto;
 import models.dto.Pagesat.Pagesa;
 import models.dto.Pagesat.UpdatePagesaDto;
-import models.dto.Porosite.Porosia;
 import repository.PagesaRepository;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
-public class PagesaServices {
+public class PagesaService {
     private PagesaRepository pagesaRepository;
 
-    public PagesaServices() { this.pagesaRepository = new PagesaRepository(); }
+    public PagesaService() { this.pagesaRepository = new PagesaRepository(); }
     List<Pagesa> getAll(){return this.pagesaRepository.getAll();}
 
     public Pagesa getById(int id){
@@ -39,14 +39,14 @@ public class PagesaServices {
         }
         if(!isValideMetodaPageses(createPagesaDto.getMetodaPageses())){
             throw new IllegalArgumentException("Metoda e pagese eshte njera prej opsioneve:\n" +
-                    "1. KARTELE\n 2. CASH\n 3.KREDI\n 4.TJETER");
+                    " 1. KARTELE\n 2. CASH\n 3. KREDI\n 4. TJETER");
         }
         if(createPagesaDto.getShuma() < 0){
             throw new IllegalArgumentException("Shuma e pagese nuk mund te jete negative");
         }
         if(createPagesaDto.getDataPageses() != null){
             try {
-                LocalDate.parse(createPagesaDto.getDataPageses().trim());
+                LocalDate.parse(createPagesaDto.getDataPageses().trim(), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
             } catch (DateTimeParseException e) {
                 throw new IllegalArgumentException("Data e pagese nuk eshte ne formatin e sakte yyyy-MM-dd.");
             }
@@ -95,7 +95,7 @@ public class PagesaServices {
 
         if(updatePagesaDto.getDataPageses() != null){
                 try {
-                    LocalDate.parse(updatePagesaDto.getDataPageses().trim());
+                    LocalDate.parse(updatePagesaDto.getDataPageses().trim(), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
                     hasChanges = true;
                 } catch (DateTimeParseException e) {
                     throw new IllegalArgumentException("Data e pagese nuk eshte ne formatin e sakte yyyy-MM-dd.");
