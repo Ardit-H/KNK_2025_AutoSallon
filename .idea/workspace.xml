@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PorosiaService.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Klientet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/Klientet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +36,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "1a27c557-b5be-42f9-b474-82829f4c391b"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -65,6 +65,7 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Klientet.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
@@ -73,7 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -81,13 +82,13 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Vleresimet">
-    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
+  <component name="RunManager" selected="Application.Klientet">
+    <configuration name="Klientet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Views.Klientet" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="Views.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Klientet" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
         <item itemvalue="Application.PerdoruesitRepositoryTest" />
-        <item itemvalue="Application.KlientRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

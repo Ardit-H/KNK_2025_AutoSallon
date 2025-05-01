@@ -8,8 +8,11 @@ import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
 import services.KlientetService;
+import services.LanguageManager;
+import services.SceneManager;
 
 import java.util.List;
+import java.util.Locale;
 
 public class KlientetController {
     @FXML
@@ -34,8 +37,10 @@ public class KlientetController {
     @FXML
     private Label messageLabel;
     private KlientetService klientetService;
+    private LanguageManager languageManager;
     public KlientetController(){
         this.klientetService=new KlientetService();
+        this.languageManager=LanguageManager.getInstance();
     }
     @FXML
 
@@ -123,6 +128,16 @@ private void loadKlientet() {
         txtEmail.clear();
         txtNrTelefonit.clear();
         txtAdresa.clear();
+    }
+    @FXML
+    private void handleLanguageEnglishClick()throws Exception{
+        this.languageManager.setLocale(Locale.ENGLISH);
+        SceneManager.reloadScene();
+    }
+    @FXML
+    private void handleLanguageAlbanianClick()throws Exception{
+        this.languageManager.setLocale(new Locale("sq","Kosova"));
+        SceneManager.reloadScene();
     }
 }
 
