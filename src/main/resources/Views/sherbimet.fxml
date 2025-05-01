@@ -34,24 +34,27 @@
       </MenuBar>
       <AnchorPane prefHeight="181.0" prefWidth="600.0">
          <children>
-            <TextField fx:id="txtEmri" layoutX="29.0" layoutY="28.0" promptText="Emri" />
-            <TextField fx:id="txtPershkrimi" layoutX="197.0" layoutY="28.0" prefHeight="26.0" prefWidth="177.0" promptText="Pershkrimi" />
-            <TextField fx:id="txtCmimi" layoutX="394.0" layoutY="28.0" promptText="Cmimi" />
-            <Button layoutX="197.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="Shto" />
-            <Button layoutX="254.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="Përditëso" />
-            <Button layoutX="334.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Fshi" />
+            <TextField fx:id="txtEmri" layoutX="29.0" layoutY="28.0" promptText="%ServiceName" />
+            <TextField fx:id="txtPershkrimi" layoutX="197.0" layoutY="28.0" prefHeight="26.0" prefWidth="177.0" promptText="%Description" />
+            <TextField fx:id="txtCmimi" layoutX="394.0" layoutY="28.0" promptText="%Price" />
+            <Button layoutX="197.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_sherbim" />
+            <Button layoutX="252.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_sherbim" />
+            <Button layoutX="338.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_sherbim" />
+            <Button layoutX="441.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" text="%language.english" />
+            <Button layoutX="503.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" text="%language.albanian" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="312.0" prefWidth="600.0">
          <children>
-            <TableView fx:id="SherbimetTableView" layoutX="18.0" layoutY="4.0" prefHeight="162.0" prefWidth="486.0">
+            <TableView fx:id="SherbimetTableView" layoutX="18.0" layoutY="4.0" prefHeight="161.0" prefWidth="567.0">
               <columns>
-                <TableColumn fx:id="colEmri" prefWidth="133.60003662109375" text="Emri" />
-                <TableColumn fx:id="colPershkrimi" prefWidth="227.199951171875" text="Përshkrimi" />
-                  <TableColumn fx:id="colCmimi" minWidth="0.0" prefWidth="125.60003662109375" text="Çmimi" />
+                <TableColumn fx:id="colEmri" prefWidth="133.60003662109375" text="%ServiceName" />
+                <TableColumn fx:id="colPershkrimi" prefWidth="227.199951171875" text="%Description" />
+                  <TableColumn fx:id="colCmimi" minWidth="0.0" prefWidth="125.60003662109375" text="%Price" />
               </columns>
             </TableView>
-            <Label fx:id="messageLabel" layoutX="18.0" layoutY="188.0" text="Message" />
+            <Label fx:id="messageLabel" layoutX="61.0" layoutY="192.0" />
+            <Label layoutX="18.0" layoutY="192.0" text="%Comment" />
          </children>
       </AnchorPane>
    </children>
