@@ -54,6 +54,23 @@ abstract class BaseRepository<Model,CreateModelDto,UpdateModelDto> {
         }
         return false;
     }
+    public ArrayList<Model> searchWithCustomWhere(String whereClause, Object... params){
+        ArrayList<Model> results = new ArrayList<>();
+        String query = "SELECT * FROM "+this.tableName+" WHERE "+whereClause;
+        try{
+            PreparedStatement stmt=this.connection.prepareStatement(query);
+            for (int i=0; i<params.length; i++) {
+                stmt.setObject(i+1, params[i]);
+            }
+            ResultSet rs=stmt.executeQuery();
+            while (rs.next()) {
+                results.add(this.fromResultSet(rs));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return results;
+    }
 
     abstract Model create(CreateModelDto createDto);
     abstract Model update(UpdateModelDto updateDto);

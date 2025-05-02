@@ -9,17 +9,17 @@ import services.LanguageManager;
 import services.SceneManager;
 import utils.SceneLocator;
 
-public class Klientet extends Application {
+public class Garancia {
     public static Scene scene;
     public void start(Stage stage) throws Exception{
         FXMLLoader fxmlLoader=new FXMLLoader(
-                getClass().getResource(SceneLocator.KLIENTET)
+                getClass().getResource(SceneLocator.GARANCIA)
         );
         LanguageManager languageManager=LanguageManager.getInstance();
         fxmlLoader.setResources(languageManager.getResourceBundle());
         Parent parent=fxmlLoader.load();
         scene=new Scene(parent);
-        SceneManager.initialize(scene,SceneLocator.KLIENTET);
+//        SceneManager.initialize(scene,SceneLocator.GARANCIA);
         stage.setScene(scene);
         stage.show();
     }

@@ -11,10 +11,13 @@ import models.dto.Klientet.UpdateKlientiDto;
 import models.dto.Sherbimet.CreateSherbimetDto;
 import models.dto.Sherbimet.Sherbimet;
 import models.dto.Sherbimet.UpdateSherbimetDto;
+import services.LanguageManager;
+import services.SceneManager;
 import services.SherbimetService;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class SherbimetController {
@@ -29,8 +32,10 @@ public class SherbimetController {
 
 
     private SherbimetService sherbimetService;
+    private LanguageManager languageManager;
     public SherbimetController(){
         this.sherbimetService=new SherbimetService();
+        this.languageManager=LanguageManager.getInstance();
     }
 
     @FXML
@@ -111,44 +116,16 @@ public class SherbimetController {
         txtPershkrimi.clear();
         txtCmimi.clear();
     }
-
-//    @FXML
-//    private void handleUpdate(MouseEvent event) {
-//        Sherbimet selected = tblSherbimet.getSelectionModel().getSelectedItem();
-//        if (selected == null) {
-//            messageLabel.setText("Zgjedh një shërbim për përditësim.");
-//            return;
-//        }
-//
-//        try {
-//            UpdateSherbimetDto dto = new UpdateSherbimetDto();
-//            dto.setId(selected.getId());
-//            if (!txtEmri.getText().isEmpty()) dto.setEmri(txtEmri.getText());
-//            if (!txtPershkrimi.getText().isEmpty()) dto.setPershkrimi(txtPershkrimi.getText());
-//            if (!txtCmimi.getText().isEmpty()) dto.setÇmimi(Double.parseDouble(txtCmimi.getText()));
-//
-//            sherbimetService.update(dto);
-//            messageLabel.setText("Shërbimi u përditësua.");
-//            loadSherbimet();
-//        } catch (Exception e) {
-//            messageLabel.setText("Gabim: " + e.getMessage());
-//        }
-//    }
-//
-//    @FXML
-//    private void handleDelete(MouseEvent event) {
-//        Sherbimet selected = tblSherbimet.getSelectionModel().getSelectedItem();
-//        if (selected == null) {
-//            messageLabel.setText("Zgjedh një shërbim për fshirje.");
-//            return;
-//        }
-//
-//        try {
-//            sherbimetService.delete(selected.getId());
-//            messageLabel.setText("Shërbimi u fshi me sukses.");
-//            loadSherbimet();
-//        } catch (Exception e) {
-//            messageLabel.setText("Gabim: " + e.getMessage());
-//        }
-//    }
+    @FXML
+    private void handleLanguageEnglishClick()throws Exception{
+        loadLanguage(Locale.ENGLISH);
+    }
+    @FXML
+    private void handleLanguageAlbanianClick()throws Exception{
+        loadLanguage(new Locale("sq"));
+    }
+    private void loadLanguage(Locale locale) throws Exception{
+        languageManager.setLocale(locale);
+        SceneManager.reload();
+    }
 }

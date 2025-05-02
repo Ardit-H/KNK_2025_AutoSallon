@@ -19,7 +19,10 @@ public class LanguageManager {
     public void setLocale(Locale locale){
         this.currentLocale=locale;
     }
+    public Locale getLocale(){
+        return this.currentLocale;
+    }
     public ResourceBundle getResourceBundle(){
-        return ResourceBundle.getBundle(BASE_NAME,this.currentLocale);
+        return ResourceBundle.getBundle(BASE_NAME,getLocale());
     }
 }
