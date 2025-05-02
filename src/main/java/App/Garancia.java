@@ -19,7 +19,7 @@ public class Garancia {
         fxmlLoader.setResources(languageManager.getResourceBundle());
         Parent parent=fxmlLoader.load();
         scene=new Scene(parent);
-        SceneManager.initialize(scene,SceneLocator.GARANCIA);
+//        SceneManager.initialize(scene,SceneLocator.GARANCIA);
         stage.setScene(scene);
         stage.show();
     }

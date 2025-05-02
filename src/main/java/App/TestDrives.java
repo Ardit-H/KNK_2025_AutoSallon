@@ -19,7 +19,7 @@ public class TestDrives {
         fxmlLoader.setResources(languageManager.getResourceBundle());
         Parent parent=fxmlLoader.load();
         scene=new Scene(parent);
-        SceneManager.initialize(scene,SceneLocator.TESTDRIVES);
+//        SceneManager.initialize(scene,SceneLocator.TESTDRIVES);
         stage.setScene(scene);
         stage.show();
     }
