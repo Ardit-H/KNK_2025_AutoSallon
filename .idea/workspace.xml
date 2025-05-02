@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i MbulesatController">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/FeedbackController.java" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i kodit per testDrives tek FeedbackController" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -346,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746215412381</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Shtimi i kodit per testDrives tek FeedbackController">
+      <option name="closed" value="true" />
+      <created>1746216148635</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746216148635</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -372,6 +377,7 @@
     <MESSAGE value="Shtimi i SceneLocator.java dhe SceneManager.java" />
     <MESSAGE value="Krijimi i VeturatController" />
     <MESSAGE value="Krijimi i MbulesatController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i MbulesatController" />
+    <MESSAGE value="Shtimi i kodit per testDrives tek FeedbackController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i kodit per testDrives tek FeedbackController" />
   </component>
 </project>
