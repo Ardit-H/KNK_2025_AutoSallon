@@ -83,18 +83,8 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
         return null;
     }
     public List<Klientet> searchByFullName(String fullName) {
-        String sql = "SELECT * FROM klientet WHERE LOWER(CONCAT(emri, ' ', mbiemri)) LIKE ?";
-        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setString(1, "%" + fullName.toLowerCase() + "%");
-            ResultSet rs = stmt.executeQuery();
-            List<Klientet> result = new ArrayList<>();
-            while (rs.next()) {
-                result.add(Klientet.getInstance(rs));
-            }
-            return result;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return Collections.emptyList();
+        String where = "LOWER(CONCAT(emri, ' ', mbiemri)) LIKE ?";
+        String searchValue = "%" + fullName.toLowerCase() + "%";
+        return searchWithCustomWhere(where, searchValue);
     }
 }
