@@ -106,4 +106,7 @@ public class KlientetService {
         }
         return klientetRepository.delete(id);
     }
+    public List<Klientet> kerkoKlientetMeEmriPlote(String emriPlote) {
+        return klientetRepository.searchByFullName(emriPlote);
+    }
 }
