@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/PorosiaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -61,36 +61,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Klientet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PerdoruesitRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PunetoretServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RezervimetServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Sherbimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Views.Vleresimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Vleresimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.KlientRepositoryTest.executor": "Run",
+    "Application.PerdoruesitRepositoryTest.executor": "Run",
+    "Application.PunetoretServiceTest.executor": "Run",
+    "Application.RezervimetServiceTest.executor": "Run",
+    "Application.Vleresimet.executor": "Run",
+    "Application.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RunManager" selected="Application.Klientet">
-    <configuration name="Klientet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Views.Klientet" />
+}]]></component>
+  <component name="RunManager" selected="Application.Vleresimet">
+    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Views.*" />
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PerdoruesitRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.PerdoruesitRepositoryTest" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,25 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sherbimet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Views.Sherbimet" />
+    <configuration name="RezervimetServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.RezervimetServiceTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Views.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Views.Vleresimet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Views.Vleresimet" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Views.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Klientet" />
-        <item itemvalue="Application.Views.Vleresimet" />
-        <item itemvalue="Application.Sherbimet" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
+        <item itemvalue="Application.RezervimetServiceTest" />
+        <item itemvalue="Application.PerdoruesitRepositoryTest" />
+        <item itemvalue="Application.KlientRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -321,31 +318,7 @@
       <option name="project" value="LOCAL" />
       <updated>1745420397652</updated>
     </task>
-    <task id="LOCAL-00020" summary="Rregullimi i ndryshimit te gjuhes tek Klientet">
-      <option name="closed" value="true" />
-      <created>1746122361536</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1746122361537</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Shtimi i butonave per ndryshimin e gjuhes tek sherbimet.fxml dhe rregullimi i tyre">
-      <option name="closed" value="true" />
-      <created>1746130890306</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1746130890306</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Shtimi i butonave per ndryshimin e gjuhes tek Vleresimet.fxml dhe rregullimi i tyre">
-      <option name="closed" value="true" />
-      <created>1746136086879</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1746136086879</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -367,9 +340,6 @@
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
-    <MESSAGE value="Rregullimi i ndryshimit te gjuhes tek Klientet" />
-    <MESSAGE value="Shtimi i butonave per ndryshimin e gjuhes tek sherbimet.fxml dhe rregullimi i tyre" />
-    <MESSAGE value="Shtimi i butonave per ndryshimin e gjuhes tek Vleresimet.fxml dhe rregullimi i tyre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i butonave per ndryshimin e gjuhes tek Vleresimet.fxml dhe rregullimi i tyre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i tabeles faturat" />
   </component>
 </project>
