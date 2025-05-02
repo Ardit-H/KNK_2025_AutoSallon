@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i VeturatController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Klientet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Perdoruesit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Perdoruesit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Punetoret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Punetoret.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Rezervimet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Rezervimet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Sherbimet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Vleresimet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LanguageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i kodit per testDrives tek FeedbackController" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,13 +54,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.Main.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
     "Application.Klientet.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
-    "Application.Rezervimet.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
     "Application.Sherbimet.executor": "Run",
     "Application.Vleresimet.executor": "Run",
@@ -84,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -92,22 +74,9 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.App.Main">
-    <configuration name="App.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Views.Main" />
+  <component name="RunManager" selected="Application.Vleresimet">
+    <configuration name="Klientet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Views.Klientet" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
@@ -119,12 +88,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Rezervimet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Views.Rezervimet" />
+    <configuration name="PunetoretServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.PunetoretServiceTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Views.*" />
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RezervimetServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.RezervimetServiceTest" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Rezervimet" />
-        <item itemvalue="Application.Sherbimet" />
         <item itemvalue="Application.Vleresimet" />
+        <item itemvalue="Application.Sherbimet" />
+        <item itemvalue="Application.Klientet" />
+        <item itemvalue="Application.PunetoretServiceTest" />
+        <item itemvalue="Application.RezervimetServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -353,7 +335,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746214688117</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Krijimi i MbulesatController">
+      <option name="closed" value="true" />
+      <created>1746215412381</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746215412381</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Shtimi i kodit per testDrives tek FeedbackController">
+      <option name="closed" value="true" />
+      <created>1746216148635</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746216148635</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -378,6 +376,8 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Shtimi i SceneLocator.java dhe SceneManager.java" />
     <MESSAGE value="Krijimi i VeturatController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i VeturatController" />
+    <MESSAGE value="Krijimi i MbulesatController" />
+    <MESSAGE value="Shtimi i kodit per testDrives tek FeedbackController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i kodit per testDrives tek FeedbackController" />
   </component>
 </project>
