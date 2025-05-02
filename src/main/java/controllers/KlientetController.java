@@ -1,6 +1,7 @@
 package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
@@ -25,6 +26,8 @@ public class KlientetController {
     private TextField txtNrTelefonit;
     @FXML
     private TextField txtAdresa;
+    @FXML
+    private TextField searchField;
 
     @FXML private TableView<Klientet> KlientetTableView;
     @FXML private TableColumn<Klientet, String> colEmri;
@@ -38,13 +41,21 @@ public class KlientetController {
     private Label messageLabel;
     private KlientetService klientetService;
     private LanguageManager languageManager;
+
     public KlientetController(){
         this.klientetService=new KlientetService();
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML
-
     public void initialize() {
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null || newValue.trim().isEmpty()) {
+                KlientetTableView.setItems(FXCollections.observableArrayList(klientetService.getAll()));
+            } else {
+                List<Klientet> filtruar = klientetService.kerkoKlientetMeEmriPlote(newValue);
+                KlientetTableView.setItems(FXCollections.observableArrayList(filtruar));
+            }
+        });
         colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
         colMbiemri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMbiemri()));
         colEmail.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmail()));

@@ -60,6 +60,7 @@
             <Button layoutX="215.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" text="%language.english" />
             <Button layoutX="290.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" text="%language.albanian" />
             <Label layoutX="43.0" layoutY="247.0" text="%Comment1" />
+            <TextField fx:id="searchField" layoutX="27.0" layoutY="1.0" promptText="%Search" />
          </children>
       </AnchorPane>
    </children>
