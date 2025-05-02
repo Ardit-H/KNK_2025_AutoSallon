@@ -8,9 +8,12 @@ import javafx.scene.input.MouseEvent;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
 import models.dto.Vleresimet.Vleresimet;
+import services.LanguageManager;
+import services.SceneManager;
 import services.VleresimetService;
 
 import java.util.List;
+import java.util.Locale;
 
 public class VleresimetController {
 
@@ -27,8 +30,10 @@ public class VleresimetController {
     @FXML private TableColumn<Vleresimet, String> colKomenti;
     @FXML private TableColumn<Vleresimet, String> colDataVleresimit;
     @FXML private VleresimetService vleresimetService;
+    private LanguageManager languageManager;
     public VleresimetController(){
         this.vleresimetService=new VleresimetService();
+        this.languageManager=LanguageManager.getInstance();
     }
     @FXML
     public void initialize() {
@@ -136,6 +141,18 @@ public class VleresimetController {
         vleresimi.getValueFactory().setValue(1);
         komenti.clear();
 
+    }
+    @FXML
+    private void handleLanguageEnglishClick()throws Exception{
+        loadLanguage(Locale.ENGLISH);
+    }
+    @FXML
+    private void handleLanguageAlbanianClick()throws Exception{
+        loadLanguage(new Locale("sq"));
+    }
+    private void loadLanguage(Locale locale) throws Exception{
+        languageManager.setLocale(locale);
+        SceneManager.reload();
     }
 }
 

@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i VeturatController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/MbulesatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Klientet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Perdoruesit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Perdoruesit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Punetoret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Punetoret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Rezervimet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Rezervimet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Sherbimet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/Vleresimet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LanguageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +70,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.Main.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
     "Application.Klientet.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
+    "Application.Rezervimet.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
     "Application.Sherbimet.executor": "Run",
     "Application.Vleresimet.executor": "Run",
@@ -70,7 +84,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -78,9 +92,22 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Vleresimet">
-    <configuration name="Klientet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Views.Klientet" />
+  <component name="RunManager" selected="Application.App.Main">
+    <configuration name="App.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
+      <module name="KNK_2025_AutoSallon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Views.Main" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
@@ -92,25 +119,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PunetoretServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.PunetoretServiceTest" />
+    <configuration name="Rezervimet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Views.Rezervimet" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RezervimetServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.RezervimetServiceTest" />
-      <module name="KNK_2025_AutoSallon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="Views.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Vleresimet" />
+        <item itemvalue="Application.App.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Rezervimet" />
         <item itemvalue="Application.Sherbimet" />
-        <item itemvalue="Application.Klientet" />
-        <item itemvalue="Application.PunetoretServiceTest" />
-        <item itemvalue="Application.RezervimetServiceTest" />
+        <item itemvalue="Application.Vleresimet" />
       </list>
     </recent_temporary>
   </component>
