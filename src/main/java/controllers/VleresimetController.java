@@ -5,14 +5,9 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import models.dto.Klientet.CreateKlientetDto;
-import models.dto.Klientet.Klientet;
-import models.dto.Klientet.UpdateKlientiDto;
-import models.dto.Sherbimet.Sherbimet;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
 import models.dto.Vleresimet.Vleresimet;
-import services.KlientetService;
 import services.VleresimetService;
 
 import java.util.List;
