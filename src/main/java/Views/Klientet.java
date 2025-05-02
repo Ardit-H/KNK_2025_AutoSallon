@@ -2,15 +2,24 @@ package Views;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import services.LanguageManager;
+import services.SceneManager;
+import utils.SceneLocator;
 
 public class Klientet extends Application {
+    public static Scene scene;
     public void start(Stage stage) throws Exception{
         FXMLLoader fxmlLoader=new FXMLLoader(
-                Klientet.class.getResource("/Views/klientet.fxml")
+                getClass().getResource(SceneLocator.KLIENTET)
         );
-        Scene scene=new Scene(fxmlLoader.load(),700,500);
+        LanguageManager languageManager=LanguageManager.getInstance();
+        fxmlLoader.setResources(languageManager.getResourceBundle());
+        Parent parent=fxmlLoader.load();
+        scene=new Scene(parent);
+        SceneManager.initialize(scene,SceneLocator.KLIENTET);
         stage.setScene(scene);
         stage.show();
     }

@@ -32,31 +32,34 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="124.0" prefWidth="600.0">
+      <AnchorPane prefHeight="105.0" prefWidth="600.0">
          <children>
-            <TextField fx:id="txtEmri" layoutX="29.0" layoutY="30.0" promptText="Emri" />
-            <TextField fx:id="txtMbiemri" layoutX="27.0" layoutY="68.0" promptText="Mbiemri" />
-            <TextField fx:id="txtEmail" layoutX="198.0" layoutY="30.0" promptText="Email" />
-            <TextField fx:id="txtNrTelefonit" layoutX="198.0" layoutY="68.0" promptText="Nr telefonit" />
-            <TextField fx:id="txtAdresa" layoutX="376.0" layoutY="30.0" promptText="Adresa" />
-            <Button layoutX="376.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="Shto" />
-            <Button layoutX="429.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="Përditëso" />
-            <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Fshi" />
+            <TextField fx:id="txtEmri" layoutX="29.0" layoutY="30.0" promptText="%FirstName" />
+            <TextField fx:id="txtMbiemri" layoutX="27.0" layoutY="68.0" promptText="%LastName" />
+            <TextField fx:id="txtEmail" layoutX="198.0" layoutY="30.0" promptText="%Email" />
+            <TextField fx:id="txtNrTelefonit" layoutX="198.0" layoutY="68.0" promptText="%Phone" />
+            <TextField fx:id="txtAdresa" layoutX="376.0" layoutY="30.0" prefHeight="26.0" prefWidth="168.0" promptText="%Address" />
+            <Button layoutX="376.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_klient" />
+            <Button layoutX="429.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_klient" />
+            <Button layoutX="507.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_klient" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="267.0" prefWidth="554.0">
+      <AnchorPane prefHeight="270.0" prefWidth="600.0">
          <children>
-            <Label fx:id="messageLabel" layoutX="22.0" layoutY="238.0" text="MessageLabel" />
-            <TableView fx:id="KlientetTableView" layoutX="12.0" layoutY="42.0" prefHeight="196.0" prefWidth="575.0">
+            <Label fx:id="messageLabel" layoutX="158.0" layoutY="247.0" />
+            <TableView fx:id="KlientetTableView" layoutX="12.0" layoutY="37.0" prefHeight="201.0" prefWidth="575.0">
               <columns>
-                <TableColumn fx:id="colEmri" prefWidth="75.0" text="Emri" />
-                <TableColumn fx:id="colMbiemri" prefWidth="75.0" text="Mbiemri" />
-                  <TableColumn fx:id="colEmail" prefWidth="125.60003662109375" text="Email" />
-                  <TableColumn fx:id="colNrTelefonit" prefWidth="93.5999755859375" text="NrTelefonit" />
-                  <TableColumn fx:id="colAdresa" minWidth="0.0" prefWidth="76.0" text="Adresa" />
-                  <TableColumn fx:id="colDataRegjistrimit" minWidth="0.0" prefWidth="140.7999267578125" text="Data e regjistrimit" />
+                <TableColumn fx:id="colEmri" prefWidth="75.0" text="%FirstName" />
+                <TableColumn fx:id="colMbiemri" prefWidth="75.0" text="%LastName" />
+                  <TableColumn fx:id="colEmail" prefWidth="125.60003662109375" text="%Email" />
+                  <TableColumn fx:id="colNrTelefonit" prefWidth="93.5999755859375" text="%Phone" />
+                  <TableColumn fx:id="colAdresa" minWidth="0.0" prefWidth="76.0" text="%Address" />
+                  <TableColumn fx:id="colDataRegjistrimit" minWidth="0.0" prefWidth="140.7999267578125" text="%RegistrationDate" />
               </columns>
             </TableView>
+            <Button layoutX="215.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" text="%language.english" />
+            <Button layoutX="290.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" text="%language.albanian" />
+            <Label layoutX="43.0" layoutY="247.0" text="%Comment" />
          </children>
       </AnchorPane>
    </children>
