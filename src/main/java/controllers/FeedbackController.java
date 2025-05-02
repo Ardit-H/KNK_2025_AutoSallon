@@ -8,6 +8,8 @@ import javafx.scene.input.MouseEvent;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
 import models.dto.Vleresimet.Vleresimet;
+import services.LanguageManager;
+import services.SceneManager;
 import services.VleresimetService;
 import models.dto.TestDrives.CreateTestDrivesDto;
 import models.dto.TestDrives.UpdateTestDrivesDto;
@@ -15,6 +17,7 @@ import models.dto.TestDrives.TestDrives;
 import services.TestDrivesService;
 
 import java.util.List;
+import java.util.Locale;
 
 public class FeedbackController {
 
@@ -43,10 +46,11 @@ public class FeedbackController {
     @FXML private TableColumn<TestDrives, String> colTestDriveDuration;
     @FXML private TableColumn<TestDrives, String> colTestDriveLocation;
     private TestDrivesService testDrivesService;
-
+    private LanguageManager languageManager;
     public FeedbackController(){
         this.vleresimetService=new VleresimetService();
         this.testDrivesService = new TestDrivesService();
+        this.languageManager=LanguageManager.getInstance();
     }
     @FXML
     public void initialize() {
@@ -255,6 +259,18 @@ public class FeedbackController {
         feedback.clear();
         location.clear();
         duration.clear();
+    }
+    @FXML
+    private void handleLanguageEnglishClick()throws Exception{
+        loadLanguage(Locale.ENGLISH);
+    }
+    @FXML
+    private void handleLanguageAlbanianClick()throws Exception{
+        loadLanguage(new Locale("sq"));
+    }
+    private void loadLanguage(Locale locale) throws Exception{
+        languageManager.setLocale(locale);
+        SceneManager.reload();
     }
 }
 
