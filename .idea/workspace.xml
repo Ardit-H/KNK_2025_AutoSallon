@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi klases GaranciaService">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/GaranciaServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="koment" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
