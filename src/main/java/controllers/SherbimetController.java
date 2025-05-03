@@ -24,6 +24,7 @@ public class SherbimetController {
     @FXML private TextField txtEmri;
     @FXML private TextField txtPershkrimi;
     @FXML private TextField txtCmimi;
+    @FXML private TextField searchField;
     @FXML private Label messageLabel;
     @FXML private TableView<Sherbimet> SherbimetTableView;
     @FXML private TableColumn<Sherbimet, String> colEmri;
@@ -40,12 +41,18 @@ public class SherbimetController {
 
     @FXML
     public void initialize() {
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null || newValue.trim().isEmpty()) {
+                SherbimetTableView.setItems(FXCollections.observableArrayList(sherbimetService.getAll()));
+            } else {
+                List<Sherbimet> filtruar = sherbimetService.kerkoSherbiminNgaEmri(newValue);
+                SherbimetTableView.setItems(FXCollections.observableArrayList(filtruar));
+            }});
         colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
         colPershkrimi.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getPershkrimi()));
         colCmimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getÇmimi())));
         loadSherbimet();
     }
-
 
     private void loadSherbimet() {
         List<Sherbimet> sherbimet = sherbimetService.getAll();

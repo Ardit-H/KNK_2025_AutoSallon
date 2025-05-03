@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/DuplicateResourceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/InvalidInputException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/OperationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/SceneManagerNotInitializedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/ValidationException.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i CustomException dhe perdorimi i tyre tek KlientetService.java,SherbimetService.java , dhe VleresimetService.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SherbimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/SherbimetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SherbimetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SherbimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SherbimetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/sherbimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/sherbimet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,7 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Main.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
@@ -82,13 +84,13 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Vleresimet">
-    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
         <item itemvalue="Application.PerdoruesitRepositoryTest" />
-        <item itemvalue="Application.KlientRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745420397652</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Shtimi i CustomException dhe perdorimi i tyre tek KlientetService.java,SherbimetService.java , dhe VleresimetService.java">
+      <option name="closed" value="true" />
+      <created>1746281818878</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746281818878</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -341,6 +351,7 @@
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i tabeles faturat" />
+    <MESSAGE value="Shtimi i CustomException dhe perdorimi i tyre tek KlientetService.java,SherbimetService.java , dhe VleresimetService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i CustomException dhe perdorimi i tyre tek KlientetService.java,SherbimetService.java , dhe VleresimetService.java" />
   </component>
 </project>

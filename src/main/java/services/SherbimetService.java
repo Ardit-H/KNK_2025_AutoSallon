@@ -4,6 +4,7 @@ import CustomExceptions.InvalidInputException;
 import CustomExceptions.OperationFailedException;
 import CustomExceptions.ResourceNotFoundException;
 import CustomExceptions.ValidationException;
+import models.dto.Klientet.Klientet;
 import models.dto.Sherbimet.CreateSherbimetDto;
 import models.dto.Sherbimet.Sherbimet;
 import models.dto.Sherbimet.UpdateSherbimetDto;
@@ -82,5 +83,8 @@ public class SherbimetService {
             throw new ResourceNotFoundException("Shërbimi nuk ekziston!");
         }
         return sherbimet.delete(id);
+    }
+    public List<Sherbimet> kerkoSherbiminNgaEmri(String sherbimi) {
+        return sherbimet.searchByEmri(sherbimi);
     }
 }
