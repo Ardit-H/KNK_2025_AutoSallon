@@ -10,7 +10,7 @@ module com.example.knk_2025_autosallon {
 
     opens  controllers to javafx.fxml;
     exports  controllers;
-    opens Views to javafx.fxml;
-    exports Views;
+    opens App to javafx.fxml;
+    exports App;
 
 }
