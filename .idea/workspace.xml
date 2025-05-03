@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PorosiaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/DuplicateResourceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/InvalidInputException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/OperationFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/SceneManagerNotInitializedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CustomExceptions/ValidationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SherbimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SherbimetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",

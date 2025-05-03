@@ -1,5 +1,9 @@
 package services;
 
+import CustomExceptions.DuplicateResourceException;
+import CustomExceptions.InvalidInputException;
+import CustomExceptions.ResourceNotFoundException;
+import CustomExceptions.ValidationException;
 import models.dto.Klientet.Klientet;
 import models.dto.Sherbimet.Sherbimet;
 import models.dto.Vleresimet.CreateVleresimetDto;
@@ -25,19 +29,19 @@ public class VleresimetService {
     }
     public Vleresimet create(CreateVleresimetDto dto)throws Exception{
         if(klientetRepository.getById(dto.getKlientiId())==null){
-            throw new Exception("Klienti me ID " + dto.getKlientiId() + " nuk ekziston!");
+            throw new ResourceNotFoundException("Klienti me ID " + dto.getKlientiId() + " nuk ekziston!");
         }
 
         if(veturatRepository.getById(dto.getVeturaId())==null){
-            throw new Exception("Vetura me ID " + dto.getVeturaId() + " nuk ekziston!");
+            throw new ResourceNotFoundException("Vetura me ID " + dto.getVeturaId() + " nuk ekziston!");
         }
 
         if (hasVotedBefore(dto.getKlientiId(), dto.getVeturaId())) {
-            throw new IllegalArgumentException("Klienti ka bërë tashmë një vlerësim për këtë veturë!");
+            throw new DuplicateResourceException("Klienti ka bërë tashmë një vlerësim për këtë veturë!");
         }
 
         if(dto.getVleresimi() < 1 || dto.getVleresimi() > 5){
-            throw new IllegalArgumentException("Vlerësimi duhet të jetë ndërmjet 1 dhe 5!");
+            throw new InvalidInputException("Vlerësimi duhet të jetë ndërmjet 1 dhe 5!");
         }
 
         return vleresimetRepository.create(dto);
@@ -53,22 +57,22 @@ public class VleresimetService {
     }
     public Vleresimet update(UpdateVleresimetDto dto) throws Exception{
         if(dto.getVleresimiId()<=0){
-            throw new Exception("ID eshte e pavlefshme!");
+            throw new ValidationException("ID eshte e pavlefshme!");
         }
         Vleresimet vleresimi = vleresimetRepository.getById(dto.getVleresimiId());
         if(vleresimi==null){
-            throw new Exception("Sherbimi me ID: "+dto.getVleresimiId()+" nuk ekziston.");
+            throw new ResourceNotFoundException("Sherbimi me ID: "+dto.getVleresimiId()+" nuk ekziston.");
         }
         if(dto.getKlientiId()!=null && klientetRepository.getById(dto.getKlientiId())==null){
-            throw new IllegalArgumentException("Klienti me ID " + dto.getKlientiId() + " nuk ekziston!");
+            throw new ResourceNotFoundException("Klienti me ID " + dto.getKlientiId() + " nuk ekziston!");
         }
 
         if(dto.getVeturaId()!=null && veturatRepository.getById(dto.getVeturaId())==null){
-            throw new IllegalArgumentException("Vetura me ID " + dto.getVeturaId() + " nuk ekziston!");
+            throw new ResourceNotFoundException("Vetura me ID " + dto.getVeturaId() + " nuk ekziston!");
         }
 
         if(dto.getVleresimi()!=null && (dto.getVleresimi() < 1 || dto.getVleresimi()>5)){
-            throw new IllegalArgumentException("Vlerësimi duhet të jetë ndërmjet 1 dhe 5!");
+            throw new InvalidInputException("Vlerësimi duhet të jetë ndërmjet 1 dhe 5!");
         }
 
         return vleresimetRepository.update(dto);
@@ -76,11 +80,11 @@ public class VleresimetService {
 
     public Vleresimet getById(int id)throws Exception{
         if(id<0){
-            throw new Exception("ID e vleresimit duhet të jetë pozitive!");
+            throw new InvalidInputException("ID e vleresimit duhet të jetë pozitive!");
         }
         Vleresimet vleresimet=this.vleresimetRepository.getById(id);
         if(vleresimet==null){
-            throw new Exception("Vleresimi me id: "+id+" nuk ekziston!");
+            throw new ResourceNotFoundException("Vleresimi me id: "+id+" nuk ekziston!");
         }
         return vleresimet;
     }
@@ -91,11 +95,11 @@ public class VleresimetService {
 
     public boolean delete(int id)throws Exception{
         if(id <= 0){
-            throw new Exception("ID e vleresimit është e pavlefshme.Duhet te jete>0 !");
+            throw new ValidationException("ID e vleresimit është e pavlefshme.Duhet te jete>0 !");
         }
         Vleresimet vleresimet=vleresimetRepository.getById(id);
         if(vleresimet==null){
-            throw new Exception("Vleresimi nuk ekzistone!");
+            throw new ResourceNotFoundException("Vleresimi nuk ekzistone!");
         }
         return vleresimetRepository.delete(id);
     }
