@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Lidhja e FeedbackController.java me fxml file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -361,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746220405363</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Lidhja e FeedbackController.java me fxml file">
+      <option name="closed" value="true" />
+      <created>1746221114109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1746221114109</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -389,6 +397,7 @@
     <MESSAGE value="Krijimi i MbulesatController" />
     <MESSAGE value="Shtimi i kodit per testDrives tek FeedbackController" />
     <MESSAGE value="Ndryshime" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ndryshime" />
+    <MESSAGE value="Lidhja e FeedbackController.java me fxml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lidhja e FeedbackController.java me fxml file" />
   </component>
 </project>
