@@ -16,7 +16,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.SHERBIMET;
+        this.currentPath = SceneLocator.KLIENTET;
         this.scene = this.initScene();
     }
 
