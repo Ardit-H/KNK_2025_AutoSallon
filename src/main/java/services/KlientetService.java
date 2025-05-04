@@ -1,9 +1,6 @@
 package services;
 
-import CustomExceptions.InvalidInputException;
-import CustomExceptions.OperationFailedException;
-import CustomExceptions.ResourceNotFoundException;
-import CustomExceptions.ValidationException;
+import CustomExceptions.*;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
@@ -44,11 +41,17 @@ public class KlientetService {
         if(!isValidEmail(createKlientetDto.getEmail())){
             throw new ValidationException("Email eshte i pavlefshem!");
         }
+        if (klientetRepository.existsByEmail(createKlientetDto.getEmail())) {
+            throw new DuplicateResourceException("Email që keni shënuar është tashmë i regjistruar!");
+        }
         if(!isValidPhone(createKlientetDto.getNrtelefonit())){
             throw new ValidationException("Numri i telefonit eshte i pavlefshem!");
         }
         if(isNullOrShort(createKlientetDto.getAdresa(),5)){
             throw new InvalidInputException("Adresa duhet te kete te pakten 5 karaktere!");
+        }
+        if (klientetRepository.existsByPhoneNumber(createKlientetDto.getNrtelefonit())) {
+            throw new DuplicateResourceException("Ky numër telefoni është tashmë i regjistruar!");
         }
     }
     private boolean isValidEmail(String email){
@@ -75,11 +78,17 @@ public class KlientetService {
             if (!isValidEmail(updateKlientiDto.getEmail())) {
                 throw new ValidationException("Email-i është i pavlefshëm.");
             }
+            if (klientetRepository.existsByEmailExceptId(updateKlientiDto.getEmail(), updateKlientiDto.getId())) {
+                throw new DuplicateResourceException("Ky email është tashmë i regjistruar për një klient tjetër!");
+            }
             hasChanges=true;
         }
         if(updateKlientiDto.getNrtelefonit()!=null) {
             if (!isValidPhone(updateKlientiDto.getNrtelefonit())) {
                 throw new ValidationException("Numri i telefonit është i pavlefshëm.");
+            }
+            if (klientetRepository.existsByPhoneNumberExceptId(updateKlientiDto.getNrtelefonit(), updateKlientiDto.getId())) {
+                throw new DuplicateResourceException("Ky numër telefoni është tashmë i regjistruar për një klient tjetër!");
             }
             hasChanges=true;
         }
