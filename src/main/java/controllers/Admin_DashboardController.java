@@ -44,4 +44,7 @@ public class Admin_DashboardController {
    @FXML private void handleLoadKlientet()throws Exception{
         SceneManager.load(SceneLocator.KLIENTET,centerPane);
     }
+    @FXML private void handleLoadDashboard_Home()throws Exception{
+        SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
+    }
 }
