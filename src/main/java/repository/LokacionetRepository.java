@@ -4,6 +4,7 @@ import models.dto.Lokacionet.CreateLokacionetDto;
 import models.dto.Lokacionet.Lokacionet;
 import models.dto.Lokacionet.UpdateLokacionetDto;
 
+import java.util.List;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -42,10 +43,7 @@ public class LokacionetRepository extends BaseRepository<Lokacionet, CreateLokac
         StringBuilder query= new StringBuilder("UPDATE LOKACIONET SET ");
         ArrayList<Object> params = new ArrayList<>();
 
-        if(lokacionetDto.getEmri() != null){
-            query.append("EMRI = ?, ");
-            params.add(lokacionetDto.getEmri());
-        }
+
         if(lokacionetDto.getAdresa() != null){
             query.append("ADRESA = ?, ");
             params.add(lokacionetDto.getAdresa());
@@ -75,6 +73,38 @@ public class LokacionetRepository extends BaseRepository<Lokacionet, CreateLokac
             e.printStackTrace();
         }
         return null;
+    }
+    public List<Lokacionet> searchByFullName(String fullName){
+        String where = "LOWER(CONCAT(emri LIKE  ?";
+        String searchValue = "%" + fullName.toLowerCase() + "%";
+        return searchWithCustomWhere(where, searchValue);
+    }
+    public boolean existsByPhoneNumber(String nrTelefonit){
+        String query = "SELECT COUNT(*) FROM lokacionet WHERE nrTelefonit = ?";
+        try(PreparedStatement pstm = this.connection.prepareStatement(query)){
+            pstm.setString(1, nrTelefonit);
+            ResultSet rs = pstm.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1)>0;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public boolean existsByPhoneNumberExceptId(String nrTelefonit, int id){
+        String query = "SELECT COUNT(*) FROM lokacionet WHERE nrTelefonit = ? AND id != ?";
+        try(PreparedStatement pstm = this.connection.prepareStatement(query)){
+            pstm.setString(1, nrTelefonit);
+            pstm.setInt(2, id);
+            ResultSet rs = pstm.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1)>0;
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }
