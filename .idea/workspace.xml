@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="admin_dashboard.fxml dhe Admin_DashboardController.java">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/LlogoAutoSallon-removebg-preview.png" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Rregullim i dizajnit te admin_dashboard.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/AdobeStock_1011767359_Preview.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/KNK_2025_AutoSallon/src/main/resources/Images",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/KNK_2025_AutoSallon/src/main/java/App",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -80,6 +81,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\java\App" />
+      <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
     </key>
   </component>
@@ -360,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746398008092</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Rregullim i dizajnit te admin_dashboard.fxml">
+      <option name="closed" value="true" />
+      <created>1746405090443</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746405090443</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -387,6 +400,7 @@
     <MESSAGE value="Shtimi i metodave per kontrollin e emailt dhe nrteTelefonit per mos lejim te duplikateve tek KlientetRepository dhe KlientetService.java" />
     <MESSAGE value="Ndryshime ne dizajn tek klientet.fxml" />
     <MESSAGE value="admin_dashboard.fxml dhe Admin_DashboardController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin_dashboard.fxml dhe Admin_DashboardController.java" />
+    <MESSAGE value="Rregullim i dizajnit te admin_dashboard.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rregullim i dizajnit te admin_dashboard.fxml" />
   </component>
 </project>
