@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="619.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.KlientetController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.KlientetController">
    <children>
       <AnchorPane layoutX="9.0" layoutY="282.0" prefHeight="322.0" prefWidth="890.0">
          <children>
             <Label fx:id="messageLabel" layoutX="99.0" layoutY="5.0" prefHeight="18.0" prefWidth="467.0" />
-            <TableView fx:id="KlientetTableView" layoutY="32.0" prefHeight="290.0" prefWidth="890.0">
+            <TableView fx:id="KlientetTableView" layoutX="37.0" layoutY="23.0" prefHeight="290.0" prefWidth="890.0">
                <columns>
                   <TableColumn fx:id="colEmri" prefWidth="118.39998817443848" text="%FirstName" />
                   <TableColumn fx:id="colMbiemri" prefWidth="128.0" text="%LastName" />

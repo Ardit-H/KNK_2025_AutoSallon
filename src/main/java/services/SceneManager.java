@@ -16,7 +16,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.KLIENTET;
+        this.currentPath = "/Views/admin_dashboard.fxml";
         this.scene = this.initScene();
     }
 
