@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i PartneretService, PartneretServiceTest dhe PartneretRepositoryTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/FaturatRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/FaturatServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/FaturatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/FaturatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Faturat/CreateFaturatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Faturat/CreateFaturatDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Faturat/Faturat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Faturat/Faturat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Faturat/UpdateFaturatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Faturat/UpdateFaturatDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
