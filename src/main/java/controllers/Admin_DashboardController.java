@@ -57,7 +57,8 @@ public class Admin_DashboardController {
         menuVisible =!menuVisible;
     }
    @FXML private void handleLoadKlientet()throws Exception{
-        SceneManager.load(SceneLocator.KLIENTET,centerPane);
+       SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
+       SceneManager.load(SceneLocator.KLIENTET, centerPane);
     }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
