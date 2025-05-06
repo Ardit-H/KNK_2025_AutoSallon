@@ -72,19 +72,19 @@ CREATE TABLE faturat(
     id SERIAL PRIMARY KEY,
     shitje_id INTEGER  NOT NULL,
     dataFatures DATE NOT NULL,
-    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0);
+    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0),
     llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
     FOREIGN KEY (shitje_id) REFERENCES Shitjet(shitje_id) ON DELETE CASCADE
 );
 CREATE TABLE Vleresimet(
-    vleresimi_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     klienti_id INT NOT NULL,
     vetura_id INT NOT NULL,
     vleresimi INT CHECK (vleresimi BETWEEN 1 AND 5),
     komenti TEXT,
     data_vleresimit DATE DEFAULT CURRENT_DATE,
     FOREIGN KEY(klienti_id) REFERENCES Klientet(id) ON DELETE CASCADE,
-    FOREIGN KEY(vetura_id) REFERENCES Veturat(vetura_id) ON DELETE CASCADE
+    FOREIGN KEY(vetura_id) REFERENCES Veturat(id) ON DELETE CASCADE
 );
 */
 
