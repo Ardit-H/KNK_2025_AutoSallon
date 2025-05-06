@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klasave Partneret, CreatePartneretDto, UpdatePartneretDto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/PartneretRepository.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i PartneretRepository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/PartneretService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746529214671</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Krijimi i PartneretRepository">
+      <option name="closed" value="true" />
+      <created>1746529485800</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746529485800</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -357,6 +365,7 @@
     <MESSAGE value="Krijimi i tabeles Partneret" />
     <MESSAGE value="Krijimi i klasave Faturat, CreateFaturatDto, UpdateFaturatDto" />
     <MESSAGE value="Krijimi i klasave Partneret, CreatePartneretDto, UpdatePartneretDto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klasave Partneret, CreatePartneretDto, UpdatePartneretDto" />
+    <MESSAGE value="Krijimi i PartneretRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i PartneretRepository" />
   </component>
 </project>
