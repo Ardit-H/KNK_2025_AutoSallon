@@ -43,15 +43,15 @@ public class FaturatRepositoryTest {
         // Testo update
         UpdateFaturatDto updateDto = new UpdateFaturatDto();
         updateDto.setId(3);
-       // updateDto.setShumaTotale(new Double("245.50")); // gabim (kontrollo tipin)
+        updateDto.setShumaTotale(245.50);
         updateDto.setLlojiPageses("Kredi");
         faturatRepository.update(updateDto);
 
         // Testo create
-//        CreateFaturaDto createDto = new CreateFaturaDto();
+//        CreateFaturatDto createDto = new CreateFaturatDto();
 //        createDto.setShitjeId(1);
-//        createDto.setDataFatures(LocalDate.now());
-//        createDto.setShumaTotale(new BigDecimal("129.99"));
+//        createDto.setDataFatures(new String("31.05.2025"));
+//        createDto.setShumaTotale(129.99);
 //        createDto.setLlojiPageses("Cash");
 //        faturatRepository.create(createDto);
 

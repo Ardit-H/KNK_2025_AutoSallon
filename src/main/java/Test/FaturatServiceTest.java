@@ -5,6 +5,8 @@ import models.dto.Faturat.Faturat;
 import models.dto.Faturat.UpdateFaturatDto;
 import services.FaturatService;
 
+import java.util.List;
+
 public class FaturatServiceTest {
     public static void main(String[] args) {
         FaturatService faturatService = new FaturatService();
@@ -15,8 +17,8 @@ public class FaturatServiceTest {
             System.out.println("Lloji i Pagesës: " + faturat.getLlojiPageses());
 
             // Testo getAll
-//            List<Fatura> lista = faturatService.getAll();
-//            for (Fatura f : lista) {
+//            List<Faturat> lista = faturatService.getAll();
+//            for (Faturat f : lista) {
 //                System.out.println("ID: " + f.getId());
 //                System.out.println("Shuma Totale: " + f.getShumaTotale());
 //                System.out.println("Lloji Pagesës: " + f.getLlojiPageses());
@@ -28,7 +30,7 @@ public class FaturatServiceTest {
             // Testo create
 //            CreateFaturatDto createDto = new CreateFaturatDto();
 //            createDto.setShitjeId(2);
-//           // createDto.setShumaTotale(new BigDecimal("150.75"));
+//            createDto.setShumaTotale(150.75);
 //            createDto.setLlojiPageses("Kesh");
 //            createDto.setDataFatures(new String("31.05.2025"));
 //            Faturat eRe = faturatService.create(createDto);
@@ -37,7 +39,7 @@ public class FaturatServiceTest {
             // Testo update
 //            UpdateFaturatDto updateDto = new UpdateFaturatDto();
 //            updateDto.setId(3);
-//            updateDto.setShumaTotale(new Double("199.99"));
+////            updateDto.setShumaTotale(new Double("199.99"));
 //            updateDto.setLlojiPageses("Transfer Bankar");
 //            Faturat updated = faturatService.update(updateDto);
 //            System.out.println("Faturat u përditësua: " + updated.getShumaTotale());

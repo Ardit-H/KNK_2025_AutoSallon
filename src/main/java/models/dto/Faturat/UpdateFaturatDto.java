@@ -4,7 +4,7 @@ package models.dto.Faturat;
     public class UpdateFaturatDto {
         private int id;
         private String dataFatures;
-        private double shumaTotale;
+        private Double shumaTotale;
         private String llojiPageses;
 
         public UpdateFaturatDto() {}
