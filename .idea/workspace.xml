@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles riparimet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +28,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "a3187b7a-c112-4f16-a232-35cfff71446e"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -308,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745420397652</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Krijimi i tabeles riparimet">
+      <option name="closed" value="true" />
+      <created>1745422095942</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1745422095942</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -330,6 +338,7 @@
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i tabeles faturat" />
+    <MESSAGE value="Krijimi i tabeles riparimet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i tabeles riparimet" />
   </component>
 </project>
