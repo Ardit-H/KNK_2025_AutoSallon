@@ -139,3 +139,14 @@ CREATE TABLE Ofertat (
     dataMbarimit DATE NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
 );
+
+CREATE TABLE Partneret (
+    id SERIAL PRIMARY KEY,
+    emri_kompanise VARCHAR(100) NOT NULL,
+    lloji_partnerit VARCHAR(50) CHECK (lloji_partnerit IN ('Servis', 'Sigurim', 'Marketing', 'Tjetër')) NOT NULL,
+    person_kontakti VARCHAR(100),
+    email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
+    telefoni VARCHAR(15) CHECK(telefoni ~ '^\+?[0-9]{7,15}$'),
+    adresa VARCHAR(100) NOT NULL,
+    data_bashkepunimit DATE DEFAULT CURRENT_DATE
+);
