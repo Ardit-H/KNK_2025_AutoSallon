@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="admin_dashboard.fxml dhe Admin_DashboardController.java">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/LlogoAutoSallon-removebg-preview.png" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i metodave per kontrollin e emailt dhe nrteTelefonit per mos lejim te duplikateve tek KlientetRepository dhe KlientetService.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/sherbimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/sherbimet.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,20 +70,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/KNK_2025_AutoSallon/src/main/resources/Images",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
-    </key>
-  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
@@ -344,23 +339,7 @@
       <option name="project" value="LOCAL" />
       <updated>1746386119975</updated>
     </task>
-    <task id="LOCAL-00023" summary="Ndryshime ne dizajn tek klientet.fxml">
-      <option name="closed" value="true" />
-      <created>1746387668473</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1746387668473</updated>
-    </task>
-    <task id="LOCAL-00024" summary="admin_dashboard.fxml dhe Admin_DashboardController.java">
-      <option name="closed" value="true" />
-      <created>1746398008092</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1746398008092</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -385,8 +364,6 @@
     <MESSAGE value="Shtimi i CustomException dhe perdorimi i tyre tek KlientetService.java,SherbimetService.java , dhe VleresimetService.java" />
     <MESSAGE value="Shtimi i metodes kerkoSherbiminngaEmri tek SherbimetService dhe rregullimi i saj ne fxml" />
     <MESSAGE value="Shtimi i metodave per kontrollin e emailt dhe nrteTelefonit per mos lejim te duplikateve tek KlientetRepository dhe KlientetService.java" />
-    <MESSAGE value="Ndryshime ne dizajn tek klientet.fxml" />
-    <MESSAGE value="admin_dashboard.fxml dhe Admin_DashboardController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin_dashboard.fxml dhe Admin_DashboardController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i metodave per kontrollin e emailt dhe nrteTelefonit per mos lejim te duplikateve tek KlientetRepository dhe KlientetService.java" />
   </component>
 </project>
