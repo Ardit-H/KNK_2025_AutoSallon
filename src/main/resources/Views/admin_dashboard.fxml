@@ -35,13 +35,13 @@
                      </font></Button>
                </children>
             </VBox>
-            <Region layoutX="504.0" layoutY="20.0" prefHeight="51.0" prefWidth="240.0" />
-            <Label alignment="CENTER" prefHeight="42.0" prefWidth="243.0" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="AutoSallon Admin Panel" textAlignment="CENTER">
+            <Region layoutX="504.0" layoutY="20.0" prefHeight="97.0" prefWidth="94.0" />
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="366.0" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="%AdminPanelTitle" textAlignment="CENTER">
                <font>
                   <Font name="Arial Narrow" size="18.0" />
                </font></Label>
             <Region HBox.hgrow="ALWAYS" />
-            <Button fx:id="languageBttn" layoutX="1364.0" layoutY="14.0" mnemonicParsing="false" onAction="#languageClick" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: lightblue;" AnchorPane.leftAnchor="1364.0" AnchorPane.rightAnchor="110.0">
+            <Button fx:id="languageToggleButton" layoutX="1364.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLanguageToggle" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="1364.0" AnchorPane.rightAnchor="110.0">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="30.0">
                      <image>
@@ -62,15 +62,15 @@
             <Insets left="10.0" right="10.0" top="20.0" />
          </padding>
          <children>
-            <Button fx:id="btn_dashboard" alignment="CENTER" layoutY="373.0" mnemonicParsing="false" onAction="#handleLoadDashboard_Home" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Dashboard" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_klientet" mnemonicParsing="false" onAction="#handleLoadKlientet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Klientët" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_automjetet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Automjetet" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_sherbimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Shërbimet" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_rezervimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Rezervimet" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_testdrives" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Test Drives" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_vleresimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Vlerësimet" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_faturat" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Faturat" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_statistikat" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="Statistikat" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_dashboard" alignment="CENTER" layoutY="373.0" mnemonicParsing="false" onAction="#handleLoadDashboard_Home" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Dashboard" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_klientet" mnemonicParsing="false" onAction="#handleLoadKlientet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Clients" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_automjetet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Vehicles" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_sherbimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Services" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_rezervimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Reservations" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_testdrives" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%TestDrives" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_vleresimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Rating" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_faturat" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Invoices" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_statistikat" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Statistics" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
          </children>
       </VBox>
    </left>
@@ -95,7 +95,7 @@
                   <Image url="@../Images/AdobeStock_1105486701_Preview.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="370.0" layoutX="719.0">
+            <ImageView fitHeight="219.0" fitWidth="384.0" layoutX="719.0">
                <image>
                   <Image url="@../Images/AdobeStock_1079240793_Preview.jpeg" />
                </image>
@@ -107,16 +107,16 @@
             </ImageView>
 
             <!-- Titulli -->
-            <Label layoutX="320.0" layoutY="350.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Mirësevini në Panelin Administrativ të AutoSallonit" />
+            <Label layoutX="320.0" layoutY="350.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="%AdminPanelDescriptionTitle" />
 
             <!-- Përshkrimi -->
-            <Label layoutX="200.0" layoutY="390.0" maxWidth="680.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="Ky panel ju lejon të menaxhoni klientët, automjetet, shërbimet, rezervimet, vlerësimet, faturat dhe më shumë. Përdorni menunë për të naviguar nëpër seksionet përkatëse." wrapText="true" />
+            <Label layoutX="200.0" layoutY="390.0" maxWidth="680.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="%AdminPanelDescription" wrapText="true" />
             <ImageView fitHeight="219.0" fitWidth="390.0" layoutX="348.0" layoutY="452.0">
                <image>
                   <Image url="@../Images/AdobeStock_930679947_Preview.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="348.0" layoutX="738.0" layoutY="452.0">
+            <ImageView fitHeight="219.0" fitWidth="365.0" layoutX="738.0" layoutY="452.0">
                <image>
                   <Image url="@../Images/AdobeStock_735926213_Preview.jpeg" />
                </image>
