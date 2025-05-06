@@ -72,19 +72,19 @@ CREATE TABLE faturat(
     id SERIAL PRIMARY KEY,
     shitje_id INTEGER  NOT NULL,
     dataFatures DATE NOT NULL,
-    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0);
+    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0),
     llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
     FOREIGN KEY (shitje_id) REFERENCES Shitjet(shitje_id) ON DELETE CASCADE
 );
 CREATE TABLE Vleresimet(
-    vleresimi_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     klienti_id INT NOT NULL,
     vetura_id INT NOT NULL,
     vleresimi INT CHECK (vleresimi BETWEEN 1 AND 5),
     komenti TEXT,
     data_vleresimit DATE DEFAULT CURRENT_DATE,
     FOREIGN KEY(klienti_id) REFERENCES Klientet(id) ON DELETE CASCADE,
-    FOREIGN KEY(vetura_id) REFERENCES Veturat(vetura_id) ON DELETE CASCADE
+    FOREIGN KEY(vetura_id) REFERENCES Veturat(id) ON DELETE CASCADE
 );
 */
 
@@ -138,4 +138,15 @@ CREATE TABLE Ofertat (
     dataFillimit DATE NOT NULL,
     dataMbarimit DATE NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Partneret (
+    id SERIAL PRIMARY KEY,
+    emri_kompanise VARCHAR(100) NOT NULL,
+    lloji_partnerit VARCHAR(50) CHECK (lloji_partnerit IN ('Servis', 'Sigurim', 'Marketing', 'Tjetër')) NOT NULL,
+    person_kontakti VARCHAR(100),
+    email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
+    telefoni VARCHAR(15) CHECK(telefoni ~ '^\+?[0-9]{7,15}$'),
+    adresa VARCHAR(100) NOT NULL,
+    data_bashkepunimit DATE DEFAULT CURRENT_DATE
 );
