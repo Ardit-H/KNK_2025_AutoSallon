@@ -139,7 +139,7 @@ CREATE TABLE Ofertat (
     dataMbarimit DATE NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
 );
-
+//koment
 CREATE TABLE Partneret (
     id SERIAL PRIMARY KEY,
     emri_kompanise VARCHAR(100) NOT NULL,
