@@ -129,7 +129,7 @@ CREATE TABLE Pagesat (
     dataPageses DATE DEFAULT CURRENT_DATE,
     FOREIGN KEY (porosiaId) REFERENCES Porosite(id) ON DELETE CASCADE
 );
-
+//koment
 CREATE TABLE Ofertat (
     id SERIAL PRIMARY KEY,
     veturaId INT NOT NULL,
