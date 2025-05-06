@@ -5,10 +5,10 @@ public class CreateFaturatDto {
 
         private int shitjeId;
         private String dataFatures;
-        private double shumaTotale;
+        private Double shumaTotale;
         private String llojiPageses;
 
-        public CreateFaturatDto(int shitjeId, String dataFatures, double shumaTotale, String llojiPageses) {
+        public CreateFaturatDto(int shitjeId, String dataFatures, Double shumaTotale, String llojiPageses) {
             this.shitjeId = shitjeId;
             this.dataFatures = dataFatures;
             this.shumaTotale = shumaTotale;
@@ -31,11 +31,11 @@ public class CreateFaturatDto {
             this.dataFatures = dataFatures;
         }
 
-        public double getShumaTotale() {
+        public Double getShumaTotale() {
             return shumaTotale;
         }
 
-        public void setShumaTotale(double shumaTotale) {
+        public void setShumaTotale(Double shumaTotale) {
             this.shumaTotale = shumaTotale;
         }
 

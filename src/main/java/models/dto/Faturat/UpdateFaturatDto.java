@@ -25,11 +25,11 @@ package models.dto.Faturat;
             this.dataFatures = dataFatures;
         }
 
-        public double getShumaTotale() {
+        public Double getShumaTotale() {
             return shumaTotale;
         }
 
-        public void setShumaTotale(double shumaTotale) {
+        public void setShumaTotale(Double shumaTotale) {
             this.shumaTotale = shumaTotale;
         }
 

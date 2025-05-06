@@ -8,10 +8,10 @@ import java.sql.SQLException;
         private int id;
         private int shitjeId;
         private String dataFatures;
-        private double shumaTotale;
+        private Double shumaTotale;
         private String llojiPageses;
 
-        private Faturat(int id, int shitjeId, String dataFatures, double shumaTotale, String llojiPageses) {
+        private Faturat(int id, int shitjeId, String dataFatures, Double shumaTotale, String llojiPageses) {
             this.id = id;
             this.shitjeId = shitjeId;
             this.dataFatures = dataFatures;
@@ -41,7 +41,7 @@ import java.sql.SQLException;
             return dataFatures;
         }
 
-        public double getShumaTotale() {
+        public Double getShumaTotale() {
             return shumaTotale;
         }
 
