@@ -137,14 +137,15 @@ public class VeturatController {
     }
 
     @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        this.languageManager.setLocale(Locale.ENGLISH);
-        SceneManager.reloadScene();
+    private void handleLanguageEnglishClick()throws Exception{
+        loadLanguage(Locale.ENGLISH);
     }
-
     @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        this.languageManager.setLocale(new Locale("sq", "Kosova"));
-        SceneManager.reloadScene();
+    private void handleLanguageAlbanianClick()throws Exception{
+        loadLanguage(new Locale("sq"));
+    }
+    private void loadLanguage(Locale locale) throws Exception{
+        languageManager.setLocale(locale);
+        SceneManager.reload();
     }
 }

@@ -9,17 +9,17 @@ import services.LanguageManager;
 import services.SceneManager;
 import utils.SceneLocator;
 
-public class Veturat extends Application {
+public class TestDrives {
     public static Scene scene;
     public void start(Stage stage) throws Exception{
         FXMLLoader fxmlLoader=new FXMLLoader(
-                getClass().getResource(SceneLocator.VETURAT)
+                getClass().getResource(SceneLocator.TESTDRIVES)
         );
         LanguageManager languageManager=LanguageManager.getInstance();
         fxmlLoader.setResources(languageManager.getResourceBundle());
         Parent parent=fxmlLoader.load();
         scene=new Scene(parent);
-        SceneManager.initialize(scene,SceneLocator.VETURAT);
+//        SceneManager.initialize(scene,SceneLocator.TESTDRIVES);
         stage.setScene(scene);
         stage.show();
     }

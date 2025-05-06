@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 public class SherbimetRepository extends BaseRepository<Sherbimet, CreateSherbimetDto, UpdateSherbimetDto> {
       public SherbimetRepository(){
@@ -79,5 +80,10 @@ public class SherbimetRepository extends BaseRepository<Sherbimet, CreateSherbim
             e.printStackTrace();
         }
         return null;
+    }
+    public List<Sherbimet> searchByEmri(String searchText) {
+        String whereClause = "LOWER(emri) LIKE ?";
+        String param = "%" + searchText.toLowerCase() + "%";
+        return searchWithCustomWhere(whereClause, param);
     }
 }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i Veturat.java, Garancia.java dhe TestDrives.java ne package Views">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i kodit per testDrives tek FeedbackController" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +27,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
-    "accountId": "711373e8-4a25-43d9-a88d-666b1d812423"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -54,28 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Klientet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PerdoruesitRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PunetoretServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RezervimetServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Sherbimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Vleresimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Klientet.executor": "Run",
+    "Application.PerdoruesitRepositoryTest.executor": "Run",
+    "Application.PunetoretServiceTest.executor": "Run",
+    "Application.RezervimetServiceTest.executor": "Run",
+    "Application.Sherbimet.executor": "Run",
+    "Application.Vleresimet.executor": "Run",
+    "Application.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Vleresimet">
     <configuration name="Klientet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Views.Klientet" />
@@ -353,15 +351,7 @@
       <option name="project" value="LOCAL" />
       <updated>1746216148635</updated>
     </task>
-    <task id="LOCAL-00025" summary="Krijimi i Veturat.java, Garancia.java dhe TestDrives.java ne package Views">
-      <option name="closed" value="true" />
-      <created>1746216570735</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1746216570735</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -388,7 +378,6 @@
     <MESSAGE value="Krijimi i VeturatController" />
     <MESSAGE value="Krijimi i MbulesatController" />
     <MESSAGE value="Shtimi i kodit per testDrives tek FeedbackController" />
-    <MESSAGE value="Krijimi i Veturat.java, Garancia.java dhe TestDrives.java ne package Views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i Veturat.java, Garancia.java dhe TestDrives.java ne package Views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i kodit per testDrives tek FeedbackController" />
   </component>
 </project>
