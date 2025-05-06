@@ -42,7 +42,7 @@
             <Button layoutX="338.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_service" />
             <Button layoutX="441.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" text="%language.english" />
             <Button layoutX="503.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" text="%language.albanian" />
-            <TextField layoutX="30.0" layoutY="68.0" promptText="%SearchService" />
+            <TextField fx:id="searchField" layoutX="30.0" layoutY="68.0" promptText="%SearchService" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="312.0" prefWidth="600.0">
