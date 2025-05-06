@@ -59,12 +59,16 @@ public class Admin_DashboardController {
    @FXML private void handleLoadKlientet()throws Exception{
        SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
        SceneManager.load(SceneLocator.KLIENTET, centerPane);
+   }
+    @FXML private void handleLoadServices()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.SHERBIMET);
+        SceneManager.load(SceneLocator.SHERBIMET, centerPane);
     }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
 
-@FXML private void handleLanguageToggle() throws Exception {
+@FXML private void handleLanguageToggle() throws Exception{
     if (isEnglish) {
         loadLanguage(new Locale("sq"));
         setLanguageIcon("/Images/language-sq.png");
