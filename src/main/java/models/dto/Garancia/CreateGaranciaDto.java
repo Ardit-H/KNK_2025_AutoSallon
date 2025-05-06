@@ -15,7 +15,7 @@ public class CreateGaranciaDto {
         return llojiGarancise;
     }
 
-    public void setLlojiGarancise(String llojiGarancise) {
+    public void setLlojiGarancise( String llojiGarancise) {
         this.llojiGarancise = llojiGarancise;
     }
 

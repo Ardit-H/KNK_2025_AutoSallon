@@ -1,16 +1,19 @@
 package controllers;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
 import services.KlientetService;
+import services.LanguageManager;
+import services.SceneManager;
 
 import java.util.List;
+import java.util.Locale;
 
 public class KlientetController {
     @FXML
@@ -24,26 +27,48 @@ public class KlientetController {
     @FXML
     private TextField txtAdresa;
     @FXML
-    private ListView<String> txtKlientetList;
+    private TextField searchField;
+
+    @FXML private TableView<Klientet> KlientetTableView;
+    @FXML private TableColumn<Klientet, String> colEmri;
+    @FXML private TableColumn<Klientet, String> colMbiemri;
+    @FXML private TableColumn<Klientet, String> colEmail;
+    @FXML private TableColumn<Klientet, String> colNrTelefonit;
+    @FXML private TableColumn<Klientet, String> colAdresa;
+    @FXML private TableColumn<Klientet, String> colDataRegjistrimit;
 
     @FXML
     private Label messageLabel;
     private KlientetService klientetService;
+    private LanguageManager languageManager;
+
     public KlientetController(){
         this.klientetService=new KlientetService();
+        this.languageManager=LanguageManager.getInstance();
     }
     @FXML
     public void initialize() {
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null || newValue.trim().isEmpty()) {
+                KlientetTableView.setItems(FXCollections.observableArrayList(klientetService.getAll()));
+            } else {
+                List<Klientet> filtruar = klientetService.kerkoKlientetMeEmriPlote(newValue);
+                KlientetTableView.setItems(FXCollections.observableArrayList(filtruar));
+            }
+        });
+        colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
+        colMbiemri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMbiemri()));
+        colEmail.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmail()));
+        colNrTelefonit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNrtelefonit()));
+        colAdresa.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAdresa()));
+        colDataRegjistrimit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getData_regjistrimit()));
         loadKlientet();
     }
 
-    private void loadKlientet() {
-        txtKlientetList.getItems().clear();
-        List<Klientet> klientet = klientetService.getAll();
-        for (Klientet k : klientet) {
-            txtKlientetList.getItems().add(k.getKid() + " - " + k.getEmri() + " " + k.getMbiemri());
-        }
-    }
+private void loadKlientet() {
+    List<Klientet> klientet = klientetService.getAll();
+    KlientetTableView.getItems().setAll(klientet);
+}
 
     @FXML
     private void handleCreate(MouseEvent event) {
@@ -72,10 +97,12 @@ public class KlientetController {
 
             UpdateKlientiDto dto = new UpdateKlientiDto();
             dto.setId(selectedId);
-            dto.setEmail(txtEmail.getText());
-            dto.setNrtelefonit(txtNrTelefonit.getText());
-            dto.setAdresa(txtAdresa.getText());
-
+            if (!txtEmail.getText().trim().isEmpty())
+                dto.setEmail(txtEmail.getText().trim());
+            if (!txtNrTelefonit.getText().trim().isEmpty())
+                dto.setNrtelefonit(txtNrTelefonit.getText().trim());
+            if (!txtAdresa.getText().trim().isEmpty())
+                dto.setAdresa(txtAdresa.getText().trim());
             klientetService.update(dto);
             messageLabel.setText("Klienti u përditësua me sukses.");
             loadKlientet();
@@ -99,20 +126,31 @@ public class KlientetController {
     }
 
     private int getSelectedKlientId() {
-        String selected = txtKlientetList.getSelectionModel().getSelectedItem();
+        Klientet selected = KlientetTableView.getSelectionModel().getSelectedItem();
         if (selected == null) {
-            messageLabel.setText("Zgjidh një klient në listë.");
+            messageLabel.setText("Zgjidh një klient në tabelë.");
             return -1;
         }
-        return Integer.parseInt(selected.split(" - ")[0]);
+        return selected.getKid();
     }
-
     private void clearForm() {
         txtEmri.clear();
         txtMbiemri.clear();
-        txtAdresa.clear();
+        txtEmail.clear();
         txtNrTelefonit.clear();
         txtAdresa.clear();
+    }
+    @FXML
+    private void handleLanguageEnglishClick()throws Exception{
+        loadLanguage(Locale.ENGLISH);
+    }
+    @FXML
+    private void handleLanguageAlbanianClick()throws Exception{
+        loadLanguage(new Locale("sq"));
+    }
+    private void loadLanguage(Locale locale) throws Exception{
+        languageManager.setLocale(locale);
+        SceneManager.reload();
     }
 }
 

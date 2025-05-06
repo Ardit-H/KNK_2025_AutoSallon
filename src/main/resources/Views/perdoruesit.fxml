@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Na" prefHeight="600.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PerdoruesitController">
+   <children>
+      <TextField fx:id="txtEmri" layoutX="414.0" layoutY="40.0" promptText="Emri" />
+      <TextField fx:id="txtEmail" layoutX="413.0" layoutY="73.0" prefHeight="26.0" prefWidth="150.0" promptText="Email" />
+      <TextField fx:id="txtFjalekalimi" layoutX="413.0" layoutY="151.0" promptText="Fjalëkalimi" />
+      <TextField fx:id="txtRoli" layoutX="414.0" layoutY="110.0" promptText="Roli" />
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="920.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="perdoruesitTable" layoutX="56.0" layoutY="320.0" prefHeight="254.0" prefWidth="305.0">
+        <columns>
+          <TableColumn fx:id="colEmri" prefWidth="76.00001525878906" text="Emri" />
+          <TableColumn fx:id="colEmail" prefWidth="75.99996948242188" text="Email" />
+            <TableColumn fx:id="colRoli" prefWidth="77.0" text="Roli" />
+            <TableColumn fx:id="colFjalekalimi" prefWidth="75.0" text="Fjalekalimi" />
+        </columns>
+      </TableView>
+      <Label fx:id="messageLabel" layoutX="524.0" layoutY="44.0" />
+      <Label layoutX="431.0" layoutY="320.0" prefHeight="18.0" prefWidth="57.0" text="Mesazhet" />
+      <Button layoutX="390.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="Shto" />
+      <Button layoutX="454.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="Përditëso" />
+      <Button layoutX="543.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Fshij" />
+   </children>
+</AnchorPane>

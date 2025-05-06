@@ -1,5 +1,6 @@
 package services;
 
+import CustomExceptions.*;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
@@ -18,33 +19,39 @@ public class KlientetService {
     }
     public Klientet getById(int id)throws Exception{
         if(id<0){
-            throw new Exception("ID e klientit duhet të jetë pozitive!");
+            throw new InvalidInputException("ID e klientit duhet të jetë pozitive!");
         }
         Klientet klienti=this.klientetRepository.getById(id);
         if(klienti==null){
-            throw new Exception("Klienti me id: "+id+" nuk ekziston!");
+            throw new ResourceNotFoundException("Klienti me id: "+id+" nuk ekziston!");
         }
         return klienti;
     }
-    public Klientet create(CreateKlientetDto createKlientet){
+    public Klientet create(CreateKlientetDto createKlientet)throws Exception{
         validateCreateDto(createKlientet);
         return klientetRepository.create(createKlientet);
     }
-    private void validateCreateDto(CreateKlientetDto createKlientetDto){
+    private void validateCreateDto(CreateKlientetDto createKlientetDto)throws Exception{
         if(isNullOrShort(createKlientetDto.getEmri(),3)){
-            throw new IllegalArgumentException("Emri duhet te kete te pakten 3 karaktere");
+            throw new InvalidInputException("Emri duhet te kete te pakten 3 karaktere");
         }
         if(isNullOrShort(createKlientetDto.getMbiemri(),3)){
-            throw new IllegalArgumentException("Mbiemri duhet te kete te pakten 3 karaktere");
+            throw new InvalidInputException("Mbiemri duhet te kete te pakten 3 karaktere");
         }
         if(!isValidEmail(createKlientetDto.getEmail())){
-            throw new IllegalArgumentException("Email eshte i pavlefshem!");
+            throw new ValidationException("Email eshte i pavlefshem!");
+        }
+        if (klientetRepository.existsByEmail(createKlientetDto.getEmail())) {
+            throw new DuplicateResourceException("Email që keni shënuar është tashmë i regjistruar!");
         }
         if(!isValidPhone(createKlientetDto.getNrtelefonit())){
-            throw new IllegalArgumentException("Numri i telefonit eshte i pavlefshem!");
+            throw new ValidationException("Numri i telefonit eshte i pavlefshem!");
         }
         if(isNullOrShort(createKlientetDto.getAdresa(),5)){
-            throw new IllegalArgumentException("Adresa duhet te kete te pakten 5 karaktere!");
+            throw new InvalidInputException("Adresa duhet te kete te pakten 5 karaktere!");
+        }
+        if (klientetRepository.existsByPhoneNumber(createKlientetDto.getNrtelefonit())) {
+            throw new DuplicateResourceException("Ky numër telefoni është tashmë i regjistruar!");
         }
     }
     private boolean isValidEmail(String email){
@@ -59,51 +66,60 @@ public class KlientetService {
     }
     public Klientet update(UpdateKlientiDto updateKlientiDto)throws Exception{
         if(updateKlientiDto.getId()<=0){
-            throw new Exception("Id e klientit eshte e pavlefshme!");
+            throw new ValidationException("Id e klientit eshte e pavlefshme!");
         }
         Klientet klienti=klientetRepository.getById(updateKlientiDto.getId());
         if (klienti==null) {
-            throw new Exception("Klienti me ID " + updateKlientiDto.getId() + " nuk ekziston.");
+            throw new ResourceNotFoundException("Klienti me ID " + updateKlientiDto.getId() + " nuk ekziston.");
         }
         boolean hasChanges=false;
 
         if(updateKlientiDto.getEmail()!=null) {
             if (!isValidEmail(updateKlientiDto.getEmail())) {
-                throw new IllegalArgumentException("Email-i është i pavlefshëm.");
+                throw new ValidationException("Email-i është i pavlefshëm.");
+            }
+            if (klientetRepository.existsByEmailExceptId(updateKlientiDto.getEmail(), updateKlientiDto.getId())) {
+                throw new DuplicateResourceException("Ky email është tashmë i regjistruar për një klient tjetër!");
             }
             hasChanges=true;
         }
         if(updateKlientiDto.getNrtelefonit()!=null) {
             if (!isValidPhone(updateKlientiDto.getNrtelefonit())) {
-                throw new IllegalArgumentException("Numri i telefonit është i pavlefshëm.");
+                throw new ValidationException("Numri i telefonit është i pavlefshëm.");
+            }
+            if (klientetRepository.existsByPhoneNumberExceptId(updateKlientiDto.getNrtelefonit(), updateKlientiDto.getId())) {
+                throw new DuplicateResourceException("Ky numër telefoni është tashmë i regjistruar për një klient tjetër!");
             }
             hasChanges=true;
         }
         if(updateKlientiDto.getAdresa()!=null) {
             if (updateKlientiDto.getAdresa().trim().length() < 5) {
-                throw new IllegalArgumentException("Adresa duhet të ketë të paktën 5 karaktere.");
+                throw new InvalidInputException("Adresa duhet të ketë të paktën 5 karaktere.");
             }
             hasChanges=true;
         }
 
         if(!hasChanges) {
-            throw new IllegalArgumentException("Duhet të përditësohet të paktën një fushë.");
+            throw new InvalidInputException("Duhet të përditësohet të paktën një fushë.");
         }
         Klientet updated = klientetRepository.update(updateKlientiDto);
         if (updated == null) {
-            throw new Exception("Update-i dështoi. Klienti nuk u përditësua.");
+            throw new OperationFailedException("Update-i dështoi. Klienti nuk u përditësua.");
         }
 
         return updated;
     }
     public boolean delete(int id) throws Exception{
         if (id <= 0) {
-            throw new IllegalArgumentException("ID e klientit është e pavlefshme.Duhet te jete>0 !");
+            throw new ValidationException("ID e klientit është e pavlefshme.Duhet te jete>0 !");
         }
         Klientet klienti=klientetRepository.getById(id);
         if(klienti==null){
-            throw new Exception("Klienti nuk ekzistone!");
+            throw new ResourceNotFoundException("Klienti nuk ekzistone!");
         }
         return klientetRepository.delete(id);
+    }
+    public List<Klientet> kerkoKlientetMeEmriPlote(String emriPlote) {
+        return klientetRepository.searchByFullName(emriPlote);
     }
 }

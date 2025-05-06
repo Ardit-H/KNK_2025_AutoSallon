@@ -7,6 +7,8 @@ import models.dto.Klientet.UpdateKlientiDto;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetDto, UpdateKlientiDto>{
     public KlientetRepository(){
@@ -80,4 +82,64 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
         }
         return null;
     }
+    public List<Klientet> searchByFullName(String fullName) {
+        String where = "LOWER(CONCAT(emri, ' ', mbiemri)) LIKE ?";
+        String searchValue = "%" + fullName.toLowerCase() + "%";
+        return searchWithCustomWhere(where, searchValue);
+    }
+    public boolean existsByPhoneNumber(String nrTelefonit){
+        String query="SELECT COUNT(*) FROM klientet WHERE nrtelefonit = ?";
+        try(PreparedStatement stmt = this.connection.prepareStatement(query)){
+            stmt.setString(1, nrTelefonit);
+            ResultSet rs=stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1)>0;
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public boolean existsByPhoneNumberExceptId(String nrTelefonit, int id){
+        String query="SELECT COUNT(*) FROM klientet WHERE nrtelefonit = ? AND id != ?";
+        try(PreparedStatement stmt = this.connection.prepareStatement(query)){
+            stmt.setString(1, nrTelefonit);
+            stmt.setInt(2, id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1)>0;
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public boolean existsByEmail(String email){
+        String query = "SELECT COUNT(*) FROM klientet WHERE email = ?";
+        try(PreparedStatement stmt=this.connection.prepareStatement(query)) {
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1) > 0;
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public boolean existsByEmailExceptId(String email, int id){
+        String query = "SELECT COUNT(*) FROM klientet WHERE email = ? AND id != ?";
+        try(PreparedStatement stmt=this.connection.prepareStatement(query)) {
+            stmt.setString(1, email);
+            stmt.setInt(2, id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1) > 0;
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }
