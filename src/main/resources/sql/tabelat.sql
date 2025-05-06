@@ -115,10 +115,12 @@ CREATE TABLE rezervimet (
 CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,
     veturaId INTEGER NOT NULL,
-    pershkrimi TEXT NOT NULL,
-    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
-    kostoRiparimit NUMERIC(10,2) NOT NULL,
-    FOREIGN KEY (veturaId) REFERENCES veturat(id)
+    sherbimiId INTEGER NOT NULL,
+    statusi VARCHAR(30) NOT NULL CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')),
+    kostoRiparimit NUMERIC(10,2) NOT NULL CHECK (kostoRiparimit >= 0),
+    dataRiparimit DATE NOT NULL DEFAULT CURRENT_DATE,
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE,
+    FOREIGN KEY (sherbimiId) REFERENCES sherbimet(id) ON DELETE SET NULL
 );
 
 CREATE TABLE Pagesat (
