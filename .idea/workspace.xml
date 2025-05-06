@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Modifikimi i tabeles Riparimet">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="komentet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Riparimet/CreateRiparimetDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Riparimet/Riparimet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Riparimet/UpdateRiparimetDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746537213777</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="komentet">
+      <option name="closed" value="true" />
+      <created>1746545064911</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1746545064911</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -388,6 +396,7 @@
     <MESSAGE value="Krijimi i PartneretRepository" />
     <MESSAGE value="Krijimi i PartneretService, PartneretServiceTest dhe PartneretRepositoryTest" />
     <MESSAGE value="Modifikimi i tabeles Riparimet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifikimi i tabeles Riparimet" />
+    <MESSAGE value="komentet" />
+    <option name="LAST_COMMIT_MESSAGE" value="komentet" />
   </component>
 </project>
