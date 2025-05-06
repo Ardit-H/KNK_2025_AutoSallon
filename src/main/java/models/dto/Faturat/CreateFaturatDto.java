@@ -8,7 +8,7 @@ public class CreateFaturatDto {
         private Double shumaTotale;
         private String llojiPageses;
 
-        public CreateFaturatDto(int shitjeId, String dataFatures, Double shumaTotale, String llojiPageses) {
+        public CreateFaturatDto() {
             this.shitjeId = shitjeId;
             this.dataFatures = dataFatures;
             this.shumaTotale = shumaTotale;

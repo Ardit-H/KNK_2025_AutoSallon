@@ -68,7 +68,7 @@ CREATE TABLE Shitjet (
 	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(punetor_id)
 );
 
-CREATE TABLE faturat(
+CREATE TABLE Faturat(
     id SERIAL PRIMARY KEY,
     shitje_id INTEGER  NOT NULL,
     dataFatures DATE NOT NULL,
