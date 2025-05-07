@@ -2,7 +2,7 @@ module com.example.knk_2025_autosallon {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-
+    requires java.desktop;
 
 
     opens com.example.knk_2025_autosallon to javafx.fxml;
@@ -10,7 +10,7 @@ module com.example.knk_2025_autosallon {
 
     opens  controllers to javafx.fxml;
     exports  controllers;
-    opens Views to javafx.fxml;
-    exports Views;
+    opens App to javafx.fxml;
+    exports App;
 
 }
