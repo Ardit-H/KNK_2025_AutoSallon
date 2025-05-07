@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import services.LanguageManager;
@@ -13,7 +14,7 @@ import utils.SceneLocator;
 
 import java.util.Locale;
 
-public class Admin_DashboardController {
+public class User_DashboardController {
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button menuToggleButton;
@@ -21,7 +22,7 @@ public class Admin_DashboardController {
     @FXML private Button languageToggleButton;
     private boolean isEnglish = true;
     private LanguageManager languageManager;
-    public Admin_DashboardController(){
+    public User_DashboardController(){
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML public void initialize() {
@@ -56,28 +57,20 @@ public class Admin_DashboardController {
         transition.play();
         menuVisible =!menuVisible;
     }
-   @FXML private void handleLoadKlientet()throws Exception{
-       SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
-       SceneManager.load(SceneLocator.KLIENTET, centerPane);
-   }
-    @FXML private void handleLoadServices()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.SHERBIMET);
-        SceneManager.load(SceneLocator.SHERBIMET, centerPane);
-    }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
 
-@FXML private void handleLanguageToggle() throws Exception{
-    if (isEnglish) {
-        loadLanguage(new Locale("sq"));
-        setLanguageIcon("/Images/language-sq.png");
-    } else {
-        loadLanguage(Locale.ENGLISH);
-        setLanguageIcon("/Images/language-en.png");
+    @FXML private void handleLanguageToggle() throws Exception{
+        if (isEnglish) {
+            loadLanguage(new Locale("sq"));
+            setLanguageIcon("/Images/language-sq.png");
+        } else {
+            loadLanguage(Locale.ENGLISH);
+            setLanguageIcon("/Images/language-en.png");
+        }
+        isEnglish =!isEnglish;
     }
-    isEnglish =!isEnglish;
-}
 
     private void setLanguageIcon(String imagePath) {
         ImageView imageView = new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream(imagePath)));

@@ -4,13 +4,12 @@ public class CreatePerdoruesitDto {
     private String emri;
     private String email;
     private String fjalekalimi;
-    private String roli;
 
-    public CreatePerdoruesitDto(String emri, String email, String fjalekalimi, String roli){
+
+    public CreatePerdoruesitDto(String emri, String email, String fjalekalimi){
         this.emri = emri;
         this.email = email;
         this.fjalekalimi = fjalekalimi;
-        this.roli = roli;
     }
 
     public void setEmri(String emri){
@@ -37,10 +36,4 @@ public class CreatePerdoruesitDto {
         return fjalekalimi;
     }
 
-    public  void setRoli(String roli){
-        this.roli = roli;
-    }
-    public String getRoli(){
-        return roli;
-    }
 }
