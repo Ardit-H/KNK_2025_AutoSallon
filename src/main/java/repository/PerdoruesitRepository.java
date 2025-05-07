@@ -19,14 +19,13 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
 
     public Perdoruesit create(CreatePerdoruesitDto perdoruesitDto){
         String query = """
-                INSERT INTO PERDORUESIT (emri, email, fjalekalimi, roli)
-                VALUES (?,?,?,?)""";
+                INSERT INTO PERDORUESIT (emri, email, fjalekalimi)
+                VALUES (?,?,?)""";
         try{
             PreparedStatement pstm = this.connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             pstm.setString(1, perdoruesitDto.getEmri());
             pstm.setString(2, perdoruesitDto.getEmail());
             pstm.setString(3, perdoruesitDto.getFjalekalimi());
-            pstm.setString(4, perdoruesitDto.getRoli());
             pstm.execute();
             ResultSet resultSet = pstm.getGeneratedKeys();
             if(resultSet.next()){
