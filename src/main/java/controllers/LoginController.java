@@ -11,6 +11,7 @@ import models.dto.Perdoruesit.Perdoruesit;
 import services.LoginService;
 import services.SceneManager;
 import services.SessionManager;
+import utils.SceneLocator;
 
 
 public class LoginController {
@@ -38,9 +39,9 @@ public class LoginController {
             String roli = loggedUser.getRoli().toLowerCase();
 
             if (roli.equals("admin")) {
-                SceneManager.load("/Views/admin_dashboard.fxml");
+                SceneManager.load(SceneLocator.ADMIN_DASHBOARD_HOME);
             } else if (roli.equals("user")) {
-                SceneManager.load("/Views/user_dashboard.fxml");
+                SceneManager.load(SceneLocator.USER_DASHBOARD_HOME);
 
             } else {
                 throw new IllegalStateException("Roli i panjohur: " + roli);
@@ -49,5 +50,8 @@ public class LoginController {
         } catch (Exception e) {
             errorLabel.setText(e.getMessage());
         }
+    }
+    @FXML private void  handleLoadSignUp(){
+
     }
 }

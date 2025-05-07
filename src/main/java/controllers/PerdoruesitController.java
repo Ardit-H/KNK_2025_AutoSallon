@@ -55,7 +55,7 @@ public class PerdoruesitController {
         colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
         colEmail.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmail()));
         colRoli.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getRoli()));
-        colFjalekalimi.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFjalekalimi()));
+//        colFjalekalimi.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFjalekalimi()));
 
         loadPerdoruesit();
     }

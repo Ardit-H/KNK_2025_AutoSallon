@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = "/Views/SignUp.fxml";
+        this.currentPath = SceneLocator.USER_DASHBOARD_HOME;
         this.scene = this.initScene();
     }
 

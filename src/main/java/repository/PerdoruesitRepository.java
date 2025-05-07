@@ -38,7 +38,30 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
         return null;
     }
+    public Perdoruesit create(String emri, String email, String passwordHash, String salt) {
+        String sql = "INSERT INTO Perdoruesit (emri, email, password_hash, salt, roli) VALUES (?, ?, ?, ?, ?) RETURNING *";
 
+        try (Connection conn = DBConnector.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, emri);
+            stmt.setString(2, email);
+            stmt.setString(3, passwordHash);
+            stmt.setString(4, salt);
+            stmt.setString(5, "user");
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return Perdoruesit.getInstance(rs);
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Nuk u krijua përdoruesi", e);
+        }
+
+        return null;
+    }
     public Perdoruesit update(UpdatePerdoruesitDto perdoruesitDto){
         StringBuilder query = new StringBuilder("UPDATE PERDORUESIT SET ");
         ArrayList<Object> params = new ArrayList<>();
@@ -81,19 +104,23 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
         return null;
     }
-    public Perdoruesit getByEmailAndPassword(String email, String fjalekalimi) {
-        String query = "SELECT * FROM PERDORUESIT WHERE EMAIL = ? AND FJALEKALIMI = ?";
-        try {
-            PreparedStatement pstm = this.connection.prepareStatement(query);
+    public Perdoruesit getByEmail(String email){
+        String sql = "SELECT * FROM Perdoruesit WHERE email = ?";
+
+        try  {
+            PreparedStatement pstm = this.connection.prepareStatement(sql);
             pstm.setString(1, email);
-            pstm.setString(2, fjalekalimi);
-            ResultSet rs = pstm.executeQuery();
-            if (rs.next()) {
-                return fromResultSet(rs);
+
+            try (ResultSet rs=pstm.executeQuery()){
+                if (rs.next()){
+                    return Perdoruesit.getInstance(rs);
+                }
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        } catch (SQLException e){
+            throw new RuntimeException("Gabim gjatë kërkimit të përdoruesit", e);
         }
+
         return null;
     }
 }
