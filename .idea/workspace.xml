@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i SignUpController.java, SignUp.fxml dhe perditesime ne CreatePerdoruesitDto.java, PerdoruesitRepository.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PerdoruesitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PerdoruesitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/Perdoruesit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/Perdoruesit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PasswordUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PasswordUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresimi i Login dhe Sign Up, duke perdorur hashing te passwordit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -396,11 +383,18 @@
       <option name="project" value="LOCAL" />
       <updated>1746644322417</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Permiresimi i Login dhe Sign Up, duke perdorur hashing te passwordit">
+      <option name="closed" value="true" />
+      <created>1746656505159</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1746656505159</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
@@ -425,6 +419,7 @@
     <MESSAGE value="komentet" />
     <MESSAGE value="Krijimi i LoginController.java, LoginService.java,SessionManager dhe Login.fxml" />
     <MESSAGE value="Krijimi i SignUpController.java, SignUp.fxml dhe perditesime ne CreatePerdoruesitDto.java, PerdoruesitRepository.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i SignUpController.java, SignUp.fxml dhe perditesime ne CreatePerdoruesitDto.java, PerdoruesitRepository.java" />
+    <MESSAGE value="Permiresimi i Login dhe Sign Up, duke perdorur hashing te passwordit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Permiresimi i Login dhe Sign Up, duke perdorur hashing te passwordit" />
   </component>
 </project>
