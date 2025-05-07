@@ -150,3 +150,19 @@ CREATE TABLE Partneret (
     adresa VARCHAR(100) NOT NULL,
     data_bashkepunimit DATE DEFAULT CURRENT_DATE
 );
+
+CREATE TABLE Lokacionet(
+lokacionet_id SERIAL PRIMARY KEY,
+emri_lokacionit VARCHAR(100),
+adresa VARCHAR(150),
+qyteti VARCHAR(50),
+nr_telefonit VARCHAR(20)
+);
+
+CREATE TABLE Statistikat_e_Shitjeve(
+statistika_id SERIAL PRIMARY KEY,
+muaji VARCHAR(20),
+totali_shitjeve INT,
+fitimi DECIMAL(10,2) CHECK (fitimi >= 0),
+shpenzimet DECIMAL(10,2) CHECK (shpenzimet >= 0)
+)
