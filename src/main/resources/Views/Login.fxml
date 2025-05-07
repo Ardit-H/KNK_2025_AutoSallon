@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.LoginController">
+    <VBox alignment="CENTER" spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+        <Label text="Kyçu në sistem" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <TextField fx:id="emailField" promptText="Email" maxWidth="250" />
+        <PasswordField fx:id="passwordField" promptText="Fjalëkalimi" maxWidth="250" />
+
+        <Button text="Kyçu" onAction="#handleLogin" maxWidth="150" />
+
+        <Label fx:id="errorLabel" textFill="red" wrapText="true" />
+    </VBox>
+</AnchorPane>
