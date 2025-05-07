@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!-- Foto Kryesore -->
+        <ImageView fitHeight="94.0" fitWidth="369.0" layoutX="376.0" layoutY="247.0">
+            <image>
+                <Image url="@../Images/LlogoAutoSallon-removebg-preview.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="219.0" fitWidth="359.0">
+            <image>
+                <Image url="@../Images/AdobeStock_1011767359_Preview.jpeg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="219.0" fitWidth="348.0" layoutY="452.0">
+            <image>
+                <Image url="@../Images/AdobeStock_1105486701_Preview.jpeg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="219.0" fitWidth="370.0" layoutX="719.0">
+            <image>
+                <Image url="@../Images/AdobeStock_1079240793_Preview.jpeg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="219.0" fitWidth="360.0" layoutX="359.0">
+            <image>
+                <Image url="@../Images/AdobeStock_943043323_Preview.jpeg" />
+            </image>
+        </ImageView>
+
+        <!-- Titulli -->
+        <Label layoutX="320.0" layoutY="350.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Mirësevini në Panelin Administrativ të AutoSallonit" />
+
+        <!-- Përshkrimi -->
+        <Label layoutX="200.0" layoutY="390.0" maxWidth="680.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="Ky panel ju lejon të menaxhoni klientët, automjetet, shërbimet, rezervimet, vlerësimet, faturat dhe më shumë. Përdorni menunë për të naviguar nëpër seksionet përkatëse." wrapText="true" />
+        <ImageView fitHeight="219.0" fitWidth="390.0" layoutX="348.0" layoutY="452.0">
+            <image>
+                <Image url="@../Images/AdobeStock_930679947_Preview.jpeg" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="219.0" fitWidth="348.0" layoutX="738.0" layoutY="452.0">
+            <image>
+                <Image url="@../Images/AdobeStock_735926213_Preview.jpeg" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

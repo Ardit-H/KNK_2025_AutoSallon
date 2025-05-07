@@ -19,7 +19,7 @@ private Perdoruesit(int pid, String emri, String email, String fjalekalimi, Stri
 }
 
 public static Perdoruesit getInstance(ResultSet resultSet) throws SQLException{
-    int pid = resultSet.getInt("perdorues_id");
+    int pid = resultSet.getInt("id");
     String emri = resultSet.getString("emri");
     String email = resultSet.getString("email");
     String fjalekalimi = resultSet.getString("fjalekalimi");

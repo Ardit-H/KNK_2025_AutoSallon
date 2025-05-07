@@ -82,4 +82,19 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
         return null;
     }
+    public Perdoruesit getByEmailAndPassword(String email, String fjalekalimi) {
+        String query = "SELECT * FROM PERDORUESIT WHERE EMAIL = ? AND FJALEKALIMI = ?";
+        try {
+            PreparedStatement pstm = this.connection.prepareStatement(query);
+            pstm.setString(1, email);
+            pstm.setString(2, fjalekalimi);
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                return fromResultSet(rs);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

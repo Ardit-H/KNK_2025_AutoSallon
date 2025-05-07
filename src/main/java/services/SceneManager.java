@@ -3,6 +3,8 @@ package services;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import utils.SceneLocator;
 
@@ -13,10 +15,11 @@ public class SceneManager {
     private Scene scene;
     private LanguageManager languageManager;
     private String currentPath;
+    private String centerPanePath;
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.KLIENTET;
+        this.currentPath = "/Views/Login.fxml";
         this.scene = this.initScene();
     }
 
@@ -70,11 +73,21 @@ public class SceneManager {
         return loader.load();
     }
 
-    public static void reload() throws Exception{
+ //Shtese-nevojitet tek AdminDashboard
+    public void setCenterPanePath(String path) {
+        this.centerPanePath = path;
+    }
+
+    public static void reload() throws Exception {
         load(sceneManager.currentPath);
+        if (sceneManager.centerPanePath != null) {
+            AnchorPane centerPane = (AnchorPane) ((BorderPane) sceneManager.scene.getRoot()).getCenter();
+            sceneManager.loadParent(sceneManager.centerPanePath, centerPane);
+        }
     }
 
     public Scene getScene() {
         return scene;
     }
+
 }

@@ -62,23 +62,23 @@ public class PerdoruesitController {
         tabelaPerdoruesit.getItems().addAll(perdoruesitService.getAll());
     }
 
-    @FXML
-    private void handleCreate(MouseEvent event) {
-        try {
-            CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
-                    txtEmri.getText(),
-                    txtEmail.getText(),
-                    txtFjalekalimi.getText(),
-                    txtRoli.getText()
-            );
-            perdoruesitService.create(dto);
-            messageLabel.setText("Perdoruesi u shtua me sukses!");
-            loadPerdoruesit();
-            clearForm();
-        } catch (Exception e) {
-            messageLabel.setText("Gabim: " + e.getMessage());
-        }
-    }
+//    @FXML
+//    private void handleCreate(MouseEvent event) {
+//        try {
+//            CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
+//                    txtEmri.getText(),
+//                    txtEmail.getText(),
+//                    txtFjalekalimi.getText(),
+//                    txtRoli.getText()
+//            );
+//            perdoruesitService.create(dto); // Këtu brenda bëhet hashing dhe salt
+//            messageLabel.setText("Perdoruesi u shtua me sukses!");
+//            loadPerdoruesit();
+//            clearForm();
+//        } catch (Exception e) {
+//            messageLabel.setText("Gabim: " + e.getMessage());
+//        }
+//    }
 
     @FXML
     private void handleUpdate(MouseEvent event) {
@@ -91,7 +91,7 @@ public class PerdoruesitController {
             if (!txtEmail.getText().trim().isEmpty())
                 dto.setEmail(txtEmail.getText().trim());
             if (!txtFjalekalimi.getText().trim().isEmpty())
-                dto.setFjalekalimi(txtFjalekalimi.getText().trim());
+//                dto.setFjalekalimi(txtFjalekalimi.getText().trim());
             if (!txtRoli.getText().trim().isEmpty())
                 dto.setRoli(txtRoli.getText().trim());
 
