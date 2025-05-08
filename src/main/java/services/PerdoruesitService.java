@@ -45,17 +45,6 @@ public class PerdoruesitService {
         String hashed = PasswordUtil.hashPassword(dto.getFjalekalimi(), salt);
 
         Perdoruesit perdoruesi= perdoruesitRepository.create(dto.getEmri(),dto.getMbiemri(), dto.getEmail(), hashed, salt,dto.getNrtelefonit(),dto.getAdresa());
-        if (perdoruesi != null && "user".equalsIgnoreCase(perdoruesi.getRoli())) {
-            CreateKlientetDto klientetDto = new CreateKlientetDto(
-                    perdoruesi.getEmri(),
-                    perdoruesi.getMbiemri(),
-                    perdoruesi.getEmail(),
-                    perdoruesi.getNrtelefonit(),
-                    perdoruesi.getAdresa(),
-                    perdoruesi.getPid()
-            );
-            klientetRepository.create(klientetDto);
-        }
 
         return perdoruesi;
     }
@@ -72,7 +61,6 @@ public class PerdoruesitService {
         }
 
     }
-
     private boolean isValidEmail(String email) {
         return email != null && Pattern.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\\.[A-Za-z]{2,}$", email);
     }

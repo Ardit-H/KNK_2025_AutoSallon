@@ -14,7 +14,7 @@ public class CreateKlientetDto {
       this.email=email;
       this.nrtelefonit=nrtelefonit;
       this.adresa=adresa;
-      perdoruesiId=perdoruesiId;
+      this.perdoruesiId=perdoruesiId;
     }
     public Integer getPerdoruesiId(){
         return perdoruesiId;

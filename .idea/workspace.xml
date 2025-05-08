@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles perdoruesi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/CreateKlientetDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/CreateKlientetDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.KlientRepositoryTest.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.PerdoruesitRepositoryTest.executor": "Run",
-    "Application.PunetoretServiceTest.executor": "Run",
-    "Application.RezervimetServiceTest.executor": "Run",
-    "Application.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PerdoruesitRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PunetoretServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RezervimetServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
@@ -320,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746530035219</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Shtimi i tabeles perdoruesi">
+      <option name="closed" value="true" />
+      <created>1746711651126</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746711651126</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +366,17 @@
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
     <MESSAGE value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
+    <MESSAGE value="Shtimi i tabeles perdoruesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i tabeles perdoruesi" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
