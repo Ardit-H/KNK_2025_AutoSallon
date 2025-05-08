@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Update i klasave">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/warranty.jpg" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/GaranciaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/GaranciaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Garancia/CreateGaranciaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Garancia/CreateGaranciaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TestDrivesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TestDrivesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Views/garancia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/garancia.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/veturat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/veturat.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +77,6 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\elsak\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
-    </key>
-  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
@@ -327,15 +322,7 @@
       <option name="project" value="LOCAL" />
       <updated>1746530035219</updated>
     </task>
-    <task id="LOCAL-00021" summary="Update i klasave">
-      <option name="closed" value="true" />
-      <created>1746699882923</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1746699882923</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -369,7 +356,6 @@
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
     <MESSAGE value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
-    <MESSAGE value="Update i klasave" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update i klasave" />
+    <option name="LAST_COMMIT_MESSAGE" value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
   </component>
 </project>

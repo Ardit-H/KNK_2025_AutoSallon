@@ -24,7 +24,7 @@ public class LoginService {
 
         String expectedHash = PasswordUtil.hashPassword(password, user.getSalt());
         if (!expectedHash.equals(user.getPasswordHash())) {
-            throw new InvalidInputException("Hash nuk janë të njëjtë!");
+            throw new InvalidInputException("Email ose fjalëkalimi është i pasaktë!");
         }
 
         return user;

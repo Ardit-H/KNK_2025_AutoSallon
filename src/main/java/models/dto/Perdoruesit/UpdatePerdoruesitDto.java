@@ -3,38 +3,59 @@ package models.dto.Perdoruesit;
 public class UpdatePerdoruesitDto {
     private int id;
     private String email;
+    private String nrtelefonit;
+    private String adresa;
     private String fjalekalimi;
     private String roli;
 
-    public UpdatePerdoruesitDto(){}
+    public UpdatePerdoruesitDto() {
+    }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
-    public String getFjalekalimi(){
+
+    public String getNrtelefonit() {
+        return nrtelefonit;
+    }
+
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public String getFjalekalimi() {
         return fjalekalimi;
     }
 
-    public String getRoli(){
+    public String getRoli() {
         return roli;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setFjalekalimi(String fjalekalimi){
+    public void setNrtelefonit(String nrtelefonit) {
+        this.nrtelefonit = nrtelefonit;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
+    }
+
+    public void setFjalekalimi(String fjalekalimi) {
         this.fjalekalimi = fjalekalimi;
     }
 
-    public void setRoli(String roli){
+    public void setRoli(String roli) {
         this.roli = roli;
     }
 }
