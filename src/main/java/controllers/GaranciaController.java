@@ -16,16 +16,22 @@ public class GaranciaController {
     @FXML private TableColumn<Garancia, String> colLlojiGarancise;
     @FXML private TableColumn<Garancia, String> colDataFillimit;
     @FXML private TableColumn<Garancia, String> colDataMbarimit;
+    @FXML private TableColumn<Garancia, String> colKlientId;
+    @FXML private TableColumn<Garancia, String> colVeturaId;
 
     @FXML private TextField txtLlojiGarancise;
     @FXML private DatePicker dpDataFillimit;
     @FXML private DatePicker dpDataMbarimit;
+    @FXML private TextField txtKlientId;
+    @FXML private TextField txtVeturaId;
     @FXML private Button btnShto;
     @FXML private Button btnPerditeso;
     @FXML private Button btnFshij;
 
     private GaranciaService garanciaService = new GaranciaService();
     @FXML public void initialize() {
+        colKlientId.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getKid())));
+        colVeturaId.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getVid())));
         colLlojiGarancise.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getLlojiGarancise()));
         colDataFillimit.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDataFillimit()));
         colDataMbarimit.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDataMbarimit()));
@@ -43,8 +49,10 @@ public class GaranciaController {
         String lloji = txtLlojiGarancise.getText();
         String fillimi = dpDataFillimit.getValue() != null ? dpDataFillimit.getValue().toString() : "";
         String mbarimi = dpDataMbarimit.getValue() != null ? dpDataMbarimit.getValue().toString() : "";
+        int kid = Integer.parseInt(txtKlientId.getText());
+        int vid = Integer.parseInt(txtVeturaId.getText());
 
-        CreateGaranciaDto dto = new CreateGaranciaDto(lloji, fillimi, mbarimi);
+        CreateGaranciaDto dto = new CreateGaranciaDto(lloji, fillimi, mbarimi, kid, vid);
         garanciaService.create(dto);
         loadTable();
         clearFields();
