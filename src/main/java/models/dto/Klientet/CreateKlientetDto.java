@@ -6,15 +6,23 @@ public class CreateKlientetDto {
     private String email;
     private String nrtelefonit;
     private String adresa;
+    private Integer perdoruesiId;
 
-    public CreateKlientetDto(String emri,String mbiemri,String email,String nrtelefonit,String adresa){
+    public CreateKlientetDto(String emri,String mbiemri,String email,String nrtelefonit,String adresa,Integer perdoruesiId){
       this.emri=emri;
       this.mbiemri=mbiemri;
       this.email=email;
       this.nrtelefonit=nrtelefonit;
       this.adresa=adresa;
+      perdoruesiId=perdoruesiId;
+    }
+    public Integer getPerdoruesiId(){
+        return perdoruesiId;
     }
 
+    public void setPerdoruesiId(Integer perdoruesiId){
+        this.perdoruesiId = perdoruesiId;
+    }
     public String getEmri() {
         return emri;
     }

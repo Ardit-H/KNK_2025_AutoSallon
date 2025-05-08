@@ -28,6 +28,8 @@ public class KlientetController {
     private TextField txtAdresa;
     @FXML
     private TextField searchField;
+    @FXML
+    private TextField txtPerdoruesiId;
 
     @FXML private TableView<Klientet> KlientetTableView;
     @FXML private TableColumn<Klientet, String> colEmri;
@@ -36,7 +38,7 @@ public class KlientetController {
     @FXML private TableColumn<Klientet, String> colNrTelefonit;
     @FXML private TableColumn<Klientet, String> colAdresa;
     @FXML private TableColumn<Klientet, String> colDataRegjistrimit;
-
+    @FXML private TableColumn<Klientet, String> colUserId;
     @FXML
     private Label messageLabel;
     private KlientetService klientetService;
@@ -62,6 +64,7 @@ public class KlientetController {
         colNrTelefonit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNrtelefonit()));
         colAdresa.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAdresa()));
         colDataRegjistrimit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getData_regjistrimit()));
+        colUserId.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPerdoruesiId())));
         loadKlientet();
     }
 
@@ -78,7 +81,8 @@ private void loadKlientet() {
                     txtMbiemri.getText(),
                     txtEmail.getText(),
                     txtNrTelefonit.getText(),
-                    txtAdresa.getText()
+                    txtAdresa.getText(),
+                   Integer.parseInt(txtPerdoruesiId.getText().trim())
             );
             klientetService.create(dto);
             messageLabel.setText("Klienti u shtua me sukses.");
