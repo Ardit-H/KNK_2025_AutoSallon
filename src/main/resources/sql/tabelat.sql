@@ -14,7 +14,7 @@ CREATE TABLE sherbimet(
     emri VARCHAR(100) NOT NULL,
     pershkrimi VARCHAR(500),
     çmimi DECIMAL(10,2) DEFAULT 0 CHECK (çmimi>=0)
-)
+);
 
 /*
 CREATE TABLE Veturat (
@@ -44,7 +44,7 @@ CREATE TABLE Porosite (
 
 
 CREATE TABLE Punetoret (
-    punetor_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     emri VARCHAR(50) NOT NULL,
     mbiemri VARCHAR(50) NOT NULL,
     pozita VARCHAR(50) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE Punetoret (
 
 
 CREATE TABLE Shitjet (
-       shitje_id SERIAL PRIMARY KEY,
+       id SERIAL PRIMARY KEY,
 	   kid INTEGER NOT NULL,
 	   vetura_id INTEGER NOT NULL ,
 	   punetor_id INTEGER NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE rezervimet (
     vetura_id INTEGER REFERENCES Veturat(vetura_id),
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
-);*/
+);
 
 CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,

@@ -18,6 +18,7 @@ public class VeturatService {
     public List<Veturat> getAll() {
         return veturatRepository.getAll();
     }
+
     public Veturat getById(int id) throws Exception {
         if (id < 0) {
             throw new Exception("ID e veturës duhet të jetë pozitive!");
@@ -105,7 +106,4 @@ public class VeturatService {
 
         return veturatRepository.delete(id);
     }
-
-
-
 }

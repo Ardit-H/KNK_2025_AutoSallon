@@ -28,7 +28,7 @@ public class VeturatServiceTest {
 //                System.out.println("Viti: " + v.getVitiProdhimit());
 //                System.out.println("------------------------");
 //            }
-
+//
 //            CreateVeturatDto createDto = new CreateVeturatDto();
 //            createDto.setModeli("Golf 7");
 //            createDto.setProdhuesi("Volkswagen");
@@ -36,14 +36,12 @@ public class VeturatServiceTest {
 //            createDto.setKilometrazha(85000);
 //            createDto.setViti_prodhimit(2016);
 //            veturatService.create(createDto);
-
+//
 //            UpdateVeturatDto updateDto = new UpdateVeturatDto();
-//            updateDto.setId(3);
-//            updateDto.setCmimi(12500.00);
-//            updateDto.setKilometrazha(90000);
+//            updateDto.setNgjyra("E bardhe");
 //            veturatService.update(updateDto);
-
-            veturatService.delete(6);
+//
+//            veturatService.delete(6);
 
         } catch (Exception e) {
             e.printStackTrace();

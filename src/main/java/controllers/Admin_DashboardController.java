@@ -2,15 +2,22 @@ package controllers;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import services.LanguageManager;
 import services.SceneManager;
 import utils.SceneLocator;
 
+import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.util.Locale;
 
 public class Admin_DashboardController {
@@ -60,6 +67,13 @@ public class Admin_DashboardController {
        SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
        SceneManager.load(SceneLocator.KLIENTET, centerPane);
     }
+
+    @FXML
+    private void handleLoadVeturat() throws Exception {
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT);
+        SceneManager.load(SceneLocator.VETURAT, centerPane);
+    }
+
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
@@ -85,4 +99,6 @@ public class Admin_DashboardController {
         languageManager.setLocale(locale);
         SceneManager.reload();
     }
+
+
 }

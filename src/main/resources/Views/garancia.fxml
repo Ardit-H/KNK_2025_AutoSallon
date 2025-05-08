@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="controllers.GaranciaController"
+            style="-fx-background-color: #C0CEF7;">
+    <children>
+        <HBox spacing="20" padding="20">
+            <VBox spacing="15" alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                <Label text="Menaxhimi i Garancive" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+                <GridPane hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT"/>
+                        <ColumnConstraints halignment="LEFT" prefWidth="200"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                    </rowConstraints>
+
+                    <Label text="Lloji i Garancisë:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtLlojiGarancise" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Data e Fillimit:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <DatePicker fx:id="dpDataFillimit" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Data e Mbarimit:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <DatePicker fx:id="dpDataMbarimit" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                </GridPane>
+
+                <HBox spacing="15" alignment="CENTER">
+                    <Button text="Shto" fx:id="btnShto" onAction="#onShtoClicked"/>
+                    <Button text="Përditëso" fx:id="btnPerditeso" onAction="#onPerditesoClicked"/>
+                    <Button text="Fshij" fx:id="btnFshij" onAction="#onFshijClicked"/>
+                </HBox>
+
+                <TableView fx:id="garanciaTableView" prefHeight="200" onMouseClicked="#onTableClicked">
+                    <columns>
+                        <TableColumn fx:id="colLlojiGarancise" text="Lloji"/>
+                        <TableColumn fx:id="colDataFillimit" text="Data Fillimit"/>
+                        <TableColumn fx:id="colDataMbarimit" text="Data Mbarimit"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <ImageView fitWidth="150" fitHeight="150" preserveRatio="true">
+                <image>
+                    <Image url="@../Images/LlogoAutoSallon-removebg-preview.png" />
+                </image>
+                </ImageView>
+        </HBox>
+    </children>
+</AnchorPane>
