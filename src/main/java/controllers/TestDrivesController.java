@@ -53,20 +53,16 @@ public class TestDrivesController {
         testDrivesTableView.getItems().setAll(testDrives);
     }
 
-    private void handleCreateTestDrive( ActionEvent event) {
-        try {
-            int durationInt = Integer.parseInt(duration.getText().trim());
+    private void handleCreateTestDrive( ActionEvent event) throws Exception {
+        int durationInt = Integer.parseInt(duration.getText().trim());
 
-            CreateTestDrivesDto dto = new CreateTestDrivesDto(
-                    "New", feedback.getText().trim(), durationInt, location.getText().trim()
-            );
-            testDrivesService.create(dto);
-            messageLabel.setText("Test Drive u shtua me sukses.");
-            loadTestDrives();
-            clearForm();
-        } catch (Exception e) {
-            messageLabel.setText("Gabim: " + e.getMessage());
-        }
+        CreateTestDrivesDto dto = new CreateTestDrivesDto(
+                "New", feedback.getText().trim(), durationInt, location.getText().trim()
+        );
+        testDrivesService.create(dto);
+        messageLabel.setText("Test Drive u shtua me sukses.");
+        loadTestDrives();
+        clearForm();
     }
 
 
