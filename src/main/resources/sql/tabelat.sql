@@ -1,25 +1,4 @@
-CREATE TABLE Perdoruesit (
-    id SERIAL PRIMARY KEY,
-    emri VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    roli VARCHAR(50) NOT NULL DEFAULT 'user',
-    password_hash VARCHAR(255) NOT NULL,
-    salt VARCHAR(255) NOT NULL
-);
-CREATE TABLE perdoruesi(
-    id SERIAL PRIMARY KEY,
-   emri VARCHAR(50) NOT NULL CHECK(char_length(emri)>=3),
-    mbiemri VARCHAR(50) NOT NULL CHECK(char_length(mbiemri)>=3),
-    email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\.[A-Za-z]{2,}$'),
-    nrtelefonit VARCHAR(15) CHECK(nrtelefonit ~ '^\+?[0-9]{7,15}$'),
-    adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
-    data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    roli VARCHAR(50) DEFAULT 'user',
-	passwordHash VARCHAR(255) NOT NULL,
-    salt VARCHAR(255) NOT NULL
-
-);
-
+/*
 CREATE TABLE Klientet(
     id SERIAL PRIMARY KEY,
     emri VARCHAR(50) NOT NULL CHECK(char_length(emri)>=3),
@@ -29,22 +8,15 @@ CREATE TABLE Klientet(
     adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
     data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
-ALTER TABLE Klientet
-ADD COLUMN perdoruesi_id INT UNIQUE;
-ALTER TABLE Klientet
-ADD CONSTRAINT fk_klient_perdorues
-FOREIGN KEY (perdoruesi_id)
-REFERENCES Perdoruesit(id)
-ON DELETE SET NULL;
-
-
+*/
 CREATE TABLE sherbimet(
     id SERIAL PRIMARY KEY,
     emri VARCHAR(100) NOT NULL,
     pershkrimi VARCHAR(500),
     çmimi DECIMAL(10,2) DEFAULT 0 CHECK (çmimi>=0)
-)
+);
 
+/*
 CREATE TABLE Veturat (
     id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
@@ -56,7 +28,9 @@ CREATE TABLE Veturat (
     kilometrazha INT CHECK (kilometrazha >= 0),
     tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
 );
+*/
 
+/*
 CREATE TABLE Porosite (
     id SERIAL PRIMARY KEY,
     kid INTEGER NOT NULL,
@@ -66,9 +40,11 @@ CREATE TABLE Porosite (
     FOREIGN KEY (kid) REFERENCES Klientet(id),
     FOREIGN KEY (veturaId) REFERENCES Veturat(id)
 );
+*/
+
 
 CREATE TABLE Punetoret (
-    punetor_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     emri VARCHAR(50) NOT NULL,
     mbiemri VARCHAR(50) NOT NULL,
     pozita VARCHAR(50) NOT NULL,
@@ -77,6 +53,8 @@ CREATE TABLE Punetoret (
     paga DECIMAL(10,2) CHECK (paga >= 0),
     data_punesimit DATE NOT NULL
 );
+*/
+
 
 CREATE TABLE Shitjet (
        id SERIAL PRIMARY KEY,
@@ -85,20 +63,19 @@ CREATE TABLE Shitjet (
 	   punetor_id INTEGER NOT NULL,
 	   data_shitjes DATE NOT NULL,
 	   cmimi_final DECIMAL(10,2) CHECK (cmimi_final > 0),
-	   FOREIGN KEY (kid) REFERENCES Klientet(id),
-	   FOREIGN KEY (vetura_id) REFERENCES Veturat(id),
-	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(id)
+	   FOREIGN KEY (kid) REFERENCES Klientet(kid),
+	   FOREIGN KEY (vetura_id) REFERENCES Veturat(vetura_id),
+	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(punetor_id)
 );
 
-CREATE TABLE Faturat(
+CREATE TABLE faturat(
     id SERIAL PRIMARY KEY,
     shitje_id INTEGER  NOT NULL,
     dataFatures DATE NOT NULL,
     shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0),
     llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
-    FOREIGN KEY (shitje_id) REFERENCES Shitjet(id) ON DELETE CASCADE
+    FOREIGN KEY (shitje_id) REFERENCES Shitjet(shitje_id) ON DELETE CASCADE
 );
-
 CREATE TABLE Vleresimet(
     id SERIAL PRIMARY KEY,
     klienti_id INT NOT NULL,
@@ -109,7 +86,9 @@ CREATE TABLE Vleresimet(
     FOREIGN KEY(klienti_id) REFERENCES Klientet(id) ON DELETE CASCADE,
     FOREIGN KEY(vetura_id) REFERENCES Veturat(id) ON DELETE CASCADE
 );
+*/
 
+/*
 CREATE TABLE testDrives (
     id SERIAL PRIMARY KEY,
     kid INT NOT NULL,
@@ -119,11 +98,12 @@ CREATE TABLE testDrives (
     duration INT,
     location VARCHAR(255),
     CONSTRAINT fk_klient FOREIGN KEY (kid)
-        REFERENCES Klientet(id) ON DELETE CASCADE,
+        REFERENCES Klientet(kid) ON DELETE CASCADE,
     CONSTRAINT fk_vetura FOREIGN KEY (vetura_id)
-        REFERENCES Veturat(id) ON DELETE CASCADE
+        REFERENCES Veturat(vetura_id) ON DELETE CASCADE
 );
-
+*/
+/*
 CREATE TABLE rezervimet (
     rezervimi_id SERIAL PRIMARY KEY,
     klienti_id INTEGER REFERENCES Klientet(kid),
@@ -135,12 +115,10 @@ CREATE TABLE rezervimet (
 CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,
     veturaId INTEGER NOT NULL,
-    sherbimiId INTEGER NOT NULL,
-    statusi VARCHAR(30) NOT NULL CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')),
-    kostoRiparimit NUMERIC(10,2) NOT NULL CHECK (kostoRiparimit >= 0),
-    dataRiparimit DATE NOT NULL DEFAULT CURRENT_DATE,
-    FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE,
-    FOREIGN KEY (sherbimiId) REFERENCES sherbimet(id) ON DELETE SET NULL
+    pershkrimi TEXT NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
+    kostoRiparimit NUMERIC(10,2) NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES veturat(id)
 );
 
 CREATE TABLE Pagesat (
@@ -151,7 +129,7 @@ CREATE TABLE Pagesat (
     dataPageses DATE DEFAULT CURRENT_DATE,
     FOREIGN KEY (porosiaId) REFERENCES Porosite(id) ON DELETE CASCADE
 );
-
+//koment
 CREATE TABLE Ofertat (
     id SERIAL PRIMARY KEY,
     veturaId INT NOT NULL,
@@ -161,7 +139,7 @@ CREATE TABLE Ofertat (
     dataMbarimit DATE NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
 );
-
+//koment
 CREATE TABLE Partneret (
     id SERIAL PRIMARY KEY,
     emri_kompanise VARCHAR(100) NOT NULL,
@@ -172,4 +150,3 @@ CREATE TABLE Partneret (
     adresa VARCHAR(100) NOT NULL,
     data_bashkepunimit DATE DEFAULT CURRENT_DATE
 );
-
