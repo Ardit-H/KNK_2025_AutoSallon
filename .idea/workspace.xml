@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Koment">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TestDrivesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/Car.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/garancia.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/testDrives.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/veturat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/Veturat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Veturat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DBConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/VeturatServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/VeturatServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/FeedbackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MbulesatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/GaranciaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/VeturatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/VeturatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +16,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -51,7 +32,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;711373e8-4a25-43d9-a88d-666b1d812423&quot;
+    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -75,16 +56,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DatabasePopulator.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Main.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
     "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -92,18 +73,13 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\elsak\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.PunetoretServiceTest">
-    <configuration name="DatabasePopulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="services.DatabasePopulator" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="services.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,7 +141,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DatabasePopulator" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
         <item itemvalue="Application.PerdoruesitRepositoryTest" />
@@ -334,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745420397652</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java">
+      <option name="closed" value="true" />
+      <created>1746530035219</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746530035219</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -356,6 +340,7 @@
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i tabeles faturat" />
+    <MESSAGE value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
   </component>
 </project>

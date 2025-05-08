@@ -4,6 +4,7 @@ import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
 import repository.PerdoruesitRepository;
+import utils.PasswordUtil;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -30,9 +31,13 @@ public class PerdoruesitService {
         return perdoruesi;
     }
 
-    public Perdoruesit create(CreatePerdoruesitDto createPerdoruesit) {
-        validateCreateDto(createPerdoruesit);
-        return perdoruesitRepository.create(createPerdoruesit);
+    public Perdoruesit create(CreatePerdoruesitDto dto) {
+        validateCreateDto(dto);
+
+        String salt = PasswordUtil.generateSalt();
+        String hashed = PasswordUtil.hashPassword(dto.getFjalekalimi(), salt);
+
+        return perdoruesitRepository.create(dto.getEmri(), dto.getEmail(), hashed, salt);
     }
 
     private void validateCreateDto(CreatePerdoruesitDto createPerdoruesitDto) {
@@ -41,6 +46,9 @@ public class PerdoruesitService {
         }
         if (!isValidEmail(createPerdoruesitDto.getEmail())) {
             throw new IllegalArgumentException("Email eshte i pavlefshem!");
+        }
+        if (perdoruesitRepository.getByEmail(createPerdoruesitDto.getEmail()) != null) {
+            throw new IllegalArgumentException("Ky email ekziston ne sistem!");
         }
 
     }
