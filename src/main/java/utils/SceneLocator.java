@@ -1,6 +1,7 @@
 package utils;
 
 public class SceneLocator {
+    public static final String OVERALL_DASHBOARD = "/Views/overall_dashboard.fxml";
     public static final String SIGNUP = "/Views/SignUp.fxml";
     public static final String LOGIN = "/Views/Login.fxml";
     public static final String DASHBOARD_HOME = "/Views/dashboard_home.fxml";

@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i tabeles perdoruesi">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresim ne kod">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/OverallDashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/emailIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/infoIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/pexels-albinberlin-919073.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/pexels-halil-fatih-cetin-460308764-27124091.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/pexels-lynxexotics-3849554.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/pexels-lynxexotics-3849555.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/pexels-maria-geller-801267-2127037.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/pexels-maria-geller-801267-2127038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/phone-call-white-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/overall_dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/CreateKlientetDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Klientet/CreateKlientetDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,6 +91,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
@@ -332,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746711651126</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Permiresim ne kod">
+      <option name="closed" value="true" />
+      <created>1746731323849</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1746731323849</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +392,8 @@
     <MESSAGE value="Krijimi i tabeles faturat" />
     <MESSAGE value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
     <MESSAGE value="Shtimi i tabeles perdoruesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i tabeles perdoruesi" />
+    <MESSAGE value="Permiresim ne kod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Permiresim ne kod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
