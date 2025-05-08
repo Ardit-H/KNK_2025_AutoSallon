@@ -13,7 +13,7 @@
       <AnchorPane layoutX="9.0" layoutY="282.0" prefHeight="322.0" prefWidth="890.0">
          <children>
             <Label fx:id="messageLabel" layoutX="99.0" layoutY="5.0" prefHeight="18.0" prefWidth="467.0" />
-            <TableView fx:id="KlientetTableView" layoutX="37.0" layoutY="23.0" prefHeight="290.0" prefWidth="890.0">
+            <TableView fx:id="KlientetTableView" layoutX="37.0" layoutY="23.0" prefHeight="290.0" prefWidth="1048.0">
                <columns>
                   <TableColumn fx:id="colEmri" prefWidth="118.39998817443848" text="%FirstName" />
                   <TableColumn fx:id="colMbiemri" prefWidth="128.0" text="%LastName" />
@@ -21,6 +21,7 @@
                   <TableColumn fx:id="colNrTelefonit" prefWidth="160.00009155273438" text="%Phone" />
                   <TableColumn fx:id="colAdresa" minWidth="0.0" prefWidth="154.4000244140625" text="%Address" />
                   <TableColumn fx:id="colDataRegjistrimit" minWidth="0.0" prefWidth="179.99993896484375" text="%RegistrationDate" />
+                  <TableColumn fx:id="colUserId" minWidth="0.0" prefWidth="179.99993896484375" text="%UserId" />
                </columns>
             </TableView>
             <Label layoutX="14.0" layoutY="5.0" prefHeight="18.0" prefWidth="69.0" text="%Comment1" />
@@ -37,6 +38,7 @@
             <Button layoutX="155.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_client" />
             <Button layoutX="295.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_client" />
             <TextField fx:id="searchField" layoutX="198.0" layoutY="108.0" promptText="%SearchClient" />
+            <TextField fx:id="txtPerdoruesiId" layoutX="355.0" layoutY="30.0" promptText="%UserId" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="49.0" prefWidth="906.0" style="-fx-background-color: lightblue;" text="%Customer_Managment" textAlignment="CENTER">

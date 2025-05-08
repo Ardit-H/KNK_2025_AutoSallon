@@ -9,12 +9,25 @@ CREATE TABLE Klientet(
     data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 */
+
+CREATE TABLE perdoruesi (
+    id SERIAL PRIMARY KEY,
+   emri VARCHAR(50) NOT NULL CHECK(char_length(emri)>=3),
+   mbiemri VARCHAR(50) NOT NULL CHECK(char_length(mbiemri)>=3),
+   email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\.[A-Za-z]{2,}$'),
+   nrtelefonit VARCHAR(15) CHECK(nrtelefonit ~ '^\+?[0-9]{7,15}$'),
+   adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
+   data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   roli VARCHAR(50) DEFAULT 'user',
+   passwordHash VARCHAR(255) NOT NULL,
+   salt VARCHAR(255) NOT NULL
+);
 CREATE TABLE sherbimet(
     id SERIAL PRIMARY KEY,
     emri VARCHAR(100) NOT NULL,
     pershkrimi VARCHAR(500),
     çmimi DECIMAL(10,2) DEFAULT 0 CHECK (çmimi>=0)
-)
+);
 
 /*
 CREATE TABLE Veturat (
@@ -44,7 +57,7 @@ CREATE TABLE Porosite (
 
 
 CREATE TABLE Punetoret (
-    punetor_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     emri VARCHAR(50) NOT NULL,
     mbiemri VARCHAR(50) NOT NULL,
     pozita VARCHAR(50) NOT NULL,
@@ -57,7 +70,7 @@ CREATE TABLE Punetoret (
 
 
 CREATE TABLE Shitjet (
-       shitje_id SERIAL PRIMARY KEY,
+       id SERIAL PRIMARY KEY,
 	   kid INTEGER NOT NULL,
 	   vetura_id INTEGER NOT NULL ,
 	   punetor_id INTEGER NOT NULL,
@@ -110,7 +123,7 @@ CREATE TABLE rezervimet (
     vetura_id INTEGER REFERENCES Veturat(vetura_id),
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
-);*/
+);
 
 CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,
@@ -129,7 +142,7 @@ CREATE TABLE Pagesat (
     dataPageses DATE DEFAULT CURRENT_DATE,
     FOREIGN KEY (porosiaId) REFERENCES Porosite(id) ON DELETE CASCADE
 );
-
+//koment
 CREATE TABLE Ofertat (
     id SERIAL PRIMARY KEY,
     veturaId INT NOT NULL,
@@ -139,7 +152,7 @@ CREATE TABLE Ofertat (
     dataMbarimit DATE NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
 );
-
+//koment
 CREATE TABLE Partneret (
     id SERIAL PRIMARY KEY,
     emri_kompanise VARCHAR(100) NOT NULL,

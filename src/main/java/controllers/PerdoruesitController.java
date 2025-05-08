@@ -65,22 +65,22 @@ public class PerdoruesitController {
         perdoruesitTable.getItems().setAll(perdoruesit);
     }
 
-    @FXML
-    private void handleCreate(MouseEvent event) {
-        try {
-            CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
-                    txtEmri.getText(),
-                    txtEmail.getText(),
-                    txtFjalekalimi.getText()
-            );
-            perdoruesitService.create(dto); // Këtu brenda bëhet hashing dhe salt
-            messageLabel.setText("Perdoruesi u shtua me sukses!");
-            loadPerdoruesit();
-            clearForm();
-        } catch (Exception e) {
-            messageLabel.setText("Gabim: " + e.getMessage());
-        }
-    }
+//    @FXML
+//    private void handleCreate(MouseEvent event) {
+//        try {
+//            CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
+//                    txtEmri.getText(),
+//                    txtEmail.getText(),
+//                    txtFjalekalimi.getText()
+//            );
+//            perdoruesitService.create(dto); // Këtu brenda bëhet hashing dhe salt
+//            messageLabel.setText("Perdoruesi u shtua me sukses!");
+//            loadPerdoruesit();
+//            clearForm();
+//        } catch (Exception e) {
+//            messageLabel.setText("Gabim: " + e.getMessage());
+//        }
+//    }
 
     @FXML
     private void handleUpdate(MouseEvent event) {

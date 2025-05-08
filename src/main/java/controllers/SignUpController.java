@@ -9,8 +9,11 @@ import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import services.PerdoruesitService;
 
 public class SignUpController {
-    @FXML private TextField txtName;
+    @FXML private TextField txtFistName;
+    @FXML private TextField txtLastName;
     @FXML private TextField txtEmail;
+    @FXML private TextField txtPhone;
+    @FXML private TextField txtAddress;
     @FXML private TextField pwdPassword;
     @FXML private Label errorMessageLabel;
     @FXML private ImageView imgIcon;
@@ -23,8 +26,11 @@ public class SignUpController {
     private void handleSignUp() {
         try {
             CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
-                    txtName.getText(),
+                    txtFistName.getText(),
+                    txtLastName.getText(),
                     txtEmail.getText(),
+                    txtPhone.getText(),
+                    txtAddress.getText(),
                     pwdPassword.getText()
             );
             perdoruesitService.create(dto); // Këtu brenda bëhet hashing dhe salt
@@ -35,7 +41,10 @@ public class SignUpController {
         }
     }
     private void clearForm() {
-        txtName.clear();
+        txtFistName.clear();
+        txtLastName.clear();
+        txtAddress.clear();
+        txtPhone.clear();
         txtEmail.clear();
         pwdPassword.clear();
     }

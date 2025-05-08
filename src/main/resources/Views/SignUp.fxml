@@ -15,21 +15,21 @@
     <children>
         <AnchorPane layoutX="417.0" layoutY="55.0" prefHeight="405.0" prefWidth="306.0" style="-fx-background-color: linear-gradient(to bottom, #19316C 2.8%, #01B3C9 97.8%);">
             <children>
-                <TextField fx:id="txtName" layoutX="72.0" layoutY="109.0" prefHeight="27.0" prefWidth="147.0" promptText="%txtName" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
+                <TextField fx:id="txtFistName" layoutX="72.0" layoutY="61.0" prefHeight="27.0" prefWidth="147.0" promptText="%txtFirstName" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
                     <font>
                         <Font size="11.0" />
                     </font>
                 </TextField>
-                <TextField fx:id="txtEmail" layoutX="73.0" layoutY="159.0" prefHeight="27.0" prefWidth="145.0" promptText="%txtEmail" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
+                <TextField fx:id="txtEmail" layoutX="73.0" layoutY="145.0" prefHeight="27.0" prefWidth="145.0" promptText="%txtEmail" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
                     <font>
                         <Font size="11.0" />
                     </font>
                 </TextField>
-                <PasswordField fx:id="pwdPassword" layoutX="73.0" layoutY="211.0" prefHeight="26.0" prefWidth="146.0" promptText="%pswPassword" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
+                <PasswordField fx:id="pwdPassword" layoutX="73.0" layoutY="268.0" prefHeight="26.0" prefWidth="146.0" promptText="%pswPassword" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
                     <font>
                         <Font size="11.0" />
                     </font></PasswordField>
-                <Button layoutX="67.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="38.0" prefWidth="158.0" style="-fx-background-color: #435778; -fx-background-radius: 10;" text="%btnSignUp" textFill="WHITE">
+                <Button layoutX="67.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="38.0" prefWidth="158.0" style="-fx-background-color: #435778; -fx-background-radius: 10;" text="%btnSignUp" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
@@ -37,7 +37,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Label layoutX="102.0" layoutY="37.0" prefHeight="37.0" prefWidth="103.0" text="%lblSignUp" textFill="WHITE">
+                <Label layoutX="101.0" layoutY="14.0" prefHeight="37.0" prefWidth="103.0" text="%lblSignUp" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
@@ -46,6 +46,21 @@
                     </padding>
                 </Label>
               <Label fx:id="errorMessageLabel" layoutX="12.0" layoutY="354.0" prefHeight="50.0" prefWidth="287.0" textFill="RED" visible="true" />
+            <TextField fx:id="txtLastName" layoutX="72.0" layoutY="104.0" prefHeight="27.0" prefWidth="147.0" promptText="%txtLastName" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPhone" layoutX="73.0" layoutY="189.0" prefHeight="27.0" prefWidth="145.0" promptText="%txtPhone" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAddress" layoutX="73.0" layoutY="226.0" prefHeight="27.0" prefWidth="145.0" promptText="%txtAddress" style="-fx-color: #fff; -fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
             </children>
         </AnchorPane>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="109.0" text="%lblWelcome" textAlignment="CENTER" textFill="WHITE">

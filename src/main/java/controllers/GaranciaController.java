@@ -9,9 +9,8 @@ import models.dto.Garancia.CreateGaranciaDto;
 import models.dto.Garancia.UpdateGaranciaDto;
 import models.dto.Garancia.Garancia;
 import services.GaranciaService;
-import java.util.Locale;
 
-public class MbulesatController {
+public class GaranciaController {
 
     @FXML private TableView<Garancia> garanciaTableView;
     @FXML private TableColumn<Garancia, String> colLlojiGarancise;

@@ -1,8 +1,11 @@
 package services;
 
+import models.dto.Klientet.CreateKlientetDto;
+import models.dto.Klientet.Klientet;
 import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
+import repository.KlientetRepository;
 import repository.PerdoruesitRepository;
 import utils.PasswordUtil;
 
@@ -11,9 +14,13 @@ import java.util.regex.Pattern;
 
 public class PerdoruesitService {
     private PerdoruesitRepository perdoruesitRepository;
+    private KlientetRepository klientetRepository;
+    private KlientetService klientetService;
 
     public PerdoruesitService() {
         this.perdoruesitRepository = new PerdoruesitRepository();
+        this.klientetRepository=new KlientetRepository();
+        this.klientetService=new KlientetService();
     }
 
     public List<Perdoruesit> getAll() {
@@ -37,7 +44,20 @@ public class PerdoruesitService {
         String salt = PasswordUtil.generateSalt();
         String hashed = PasswordUtil.hashPassword(dto.getFjalekalimi(), salt);
 
-        return perdoruesitRepository.create(dto.getEmri(), dto.getEmail(), hashed, salt);
+        Perdoruesit perdoruesi= perdoruesitRepository.create(dto.getEmri(),dto.getMbiemri(), dto.getEmail(), hashed, salt,dto.getNrtelefonit(),dto.getAdresa());
+        if (perdoruesi != null && "user".equalsIgnoreCase(perdoruesi.getRoli())) {
+            CreateKlientetDto klientetDto = new CreateKlientetDto(
+                    perdoruesi.getEmri(),
+                    perdoruesi.getMbiemri(),
+                    perdoruesi.getEmail(),
+                    perdoruesi.getNrtelefonit(),
+                    perdoruesi.getAdresa(),
+                    perdoruesi.getPid()
+            );
+            klientetRepository.create(klientetDto);
+        }
+
+        return perdoruesi;
     }
 
     private void validateCreateDto(CreatePerdoruesitDto createPerdoruesitDto) {
