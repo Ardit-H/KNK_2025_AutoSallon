@@ -50,7 +50,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button style="-fx-text-fill: white; -fx-background-color: transparent;" text="Log Out" />
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#handleLogOut" style="-fx-text-fill: white; -fx-background-color: gray;" text="%LogOut" />
          </children>
       </HBox>
    </top>

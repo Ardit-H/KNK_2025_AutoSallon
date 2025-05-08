@@ -71,6 +71,9 @@ public class User_DashboardController {
         }
         isEnglish =!isEnglish;
     }
+    @FXML private void handleLogOut()throws Exception{
+        SceneManager.load(SceneLocator.OVERALL_DASHBOARD);
+    }
 
     private void setLanguageIcon(String imagePath) {
         ImageView imageView = new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream(imagePath)));
