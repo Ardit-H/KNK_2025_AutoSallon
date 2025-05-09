@@ -1,16 +1,15 @@
 package repository;
 
+import Database.DBConnector;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
 import models.dto.Vleresimet.Vleresimet;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVleresimetDto, UpdateVleresimetDto> {
      public VleresimetRepository(){
@@ -88,6 +87,30 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         }
         return null;
     }
+    public List<Vleresimet> getByUserId(int userId){
+        List<Vleresimet> vleresimetList=new ArrayList<>();
+        String sql = """
+        SELECT v.*, ve.prodhuesi, ve.modeli
+        FROM Vleresimet v
+        JOIN Veturat ve ON v.vetura_id = ve.id
+        WHERE v.perdoruesi_id = ?
+    """;
+        try(Connection conn=DBConnector.getConnection();
+            PreparedStatement stmt=conn.prepareStatement(sql)){
+            stmt.setInt(1, userId);
+            ResultSet rs=stmt.executeQuery();
+            while (rs.next()){
+                Vleresimet v=Vleresimet.getInstance(rs); // kjo e mbush pjesën e zakonshme
+                String veturaEmri=rs.getString("prodhuesi") + " " + rs.getString("modeli");
+                v.setVeturaEmri(veturaEmri);
+                vleresimetList.add(v);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return vleresimetList;
+    }
+
 }
 
 

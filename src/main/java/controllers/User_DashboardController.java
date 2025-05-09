@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import services.LanguageManager;
 import services.SceneManager;
+import services.SessionManager;
 import utils.SceneLocator;
 
 import java.util.Locale;
@@ -60,6 +61,9 @@ public class User_DashboardController {
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
+    @FXML private void handleLoadUserVleresimet()throws Exception{
+        SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
+    }
 
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {
@@ -72,6 +76,7 @@ public class User_DashboardController {
         isEnglish =!isEnglish;
     }
     @FXML private void handleLogOut()throws Exception{
+        SessionManager.getInstance().logout();
         SceneManager.load(SceneLocator.OVERALL_DASHBOARD);
     }
 

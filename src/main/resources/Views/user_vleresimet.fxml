@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.UserVleresimetController" prefWidth="800" prefHeight="600">
+    <children>
+        <TableView fx:id="vleresimetTable" layoutX="50" layoutY="50" prefWidth="700" prefHeight="500">
+            <columns>
+                <TableColumn fx:id="colVetura" text="Vetura"/>
+                <TableColumn fx:id="colVleresimi" text="Vleresimi"/>
+                <TableColumn fx:id="colKomenti" text="Komenti"/>
+                <TableColumn fx:id="colData" text="Data"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

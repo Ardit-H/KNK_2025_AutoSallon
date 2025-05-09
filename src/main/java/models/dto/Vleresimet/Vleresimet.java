@@ -10,6 +10,7 @@ public class Vleresimet {
     private int vleresimi;
     private String komenti;
     private String dataVleresimit;
+    private String veturaEmri;
 
     private Vleresimet(int vleresimiId, int perdoruesiId, int veturaId, int vleresimi, String komenti, String dataVleresimit) {
         this.vleresimiId = vleresimiId;
@@ -51,5 +52,12 @@ public class Vleresimet {
 
     public String getDataVleresimit() {
         return dataVleresimit;
+    }
+    public String getVeturaEmri() {
+        return veturaEmri;
+    }
+
+    public void setVeturaEmri(String veturaEmri) {
+        this.veturaEmri = veturaEmri;
     }
 }

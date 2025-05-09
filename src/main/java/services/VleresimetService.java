@@ -159,4 +159,7 @@ public class VleresimetService {
             }
         }
     }
+    public List<Vleresimet> getVleresimetByUserId(int userId) {
+        return vleresimetRepository.getByUserId(userId);
+    }
 }
