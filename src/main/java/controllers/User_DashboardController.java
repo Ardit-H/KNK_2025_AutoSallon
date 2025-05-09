@@ -66,13 +66,20 @@ public class User_DashboardController {
         menuVisible =!menuVisible;
     }
     @FXML private void handleLoadDashboard_Home()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.DASHBOARD_HOME);
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
     @FXML private void handleLoadUserVleresimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_VLERESIMET);
         SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
     }
     @FXML private void handleLoadVleresimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
         SceneManager.load(SceneLocator.VLERESIMET,centerPane);
+    }
+    @FXML private void handleLoadUserSherbimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_SHERBIMET);
+        SceneManager.load(SceneLocator.USER_SHERBIMET,centerPane);
     }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {
