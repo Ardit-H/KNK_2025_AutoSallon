@@ -68,6 +68,10 @@ public class OverallDashboardController {
         SceneManager.load(SceneLocator.LOGIN);
     }
     @FXML
+    private void handleLoadInfo(MouseEvent me)throws Exception{
+        SceneManager.load(SceneLocator.DASHBOARD_HELP);
+    }
+    @FXML
     public void buttoni_qasja_hover(MouseEvent event){
         buttoni_qasja.setStyle("-fx-opacity: 0.9;" +
                 "-fx-background-color:  linear-gradient(to bottom, #0a84ff, #00a5ff, #00c0ff, #00d7f7, #12ebe5)");
