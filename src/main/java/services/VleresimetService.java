@@ -62,7 +62,7 @@ public class VleresimetService {
         }
         Vleresimet vleresimi = vleresimetRepository.getById(dto.getVleresimiId());
         if(vleresimi==null){
-            throw new ResourceNotFoundException("Sherbimi me ID: "+dto.getVleresimiId()+" nuk ekziston.");
+            throw new ResourceNotFoundException("Vleresimi me ID: "+dto.getVleresimiId()+" nuk ekziston.");
         }
         if(dto.getPerdoruesiId()!=null && perdoruesitRepository.getById(dto.getPerdoruesiId())==null){
             throw new ResourceNotFoundException("Perdoruesi me ID " + dto.getPerdoruesiId() + " nuk ekziston!");
