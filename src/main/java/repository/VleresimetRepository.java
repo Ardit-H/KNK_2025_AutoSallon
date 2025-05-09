@@ -22,14 +22,14 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
     public Vleresimet create(CreateVleresimetDto vleresimetDto){
         String query = """
                 INSERT INTO 
-                VLERESIMET (KLIENTI_ID,VETURA_ID,VLERESIMI,KOMENTI)
+                VLERESIMET (PERDORUESI_ID,VETURA_ID,VLERESIMI,KOMENTI)
                 VALUES (?, ?, ?, ?)
                 """;
         try{
             PreparedStatement pstm =
                     this.connection.prepareStatement(
                             query, Statement.RETURN_GENERATED_KEYS);
-            pstm.setInt(1,vleresimetDto.getKlientiId());
+            pstm.setInt(1,vleresimetDto.getPerdoruesiId());
             pstm.setInt(2,vleresimetDto.getVeturaId());
             pstm.setInt(3, vleresimetDto.getVleresimi());
             pstm.setString(4, vleresimetDto.getKomenti());
@@ -49,9 +49,9 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         StringBuilder query=new StringBuilder("UPDATE VLERESIMET SET ");
         ArrayList<Object> params=new ArrayList<>();
 
-        if(vleresimetDto.getKlientiId() != null){
-            query.append("KLIENTI_ID = ?, ");
-            params.add(vleresimetDto.getKlientiId());
+        if(vleresimetDto.getPerdoruesiId() != null){
+            query.append("PERDORUESI_ID = ?, ");
+            params.add(vleresimetDto.getPerdoruesiId());
         }
         if(vleresimetDto.getVeturaId() != null){
             query.append("VETURA_ID = ?, ");
