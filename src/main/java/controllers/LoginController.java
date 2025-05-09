@@ -81,6 +81,9 @@ public class LoginController {
             errorMessageLabel.setText(e.getMessage());
         }
     }
+    @FXML private void handleGuestLogin()throws Exception{
+        SceneManager.load(SceneLocator.USER_DASHBOARD_HOME);
+    }
     @FXML private void  handleLoadSignUp()throws Exception{
         SceneManager.load(SceneLocator.SIGNUP);
     }

@@ -18,6 +18,8 @@ import java.util.Locale;
 public class User_DashboardController {
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
+    @FXML private Button btn_vleresimetemia;
+    @FXML private Button btn_vleresimet;
     @FXML private Button menuToggleButton;
     private boolean menuVisible = false;
     @FXML private Button languageToggleButton;
@@ -27,6 +29,11 @@ public class User_DashboardController {
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML public void initialize() {
+        if(!SessionManager.getInstance().isLoggedIn()){
+            btn_vleresimetemia.setVisible(false);
+        }else {
+            btn_vleresimetemia.setVisible(true);
+        }
         sideMenu.setTranslateX(-200);
         sideMenu.setVisible(false);
         sideMenu.setManaged(false);
@@ -64,7 +71,9 @@ public class User_DashboardController {
     @FXML private void handleLoadUserVleresimet()throws Exception{
         SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
     }
-
+    @FXML private void handleLoadVleresimet()throws Exception{
+        SceneManager.load(SceneLocator.VLERESIMET,centerPane);
+    }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {
             loadLanguage(new Locale("sq"));
