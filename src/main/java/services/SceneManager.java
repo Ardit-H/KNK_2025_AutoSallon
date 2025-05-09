@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.VLERESIMET;
+        this.currentPath = SceneLocator.ADMIN_DASHBOARD_HOME;
         this.scene = this.initScene();
     }
 

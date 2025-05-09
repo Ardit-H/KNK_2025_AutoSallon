@@ -78,7 +78,14 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT);
         SceneManager.load(SceneLocator.VETURAT, centerPane);
     }
-
+    @FXML private void handleLoadSherbimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.SHERBIMET);
+        SceneManager.load(SceneLocator.SHERBIMET, centerPane);
+    }
+    @FXML private void handleLoadVleresimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
+        SceneManager.load(SceneLocator.VLERESIMET,centerPane);
+    }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
