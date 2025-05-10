@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = "/Views/user_dashboard.fxml";
+        this.currentPath = SceneLocator.OVERALL_DASHBOARD;
         this.scene = this.initScene();
     }
 

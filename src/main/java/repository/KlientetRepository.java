@@ -21,8 +21,8 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
 
     public Klientet create(CreateKlientetDto klientetDto){
         String query ="""
-                INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa)
-                 VALUES(?,?,?,?,?)
+                INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa, perdoruesi_id)
+                 VALUES(?,?,?,?,?,?)
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(
@@ -32,6 +32,7 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
             pstm.setString(3,klientetDto.getEmail());
             pstm.setString(4,klientetDto.getNrtelefonit());
             pstm.setString(5,klientetDto.getAdresa());
+            pstm.setObject(6, klientetDto.getPerdoruesiId(), Types.INTEGER);
             pstm.execute();
             ResultSet resultSet=pstm.getGeneratedKeys();
             if(resultSet.next()){

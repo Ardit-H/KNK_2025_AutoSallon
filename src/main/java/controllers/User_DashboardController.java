@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import services.LanguageManager;
 import services.SceneManager;
+import services.SessionManager;
 import utils.SceneLocator;
 
 import java.util.Locale;
@@ -17,6 +18,8 @@ import java.util.Locale;
 public class User_DashboardController {
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
+    @FXML private Button btn_vleresimetemia;
+    @FXML private Button btn_vleresimet;
     @FXML private Button menuToggleButton;
     private boolean menuVisible = false;
     @FXML private Button languageToggleButton;
@@ -26,6 +29,11 @@ public class User_DashboardController {
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML public void initialize() {
+        if(!SessionManager.getInstance().isLoggedIn()){
+            btn_vleresimetemia.setVisible(false);
+        }else {
+            btn_vleresimetemia.setVisible(true);
+        }
         sideMenu.setTranslateX(-200);
         sideMenu.setVisible(false);
         sideMenu.setManaged(false);
@@ -58,9 +66,21 @@ public class User_DashboardController {
         menuVisible =!menuVisible;
     }
     @FXML private void handleLoadDashboard_Home()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.DASHBOARD_HOME);
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
-
+    @FXML private void handleLoadUserVleresimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_VLERESIMET);
+        SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
+    }
+    @FXML private void handleLoadVleresimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
+        SceneManager.load(SceneLocator.VLERESIMET,centerPane);
+    }
+    @FXML private void handleLoadUserSherbimet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_SHERBIMET);
+        SceneManager.load(SceneLocator.USER_SHERBIMET,centerPane);
+    }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {
             loadLanguage(new Locale("sq"));
@@ -70,6 +90,10 @@ public class User_DashboardController {
             setLanguageIcon("/Images/language-en.png");
         }
         isEnglish =!isEnglish;
+    }
+    @FXML private void handleLogOut()throws Exception{
+        SessionManager.getInstance().logout();
+        SceneManager.load(SceneLocator.OVERALL_DASHBOARD);
     }
 
     private void setLanguageIcon(String imagePath) {

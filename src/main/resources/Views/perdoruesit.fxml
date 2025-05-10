@@ -36,7 +36,6 @@
             <TableColumn fx:id="colFjalekalimi" prefWidth="75.0" text="Fjalekalimi" />
         </columns>
       </TableView>
-      <Label fx:id="messageLabel" layoutX="524.0" layoutY="44.0" />
       <Label layoutX="431.0" layoutY="320.0" prefHeight="18.0" prefWidth="57.0" text="Mesazhet" />
       <Button layoutX="390.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="Shto" />
       <Button layoutX="454.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="Përditëso" />

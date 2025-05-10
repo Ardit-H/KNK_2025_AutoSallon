@@ -1,18 +1,26 @@
 package services;
 
+import models.dto.Klientet.CreateKlientetDto;
+import models.dto.Klientet.Klientet;
 import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
+import repository.KlientetRepository;
 import repository.PerdoruesitRepository;
+import utils.PasswordUtil;
 
 import java.util.List;
 import java.util.regex.Pattern;
 
 public class PerdoruesitService {
     private PerdoruesitRepository perdoruesitRepository;
+    private KlientetRepository klientetRepository;
+    private KlientetService klientetService;
 
     public PerdoruesitService() {
         this.perdoruesitRepository = new PerdoruesitRepository();
+        this.klientetRepository=new KlientetRepository();
+        this.klientetService=new KlientetService();
     }
 
     public List<Perdoruesit> getAll() {
@@ -30,9 +38,15 @@ public class PerdoruesitService {
         return perdoruesi;
     }
 
-    public Perdoruesit create(CreatePerdoruesitDto createPerdoruesit) {
-        validateCreateDto(createPerdoruesit);
-        return perdoruesitRepository.create(createPerdoruesit);
+    public Perdoruesit create(CreatePerdoruesitDto dto) {
+        validateCreateDto(dto);
+
+        String salt = PasswordUtil.generateSalt();
+        String hashed = PasswordUtil.hashPassword(dto.getFjalekalimi(), salt);
+
+        Perdoruesit perdoruesi= perdoruesitRepository.create(dto.getEmri(),dto.getMbiemri(), dto.getEmail(), hashed, salt,dto.getNrtelefonit(),dto.getAdresa());
+
+        return perdoruesi;
     }
 
     private void validateCreateDto(CreatePerdoruesitDto createPerdoruesitDto) {
@@ -42,9 +56,11 @@ public class PerdoruesitService {
         if (!isValidEmail(createPerdoruesitDto.getEmail())) {
             throw new IllegalArgumentException("Email eshte i pavlefshem!");
         }
+        if (perdoruesitRepository.getByEmail(createPerdoruesitDto.getEmail()) != null) {
+            throw new IllegalArgumentException("Ky email ekziston ne sistem!");
+        }
 
     }
-
     private boolean isValidEmail(String email) {
         return email != null && Pattern.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\\.[A-Za-z]{2,}$", email);
     }

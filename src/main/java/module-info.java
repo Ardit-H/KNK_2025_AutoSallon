@@ -3,6 +3,7 @@ module com.example.knk_2025_autosallon {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
+    requires mysql.connector.j;
 
 
     opens com.example.knk_2025_autosallon to javafx.fxml;
