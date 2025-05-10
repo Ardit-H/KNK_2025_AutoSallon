@@ -13,116 +13,116 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #F8F6DE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VeturatController">
-   <children>
-      <ImageView fitHeight="239.0" fitWidth="415.0" layoutX="24.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/Car.jpg" />
-         </image>
-      </ImageView>
-      <Separator layoutX="33.0" layoutY="123.0" prefHeight="0.0" prefWidth="834.0" />
-      <HBox layoutX="31.0" layoutY="25.0" prefHeight="72.0" prefWidth="823.0" style="-fx-background-color: #335778;">
-         <children>
-            <ImageView fitHeight="65.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/sport-car.png" />
-               </image>
-            </ImageView>
-            <Text fill="#f1f1f4" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F0E263;" text="Veturat" textAlignment="CENTER" wrappingWidth="161.958251953125">
-               <font>
-                  <Font name="Bernard MT Condensed" size="52.0" />
-               </font>
-            </Text>
-         </children>
-      </HBox>
-      <TableView id="veturatTableView" layoutX="33.0" layoutY="498.0" prefHeight="288.0" prefWidth="834.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
-        <columns>
-          <TableColumn id="colProdhuesi" prefWidth="90.39998626708984" text="Prodhuesi" />
-          <TableColumn id="colModeli" prefWidth="111.20000457763672" text="Modeli" />
-            <TableColumn id="colVitiProdhimit" prefWidth="115.99993896484375" text="Viti i Prodhimit" />
-            <TableColumn id="colNgjyra" prefWidth="81.60003662109375" text="Ngjyra" />
-            <TableColumn id="colCmimi" prefWidth="72.0" text="Çmimi" />
-            <TableColumn id="colGjendja" prefWidth="104.00003051757812" text="Gjendja" />
-            <TableColumn id="colKilometrazha" prefWidth="109.5999755859375" text="Kilometrazha" />
-            <TableColumn id="colTipiKarburant" minWidth="7.20001220703125" prefWidth="130.4000244140625" text="Tipi i Karburantit" />
-        </columns>
-      </TableView>
-      <Text layoutX="498.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodhuesi: " wrappingWidth="81.74414062499977">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="520.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modeli: " wrappingWidth="53.8671875">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="477.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Viti i prodhimit:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="525.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngjyra:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="526.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Çmimi:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="512.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gjendja: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="482.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilometrazha: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="461.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipi i karburantit: ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtProdhuesi" layoutX="576.0" layoutY="132.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="BMW" />
-      <TextField fx:id="txtModeli" layoutX="576.0" layoutY="166.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="M5" />
-      <TextField fx:id="txtVitiProdhimit" layoutX="576.0" layoutY="204.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="2018" />
-      <TextField fx:id="txtNgjyra" layoutX="576.0" layoutY="246.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="E zezë" />
-      <TextField fx:id="txtCmimi" layoutX="576.0" layoutY="284.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="40000.00" />
-      <TextField fx:id="txtGjendja" layoutX="576.0" layoutY="324.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="E re" />
-      <TextField fx:id="txtKilometrazha" layoutX="576.0" layoutY="364.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="20000" />
-      <TextField fx:id="txtTipiKarburant" layoutX="576.0" layoutY="400.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="Benzinë " />
-      <Button fx:id="btn_shto" layoutX="461.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Shto" textFill="#fcfcfc">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="btn_perditeso" layoutX="593.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Perditeso" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="btn_fshij" layoutX="734.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Fshij" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Text layoutX="81.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zgjidh gjuhën: " wrappingWidth="152.05233001708984">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Button fx:id="btn_shqip" layoutX="33.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Shqip" textFill="#fffdfd">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="btn_anglisht" layoutX="148.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Anglisht" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-   </children>
+    <children>
+        <ImageView fitHeight="239.0" fitWidth="415.0" layoutX="24.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/Car.jpg" />
+            </image>
+        </ImageView>
+        <Separator layoutX="33.0" layoutY="123.0" prefHeight="0.0" prefWidth="834.0" />
+        <HBox layoutX="31.0" layoutY="25.0" prefHeight="72.0" prefWidth="823.0" style="-fx-background-color: #335778;">
+            <children>
+                <ImageView fitHeight="65.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/sport-car.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#f1f1f4" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F0E263;" text="Veturat" textAlignment="CENTER" wrappingWidth="161.958251953125">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="52.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <TableView id="veturatTableView" layoutX="33.0" layoutY="498.0" prefHeight="288.0" prefWidth="834.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
+            <columns>
+                <TableColumn id="colProdhuesi" prefWidth="90.39998626708984" text="Prodhuesi" />
+                <TableColumn id="colModeli" prefWidth="111.20000457763672" text="Modeli" />
+                <TableColumn id="colVitiProdhimit" prefWidth="115.99993896484375" text="Viti i Prodhimit" />
+                <TableColumn id="colNgjyra" prefWidth="81.60003662109375" text="Ngjyra" />
+                <TableColumn id="colCmimi" prefWidth="72.0" text="Çmimi" />
+                <TableColumn id="colGjendja" prefWidth="104.00003051757812" text="Gjendja" />
+                <TableColumn id="colKilometrazha" prefWidth="109.5999755859375" text="Kilometrazha" />
+                <TableColumn id="colTipiKarburant" minWidth="7.20001220703125" prefWidth="130.4000244140625" text="Tipi i Karburantit" />
+            </columns>
+        </TableView>
+        <Text layoutX="498.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prodhuesi: " wrappingWidth="81.74414062499977">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="520.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modeli: " wrappingWidth="53.8671875">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="477.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Viti i prodhimit:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="525.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngjyra:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="526.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Çmimi:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="512.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gjendja: ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="482.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilometrazha: ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="461.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipi i karburantit: ">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <TextField fx:id="txtProdhuesi" layoutX="576.0" layoutY="132.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="BMW" />
+        <TextField fx:id="txtModeli" layoutX="576.0" layoutY="166.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="M5" />
+        <TextField fx:id="txtVitiProdhimit" layoutX="576.0" layoutY="204.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="2018" />
+        <TextField fx:id="txtNgjyra" layoutX="576.0" layoutY="246.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="E zezë" />
+        <TextField fx:id="txtCmimi" layoutX="576.0" layoutY="284.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="40000.00" />
+        <TextField fx:id="txtGjendja" layoutX="576.0" layoutY="324.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="E re" />
+        <TextField fx:id="txtKilometrazha" layoutX="576.0" layoutY="364.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="20000" />
+        <TextField fx:id="txtTipiKarburant" layoutX="576.0" layoutY="400.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" text="Benzinë " />
+        <Button fx:id="btn_shto" layoutX="461.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Shto" textFill="#fcfcfc">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btn_perditeso" layoutX="593.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Perditeso" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btn_fshij" layoutX="734.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Fshij" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Text layoutX="81.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zgjidh gjuhën: " wrappingWidth="152.05233001708984">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Button fx:id="btn_shqip" layoutX="33.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLanguageAlbanianClick" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Shqip" textFill="#fffdfd">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="btn_anglisht" layoutX="148.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLanguageEnglishClick" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="Anglisht" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+    </children>
 </AnchorPane>
