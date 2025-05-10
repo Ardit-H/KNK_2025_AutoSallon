@@ -70,12 +70,12 @@ public class User_DashboardController {
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
     @FXML private void handleLoadUserVleresimet()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_VLERESIMET);
-        SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.LOGEDUSER_VLERESIMET);
+        SceneManager.load(SceneLocator.LOGEDUSER_VLERESIMET,centerPane);
     }
     @FXML private void handleLoadVleresimet()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
-        SceneManager.load(SceneLocator.VLERESIMET,centerPane);
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_VLERESIMET);
+        SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
     }
     @FXML private void handleLoadUserSherbimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_SHERBIMET);

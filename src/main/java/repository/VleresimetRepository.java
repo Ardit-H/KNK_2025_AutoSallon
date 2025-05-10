@@ -95,8 +95,8 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         JOIN Veturat ve ON v.vetura_id = ve.id
         WHERE v.perdoruesi_id = ?
     """;
-        try(Connection conn=DBConnector.getConnection();
-            PreparedStatement stmt=conn.prepareStatement(sql)){
+        try(
+            PreparedStatement stmt=this.connection.prepareStatement(sql)){
             stmt.setInt(1, userId);
             ResultSet rs=stmt.executeQuery();
             while (rs.next()){
@@ -106,6 +106,28 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
                 vleresimetList.add(v);
             }
         }catch(Exception e){
+            e.printStackTrace();
+        }
+        return vleresimetList;
+    }
+    public List<Vleresimet> getAllWithJoins(){
+        List<Vleresimet> vleresimetList = new ArrayList<>();
+        String sql = """
+        SELECT v.*, ve.prodhuesi, ve.modeli, p.emri, p.mbiemri
+        FROM Vleresimet v
+        JOIN Veturat ve ON v.vetura_id = ve.id
+        JOIN Perdoruesi p ON v.perdoruesi_id = p.id
+    """;
+        try (
+             PreparedStatement stmt = this.connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Vleresimet v = Vleresimet.getInstance(rs);
+                v.setVeturaEmri(rs.getString("prodhuesi") + " " + rs.getString("modeli"));
+                v.setPerdoruesiEmriPlote(rs.getString("emri") + " " + rs.getString("mbiemri"));
+                vleresimetList.add(v);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return vleresimetList;

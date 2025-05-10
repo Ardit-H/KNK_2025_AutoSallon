@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import services.LanguageManager;
 import services.SceneManager;
+import services.SessionManager;
 import utils.SceneLocator;
 
 import java.awt.event.ActionEvent;
@@ -101,6 +102,7 @@ public class Admin_DashboardController {
     isEnglish =!isEnglish;
 }
     @FXML private void handleLogOut()throws Exception{
+        SessionManager.getInstance().logout();
         SceneManager.load(SceneLocator.OVERALL_DASHBOARD);
     }
     private void setLanguageIcon(String imagePath) {

@@ -5,6 +5,7 @@ public class CreateVleresimetDto {
     private int veturaId;
     private int vleresimi;
     private String komenti;
+    private String dataVleresimit;
 
     public CreateVleresimetDto(int perdoruesiId, int veturaId, int vleresimi, String komenti) {
         this.perdoruesiId = perdoruesiId;
@@ -49,6 +50,5 @@ public class CreateVleresimetDto {
         this.komenti = komenti;
     }
 
-    private String dataVleresimit;
 
 }

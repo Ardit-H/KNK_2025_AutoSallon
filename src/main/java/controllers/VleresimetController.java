@@ -15,7 +15,7 @@ import services.VleresimetService;
 import java.util.List;
 import java.util.Locale;
 
-public class FeedbackController {
+public class VleresimetController {
 
     @FXML private TextField veturaId;
     @FXML private TextField perdoruesiId;
@@ -31,14 +31,14 @@ public class FeedbackController {
     @FXML private VleresimetService vleresimetService;
     private LanguageManager languageManager;
 
-    public FeedbackController(){
+    public VleresimetController(){
         this.vleresimetService=new VleresimetService();
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML
     public void initialize() {
-        colPerdoruesi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPerdoruesiId())));
-        colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVeturaId())));
+        colPerdoruesi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPerdoruesiEmriPlote())));
+        colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVeturaEmri())));
         colVleresimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVleresimi())));
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1);
         vleresimi.setValueFactory(valueFactory);
@@ -49,7 +49,7 @@ public class FeedbackController {
     }
 
     private void loadVleresimet() {
-        List<Vleresimet> vleresimet = vleresimetService.getAll();
+        List<Vleresimet> vleresimet = vleresimetService.getVleresimetWithJoins();
         VleresimetTableView.getItems().setAll(vleresimet);
     }
 

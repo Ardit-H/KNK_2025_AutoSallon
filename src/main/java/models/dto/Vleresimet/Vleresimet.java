@@ -11,6 +11,7 @@ public class Vleresimet {
     private String komenti;
     private String dataVleresimit;
     private String veturaEmri;
+    private String perdoruesiEmriPlote;
 
     private Vleresimet(int vleresimiId, int perdoruesiId, int veturaId, int vleresimi, String komenti, String dataVleresimit) {
         this.vleresimiId = vleresimiId;
@@ -60,4 +61,19 @@ public class Vleresimet {
     public void setVeturaEmri(String veturaEmri) {
         this.veturaEmri = veturaEmri;
     }
+
+    public String getPerdoruesiEmriPlote() {
+        return perdoruesiEmriPlote;
+    }
+
+    public void setVleresimiId(int vleresimiId) {
+        this.vleresimiId = vleresimiId;
+    }
+
+    public void setPerdoruesiEmriPlote(String perdoruesiEmri) {
+        this.perdoruesiEmriPlote = perdoruesiEmri;
+    }
+
+
+
 }

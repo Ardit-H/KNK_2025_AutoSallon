@@ -162,4 +162,8 @@ public class VleresimetService {
     public List<Vleresimet> getVleresimetByUserId(int userId) {
         return vleresimetRepository.getByUserId(userId);
     }
+    public List<Vleresimet> getVleresimetWithJoins() {
+        return vleresimetRepository.getAllWithJoins();
+    }
+
 }
