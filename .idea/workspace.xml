@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i user_sherbimet.fxml qe mund te shihet vetem nga perdoruesit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/logeduser_vleresimet.fxml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="krijimi i logeduser_vleresimet.fxml dhe LogedUserVleresimetController.java dhe disa përmirësime">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/CreateVleresimetDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/CreateVleresimetDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/UpdateVleresimetDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/UpdateVleresimetDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/Vleresimet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Vleresimet/Vleresimet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/VleresimetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/VleresimetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/VleresimetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SignUpController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746834210857</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="krijimi i logeduser_vleresimet.fxml dhe LogedUserVleresimetController.java dhe disa përmirësime">
+      <option name="closed" value="true" />
+      <created>1746916874938</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1746916874938</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
@@ -450,6 +437,7 @@
     <MESSAGE value="Shtimi i butonit Continue as Guest ne Login qe i mundeson perdoruesit te kete qasje ne faqen e perdoruesve dhe nuk kan qasje ne pjeset qe jane vetem per perdoruesit me llogari" />
     <MESSAGE value="Permiresime ne user_vleresimet.fxml" />
     <MESSAGE value="Krijimi i user_sherbimet.fxml qe mund te shihet vetem nga perdoruesit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i user_sherbimet.fxml qe mund te shihet vetem nga perdoruesit" />
+    <MESSAGE value="krijimi i logeduser_vleresimet.fxml dhe LogedUserVleresimetController.java dhe disa përmirësime" />
+    <option name="LAST_COMMIT_MESSAGE" value="krijimi i logeduser_vleresimet.fxml dhe LogedUserVleresimetController.java dhe disa përmirësime" />
   </component>
 </project>
