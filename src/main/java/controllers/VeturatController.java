@@ -4,7 +4,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import services.LanguageManager;
 import services.SceneManager;
 import models.dto.Veturat.CreateVeturatDto;

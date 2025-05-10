@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.event.ActionEvent;
 import services.LanguageManager;
 import services.SceneManager;
 import models.dto.TestDrives.CreateTestDrivesDto;
@@ -11,7 +12,6 @@ import models.dto.TestDrives.UpdateTestDrivesDto;
 import models.dto.TestDrives.TestDrives;
 import services.TestDrivesService;
 
-import java.awt.event.ActionEvent;
 import java.util.List;
 import java.util.Locale;
 
@@ -19,7 +19,18 @@ public class TestDrivesController {
     @FXML private TextField duration;
     @FXML private TextField feedback;
     @FXML private TextField location;
+    @FXML private TextField statusi;
+    @FXML private TextField kid;
+    @FXML private TextField vid;
+
     @FXML private Label messageLabel;
+    @FXML public Button btn_shto;
+    @FXML public Button btn_perditeso;
+    @FXML public Button btn_fshij;
+    @FXML public Button btn_shqip;
+    @FXML public Button btn_anglisht;
+
+
     @FXML private TableView<TestDrives> testDrivesTableView;
     @FXML private TableColumn<TestDrives, String> colTestDriveKlienti;
     @FXML private TableColumn<TestDrives, String> colTestDriveVetura;
@@ -53,6 +64,7 @@ public class TestDrivesController {
         testDrivesTableView.getItems().setAll(testDrives);
     }
 
+    @FXML
     private void handleCreateTestDrive( ActionEvent event) throws Exception {
         int durationInt = Integer.parseInt(duration.getText().trim());
 
@@ -133,6 +145,7 @@ public class TestDrivesController {
     private void handleLanguageAlbanianClick()throws Exception{
         loadLanguage(new Locale("sq"));
     }
+
     private void loadLanguage(Locale locale) throws Exception{
         languageManager.setLocale(locale);
         SceneManager.reload();
