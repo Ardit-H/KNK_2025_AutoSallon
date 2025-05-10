@@ -89,16 +89,32 @@ CREATE TABLE faturat(
     llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
     FOREIGN KEY (shitje_id) REFERENCES Shitjet(shitje_id) ON DELETE CASCADE
 );
-CREATE TABLE Vleresimet(
+--CREATE TABLE Vleresimet(
+--    id SERIAL PRIMARY KEY,
+--    klienti_id INT NOT NULL,
+--    vetura_id INT NOT NULL,
+--    vleresimi INT CHECK (vleresimi BETWEEN 1 AND 5),
+--    komenti TEXT,
+--    data_vleresimit DATE DEFAULT CURRENT_DATE,
+--    FOREIGN KEY(klienti_id) REFERENCES Klientet(id) ON DELETE CASCADE,
+--    FOREIGN KEY(vetura_id) REFERENCES Veturat(id) ON DELETE CASCADE
+--);
+--Lidhja e vleresimeve me perdoruesit e sistemit jo me klientet
+CREATE TABLE Vleresimet (
     id SERIAL PRIMARY KEY,
-    klienti_id INT NOT NULL,
+    perdoruesi_id INT NOT NULL,
     vetura_id INT NOT NULL,
     vleresimi INT CHECK (vleresimi BETWEEN 1 AND 5),
     komenti TEXT,
     data_vleresimit DATE DEFAULT CURRENT_DATE,
-    FOREIGN KEY(klienti_id) REFERENCES Klientet(id) ON DELETE CASCADE,
+    FOREIGN KEY(perdoruesi_id) REFERENCES perdoruesi(id) ON DELETE CASCADE,
     FOREIGN KEY(vetura_id) REFERENCES Veturat(id) ON DELETE CASCADE
 );
+ALTER TABLE Vleresimet
+ALTER COLUMN data_vleresimit TYPE TIMESTAMP
+USING data_vleresimit::timestamp,
+ALTER COLUMN data_vleresimit SET DEFAULT CURRENT_TIMESTAMP;
+
 */
 
 /*

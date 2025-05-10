@@ -7,6 +7,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import services.PerdoruesitService;
+import services.SceneManager;
+import utils.SceneLocator;
 
 public class SignUpController {
     @FXML private TextField txtFistName;
@@ -39,6 +41,9 @@ public class SignUpController {
         } catch (Exception e) {
             errorMessageLabel.setText("Gabim: " + e.getMessage());
         }
+    }
+    @FXML private void handleGoToOverallDashboard()throws Exception{
+        SceneManager.load(SceneLocator.OVERALL_DASHBOARD);
     }
     private void clearForm() {
         txtFistName.clear();

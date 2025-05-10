@@ -17,14 +17,13 @@ import java.util.Locale;
 
 public class FeedbackController {
 
-    @FXML
-    private TextField klientiid;
     @FXML private TextField veturaId;
+    @FXML private TextField perdoruesiId;
     @FXML private Spinner vleresimi;
     @FXML private TextField komenti;
     @FXML private Label messageLabel;
     @FXML private TableView<Vleresimet> VleresimetTableView;
-    @FXML private TableColumn<Vleresimet, String> colKlienti;
+    @FXML private TableColumn<Vleresimet, String> colPerdoruesi;
     @FXML private TableColumn<Vleresimet, String> colVetura;
     @FXML private TableColumn<Vleresimet, String> colVleresimi;
     @FXML private TableColumn<Vleresimet, String> colKomenti;
@@ -38,7 +37,7 @@ public class FeedbackController {
     }
     @FXML
     public void initialize() {
-        colKlienti.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getKlientiId())));
+        colPerdoruesi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPerdoruesiId())));
         colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVeturaId())));
         colVleresimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVleresimi())));
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1);
@@ -57,12 +56,12 @@ public class FeedbackController {
     @FXML
     private void handleCreateVleresim(MouseEvent event) {
         try {
-            int klientiIdInt = Integer.parseInt(klientiid.getText().trim());
+            int perdoruesiIdInt = Integer.parseInt(perdoruesiId.getText().trim());
             int veturaIdInt = Integer.parseInt(veturaId.getText().trim());
             int vleresimiInt = (Integer) vleresimi.getValue();
 
             CreateVleresimetDto dto = new CreateVleresimetDto(
-                    klientiIdInt,
+                    perdoruesiIdInt,
                     veturaIdInt,
                     vleresimiInt,
                     komenti.getText()
@@ -81,9 +80,9 @@ public class FeedbackController {
         try {
             int selectedId = getSelectedVleresimId();
             if (selectedId == -1) return;
-            Integer klientiIdInt = null;
-            if (!klientiid.getText().trim().isEmpty()) {
-                klientiIdInt = Integer.parseInt(klientiid.getText().trim());
+            Integer perdoruesiIdInt = null;
+            if (!perdoruesiId.getText().trim().isEmpty()) {
+                perdoruesiIdInt = Integer.parseInt(perdoruesiId.getText().trim());
             }
             Integer veturaIdInt = null;
             if (!veturaId.getText().trim().isEmpty()) {
@@ -95,8 +94,8 @@ public class FeedbackController {
             }
             UpdateVleresimetDto dto = new UpdateVleresimetDto();
             dto.setVleresimiId(selectedId);
-            if (klientiIdInt != null) {
-                dto.setKlientiId(klientiIdInt);
+            if (perdoruesiIdInt != null) {
+                dto.setPerdoruesiId(perdoruesiIdInt);
             }
             if (veturaIdInt != null) {
                 dto.setVeturaId(veturaIdInt);
@@ -139,7 +138,7 @@ public class FeedbackController {
     }
 
     private void clearForm() {
-        klientiid.clear();
+        perdoruesiId.clear();
         veturaId.clear();
         vleresimi.getValueFactory().setValue(1);
         komenti.clear();

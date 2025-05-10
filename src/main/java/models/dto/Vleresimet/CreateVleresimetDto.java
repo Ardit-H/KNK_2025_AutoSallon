@@ -1,21 +1,28 @@
 package models.dto.Vleresimet;
 
 public class CreateVleresimetDto {
-    private int klientiId;
+    private int perdoruesiId;
     private int veturaId;
     private int vleresimi;
     private String komenti;
 
+    public CreateVleresimetDto(int perdoruesiId, int veturaId, int vleresimi, String komenti) {
+        this.perdoruesiId = perdoruesiId;
+        this.veturaId = veturaId;
+        this.vleresimi = vleresimi;
+        this.komenti = komenti;
+
+    }
     public String getDataVleresimit() {
         return dataVleresimit;
     }
 
-    public int getKlientiId() {
-        return klientiId;
+    public int getPerdoruesiId() {
+        return perdoruesiId;
     }
 
-    public void setKlientiId(int klientiId) {
-        this.klientiId = klientiId;
+    public void setPerdoruesiId(int perdoruesiId) {
+        this.perdoruesiId = perdoruesiId;
     }
 
     public int getVeturaId() {
@@ -44,11 +51,4 @@ public class CreateVleresimetDto {
 
     private String dataVleresimit;
 
-    public CreateVleresimetDto(int klientiId, int veturaId, int vleresimi, String komenti) {
-        this.klientiId = klientiId;
-        this.veturaId = veturaId;
-        this.vleresimi = vleresimi;
-        this.komenti = komenti;
-
-    }
 }

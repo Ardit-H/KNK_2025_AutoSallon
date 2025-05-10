@@ -108,6 +108,12 @@ public class KlientetService {
             }
             hasChanges=true;
         }
+        if(updateKlientiDto.getPerdoruesiId() != null){
+            if (!perdoruesiIdIsValid(updateKlientiDto.getPerdoruesiId())) {
+                throw new ValidationException("Përdoruesi i dhënë nuk është i vlefshëm.");
+            }
+            hasChanges = true;
+        }
         if(updateKlientiDto.getAdresa()!=null) {
             if (updateKlientiDto.getAdresa().trim().length() < 5) {
                 throw new InvalidInputException("Adresa duhet të ketë të paktën 5 karaktere.");
