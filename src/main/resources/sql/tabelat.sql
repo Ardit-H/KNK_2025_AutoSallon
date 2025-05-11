@@ -56,6 +56,9 @@ CREATE TABLE Porosite (
     FOREIGN KEY (kid) REFERENCES Klientet(id),
     FOREIGN KEY (veturaId) REFERENCES Veturat(id)
 );
+ALTER TABLE porosite
+ADD CONSTRAINT porosite_kid_fkey FOREIGN KEY (kid) REFERENCES klientet(id) ON DELETE CASCADE;
+
 */
 
 
@@ -143,6 +146,10 @@ CREATE TABLE rezervimet (
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
 );
+ALTER TABLE rezervimet
+ADD CONSTRAINT rezervimet_klienti_id_fkey
+FOREIGN KEY (klienti_id) REFERENCES klientet(id) ON DELETE CASCADE;
+
 
 CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,

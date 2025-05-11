@@ -132,6 +132,36 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         }
         return vleresimetList;
     }
+    public List<Vleresimet> searchByVehicleOrUserName(String keyword) {
+        List<Vleresimet> results = new ArrayList<>();
+        String query = """
+        SELECT v.*, 
+               ve.prodhuesi || ' ' || ve.modeli AS vetura_emri, 
+               p.emri || ' ' || p.mbiemri AS perdoruesi_emri
+        FROM Vleresimet v
+        JOIN Veturat ve ON v.vetura_id = ve.id
+        JOIN perdoruesi p ON v.perdoruesi_id = p.id
+        WHERE LOWER(ve.prodhuesi || ' ' || ve.modeli) LIKE ? 
+           OR LOWER(p.emri || ' ' || p.mbiemri) LIKE ?
+    """;
+
+        try (PreparedStatement pstm = this.connection.prepareStatement(query)) {
+            String searchKeyword = "%" + keyword.toLowerCase() + "%";
+            pstm.setString(1, searchKeyword);
+            pstm.setString(2, searchKeyword);
+            ResultSet rs = pstm.executeQuery();
+
+            while (rs.next()) {
+                Vleresimet v = Vleresimet.getInstance(rs);
+                v.setVeturaEmri(rs.getString("vetura_emri"));
+                v.setPerdoruesiEmriPlote(rs.getString("perdoruesi_emri"));
+                results.add(v);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // ose log.error(...) nëse ke logging
+        }
+        return results;
+    }
 
 }
 
