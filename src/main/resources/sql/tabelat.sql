@@ -8,6 +8,9 @@ CREATE TABLE Klientet(
     adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
     data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
+    ALTER TABLE Klientet ADD COLUMN perdoruesi_id INTEGER UNIQUE;
+    ALTER TABLE Klientet ADD CONSTRAINT fk_perdoruesi FOREIGN KEY (perdoruesi_id) REFERENCES perdoruesi(id) ON DELETE SET NULL;
+
 */
 
 CREATE TABLE perdoruesi (

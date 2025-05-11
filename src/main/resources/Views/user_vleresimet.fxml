@@ -10,7 +10,7 @@
     <children>
         <AnchorPane prefHeight="147.0" prefWidth="600.0">
          <children>
-            <Label layoutX="21.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;"  text="%lbluservleresimet"/>
+            <Label layoutX="21.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbluservleresimet" />
          </children></AnchorPane>
         <AnchorPane prefHeight="312.0" prefWidth="600.0">
             <children>
