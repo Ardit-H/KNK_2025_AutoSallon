@@ -6,6 +6,7 @@ UpdateKlientiDto {
     private String email;
     private String adresa;
     private String nrtelefonit;
+    private Integer perdoruesiId;
 
     public UpdateKlientiDto(){}
 
@@ -37,5 +38,12 @@ UpdateKlientiDto {
 
     public void setNrtelefonit(String nrtelefonit) {
         this.nrtelefonit = nrtelefonit;
+    }
+    public Integer getPerdoruesiId(){
+        return perdoruesiId;
+    }
+
+    public void setPerdoruesiId(Integer perdoruesiId){
+        this.perdoruesiId = perdoruesiId;
     }
 }

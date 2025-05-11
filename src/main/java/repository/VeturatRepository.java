@@ -51,8 +51,12 @@ public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto,
         ArrayList<Object> params=new ArrayList<>();
 
         if(veturatDto.getGjendja() != null){
-            query.append("CMIMI = ?, ");
+            query.append("GJENDJA = ?, ");
             params.add(veturatDto.getGjendja());
+        }
+        if(veturatDto.getNgjyra() != null){
+            query.append("NGJYRA = ?, ");
+            params.add(veturatDto.getNgjyra());
         }
 
 

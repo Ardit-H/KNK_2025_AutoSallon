@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.Cursor?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1530.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardHelpController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff" height="766.0" layoutX="388.8" layoutY="23.2" stroke="#a5cef2" strokeType="INSIDE" style="-fx-fill: transparent;" width="754.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="389.0" AnchorPane.rightAnchor="387.0" AnchorPane.topAnchor="23.0" />
+        <ImageView fx:id="helpLogo" fitHeight="107.0" fitWidth="117.0" layoutX="715.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/information.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="660.0" layoutY="179.0" prefHeight="35.0" prefWidth="214.0" text="%lblManualiPerdoruesit" textFill="#0a84ff">
+            <font>
+                <Font name="Arial" size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="490.0" layoutY="241.0" prefHeight="50.0" prefWidth="558.0" text="%lblManInfo" textAlignment="CENTER" textFill="#0a84ff">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Line endX="271.800048828125" layoutX="777.0" layoutY="298.0" startX="-289.26666259765625" stroke="#a5cef2" />
+        <Label alignment="CENTER" layoutX="682.0" layoutY="333.0" prefHeight="38.0" prefWidth="192.0" style="-fx-border-color: #a5cef2; -fx-border-width: 0px 0px 2px 0px;" text="%lblElementi1" textAlignment="CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <HBox layoutX="100.0" layoutY="273.0" prefHeight="51.0" prefWidth="297.0" />
+        <Label alignment="CENTER" layoutX="677.0" layoutY="457.0" prefHeight="38.0" prefWidth="200.0" style="-fx-border-color: #a5cef2; -fx-border-width: 0px 0px 2px 0px;" text="%lblElementeSh" textAlignment="CENTER">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <HBox layoutX="100.0" layoutY="425.0" prefHeight="51.0" prefWidth="297.0" />
+          <Text layoutX="536.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%txtElementi1info" wrappingWidth="442.8034362792969" />
+          <Text layoutX="533.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%txtElementeShinfo" wrappingWidth="476.93670654296875" />
+        <ImageView fx:id="closeIcon" fitHeight="55.0" fitWidth="44.0" layoutX="1094.0" layoutY="25.0" onMouseClicked="#handleCloseInfo" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/close.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+    </children>
+</AnchorPane>

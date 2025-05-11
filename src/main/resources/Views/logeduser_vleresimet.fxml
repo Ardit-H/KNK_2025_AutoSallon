@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogedUserVleresimetController">
+    <children>
+
+        <Label layoutX="178.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbllogeduservleresimet"/>
+
+        <TableView fx:id="vleresimetTable" layoutX="20" layoutY="96.0" prefHeight="464.0" prefWidth="860">
+            <columns>
+                <TableColumn fx:id="colVetura" prefWidth="219.20001220703125" text="%CarName" />
+                <TableColumn fx:id="colVleresimi" prefWidth="79.199951171875" text="%Rating" />
+                <TableColumn fx:id="colKomenti" prefWidth="289.60003662109375" text="%Comment" />
+                <TableColumn fx:id="colData" prefWidth="194.4000244140625" text="%DateOfRating" />
+            </columns>
+        </TableView>
+        <Label fx:id="messageLabel" layoutX="115.0" layoutY="56.0" prefHeight="26.0" prefWidth="670.0" />
+        <TextField fx:id="komenti" layoutX="405.0" layoutY="610.0" promptText="%Comment" />
+        <Spinner fx:id="vleresimi" layoutX="225.0" layoutY="610.0" />
+        <Button layoutX="592.0" layoutY="609.0" onMouseClicked="#handleUpdate" prefWidth="110" text="%btn.update_rating" />
+        <Button layoutX="752.0" layoutY="609.0" onMouseClicked="#handleDelete" prefWidth="110" text="%btn.remove_rating" />
+
+    </children>
+</AnchorPane>

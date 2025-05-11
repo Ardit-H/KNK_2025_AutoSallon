@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePerdoruesitDto, UpdatePerdoruesitDto> {
     public PerdoruesitRepository(){
-        super("perdoruesit");
+        super("perdoruesi");
     }
 
     public Perdoruesit fromResultSet(ResultSet result) throws SQLException{
@@ -19,14 +19,13 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
 
     public Perdoruesit create(CreatePerdoruesitDto perdoruesitDto){
         String query = """
-                INSERT INTO PERDORUESIT (emri, email, fjalekalimi, roli)
-                VALUES (?,?,?,?)""";
+                INSERT INTO PERDORUESI (emri, email, fjalekalimi)
+                VALUES (?,?,?)""";
         try{
             PreparedStatement pstm = this.connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             pstm.setString(1, perdoruesitDto.getEmri());
             pstm.setString(2, perdoruesitDto.getEmail());
             pstm.setString(3, perdoruesitDto.getFjalekalimi());
-            pstm.setString(4, perdoruesitDto.getRoli());
             pstm.execute();
             ResultSet resultSet = pstm.getGeneratedKeys();
             if(resultSet.next()){
@@ -39,9 +38,36 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
         return null;
     }
+    public Perdoruesit create(String emri, String mbiemri, String email, String passwordHash, String salt, String nrtelefonit, String adresa) {
+        String sql = "INSERT INTO perdoruesi (emri, mbiemri, email, nrtelefonit, adresa, roli, passwordHash, salt) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING *";
 
+
+        try (
+             PreparedStatement stmt = this.connection.prepareStatement(sql)) {
+
+            stmt.setString(1, emri);
+            stmt.setString(2, mbiemri);
+            stmt.setString(3, email);
+            stmt.setString(4, nrtelefonit);
+            stmt.setString(5, adresa);
+            stmt.setString(6, "user");
+            stmt.setString(7, passwordHash);
+            stmt.setString(8, salt);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return Perdoruesit.getInstance(rs);
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Nuk u krijua përdoruesi", e);
+        }
+
+        return null;
+    }
     public Perdoruesit update(UpdatePerdoruesitDto perdoruesitDto){
-        StringBuilder query = new StringBuilder("UPDATE PERDORUESIT SET ");
+        StringBuilder query = new StringBuilder("UPDATE PERDORUESI SET ");
         ArrayList<Object> params = new ArrayList<>();
 
         if(perdoruesitDto.getEmail() != null){
@@ -82,18 +108,37 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
         return null;
     }
-    public Perdoruesit getByEmailAndPassword(String email, String fjalekalimi) {
-        String query = "SELECT * FROM PERDORUESIT WHERE EMAIL = ? AND FJALEKALIMI = ?";
-        try {
-            PreparedStatement pstm = this.connection.prepareStatement(query);
+    public Perdoruesit getByEmail(String email){
+        String sql = "SELECT * FROM perdoruesi WHERE email = ?";
+
+        try  {
+            PreparedStatement pstm = this.connection.prepareStatement(sql);
             pstm.setString(1, email);
-            pstm.setString(2, fjalekalimi);
-            ResultSet rs = pstm.executeQuery();
-            if (rs.next()) {
-                return fromResultSet(rs);
+
+            try (ResultSet rs=pstm.executeQuery()){
+                if (rs.next()){
+                    return Perdoruesit.getInstance(rs);
+                }
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        } catch (SQLException e){
+            throw new RuntimeException("Gabim gjatë kërkimit të përdoruesit", e);
+        }
+
+        return null;
+    }
+    public Perdoruesit  findById(Integer perdoruesiId){
+        String sql = "SELECT * FROM perdoruesi WHERE id = ?";
+        try  {
+            PreparedStatement pstm = this.connection.prepareStatement(sql);
+            pstm.setInt(1, perdoruesiId);
+            try (ResultSet rs=pstm.executeQuery()){
+                if (rs.next()){
+                    return Perdoruesit.getInstance(rs);
+                }
+            }
+        } catch (SQLException e){
+            throw new RuntimeException("Gabim gjatë kërkimit të përdoruesit", e);
         }
         return null;
     }

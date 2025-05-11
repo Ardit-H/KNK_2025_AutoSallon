@@ -1,9 +1,11 @@
 package controllers;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import models.dto.Klientet.Klientet;
 import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
@@ -25,10 +27,10 @@ public class PerdoruesitController {
     private TextField txtRoli;
 
     @FXML
-    private TableView<Perdoruesit> tabelaPerdoruesit;
+    private TableView<Perdoruesit> perdoruesitTable;
 
     @FXML
-    private TableColumn<Perdoruesit, Integer> colId;
+    private TableColumn<Perdoruesit, String> colFjalekalimi;
 
     @FXML
     private TableColumn<Perdoruesit, String> colEmri;
@@ -50,16 +52,17 @@ public class PerdoruesitController {
 
     @FXML
     public void initialize() {
-        colId.setCellValueFactory(new PropertyValueFactory<>("pid"));
-        colEmri.setCellValueFactory(new PropertyValueFactory<>("emri"));
-        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
-        colRoli.setCellValueFactory(new PropertyValueFactory<>("roli"));
+        colEmri.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmri()));
+        colEmail.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmail()));
+        colRoli.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getRoli()));
+//        colFjalekalimi.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFjalekalimi()));
+
         loadPerdoruesit();
     }
 
     private void loadPerdoruesit() {
-        tabelaPerdoruesit.getItems().clear();
-        tabelaPerdoruesit.getItems().addAll(perdoruesitService.getAll());
+        List<Perdoruesit> perdoruesit = perdoruesitService.getAll();
+        perdoruesitTable.getItems().setAll(perdoruesit);
     }
 
 //    @FXML
@@ -68,8 +71,7 @@ public class PerdoruesitController {
 //            CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
 //                    txtEmri.getText(),
 //                    txtEmail.getText(),
-//                    txtFjalekalimi.getText(),
-//                    txtRoli.getText()
+//                    txtFjalekalimi.getText()
 //            );
 //            perdoruesitService.create(dto); // Këtu brenda bëhet hashing dhe salt
 //            messageLabel.setText("Perdoruesi u shtua me sukses!");
@@ -91,7 +93,7 @@ public class PerdoruesitController {
             if (!txtEmail.getText().trim().isEmpty())
                 dto.setEmail(txtEmail.getText().trim());
             if (!txtFjalekalimi.getText().trim().isEmpty())
-//                dto.setFjalekalimi(txtFjalekalimi.getText().trim());
+                dto.setFjalekalimi(txtFjalekalimi.getText().trim());
             if (!txtRoli.getText().trim().isEmpty())
                 dto.setRoli(txtRoli.getText().trim());
 
@@ -119,7 +121,7 @@ public class PerdoruesitController {
     }
 
     private int getSelectedPerdoruesitId() {
-        Perdoruesit selected = tabelaPerdoruesit.getSelectionModel().getSelectedItem();
+        Perdoruesit selected = perdoruesitTable.getSelectionModel().getSelectedItem();
         if (selected == null) {
             messageLabel.setText("Zgjidh një përdorues në tabelë!");
             return -1;
