@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i tabeles faturat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PorosiaService.java" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/klientet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Pamja/vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/KlientetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/SignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/SignUp.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2ufmVEA1vs1fsRe3Q1WZ4IdEH4n" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,6 +66,7 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Main.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
@@ -73,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -81,13 +83,13 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Vleresimet">
-    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
         <item itemvalue="Application.PerdoruesitRepositoryTest" />
-        <item itemvalue="Application.KlientRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

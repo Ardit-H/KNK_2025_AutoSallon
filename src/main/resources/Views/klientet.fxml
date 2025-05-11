@@ -38,7 +38,6 @@
             <Button layoutX="155.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_client" />
             <Button layoutX="295.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_client" />
             <TextField fx:id="searchField" layoutX="198.0" layoutY="108.0" promptText="%SearchClient" />
-            <TextField fx:id="txtPerdoruesiId" layoutX="355.0" layoutY="30.0" promptText="%UserId" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="49.0" prefWidth="906.0" style="-fx-background-color: lightblue;" text="%Customer_Managment" textAlignment="CENTER">
