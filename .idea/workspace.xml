@@ -7,6 +7,8 @@
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
@@ -73,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -342,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746979589094</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Krijimi i UserProfileController.java dhe user_profile.fxml">
+      <option name="closed" value="true" />
+      <created>1747045808772</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1747045808772</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -367,6 +377,7 @@
     <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="Krijimi i UserProfileController.java dhe user_profile.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i UserProfileController.java dhe user_profile.fxml" />
   </component>
 </project>
