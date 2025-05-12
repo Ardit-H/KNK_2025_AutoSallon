@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShitjetRepository extends BaseRepository<Shitjet, CreateShitjetDto, UpdateShitjeDto> {
     public ShitjetRepository(){ super("shitjet");}
@@ -80,5 +81,20 @@ public class ShitjetRepository extends BaseRepository<Shitjet, CreateShitjetDto,
             e.printStackTrace();
         }
         return null;
+    }
+    public List<Shitjet> searchByClientId(int kid) {
+        List<Shitjet> lista = new ArrayList<>();
+        String query = "SELECT * FROM SHITJET WHERE KID = ?";
+        try {
+            PreparedStatement pst = this.connection.prepareStatement(query);
+            pst.setInt(1, kid);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                lista.add(Shitjet.getInstance(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lista;
     }
 }
