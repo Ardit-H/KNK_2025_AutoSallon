@@ -8,6 +8,7 @@ public class SceneLocator {
     public static final String DASHBOARD_HOME = "/Views/dashboard_home.fxml";
     public static final String ADMIN_DASHBOARD_HOME = "/Views/admin_dashboard.fxml";
     public static final String USER_DASHBOARD_HOME = "/Views/user_dashboard.fxml";
+    public static final String USER_PROFILE = "/Views/user_profile.fxml";
     public static final String KLIENTET="/Views/klientet.fxml";
     public static final String SHERBIMET="/Views/sherbimet.fxml";
     public static final String USER_SHERBIMET="/Views/user_sherbimet.fxml";

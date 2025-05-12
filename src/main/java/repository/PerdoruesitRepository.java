@@ -90,7 +90,7 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
 
         query.setLength(query.length() - 2);
-        query.append("WHERE ID = ?");
+        query.append(" WHERE ID = ?");
         params.add(perdoruesitDto.getId());
 
 

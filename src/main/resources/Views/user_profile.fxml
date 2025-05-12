@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserProfileController">
+    <children>
+        <HBox maxHeight="100.0" VBox.vgrow="ALWAYS" />
+        <HBox layoutX="10.0" layoutY="10.0" prefHeight="574.0" prefWidth="1300.0">
+            <children>
+                <HBox HBox.hgrow="ALWAYS" />
+                <AnchorPane prefHeight="574.0" prefWidth="845.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+                    <children>
+                        <Label layoutX="80.0" layoutY="31.0" prefHeight="35.0" prefWidth="136.0" text="%FirstName">
+                            <font>
+                                <Font name="Tahoma" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFirstName" layoutX="79.0" layoutY="66.0" prefHeight="35.0" prefWidth="312.0" style="-fx-background-radius: 15;" />
+                        <Label layoutX="80.0" layoutY="111.0" prefHeight="35.0" prefWidth="136.0" text="%LastName">
+                            <font>
+                                <Font name="Tahoma" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtLastName" layoutX="79.0" layoutY="146.0" prefHeight="35.0" prefWidth="312.0" style="-fx-background-radius: 15;" />
+                        <TextField fx:id="txtEmail" layoutX="80.0" layoutY="233.0" prefHeight="35.0" prefWidth="312.0" style="-fx-background-radius: 15;" />
+                        <TextField fx:id="txtNrTelefonit" layoutX="80.0" layoutY="277.0" prefHeight="35.0" prefWidth="312.0" style="-fx-background-radius: 15;" />
+                        <TextField fx:id="txtAdresa" layoutX="80.0" layoutY="331.0" prefHeight="35.0" prefWidth="312.0" style="-fx-background-radius: 15;" />
+                        <Label layoutX="80.0" layoutY="194.0" prefHeight="35.0" prefWidth="136.0" text="%Email">
+                            <font>
+                                <Font name="Tahoma" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="387.0" mnemonicParsing="false" onAction="#handleChangePassword" prefHeight="42.0" prefWidth="174.0" style="-fx-background-radius: 15; -fx-background-color: #A5CEF2; -fx-border-width: 0.5; -fx-border-color: black; -fx-border-radius: 15;" text="btnChangePassword">
+                            <font>
+                                <Font name="Tahoma" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="buttonEdit" alignment="CENTER" contentDisplay="CENTER" layoutX="272.0" layoutY="387.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="42.0" prefWidth="119.0" style="-fx-background-radius: 15; -fx-background-color: #A5CEF2; -fx-border-width: 0.5; -fx-border-color: black; -fx-border-radius: 15;" text="btnEdit">
+                            <font>
+                                <Font name="Tahoma" size="15.0" />
+                            </font>
+                        </Button>
+                        <ImageView fx:id="imgProfilePhoto" fitHeight="362.0" fitWidth="265.0" layoutX="522.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Images/UserProfile.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="buttonSave" alignment="CENTER" contentDisplay="CENTER" layoutX="272.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="42.0" prefWidth="119.0" style="-fx-background-radius: 15; -fx-background-color: #A5CEF2; -fx-border-width: 0.5; -fx-border-color: black; -fx-border-radius: 15;" text="btnSave">
+                            <font>
+                                <Font name="Tahoma" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </AnchorPane>
+                <HBox layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+        <HBox layoutX="10.0" layoutY="110.0" maxHeight="100.0" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>
