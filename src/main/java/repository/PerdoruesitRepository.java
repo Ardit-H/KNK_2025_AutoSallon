@@ -74,6 +74,15 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
             query.append("EMAIL = ?, ");
             params.add(perdoruesitDto.getEmail());
         }
+        if(perdoruesitDto.getNrtelefonit() != null){
+            query.append("NRTELEFONIT = ?, ");
+            params.add(perdoruesitDto.getNrtelefonit());
+        }
+
+        if(perdoruesitDto.getAdresa() != null){
+            query.append("ADRESA = ?, ");
+            params.add(perdoruesitDto.getAdresa());
+        }
 
         if(perdoruesitDto.getFjalekalimi() != null){
             query.append("FJALEKALIMI = ?, ");
@@ -90,7 +99,7 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
 
         query.setLength(query.length() - 2);
-        query.append("WHERE ID = ?");
+        query.append(" WHERE ID = ?");
         params.add(perdoruesitDto.getId());
 
 
