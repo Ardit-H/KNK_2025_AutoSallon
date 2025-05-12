@@ -59,6 +59,16 @@ public class PerdoruesitService {
         if (perdoruesitRepository.getByEmail(createPerdoruesitDto.getEmail()) != null) {
             throw new IllegalArgumentException("Ky email ekziston ne sistem!");
         }
+        if (isNullOrShort(createPerdoruesitDto.getMbiemri(), 3)) {
+            throw new IllegalArgumentException("Mbiemri duhet të ketë të paktën 3 karaktere.");
+        }
+        if (!isValidPhone(createPerdoruesitDto.getNrtelefonit())) {
+            throw new IllegalArgumentException("Numri i telefonit është i pavlefshëm.");
+        }
+        if (isNullOrShort(createPerdoruesitDto.getAdresa(), 5)) {
+            throw new IllegalArgumentException("Adresa duhet të ketë të paktën 5 karaktere.");
+        }
+
 
     }
     private boolean isValidEmail(String email) {
