@@ -205,3 +205,13 @@ CREATE TABLE Statistikat_e_shitjeve (
     fitimi          NUMERIC(10,2) CHECK (fitimi >= 0),
     shpenzimet      NUMERIC(10,2) CHECK (shpenzimet >= 0)
 );
+CREATE TABLE garancia (
+    id SERIAL PRIMARY KEY,
+    vid INT,
+    kid INT,
+    lloji_garancise VARCHAR(40) CHECK (lloji_garancise IN ('6 muaj', '1 vit', '2 vite')),
+    data_fillimit DATE,
+    data_mbarimit DATE,
+    FOREIGN KEY (kid) REFERENCES klientet(id),
+    FOREIGN KEY (vid) REFERENCES veturat(id)
+);
