@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/AdminProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_profile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ShitjetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ShitjetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747054470391</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit">
+      <option name="closed" value="true" />
+      <created>1747057579473</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747057579473</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -387,6 +398,7 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Krijimi i UserProfileController.java dhe user_profile.fxml" />
     <MESSAGE value="Ndryshime" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ndryshime" />
+    <MESSAGE value="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit" />
   </component>
 </project>

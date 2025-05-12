@@ -87,6 +87,13 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
         }
         return null;
     }
+    public int getTotalKlientet() throws SQLException {
+        String query = "SELECT COUNT(*) FROM klientet";
+        try (PreparedStatement stmt = this.connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            return rs.next() ? rs.getInt(1) : 0;
+        }
+    }
     public List<Klientet> searchByFullName(String fullName) {
         String where = "LOWER(CONCAT(emri, ' ', mbiemri)) LIKE ?";
         String searchValue = "%" + fullName.toLowerCase() + "%";
