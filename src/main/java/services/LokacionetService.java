@@ -105,7 +105,7 @@ public class LokacionetService {
         }
         return lokacionetRepository.delete(id);
     }
-    public List<Lokacionet> KerkoLokacionin(String emriL){
+    public List<Lokacionet> kerkoLokacionMeEmrin(String emriL){
         return lokacionetRepository.searchByFullName(emriL);
     }
 

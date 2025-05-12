@@ -1,0 +1,168 @@
+package controllers;
+
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import models.dto.StatistikatEShitjeve.CreateStatistikatEShitjeveDto;
+import models.dto.StatistikatEShitjeve.StatistikatEShitjeve;
+import models.dto.StatistikatEShitjeve.UpdateStatistikatEShitjeveDto;
+import services.StatistikatEShitjeveService;
+import services.LanguageManager;
+import services.SceneManager;
+
+import java.util.List;
+import java.util.Locale;
+
+public class StatistikatEShitjeveController {
+    @FXML private TextField txtId;
+    @FXML private TextField txtMuaji;
+    @FXML private TextField txtFitimi;
+    @FXML private TextField txtShpenzimet;
+    @FXML private TextField txtTotaliShitjeve;
+    @FXML private TextField searchField;
+
+
+
+    @FXML private TableView<StatistikatEShitjeve> statistikatEShitjeveTableView;
+    @FXML private TableColumn<StatistikatEShitjeve, String> colMuaji;
+    @FXML private TableColumn<StatistikatEShitjeve, String> colFitimi;
+    @FXML private TableColumn<StatistikatEShitjeve, String> colShpenzimet;
+    @FXML private TableColumn<StatistikatEShitjeve, String> colTotaliShitjeve;
+
+    @FXML private Label messageLabel;
+    private StatistikatEShitjeveService statistikatEShitjeveService;
+    private LanguageManager languageManager;
+
+    public StatistikatEShitjeveController(){
+        this.statistikatEShitjeveService = new StatistikatEShitjeveService();
+        this.languageManager = LanguageManager.getInstance();
+    }
+
+    @FXML
+    public void initialize() {
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null || newValue.trim().isEmpty()) {
+                statistikatEShitjeveTableView.setItems(FXCollections.observableArrayList(statistikatEShitjeveService.getAll()));
+            } else {
+                List<StatistikatEShitjeve> filtruar = statistikatEShitjeveService.kerkoStatistikat(newValue);
+                statistikatEShitjeveTableView.setItems(FXCollections.observableArrayList(filtruar));
+            }
+        });
+
+        colMuaji.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMuaji()));
+        colFitimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getFitimi())));
+        colShpenzimet.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getShpenzimet())));
+        colTotaliShitjeve.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getTotali_shitjeve())));
+
+        loadStatistikatEShitjeve();
+
+    }
+
+    private void loadStatistikatEShitjeve() {
+        List<StatistikatEShitjeve> statistikat = statistikatEShitjeveService.getAll();
+        statistikatEShitjeveTableView.getItems().setAll(statistikat);
+    }
+
+    @FXML
+    private void handleCreate(MouseEvent event) {
+        try {
+            String muaji = txtMuaji.getText();
+            Double fitimi = Double.parseDouble(txtFitimi.getText());
+            Double shpenzimet = Double.parseDouble(txtShpenzimet.getText());
+            Double totaliShitjeve = Double.parseDouble(txtTotaliShitjeve.getText());
+
+            CreateStatistikatEShitjeveDto dto = new CreateStatistikatEShitjeveDto(
+                    muaji,
+                    fitimi,
+                    shpenzimet,
+                    totaliShitjeve
+            );
+
+            statistikatEShitjeveService.create(dto);
+
+            messageLabel.setText("Statistika e shitjeve u shtua me sukses.");
+            loadStatistikatEShitjeve();
+
+            clearForm();
+        } catch (Exception e) {
+
+            messageLabel.setText("Gabim: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void handleUpdate(MouseEvent event) {
+        try {
+            int selectedId = getSelectedStatistikaId();
+            if (selectedId == -1) return;
+
+            UpdateStatistikatEShitjeveDto dto = new UpdateStatistikatEShitjeveDto(selectedId);
+
+            if (!txtMuaji.getText().trim().isEmpty())
+                dto.setMuaji(txtMuaji.getText().trim());
+
+            if (!txtFitimi.getText().trim().isEmpty())
+                dto.setFitimi(Double.parseDouble(txtFitimi.getText().trim()));
+
+            if (!txtShpenzimet.getText().trim().isEmpty())
+                dto.setShpenzimet(Double.parseDouble(txtShpenzimet.getText().trim()));
+
+            if (!txtTotaliShitjeve.getText().trim().isEmpty())
+                dto.setTotaliShitjeve(Double.parseDouble(txtTotaliShitjeve.getText().trim()));
+
+            statistikatEShitjeveService.update(dto);
+            messageLabel.setText("Statistika e shitjeve u përditësua me sukses.");
+            loadStatistikatEShitjeve();
+            clearForm();
+        } catch (Exception e) {
+            messageLabel.setText("Gabim: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void handleDelete(MouseEvent event) {
+        try {
+            int selectedId = getSelectedStatistikaId();
+            if (selectedId == -1) return;
+
+            statistikatEShitjeveService.delete(selectedId);
+            messageLabel.setText("Statistika e shitjeve u fshi me sukses.");
+            loadStatistikatEShitjeve();
+        } catch (Exception e) {
+            messageLabel.setText("Gabim: " + e.getMessage());
+        }
+    }
+
+    private int getSelectedStatistikaId() {
+        StatistikatEShitjeve selected = statistikatEShitjeveTableView.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            messageLabel.setText("Zgjidhni një statistike në tabelë.");
+            return -1;
+        }
+        return selected.getStatistika_id();
+    }
+
+    private void clearForm() {
+        txtMuaji.clear();
+        txtFitimi.clear();
+        txtShpenzimet.clear();
+        txtTotaliShitjeve.clear();
+    }
+
+    @FXML
+    private void handleLanguageEnglishClick() throws Exception {
+        loadLanguage(Locale.ENGLISH);
+    }
+
+    @FXML
+    private void handleLanguageAlbanianClick() throws Exception {
+        loadLanguage(new Locale("sq"));
+    }
+
+    private void loadLanguage(Locale locale) throws Exception {
+        languageManager.setLocale(locale);
+        SceneManager.reload();
+    }
+}

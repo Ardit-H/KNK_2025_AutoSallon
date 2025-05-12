@@ -82,5 +82,13 @@ public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto,
         }
         return null;
     }
+    public int getTotalVeturat() throws SQLException{
+        String query="SELECT COUNT(*) FROM veturat";
+        try (PreparedStatement stmt=connection.prepareStatement(query);
+             ResultSet rs=stmt.executeQuery()){
+            return rs.next() ? rs.getInt(1):0;
+        }
+    }
+
 
 }

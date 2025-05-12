@@ -1,0 +1,217 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1437fe98-bfee-40af-a69b-ea5044c9094c\" name=\"Changes\" comment=\"workspace.xml\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/services/SceneManager.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/services/SceneManager.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/Views/user_sherbimet.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/Views/user_sherbimet.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/languages/messages.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/languages/messages.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/languages/messages_en.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/languages/messages_en.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Ardit-H&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,\r\n    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2ufmVEA1vs1fsRe3Q1WZ4IdEH4n\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.HelloApplication.executor\": \"Run\",\r\n    \"Application.KlientRepositoryTest.executor\": \"Run\",\r\n    \"Application.Main.executor\": \"Run\",\r\n    \"Application.PerdoruesitRepositoryTest.executor\": \"Run\",\r\n    \"Application.PunetoretServiceTest.executor\": \"Run\",\r\n    \"Application.RezervimetServiceTest.executor\": \"Run\",\r\n    \"Application.Vleresimet.executor\": \"Run\",\r\n    \"Application.test.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"App.Main\" />\r\n      <module name=\"KNK_2025_AutoSallon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"App.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PerdoruesitRepositoryTest\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Test.PerdoruesitRepositoryTest\" />\r\n      <module name=\"KNK_2025_AutoSallon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Test.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PunetoretServiceTest\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Test.PunetoretServiceTest\" />\r\n      <module name=\"KNK_2025_AutoSallon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Test.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"RezervimetServiceTest\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Test.RezervimetServiceTest\" />\r\n      <module name=\"KNK_2025_AutoSallon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Test.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Vleresimet\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Pamja.Vleresimet\" />\r\n      <module name=\"KNK_2025_AutoSallon\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Pamja.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.Vleresimet\" />\r\n        <item itemvalue=\"Application.PunetoretServiceTest\" />\r\n        <item itemvalue=\"Application.RezervimetServiceTest\" />\r\n        <item itemvalue=\"Application.PerdoruesitRepositoryTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1437fe98-bfee-40af-a69b-ea5044c9094c\" name=\"Changes\" comment=\"\" />\r\n      <created>1742648026444</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1742648026444</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"init commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742648196946</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742648196946</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"krijimi i folderit per vendosjen e tabelave te sql\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742666318222</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742666318222</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"shtimi i tabeles Klientet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742681857316</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742681857316</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"shtimi i tabeles Klientet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742682136278</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742682136278</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Krijimi i DBConnector\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742753111762</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742753111762</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Testimi i lidhjes me Database\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742753439946</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742753439946</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Krijimi i paketave models and dto\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1742939837885</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1742939837885</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Krijimi i klases User\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743085212146</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743085212146</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Krijimi i klases Klientet\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743086060632</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743086060632</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Organizimi i dto brenda models\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743086495133</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743086495133</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Shtova tabelen Veturat ne databaze\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743104267212</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743104267212</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Krijimi i klases Veturat\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743105949386</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743105949386</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Krijimi i klases UpdateKlientetEmailDto\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743352102332</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743352102332</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Ndryshim ne klasen CreateKlientetDto\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743352801022</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743352801022</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Krijimi i klases KlientetRepository\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743354835243</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743354835243</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743357946849</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743357946849</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Krijimi i modelit Sherbimet me dto perkatese\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743750658690</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743750658690</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Shtimi i tabeles tek resources\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1743750698264</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1743750698264</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Krijimi i tabeles faturat\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1745420397652</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1745420397652</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746967050876</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746967050876</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746977505667</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746977505667</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746979589094</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746979589094</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"23\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"init commit\" />\r\n    <MESSAGE value=\"krijimi i folderit per vendosjen e tabelave te sql\" />\r\n    <MESSAGE value=\"shtimi i tabeles Klientet\" />\r\n    <MESSAGE value=\"Krijimi i DBConnector\" />\r\n    <MESSAGE value=\"Testimi i lidhjes me Database\" />\r\n    <MESSAGE value=\"Krijimi i paketave models and dto\" />\r\n    <MESSAGE value=\"Krijimi i klases User\" />\r\n    <MESSAGE value=\"Krijimi i klases Klientet\" />\r\n    <MESSAGE value=\"Organizimi i dto brenda models\" />\r\n    <MESSAGE value=\"Shtova tabelen Veturat ne databaze\" />\r\n    <MESSAGE value=\"Krijimi i klases Veturat\" />\r\n    <MESSAGE value=\"Krijimi i klases UpdateKlientetEmailDto\" />\r\n    <MESSAGE value=\"Ndryshim ne klasen CreateKlientetDto\" />\r\n    <MESSAGE value=\"Krijimi i klases KlientetRepository\" />\r\n    <MESSAGE value=\"Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository\" />\r\n    <MESSAGE value=\"Krijimi i modelit Sherbimet me dto perkatese\" />\r\n    <MESSAGE value=\"Shtimi i tabeles tek resources\" />\r\n    <MESSAGE value=\"Krijimi i tabeles faturat\" />\r\n    <MESSAGE value=\"Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi\" />\r\n    <MESSAGE value=\"Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java\" />\r\n    <MESSAGE value=\"workspace.xml\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"workspace.xml\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0e560fdb3dc7a40470820048e9b665f422e0f646)
++++ b/.idea/workspace.xml	(date 1747038757014)
+@@ -4,15 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_sherbimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_sherbimet.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
++    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java">
++      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/tabelat.sql" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -39,7 +32,7 @@
+   <component name="GithubPullRequestsUISettings">{
+   &quot;selectedUrlAndAccountId&quot;: {
+     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+-    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
++    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+   }
+ }</component>
+   <component name="MavenImportPreferences">
+@@ -71,12 +64,10 @@
+     "Application.PerdoruesitRepositoryTest.executor": "Run",
+     "Application.PunetoretServiceTest.executor": "Run",
+     "Application.RezervimetServiceTest.executor": "Run",
+-    "Application.Vleresimet.executor": "Run",
+     "Application.test.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "master",
++    "git-widget-placeholder": "main",
+     "ignore.virus.scanning.warn.message": "true",
+     "kotlin-language-version-configured": "true",
+     "project.structure.last.edited": "Project",
+@@ -85,6 +76,19 @@
+   }
+ }]]></component>
+   <component name="RunManager" selected="Application.Main">
++    <configuration name="KlientRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Test.KlientRepositoryTest" />
++      <module name="KNK_2025_AutoSallon" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="Test.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="App.Main" />
+       <module name="KNK_2025_AutoSallon" />
+@@ -137,26 +141,13 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Vleresimet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="Pamja.Vleresimet" />
+-      <module name="KNK_2025_AutoSallon" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="Pamja.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Application.Main" />
+-        <item itemvalue="Application.Vleresimet" />
+         <item itemvalue="Application.PunetoretServiceTest" />
+         <item itemvalue="Application.RezervimetServiceTest" />
+         <item itemvalue="Application.PerdoruesitRepositoryTest" />
++        <item itemvalue="Application.KlientRepositoryTest" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -321,33 +312,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1745420397652</updated>
+     </task>
+-    <task id="LOCAL-00020" summary="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi">
++    <task id="LOCAL-00020" summary="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java">
+       <option name="closed" value="true" />
+-      <created>1746967050876</created>
++      <created>1746530035219</created>
+       <option name="number" value="00020" />
+       <option name="presentableId" value="LOCAL-00020" />
+       <option name="project" value="LOCAL" />
+-      <updated>1746967050876</updated>
+-    </task>
+-    <task id="LOCAL-00021" summary="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java">
+-      <option name="closed" value="true" />
+-      <created>1746977505667</created>
+-      <option name="number" value="00021" />
+-      <option name="presentableId" value="LOCAL-00021" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1746977505667</updated>
++      <updated>1746530035219</updated>
+     </task>
+-    <task id="LOCAL-00022" summary="workspace.xml">
+-      <option name="closed" value="true" />
+-      <created>1746979589094</created>
+-      <option name="number" value="00022" />
+-      <option name="presentableId" value="LOCAL-00022" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1746979589094</updated>
+-    </task>
+-    <option name="localTasksCounter" value="23" />
++    <option name="localTasksCounter" value="21" />
+     <servers />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="init commit" />
+     <MESSAGE value="krijimi i folderit per vendosjen e tabelave te sql" />
+@@ -367,9 +353,7 @@
+     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
+     <MESSAGE value="Shtimi i tabeles tek resources" />
+     <MESSAGE value="Krijimi i tabeles faturat" />
+-    <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
+-    <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
+-    <MESSAGE value="workspace.xml" />
+-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
++    <MESSAGE value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
++    <option name="LAST_COMMIT_MESSAGE" value="Permiresim ne ndryshimin e gjuhes tek Admin_DashboardController.java" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/services/ShitjetService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package services;\r\n\r\nimport CustomExceptions.DuplicateResourceException;\r\nimport CustomExceptions.InvalidInputException;\r\nimport CustomExceptions.ResourceNotFoundException;\r\nimport CustomExceptions.ValidationException;\r\nimport models.dto.Shitjet.CreateShitjetDto;\r\nimport models.dto.Shitjet.Shitjet;\r\nimport models.dto.Shitjet.UpdateShitjeDto;\r\nimport repository.KlientetRepository;\r\nimport repository.PunetoretRepository;\r\nimport repository.ShitjetRepository;\r\nimport repository.VeturatRepository;\r\n\r\nimport java.util.List;\r\nimport java.sql.SQLException;\r\n\r\npublic class ShitjetService {\r\n    private ShitjetRepository shitjetRepository;\r\n    private KlientetRepository klientetRepository;\r\n    private VeturatRepository veturatRepository;\r\n    private PunetoretRepository punetoretRepository;\r\n    public ShitjetService(){\r\n        this.shitjetRepository = new ShitjetRepository();\r\n        this.klientetRepository = new KlientetRepository();\r\n        this.veturatRepository = new VeturatRepository();\r\n        this.punetoretRepository = new PunetoretRepository();\r\n    }\r\n    public Shitjet create(CreateShitjetDto dto) throws Exception{\r\n        if(shitjetRepository.getById(dto.getKid())==null){\r\n            throw new ResourceNotFoundException(\"Klienti me ID \" + dto.getKid() + \" nuk ekziston!\");\r\n        }\r\n\r\n        if(veturatRepository.getById(dto.getVetura_id())==null){\r\n            throw new ResourceNotFoundException(\"Vetura me ID \" + dto.getVetura_id() + \" nuk ekziston!\");\r\n        }\r\n\r\n        if(punetoretRepository.getById(dto.getPunetor_id())==null){\r\n            throw new ResourceNotFoundException(\"Punetori me ID \" + dto.getPunetor_id() + \" nuk ekziston!\");\r\n        }\r\n\r\n        if(hasBuyBefore(dto.getKid(), dto.getVetura_id())){\r\n            throw new DuplicateResourceException(\"Klienti e ka bere tashme nje blerje per kete veture!\");\r\n        }\r\n\r\n        return shitjetRepository.create(dto);\r\n    }\r\n    private boolean hasBuyBefore(int kid, int vetura_id) throws SQLException{\r\n        List<Shitjet> shitjetList = shitjetRepository.getAll();\r\n        for(Shitjet shitja : shitjetList){\r\n            if(shitja.getKid() == kid && shitja.getVetura_id() == vetura_id){\r\n                return true;\r\n            }\r\n        }\r\n        return false;\r\n    }\r\n    public Shitjet update(UpdateShitjeDto dto) throws Exception{\r\n        if(dto.getShitjet_id() <= 0){\r\n            throw new ValidationException(\"ID eshte e pavlefshme!\");\r\n        }\r\n        Shitjet shitja = shitjetRepository.getById(dto.getShitjet_id());\r\n        if(shitja==null){\r\n            throw new ResourceNotFoundException(\"Shitja me ID: \" + dto.getShitjet_id() + \" nuk ekziston!\");\r\n        }\r\n        if(dto.getKid()!=null && klientetRepository.getById(dto.getKid())==null){\r\n            throw new ResourceNotFoundException(\"Klienti me ID \" + dto.getKid() + \" nuk ekziston!\");\r\n        }\r\n        if(dto.getVetura_id()!=null && veturatRepository.getById(dto.getVetura_id())==null){\r\n            throw new ResourceNotFoundException(\"Vetura me ID \" + dto.getVetura_id() + \" nuk ekziston!\");\r\n        }\r\n        if(dto.getPunetor_id()!=null && punetoretRepository.getById(dto.getPunetor_id())==null){\r\n            throw new ResourceNotFoundException(\"Punetori me ID \" + dto.getPunetor_id() + \" nuk ekziston!\");\r\n        }\r\n\r\n        return shitjetRepository.update(dto);\r\n    }\r\n    public Shitjet getById(int id) throws Exception{\r\n        if(id<0){\r\n            throw new InvalidInputException(\"ID e shitjes duhet te jete pozitive!\");\r\n        }\r\n        Shitjet shitjet = this.shitjetRepository.getById(id);\r\n        if(shitjet==null){\r\n            throw new ResourceNotFoundException(\"Shitja me ID \" + id + \" nuk ekziston!\");\r\n        }\r\n        return shitjet;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/services/ShitjetService.java b/src/main/java/services/ShitjetService.java
+--- a/src/main/java/services/ShitjetService.java	(revision 0e560fdb3dc7a40470820048e9b665f422e0f646)
++++ b/src/main/java/services/ShitjetService.java	(date 1747039949415)
+@@ -12,6 +12,7 @@
+ import repository.ShitjetRepository;
+ import repository.VeturatRepository;
+ 
++import java.util.ArrayList;
+ import java.util.List;
+ import java.sql.SQLException;
+ 
+@@ -26,6 +27,8 @@
+         this.veturatRepository = new VeturatRepository();
+         this.punetoretRepository = new PunetoretRepository();
+     }
++    public List<Shitjet> getAll(){ return shitjetRepository.getAll(); }
++
+     public Shitjet create(CreateShitjetDto dto) throws Exception{
+         if(shitjetRepository.getById(dto.getKid())==null){
+             throw new ResourceNotFoundException("Klienti me ID " + dto.getKid() + " nuk ekziston!");
+@@ -83,5 +86,8 @@
+             throw new ResourceNotFoundException("Shitja me ID " + id + " nuk ekziston!");
+         }
+         return shitjet;
++    }
++    public List<Shitjet> kerkoShitjetMeKlientId(String  input){
++        
+     }
+ }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_23\" default=\"true\" project-jdk-name=\"openjdk-23\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 0e560fdb3dc7a40470820048e9b665f422e0f646)
++++ b/.idea/misc.xml	(date 1747038826947)
+@@ -8,7 +8,7 @@
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23 (4)" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file

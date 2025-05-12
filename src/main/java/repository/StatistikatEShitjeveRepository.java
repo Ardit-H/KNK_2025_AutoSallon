@@ -52,9 +52,9 @@ public class StatistikatEShitjeveRepository extends BaseRepository<StatistikatES
             query.append("SHPENZIMET = ?, ");
             params.add(statistikatEShitjeveDto.getShpenzimet());
         }
-        if(statistikatEShitjeveDto.getTotali_shitjeve() != null){
+        if(statistikatEShitjeveDto.getTotaliShitjeve() != null){
             query.append("TOTALI_SHITJEVE = ?, ");
-            params.add(statistikatEShitjeveDto.getTotali_shitjeve());
+            params.add(statistikatEShitjeveDto.getTotaliShitjeve());
         }
         if(params.isEmpty()){
             return getById(statistikatEShitjeveDto.getId());
@@ -79,7 +79,7 @@ public class StatistikatEShitjeveRepository extends BaseRepository<StatistikatES
         return null;
     }
     public List<StatistikatEShitjeve> searchhByMonth(String month){
-        String where = "LOWER(CONCAT(muaji LIKE ?";
+        String where = "LOWER(muaji) LIKE ?";
         String searchValue = "%" + month.toLowerCase() + "%";
         return searchWithCustomWhere(where, searchValue);
     }
