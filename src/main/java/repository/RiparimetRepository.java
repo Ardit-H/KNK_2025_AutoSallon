@@ -87,4 +87,23 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
         String searchValue = "%" + status.toLowerCase() + "%";
         return searchWithCustomWhere(where, searchValue);
     }
+
+    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String statusi, Double kostoRiparimit, String dataRiparimit) {
+        String sql = "SELECT * FROM riparimet WHERE vetura_id = ? AND sherbimi_id = ? AND statusi = ? AND kosto_riparimit = ? AND data_riparimit = ?";
+        try (PreparedStatement stmt = this.connection.prepareStatement(sql)) {
+            stmt.setInt(1, veturaId);
+            stmt.setInt(2, sherbimiId);
+            stmt.setString(3, statusi);
+            stmt.setDouble(4, kostoRiparimit);
+            stmt.setString(5, dataRiparimit);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return Riparimet.getInstance(rs);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException("Gabim gjatë kërkimit të riparimit: " + e.getMessage(), e);
+        }
+    }
+
 }
