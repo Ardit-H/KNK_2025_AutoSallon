@@ -20,7 +20,6 @@ public class DBConnector {
             }
         }
         return connection;
-        //dsbfskjdks
     }
 
 

@@ -4,15 +4,19 @@ import CustomExceptions.*;
 import models.dto.Klientet.CreateKlientetDto;
 import models.dto.Klientet.Klientet;
 import models.dto.Klientet.UpdateKlientiDto;
+import models.dto.Perdoruesit.Perdoruesit;
 import repository.KlientetRepository;
+import repository.PerdoruesitRepository;
 
 import java.util.List;
 import java.util.regex.Pattern;
 
 public class KlientetService {
     private KlientetRepository klientetRepository;
+    private PerdoruesitRepository perdoruesitRepository;
     public KlientetService(){
         this.klientetRepository=new KlientetRepository();
+        this.perdoruesitRepository=new PerdoruesitRepository();
     }
     public List<Klientet> getAll() {
         return klientetRepository.getAll();
@@ -29,7 +33,19 @@ public class KlientetService {
     }
     public Klientet create(CreateKlientetDto createKlientet)throws Exception{
         validateCreateDto(createKlientet);
+        if (createKlientet.getPerdoruesiId() != null && !perdoruesiIdIsValid(createKlientet.getPerdoruesiId())) {
+            throw new ValidationException("Përdoruesi i dhënë nuk është i vlefshëm.");
+        }
         return klientetRepository.create(createKlientet);
+    }
+    public boolean perdoruesiIdIsValid(Integer perdoruesiId) {
+        if (perdoruesiId == null){
+            return true; // Lejo përdorues pa ID (p.sh., nëse është klient pa llogari)
+        }
+        // Kërko përdoruesin me këtë ID në bazën e të dhënave
+        Perdoruesit perdorues = perdoruesitRepository.findById(perdoruesiId);
+        // Kthe true nëse përdoruesi ekziston, false nëse nuk ekziston
+        return perdorues != null;
     }
     private void validateCreateDto(CreateKlientetDto createKlientetDto)throws Exception{
         if(isNullOrShort(createKlientetDto.getEmri(),3)){
@@ -92,6 +108,12 @@ public class KlientetService {
             }
             hasChanges=true;
         }
+        if(updateKlientiDto.getPerdoruesiId() != null){
+            if (!perdoruesiIdIsValid(updateKlientiDto.getPerdoruesiId())) {
+                throw new ValidationException("Përdoruesi i dhënë nuk është i vlefshëm.");
+            }
+            hasChanges = true;
+        }
         if(updateKlientiDto.getAdresa()!=null) {
             if (updateKlientiDto.getAdresa().trim().length() < 5) {
                 throw new InvalidInputException("Adresa duhet të ketë të paktën 5 karaktere.");
@@ -121,5 +143,8 @@ public class KlientetService {
     }
     public List<Klientet> kerkoKlientetMeEmriPlote(String emriPlote) {
         return klientetRepository.searchByFullName(emriPlote);
+    }
+    public Klientet findByAllFields(String emri, String mbiemri, String email, String nrTelefonit, String adresa) {
+        return klientetRepository.findByAllFields(emri, mbiemri, email, nrTelefonit, adresa);
     }
 }

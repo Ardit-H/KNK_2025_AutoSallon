@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Krijimi i klasave Riparimet&#10;, CreateRiparimetDto dhe UpdateRiparimetDto">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/RiparimetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2025_22_53/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="komentet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Riparimet/CreateRiparimetDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Riparimet/Riparimet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/dto/Riparimet/UpdateRiparimetDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +30,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;a3187b7a-c112-4f16-a232-35cfff71446e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "a3187b7a-c112-4f16-a232-35cfff71446e"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -368,18 +368,11 @@
       <option name="project" value="LOCAL" />
       <updated>1746545064911</updated>
     </task>
-    <task id="LOCAL-00027" summary="Krijimi i klasave Riparimet&#10;, CreateRiparimetDto dhe UpdateRiparimetDto">
-      <option name="closed" value="true" />
-      <created>1746545557719</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1746545557719</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
     <MESSAGE value="krijimi i folderit per vendosjen e tabelave te sql" />
     <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
@@ -404,7 +397,6 @@
     <MESSAGE value="Krijimi i PartneretService, PartneretServiceTest dhe PartneretRepositoryTest" />
     <MESSAGE value="Modifikimi i tabeles Riparimet" />
     <MESSAGE value="komentet" />
-    <MESSAGE value="Krijimi i klasave Riparimet&#10;, CreateRiparimetDto dhe UpdateRiparimetDto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Krijimi i klasave Riparimet&#10;, CreateRiparimetDto dhe UpdateRiparimetDto" />
+    <option name="LAST_COMMIT_MESSAGE" value="komentet" />
   </component>
 </project>

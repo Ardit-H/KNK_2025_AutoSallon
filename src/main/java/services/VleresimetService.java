@@ -5,11 +5,13 @@ import CustomExceptions.InvalidInputException;
 import CustomExceptions.ResourceNotFoundException;
 import CustomExceptions.ValidationException;
 import models.dto.Klientet.Klientet;
+import models.dto.KomentetDto;
 import models.dto.Sherbimet.Sherbimet;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
 import models.dto.Vleresimet.Vleresimet;
 import repository.KlientetRepository;
+import repository.PerdoruesitRepository;
 import repository.VeturatRepository;
 import repository.VleresimetRepository;
 
@@ -20,24 +22,24 @@ import java.util.stream.Collectors;
 
 public class VleresimetService {
     private VleresimetRepository vleresimetRepository;
-    private KlientetRepository klientetRepository;
+    private PerdoruesitRepository perdoruesitRepository;
     private VeturatRepository veturatRepository;
     public VleresimetService(){
         this.vleresimetRepository=new VleresimetRepository();
-        this.klientetRepository=new KlientetRepository();
+        this.perdoruesitRepository=new PerdoruesitRepository();
         this.veturatRepository=new VeturatRepository();
     }
     public Vleresimet create(CreateVleresimetDto dto)throws Exception{
-        if(klientetRepository.getById(dto.getKlientiId())==null){
-            throw new ResourceNotFoundException("Klienti me ID " + dto.getKlientiId() + " nuk ekziston!");
+        if(perdoruesitRepository.getById(dto.getPerdoruesiId())==null){
+            throw new ResourceNotFoundException("Perdoruesi me ID " + dto.getPerdoruesiId() + " nuk ekziston!");
         }
 
         if(veturatRepository.getById(dto.getVeturaId())==null){
             throw new ResourceNotFoundException("Vetura me ID " + dto.getVeturaId() + " nuk ekziston!");
         }
 
-        if (hasVotedBefore(dto.getKlientiId(), dto.getVeturaId())) {
-            throw new DuplicateResourceException("Klienti ka bërë tashmë një vlerësim për këtë veturë!");
+        if (hasVotedBefore(dto.getPerdoruesiId(), dto.getVeturaId())) {
+            throw new DuplicateResourceException("Perdoruesi ka bërë tashmë një vlerësim për këtë veturë!");
         }
 
         if(dto.getVleresimi() < 1 || dto.getVleresimi() > 5){
@@ -46,10 +48,10 @@ public class VleresimetService {
 
         return vleresimetRepository.create(dto);
     }
-    private boolean hasVotedBefore(int klientiId, int veturaId) throws SQLException {
+    private boolean hasVotedBefore(int perdoruesiId, int veturaId) throws SQLException {
         List<Vleresimet> vleresimetList = vleresimetRepository.getAll();
         for (Vleresimet vleresim : vleresimetList) {
-            if (vleresim.getKlientiId() == klientiId && vleresim.getVeturaId() == veturaId) {
+            if (vleresim.getPerdoruesiId() == perdoruesiId && vleresim.getVeturaId() == veturaId) {
                 return true;  // Klienti ka bërë një vlerësim për këtë veturë
             }
         }
@@ -61,10 +63,10 @@ public class VleresimetService {
         }
         Vleresimet vleresimi = vleresimetRepository.getById(dto.getVleresimiId());
         if(vleresimi==null){
-            throw new ResourceNotFoundException("Sherbimi me ID: "+dto.getVleresimiId()+" nuk ekziston.");
+            throw new ResourceNotFoundException("Vleresimi me ID: "+dto.getVleresimiId()+" nuk ekziston.");
         }
-        if(dto.getKlientiId()!=null && klientetRepository.getById(dto.getKlientiId())==null){
-            throw new ResourceNotFoundException("Klienti me ID " + dto.getKlientiId() + " nuk ekziston!");
+        if(dto.getPerdoruesiId()!=null && perdoruesitRepository.getById(dto.getPerdoruesiId())==null){
+            throw new ResourceNotFoundException("Perdoruesi me ID " + dto.getPerdoruesiId() + " nuk ekziston!");
         }
 
         if(dto.getVeturaId()!=null && veturatRepository.getById(dto.getVeturaId())==null){
@@ -103,11 +105,11 @@ public class VleresimetService {
         }
         return vleresimetRepository.delete(id);
     }
-    public List<Vleresimet> getVleresimetByKlientiId(int klientiId){
+    public List<Vleresimet> getVleresimetByPerdoruesiId(int perdoruesiId){
         List<Vleresimet> result = new ArrayList<>();
         List<Vleresimet> vleresimet = vleresimetRepository.getAll();
         for(Vleresimet vleresim : vleresimet){
-            if (vleresim.getKlientiId() == klientiId) {
+            if (vleresim.getPerdoruesiId() == perdoruesiId) {
                 result.add(vleresim);
             }
         }
@@ -141,21 +143,31 @@ public class VleresimetService {
         }
         return (double) total/count;
     }
-    public void showPositiveAndNegativeVleresimet(int veturaId){
+    public KomentetDto getPositiveAndNegativeVleresimet(int veturaId) {
         List<Vleresimet> vleresimet = getVleresimetByVeturaId(veturaId);
 
-        System.out.println("Vlerësime Pozitive:");
+        List<String> pozitive = new ArrayList<>();
+        List<String> negative = new ArrayList<>();
+
         for (Vleresimet vleresim : vleresimet) {
             if (vleresim.getVleresimi() > 3) {
-                System.out.println(vleresim.getKomenti());
+                pozitive.add(vleresim.getKomenti());
+            } else {
+                negative.add(vleresim.getKomenti());
             }
         }
 
-        System.out.println("Vlerësime Negative:");
-        for (Vleresimet vleresim : vleresimet) {
-            if (vleresim.getVleresimi() <= 3) {
-                System.out.println(vleresim.getKomenti());
-            }
-        }
+        return new KomentetDto(pozitive, negative);
     }
+
+    public List<Vleresimet> getVleresimetByUserId(int userId) {
+        return vleresimetRepository.getByUserId(userId);
+    }
+    public List<Vleresimet> getVleresimetWithJoins() {
+        return vleresimetRepository.getAllWithJoins();
+    }
+    public List<Vleresimet> searchByVeturaOrPerdorues(String keyword) {
+        return vleresimetRepository.searchByVehicleOrUserName(keyword);
+    }
+
 }

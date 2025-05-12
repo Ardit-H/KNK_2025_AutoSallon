@@ -5,11 +5,15 @@ import java.sql.SQLException;
 
 public class UpdateVleresimetDto {
     private int vleresimiId;
-    private Integer klientiId;
+    private Integer perdoruesiId;
     private Integer veturaId;
     private Integer vleresimi;
     private String komenti;
     private String dataVleresimit;
+
+
+    public UpdateVleresimetDto() {
+    }
 
     public int getVleresimiId() {
         return vleresimiId;
@@ -19,12 +23,12 @@ public class UpdateVleresimetDto {
         this.vleresimiId = vleresimiId;
     }
 
-    public Integer getKlientiId() {
-        return klientiId;
+    public Integer getPerdoruesiId() {
+        return perdoruesiId;
     }
 
-    public void setKlientiId(Integer klientiId) {
-        this.klientiId = klientiId;
+    public void setPerdoruesiId(Integer perdoruesiId) {
+        this.perdoruesiId = perdoruesiId;
     }
 
     public Integer getVeturaId() {
@@ -58,9 +62,5 @@ public class UpdateVleresimetDto {
     public void setDataVleresimit(String dataVleresimit) {
         this.dataVleresimit = dataVleresimit;
     }
-
-    public UpdateVleresimetDto() {
-    }
-
 }
 

@@ -12,8 +12,9 @@ public class Klientet {
     private String nrtelefonit;
     private String adresa;
     private String data_regjistrimit;
+    private Integer perdoruesiId;
 
-    private Klientet(int kid,String emri,String mbiemri,String email,String nrtelefonit,String adresa,String data_regjistrimit){
+    private Klientet(int kid,String emri,String mbiemri,String email,String nrtelefonit,String adresa,String data_regjistrimit,  Integer perdoruesiId){
         this.kid=kid;
         this.emri=emri;
         this.mbiemri=mbiemri;
@@ -21,6 +22,7 @@ public class Klientet {
         this.nrtelefonit=nrtelefonit;
         this.adresa=adresa;
         this.data_regjistrimit=data_regjistrimit;
+        this.perdoruesiId=perdoruesiId;
     }
 
 public static Klientet getInstance(ResultSet resultSet)throws SQLException{
@@ -31,9 +33,16 @@ public static Klientet getInstance(ResultSet resultSet)throws SQLException{
     String nrtelefonit=resultSet.getString("nrtelefonit");
     String adresa=resultSet.getString("adresa");
     String data_regjistrimit=resultSet.getString("data_regjistrimit");
-    return new Klientet(kid,emri,mbiemri,email,nrtelefonit,adresa,data_regjistrimit);
+    Integer perdoruesiId = resultSet.getObject("perdoruesi_id", Integer.class);
+    return new Klientet(kid,emri,mbiemri,email,nrtelefonit,adresa,data_regjistrimit,perdoruesiId);
 }
+    public Integer getPerdoruesiId(){
+        return perdoruesiId;
+    }
 
+    public void setPerdoruesiId(Integer perdoruesiId){
+        this.perdoruesiId = perdoruesiId;
+    }
     public int getKid() {
         return kid;
     }

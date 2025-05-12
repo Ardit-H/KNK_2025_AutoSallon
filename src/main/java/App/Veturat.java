@@ -1,4 +1,4 @@
-package Views;
+package App;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +19,7 @@ public class Veturat extends Application {
         fxmlLoader.setResources(languageManager.getResourceBundle());
         Parent parent=fxmlLoader.load();
         scene=new Scene(parent);
-//        SceneManager.initialize(scene,SceneLocator.VETURAT);
+//       SceneManager.initialize(scene,SceneLocator.VETURAT);
         stage.setScene(scene);
         stage.show();
     }

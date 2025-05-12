@@ -1,9 +1,9 @@
 package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import services.LanguageManager;
 import services.SceneManager;
 import models.dto.Veturat.CreateVeturatDto;
@@ -15,6 +15,12 @@ import java.util.List;
 import java.util.Locale;
 
 public class VeturatController {
+    @FXML public Button btn_shto;
+    @FXML public Button btn_perditeso;
+    @FXML public Button btn_fshij;
+    @FXML public Button btn_shqip;
+    @FXML public Button btn_anglisht;
+
     @FXML private TextField txtProdhuesi;
     @FXML private TextField txtModeli;
     @FXML private TextField txtVitiProdhimit;
@@ -62,7 +68,7 @@ public class VeturatController {
     }
 
     @FXML
-    private void handleCreate(MouseEvent event) {
+    private void handleCreate(ActionEvent event) {
         try {
             CreateVeturatDto dto = new CreateVeturatDto(
                     txtProdhuesi.getText(),
@@ -85,7 +91,7 @@ public class VeturatController {
     }
 
     @FXML
-    private void handleUpdate(MouseEvent event) {
+    private void handleUpdate(ActionEvent event) {
         try {
             int selectedId = getSelectedVeturaId();
             if (selectedId == -1) return;
@@ -103,7 +109,7 @@ public class VeturatController {
     }
 
     @FXML
-    private void handleDelete(MouseEvent event) {
+    private void handleDelete(ActionEvent event) {
         try {
             int selectedId = getSelectedVeturaId();
             if (selectedId == -1) return;

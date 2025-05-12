@@ -21,8 +21,8 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
 
     public Klientet create(CreateKlientetDto klientetDto){
         String query ="""
-                INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa)
-                 VALUES(?,?,?,?,?)
+                INSERT INTO KLIENTET(emri,mbiemri,email,nrtelefonit,adresa, perdoruesi_id)
+                 VALUES(?,?,?,?,?,?)
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(
@@ -32,6 +32,7 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
             pstm.setString(3,klientetDto.getEmail());
             pstm.setString(4,klientetDto.getNrtelefonit());
             pstm.setString(5,klientetDto.getAdresa());
+            pstm.setObject(6, klientetDto.getPerdoruesiId(), Types.INTEGER);
             pstm.execute();
             ResultSet resultSet=pstm.getGeneratedKeys();
             if(resultSet.next()){
@@ -59,6 +60,10 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
         if(klientetDto.getAdresa() != null){
             query.append("ADRESA = ?, ");
             params.add(klientetDto.getAdresa());
+        }
+        if(klientetDto.getPerdoruesiId()!=null){
+            query.append("perdoruesi_id= ?, ");
+            params.add(klientetDto.getPerdoruesiId());
         }
         if(params.isEmpty()){
             return getById(klientetDto.getId());
@@ -140,6 +145,23 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
             e.printStackTrace();
         }
         return false;
+    }
+    public Klientet findByAllFields(String emri, String mbiemri, String email, String nrTelefonit, String adresa){
+        String sql="SELECT * FROM klientet WHERE emri = ? AND mbiemri = ? AND email = ? AND nrtelefonit = ? AND adresa = ?";
+        try (PreparedStatement stmt=this.connection.prepareStatement(sql)) {
+            stmt.setString(1, emri);
+            stmt.setString(2, mbiemri);
+            stmt.setString(3, email);
+            stmt.setString(4, nrTelefonit);
+            stmt.setString(5, adresa);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()){
+                return Klientet.getInstance(rs);
+            }
+            return null;
+        } catch (SQLException e){
+            throw new RuntimeException("Gabim gjatë kërkimit të klientit: " + e.getMessage());
+        }
     }
 
 }
