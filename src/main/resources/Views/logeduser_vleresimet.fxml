@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogedUserVleresimetController">
     <children>
 
-        <Label layoutX="178.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbllogeduservleresimet"/>
+        <Label layoutX="178.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbllogeduservleresimet" />
 
         <TableView fx:id="vleresimetTable" layoutX="20" layoutY="96.0" prefHeight="464.0" prefWidth="860">
             <columns>

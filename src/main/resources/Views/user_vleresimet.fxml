@@ -6,11 +6,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.Button?>
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserVleresimetController">
     <children>
         <AnchorPane prefHeight="147.0" prefWidth="600.0">
          <children>
-            <Label layoutX="21.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;"  text="%lbluservleresimet"/>
+            <Label layoutX="21.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbluservleresimet" />
+             <Button layoutX="468.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleShowAverage" text="%AverageOfRatings" />
          </children></AnchorPane>
         <AnchorPane prefHeight="312.0" prefWidth="600.0">
             <children>

@@ -13,13 +13,13 @@
    <children>
       <AnchorPane prefHeight="147.0" prefWidth="600.0">
          <children>
-            <TextField fx:id="veturaId" layoutX="107.0" layoutY="66.0" promptText="%CarName" />
-            <TextField fx:id="komenti" layoutX="285.0" layoutY="66.0" promptText="%Comment" />
-            <Button layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#handleCreateVleresim" text="%btn.add_rating" />
-            <TextField fx:id="perdoruesiId" layoutX="107.0" layoutY="28.0" promptText="%UserName" />
-            <Button layoutX="120.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#handleDeleteVleresim" text="%btn.remove_rating" />
-            <Button layoutX="231.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#handleUpdateVleresim" text="%btn.update_rating" />
-            <Spinner fx:id="vleresimi" layoutX="285.0" layoutY="28.0" />
+             <TextField fx:id="searchField" layoutX="372.0" layoutY="27.0" prefHeight="26.0" prefWidth="201.0" promptText="%SearchByCarOrUser" />
+             <Button layoutX="372.0" layoutY="77.0" onAction="#onSearchClicked" text="%Search" />
+            <TextField fx:id="komenti" layoutX="42.0" layoutY="28.0" promptText="%Comment" />
+            <Button layoutX="78.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#handleDeleteVleresim" text="%btn.remove_rating" />
+            <Button layoutX="216.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#handleUpdateVleresim" text="%btn.update_rating" />
+             <Button layoutX="468.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleShowAverage" text="%AverageOfRatings" />
+             <Spinner fx:id="vleresimi" layoutX="201.0" layoutY="28.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="369.0" prefWidth="600.0">

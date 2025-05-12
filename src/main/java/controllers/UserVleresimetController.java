@@ -2,9 +2,11 @@ package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import models.dto.KomentetDto;
 import models.dto.Vleresimet.Vleresimet;
 import services.LanguageManager;
 import services.VleresimetService;
@@ -40,5 +42,47 @@ public class UserVleresimetController {
     private void loadVleresimet() {
         List<Vleresimet> vleresimet = vleresimetService.getVleresimetWithJoins();
         VleresimetTableView.getItems().setAll(vleresimet);
+    }
+    @FXML private void handleShowAverage() {
+        Vleresimet selected = VleresimetTableView.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            showAlert("Gabim", "Ju lutem selektoni një vlerësim!", Alert.AlertType.ERROR);
+            return;
+        }
+        int veturaId = selected.getVeturaId();
+        double mesatarja = vleresimetService.getMesatarjaEVleresimevePerVeture(veturaId);
+        KomentetDto komentetDto = vleresimetService.getPositiveAndNegativeVleresimet(veturaId);
+        StringBuilder content = new StringBuilder();
+        content.append("Mesatarja e vlerësimeve për veturën \"")
+                .append(selected.getVeturaEmri())
+                .append("\" është: ")
+                .append(String.format("%.2f", mesatarja))
+                .append("\n\n");
+
+        content.append("💬 Komente Pozitive:\n");
+        if (komentetDto.getKomentetPozitive().isEmpty()) {
+            content.append("- Asnjë koment pozitiv.\n");
+        } else {
+            for (String kom : komentetDto.getKomentetPozitive()) {
+                content.append("- ").append(kom).append("\n");
+            }
+        }
+
+        content.append("\n💬 Komente Negative:\n");
+        if (komentetDto.getKomentetNegative().isEmpty()) {
+            content.append("- Asnjë koment negativ.\n");
+        } else {
+            for (String kom : komentetDto.getKomentetNegative()) {
+                content.append("- ").append(kom).append("\n");
+            }
+        }
+        showAlert("Detaje të Vlerësimeve", content.toString(), Alert.AlertType.INFORMATION);
+    }
+    private void showAlert(String title, String content, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }
