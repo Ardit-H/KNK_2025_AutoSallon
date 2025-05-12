@@ -17,7 +17,6 @@ public class UserProfileController {
     @FXML private TextField txtEmail;
     @FXML private TextField txtNrTelefonit;
     @FXML private TextField txtAdresa;
-
     @FXML private ImageView imgProfilePhoto;
     @FXML private Button buttonEdit;
     @FXML private Button buttonSave;
@@ -26,15 +25,14 @@ public class UserProfileController {
     private final PerdoruesitService perdoruesitService = new PerdoruesitService();
 
     @FXML
-    public void initialize() {
+    public void initialize(){
         currentUser = SessionManager.getInstance().getcurrentUser();
-        if (currentUser != null) {
+        if (currentUser != null){
             loadUserProfile();
             setEditable(false);
         }
     }
-
-    private void loadUserProfile() {
+    private void loadUserProfile(){
         txtFirstName.setText(currentUser.getEmri());
         txtLastName.setText(currentUser.getMbiemri());
         txtEmail.setText(currentUser.getEmail());
@@ -42,7 +40,7 @@ public class UserProfileController {
         txtAdresa.setText(currentUser.getAdresa());
     }
 
-    private void setEditable(boolean editable) {
+    private void setEditable(boolean editable){
         txtFirstName.setEditable(false); // nuk lejohet ndryshimi
         txtLastName.setEditable(false);  // nuk lejohet ndryshimi
         txtEmail.setEditable(editable);
@@ -52,24 +50,22 @@ public class UserProfileController {
     }
 
     @FXML
-    private void handleEdit(ActionEvent event) {
+    private void handleEdit(){
         setEditable(true);
     }
 
     @FXML
-    private void handleSave(ActionEvent event) {
-        if (currentUser != null) {
-            UpdatePerdoruesitDto dto = new UpdatePerdoruesitDto();
+    private void handleSave(){
+        if (currentUser != null){
+            UpdatePerdoruesitDto dto=new UpdatePerdoruesitDto();
             dto.setId(currentUser.getPid());
             dto.setEmail(txtEmail.getText());
             dto.setNrtelefonit(txtNrTelefonit.getText());
             dto.setAdresa(txtAdresa.getText());
-            dto.setRoli(currentUser.getRoli()); // ruajmë rolin ekzistues
-            dto.setFjalekalimi(currentUser.getPasswordHash()); // ose mbaje bosh nëse nuk ndryshohet
+            dto.setRoli(currentUser.getRoli());
 
-            try {
+            try{
                 perdoruesitService.update(dto);
-
                 // Përditësojmë userin e ruajtur në SessionManager
                 currentUser = new Perdoruesit(
                         currentUser.getPid(),
@@ -84,17 +80,16 @@ public class UserProfileController {
                         currentUser.getSalt()
                 );
                 SessionManager.getInstance().loginUser(currentUser);
-
                 setEditable(false);
-            } catch (Exception e) {
-                e.printStackTrace(); // ose shfaq dialog errori
+            }catch(Exception e){
+                e.printStackTrace();
             }
         }
     }
 
     @FXML
-    private void handleChangePassword(ActionEvent event) {
-        // TODO: hap dritare për ndryshim të fjalëkalimit
+    private void handleChangePassword(){
+
         System.out.println("Ndrysho fjalëkalimin...");
     }
 }
