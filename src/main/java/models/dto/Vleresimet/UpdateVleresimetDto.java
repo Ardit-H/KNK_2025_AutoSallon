@@ -11,6 +11,10 @@ public class UpdateVleresimetDto {
     private String komenti;
     private String dataVleresimit;
 
+
+    public UpdateVleresimetDto() {
+    }
+
     public int getVleresimiId() {
         return vleresimiId;
     }
@@ -58,9 +62,5 @@ public class UpdateVleresimetDto {
     public void setDataVleresimit(String dataVleresimit) {
         this.dataVleresimit = dataVleresimit;
     }
-
-    public UpdateVleresimetDto() {
-    }
-
 }
 

@@ -95,8 +95,8 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         JOIN Veturat ve ON v.vetura_id = ve.id
         WHERE v.perdoruesi_id = ?
     """;
-        try(Connection conn=DBConnector.getConnection();
-            PreparedStatement stmt=conn.prepareStatement(sql)){
+        try(
+            PreparedStatement stmt=this.connection.prepareStatement(sql)){
             stmt.setInt(1, userId);
             ResultSet rs=stmt.executeQuery();
             while (rs.next()){
@@ -109,6 +109,58 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
             e.printStackTrace();
         }
         return vleresimetList;
+    }
+    public List<Vleresimet> getAllWithJoins(){
+        List<Vleresimet> vleresimetList = new ArrayList<>();
+        String sql = """
+        SELECT v.*, ve.prodhuesi, ve.modeli, p.emri, p.mbiemri
+        FROM Vleresimet v
+        JOIN Veturat ve ON v.vetura_id = ve.id
+        JOIN Perdoruesi p ON v.perdoruesi_id = p.id
+    """;
+        try (
+             PreparedStatement stmt = this.connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Vleresimet v = Vleresimet.getInstance(rs);
+                v.setVeturaEmri(rs.getString("prodhuesi") + " " + rs.getString("modeli"));
+                v.setPerdoruesiEmriPlote(rs.getString("emri") + " " + rs.getString("mbiemri"));
+                vleresimetList.add(v);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return vleresimetList;
+    }
+    public List<Vleresimet> searchByVehicleOrUserName(String keyword) {
+        List<Vleresimet> results = new ArrayList<>();
+        String query = """
+        SELECT v.*, 
+               ve.prodhuesi || ' ' || ve.modeli AS vetura_emri, 
+               p.emri || ' ' || p.mbiemri AS perdoruesi_emri
+        FROM Vleresimet v
+        JOIN Veturat ve ON v.vetura_id = ve.id
+        JOIN perdoruesi p ON v.perdoruesi_id = p.id
+        WHERE LOWER(ve.prodhuesi || ' ' || ve.modeli) LIKE ? 
+           OR LOWER(p.emri || ' ' || p.mbiemri) LIKE ?
+    """;
+
+        try (PreparedStatement pstm = this.connection.prepareStatement(query)) {
+            String searchKeyword = "%" + keyword.toLowerCase() + "%";
+            pstm.setString(1, searchKeyword);
+            pstm.setString(2, searchKeyword);
+            ResultSet rs = pstm.executeQuery();
+
+            while (rs.next()) {
+                Vleresimet v = Vleresimet.getInstance(rs);
+                v.setVeturaEmri(rs.getString("vetura_emri"));
+                v.setPerdoruesiEmriPlote(rs.getString("perdoruesi_emri"));
+                results.add(v);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // ose log.error(...) nëse ke logging
+        }
+        return results;
     }
 
 }

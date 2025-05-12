@@ -5,6 +5,7 @@ import CustomExceptions.InvalidInputException;
 import CustomExceptions.ResourceNotFoundException;
 import CustomExceptions.ValidationException;
 import models.dto.Klientet.Klientet;
+import models.dto.KomentetDto;
 import models.dto.Sherbimet.Sherbimet;
 import models.dto.Vleresimet.CreateVleresimetDto;
 import models.dto.Vleresimet.UpdateVleresimetDto;
@@ -142,24 +143,31 @@ public class VleresimetService {
         }
         return (double) total/count;
     }
-    public void showPositiveAndNegativeVleresimet(int veturaId){
+    public KomentetDto getPositiveAndNegativeVleresimet(int veturaId) {
         List<Vleresimet> vleresimet = getVleresimetByVeturaId(veturaId);
 
-        System.out.println("Vlerësime Pozitive:");
+        List<String> pozitive = new ArrayList<>();
+        List<String> negative = new ArrayList<>();
+
         for (Vleresimet vleresim : vleresimet) {
             if (vleresim.getVleresimi() > 3) {
-                System.out.println(vleresim.getKomenti());
+                pozitive.add(vleresim.getKomenti());
+            } else {
+                negative.add(vleresim.getKomenti());
             }
         }
 
-        System.out.println("Vlerësime Negative:");
-        for (Vleresimet vleresim : vleresimet) {
-            if (vleresim.getVleresimi() <= 3) {
-                System.out.println(vleresim.getKomenti());
-            }
-        }
+        return new KomentetDto(pozitive, negative);
     }
+
     public List<Vleresimet> getVleresimetByUserId(int userId) {
         return vleresimetRepository.getByUserId(userId);
     }
+    public List<Vleresimet> getVleresimetWithJoins() {
+        return vleresimetRepository.getAllWithJoins();
+    }
+    public List<Vleresimet> searchByVeturaOrPerdorues(String keyword) {
+        return vleresimetRepository.searchByVehicleOrUserName(keyword);
+    }
+
 }

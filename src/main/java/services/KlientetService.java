@@ -144,4 +144,7 @@ public class KlientetService {
     public List<Klientet> kerkoKlientetMeEmriPlote(String emriPlote) {
         return klientetRepository.searchByFullName(emriPlote);
     }
+    public Klientet findByAllFields(String emri, String mbiemri, String email, String nrTelefonit, String adresa) {
+        return klientetRepository.findByAllFields(emri, mbiemri, email, nrTelefonit, adresa);
+    }
 }
