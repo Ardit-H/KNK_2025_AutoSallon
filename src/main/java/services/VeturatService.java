@@ -1,10 +1,16 @@
 package services;
 
+import Database.DBConnector;
 import models.dto.Veturat.CreateVeturatDto;
 import models.dto.Veturat.Veturat;
 import models.dto.Veturat.UpdateVeturatDto;
 import repository.VeturatRepository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -76,14 +82,17 @@ public class VeturatService {
             throw new Exception("Vetura me ID " + updateDto.getId() + " nuk ekziston.");
         }
 
-        boolean hasChanges = false;
+        validateUpdateDto(updateDto);
 
-        if (updateDto.getGjendja() != null && updateDto.getGjendja().trim().length() >= 2) {
+        boolean hasChanges = false;
+        if ((updateDto.getGjendja() != null && !updateDto.getGjendja().equals(ekzistuese.getGjendja())) ||
+                (updateDto.getNgjyra() != null && !updateDto.getNgjyra().equals(ekzistuese.getNgjyra())) ||
+                (updateDto.getKilometrazha() != ekzistuese.getKilometrazha())) {
             hasChanges = true;
         }
 
         if (!hasChanges) {
-            throw new IllegalArgumentException("Duhet të përditësohet të paktën një fushë.");
+            throw new IllegalArgumentException("Asnjë ndryshim nuk u bë në të dhënat e veturës.");
         }
 
         Veturat updated = veturatRepository.update(updateDto);
@@ -93,6 +102,7 @@ public class VeturatService {
 
         return updated;
     }
+
 
     public boolean delete(int id) throws Exception {
         if (id <= 0) {
@@ -106,4 +116,25 @@ public class VeturatService {
 
         return veturatRepository.delete(id);
     }
+
+    private void validateUpdateDto(UpdateVeturatDto dto) {
+        if (dto.getGjendja() != null && dto.getGjendja().trim().length() < 2) {
+            throw new IllegalArgumentException("Gjendja është shumë e shkurtër.");
+        }
+        if (dto.getNgjyra() != null && dto.getNgjyra().trim().length() < 3) {
+            throw new IllegalArgumentException("Ngjyra është shumë e shkurtër.");
+        }
+        if (dto.getKilometrazha() < 0) {
+            throw new IllegalArgumentException("Kilometrazha nuk mund të jetë negative.");
+        }
+    }
+
+    public List<Veturat> kerkoVeturat(String search) {
+        if (search == null || search.trim().isEmpty()) {
+            return veturatRepository.getAll();
+        }
+
+        return veturatRepository.kerkoSipasProdhuesit(search.trim());
+    }
+
 }

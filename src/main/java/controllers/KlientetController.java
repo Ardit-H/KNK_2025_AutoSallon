@@ -66,10 +66,10 @@ public class KlientetController {
         loadKlientet();
     }
 
-private void loadKlientet() {
-    List<Klientet> klientet = klientetService.getAll();
-    KlientetTableView.getItems().setAll(klientet);
-}
+    private void loadKlientet() {
+        List<Klientet> klientet = klientetService.getAll();
+        KlientetTableView.getItems().setAll(klientet);
+    }
 
     @FXML
     private void handleCreate(MouseEvent event) {
@@ -136,6 +136,7 @@ private void loadKlientet() {
         }
         return selected.getKid();
     }
+
     private void clearForm() {
         txtEmri.clear();
         txtMbiemri.clear();

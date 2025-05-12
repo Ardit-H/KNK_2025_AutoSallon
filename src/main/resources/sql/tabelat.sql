@@ -33,7 +33,7 @@ CREATE TABLE sherbimet(
 );
 
 /*
-CREATE TABLE Veturat (
+CREATE TABLE veturat (
     id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
     modeli VARCHAR(50) NOT NULL,
