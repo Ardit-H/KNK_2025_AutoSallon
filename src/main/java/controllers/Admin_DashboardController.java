@@ -24,9 +24,7 @@ import java.util.Locale;
 public class Admin_DashboardController {
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
-    @FXML private Button menuToggleButton;
     @FXML private Button btnLogOut;
-    private boolean menuVisible = false;
     @FXML private Button languageToggleButton;
     private boolean isEnglish = true;
     private LanguageManager languageManager;
@@ -34,10 +32,6 @@ public class Admin_DashboardController {
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML public void initialize() {
-        sideMenu.setTranslateX(-200);
-        sideMenu.setVisible(false);
-        sideMenu.setManaged(false);
-        menuToggleButton.setOnAction(event -> toggleMenu());
         if (languageManager.getLocale().equals(new Locale("en"))) {
             setLanguageIcon("/Images/language-en.png");
             isEnglish = true;
@@ -45,25 +39,6 @@ public class Admin_DashboardController {
             setLanguageIcon("/Images/language-sq.png");
             isEnglish = false;
         }
-    }
-
-    private void toggleMenu() {
-        TranslateTransition transition = new TranslateTransition(Duration.millis(300), sideMenu);
-        if (!menuVisible) {
-            sideMenu.setVisible(true);
-            sideMenu.setManaged(true);
-            transition.setFromX(-200);
-            transition.setToX(0);
-        } else {
-            transition.setFromX(0);
-            transition.setToX(-200);
-            transition.setOnFinished(event -> {
-                sideMenu.setVisible(false);
-                sideMenu.setManaged(false);
-            });
-        }
-        transition.play();
-        menuVisible =!menuVisible;
     }
    @FXML private void handleLoadKlientet()throws Exception{
        SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
