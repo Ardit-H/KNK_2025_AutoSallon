@@ -16,56 +16,56 @@
 <AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #FBF3D8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GaranciaController">
     <children>
 
-        <Label layoutX="37.0" layoutY="179.0" prefHeight="27.0" prefWidth="98.0" text="Lloji Garancise:">
+        <Label layoutX="16.0" layoutY="179.0" prefHeight="27.0" prefWidth="119.0" text="%Lloji_i_Garancise">
          <font>
             <Font size="14.0" />
          </font></Label>
         <TextField fx:id="txtLlojiGarancise" layoutX="150.0" layoutY="179.0" prefWidth="200.0" style="-fx-border-color: #27435c;" />
 
-        <Label layoutX="43.0" layoutY="223.0" prefHeight="20.0" prefWidth="93.0" text="Data e Fillimit:">
+        <Label layoutX="27.0" layoutY="223.0" prefHeight="20.0" prefWidth="110.0" text="%Data_e_Fillimit">
          <font>
             <Font size="14.0" />
          </font></Label>
         <DatePicker fx:id="dpDataFillimit" layoutX="150.0" layoutY="220.0" prefWidth="200.0" style="-fx-border-color: #27435c;" />
 
-        <Label layoutX="34.0" layoutY="263.0" prefHeight="20.0" prefWidth="110.0" text="Data e Mbarimit:">
+        <Label layoutX="14.0" layoutY="263.0" prefHeight="20.0" prefWidth="130.0" text="%Data_e_Mbarimit">
          <font>
             <Font size="14.0" />
          </font></Label>
         <DatePicker fx:id="dpDataMbarimit" layoutX="150.0" layoutY="259.0" prefWidth="200.0" style="-fx-border-color: #27435c;" />
 
-        <Label layoutX="422.0" layoutY="192.0" text="Klient ID:">
+        <Label layoutX="405.0" layoutY="192.0" prefHeight="20.0" prefWidth="83.0" text="%Klient_ID">
          <font>
             <Font size="14.0" />
          </font></Label>
         <TextField fx:id="txtKlientId" layoutX="487.0" layoutY="188.0" prefWidth="200.0" style="-fx-border-color: #27435c;" />
 
-        <Label layoutX="420.0" layoutY="233.0" text="Vetura ID:">
+        <Label layoutX="401.0" layoutY="233.0" prefHeight="20.0" prefWidth="91.0" text="%Vetura_ID">
          <font>
             <Font size="14.0" />
          </font></Label>
         <TextField fx:id="txtVeturaId" layoutX="487.0" layoutY="229.0" prefWidth="200.0" style="-fx-border-color: #27435c;" />
 
-        <Button fx:id="btnShto" layoutX="36.0" layoutY="316.0" onAction="#onShtoClicked" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #27435c; -fx-background-radius: 20;" text="Shto" textFill="#fffdcd">
+        <Button fx:id="btnShto" layoutX="36.0" layoutY="316.0" onAction="#onShtoClicked" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: #27435c; -fx-background-radius: 20;" text="%Shto" textFill="#fffdcd">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-        <Button fx:id="btnPerditeso" layoutX="184.0" layoutY="316.0" onAction="#onPerditesoClicked" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #27435c; -fx-background-radius: 20;" text="Përditëso" textFill="#f4f1d7">
+        <Button fx:id="btnPerditeso" layoutX="184.0" layoutY="316.0" onAction="#onPerditesoClicked" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #27435c; -fx-background-radius: 20;" text="%Perditeso" textFill="#f4f1d7">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-        <Button fx:id="btnFshij" layoutX="340.0" layoutY="316.0" onAction="#onFshijClicked" prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #27435c; -fx-background-radius: 20;" text="Fshij" textFill="#f2ecc4">
+        <Button fx:id="btnFshij" layoutX="340.0" layoutY="316.0" onAction="#onFshijClicked" prefHeight="34.0" prefWidth="119.0" style="-fx-background-color: #27435c; -fx-background-radius: 20;" text="%Fshij" textFill="#f2ecc4">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
 
         <TableView fx:id="garanciaTableView" layoutX="30.0" layoutY="377.0" onMouseClicked="#onTableClicked" prefHeight="350.0" prefWidth="740.0" style="-fx-background-color: #AFDCF8; -fx-border-color: #27435c;">
             <columns>
-                <TableColumn fx:id="colLlojiGarancise" prefWidth="150" text="Lloji Garancise" />
-                <TableColumn fx:id="colDataFillimit" prefWidth="150" text="Data Fillimit" />
-                <TableColumn fx:id="colDataMbarimit" prefWidth="150" text="Data Mbarimit" />
-                <TableColumn fx:id="colKlientId" prefWidth="140" text="Klient ID" />
-                <TableColumn fx:id="colVeturaId" prefWidth="140" text="Vetura ID" />
+                <TableColumn fx:id="colLlojiGarancise" prefWidth="150" text="%Lloji_i_Garancise" />
+                <TableColumn fx:id="colDataFillimit" prefWidth="150" text="%Data_Fillimit" />
+                <TableColumn fx:id="colDataMbarimit" prefWidth="150" text="%Data_e_Mbarimit" />
+                <TableColumn fx:id="colKlientId" prefWidth="140" text="%Klienti_ID" />
+                <TableColumn fx:id="colVeturaId" prefWidth="140" text="%Vetura_ID" />
             </columns>
         </TableView>
       <HBox layoutX="13.0" layoutY="25.0" prefHeight="72.0" prefWidth="774.0" style="-fx-background-color: #27435c;">
@@ -75,13 +75,15 @@
                      <Image url="@../Images/warranty.jpg" />
                  </image>
              </ImageView>
-            <Text fill="#f2e375" strokeType="OUTSIDE" strokeWidth="0.0" text="Garancia e Veturave" wrappingWidth="437.697265625">
+            <Text fill="#f2e375" strokeType="OUTSIDE" strokeWidth="0.0" text="%Garancia_e_Veturave" wrappingWidth="437.697265625">
                <font>
                   <Font name="Bell MT Bold" size="36.0" />
                </font>
             </Text>
          </children>
       </HBox>
+      <HBox layoutX="27.0" layoutY="123.0" prefHeight="27.0" prefWidth="328.0" />
+      <Label fx:id="messageLabel" layoutX="403.0" layoutY="268.0" prefHeight="30.0" prefWidth="367.0" textFill="#fa0000" />
 
     </children>
 </AnchorPane>

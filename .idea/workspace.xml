@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -373,7 +376,6 @@
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Perkthimi" />
-    <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Perkthimi" />
   </component>
 </project>
