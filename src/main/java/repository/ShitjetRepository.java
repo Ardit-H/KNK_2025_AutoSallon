@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShitjetRepository extends BaseRepository<Shitjet, CreateShitjetDto, UpdateShitjeDto> {
     public ShitjetRepository(){ super("shitjet");}
@@ -80,5 +81,10 @@ public class ShitjetRepository extends BaseRepository<Shitjet, CreateShitjetDto,
             e.printStackTrace();
         }
         return null;
+    }
+    public List<Shitjet> searchByClientId(int klientiId) {
+        String where = "kid = ?";
+        String searchValue = String.valueOf(klientiId); // Shndërrohet në String
+        return searchWithCustomWhere(where, searchValue);
     }
 }
