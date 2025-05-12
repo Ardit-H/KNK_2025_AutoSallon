@@ -57,6 +57,10 @@ public class User_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_SHERBIMET);
         SceneManager.load(SceneLocator.USER_SHERBIMET,centerPane);
     }
+    @FXML private void handleLoadUserProfili()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_PROFILE);
+        SceneManager.load(SceneLocator.USER_PROFILE,centerPane);
+    }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {
             loadLanguage(new Locale("sq"));

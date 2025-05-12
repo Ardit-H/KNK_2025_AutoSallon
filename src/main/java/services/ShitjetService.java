@@ -12,6 +12,7 @@ import repository.PunetoretRepository;
 import repository.ShitjetRepository;
 import repository.VeturatRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.sql.SQLException;
 
@@ -26,6 +27,8 @@ public class ShitjetService {
         this.veturatRepository = new VeturatRepository();
         this.punetoretRepository = new PunetoretRepository();
     }
+    public List<Shitjet> getAll(){ return shitjetRepository.getAll(); }
+
     public Shitjet create(CreateShitjetDto dto) throws Exception{
         if(shitjetRepository.getById(dto.getKid())==null){
             throw new ResourceNotFoundException("Klienti me ID " + dto.getKid() + " nuk ekziston!");
@@ -83,5 +86,20 @@ public class ShitjetService {
             throw new ResourceNotFoundException("Shitja me ID " + id + " nuk ekziston!");
         }
         return shitjet;
+    }
+    public boolean delete(int id) throws Exception {
+        if (id <= 0) {
+            throw new ValidationException("ID e shitjes është e pavlefshme. Duhet të jetë > 0 !");
+        }
+
+        Shitjet shitja = shitjetRepository.getById(id);
+        if (shitja == null) {
+            throw new ResourceNotFoundException("Shitja me ID " + id + " nuk ekziston!");
+        }
+
+        return shitjetRepository.delete(id);
+    }
+    public List<Shitjet> kerkoShitjetMeKlientId(int kid){
+        return shitjetRepository.searchByClientId(kid);
     }
 }
