@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i logjikes per shikimin e mesatares se vleresimeve dhe komenteve per nje veture tek dahboardi i perdoruesve">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2025_22_53.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2025_22_53/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserVleresimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_sherbimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_sherbimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +35,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "1a27c557-b5be-42f9-b474-82829f4c391b"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -81,7 +80,8 @@
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">
@@ -345,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746979589094</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Shtimi i logjikes per shikimin e mesatares se vleresimeve dhe komenteve per nje veture tek dahboardi i perdoruesve">
+      <option name="closed" value="true" />
+      <created>1746985659092</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746985659092</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -370,6 +378,7 @@
     <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="Shtimi i logjikes per shikimin e mesatares se vleresimeve dhe komenteve per nje veture tek dahboardi i perdoruesve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i logjikes per shikimin e mesatares se vleresimeve dhe komenteve per nje veture tek dahboardi i perdoruesve" />
   </component>
 </project>
