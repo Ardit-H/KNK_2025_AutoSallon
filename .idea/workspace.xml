@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/AdminProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_profile.fxml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/RiparimetRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/RiparimetServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/RiparimetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/KlientetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ShitjetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ShitjetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/VeturatRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/RiparimetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RiparimetRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +74,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47126436"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">
@@ -347,32 +343,19 @@
       <option name="project" value="LOCAL" />
       <updated>1746979589094</updated>
     </task>
-    <task id="LOCAL-00023" summary="Krijimi i UserProfileController.java dhe user_profile.fxml">
-      <option name="closed" value="true" />
-      <created>1747045808772</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1747045808772</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Ndryshime">
-      <option name="closed" value="true" />
-      <created>1747054470391</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1747054470391</updated>
-    </task>
-    <task id="LOCAL-00025" summary="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit">
-      <option name="closed" value="true" />
-      <created>1747057579473</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1747057579473</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
@@ -396,9 +379,6 @@
     <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="workspace.xml" />
-    <MESSAGE value="Krijimi i UserProfileController.java dhe user_profile.fxml" />
-    <MESSAGE value="Ndryshime" />
-    <MESSAGE value="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit" />
-    <option name="LAST_COMMIT_MESSAGE" value="permiresime ne user_profile.fxml, UserProfileController.java dhe PerdoruesitRepository.java per tu ndryshuar edhe adresa dhe numri i telefonit te perdoruesit" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
   </component>
 </project>

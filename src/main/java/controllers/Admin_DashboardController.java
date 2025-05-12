@@ -62,6 +62,10 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
         SceneManager.load(SceneLocator.VLERESIMET,centerPane);
     }
+    @FXML private void handleLoadFaturat()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.FATURAT);
+        SceneManager.load(SceneLocator.FATURAT, centerPane);
+    }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.DASHBOARD_HOME);
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);

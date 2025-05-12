@@ -44,13 +44,12 @@ public class RiparimetService {
     }
 
     private void validateCreateDto(CreateRiparimetDto dto) throws Exception {
-        if (dto.getKostoRiparimit() == 0.0 || dto.getKostoRiparimit() < 0) {
+        if (dto.getKostoRiparimit() <= 0.0) {
             throw new ValidationException("Kostoja e riparimit duhet të jetë një vlerë pozitive.");
         }
         if (dto.getStatusi() == null || dto.getStatusi().trim().isEmpty()) {
             throw new InvalidInputException("Statusi nuk duhet të jetë bosh.");
         }
-
     }
 
     public Riparimet update(UpdateRiparimetDto dto) throws Exception {
@@ -69,13 +68,9 @@ public class RiparimetService {
             hasChanges = true;
         }
 
-        if (dto.getKostoRiparimit() != 0.0) {
-            if (dto.getKostoRiparimit() < 0) {
-                throw new ValidationException("Kostoja e riparimit duhet të jetë pozitive.");
-            }
+        if (dto.getKostoRiparimit() > 0.0) {
             hasChanges = true;
         }
-
 
         if (!hasChanges) {
             throw new InvalidInputException("Duhet të përditësohet të paktën një fushë.");
