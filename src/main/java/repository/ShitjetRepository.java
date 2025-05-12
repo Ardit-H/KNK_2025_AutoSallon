@@ -9,8 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class ShitjetRepository extends BaseRepository<Shitjet, CreateShitjetDto, UpdateShitjeDto> {
     public ShitjetRepository(){ super("shitjet");}
@@ -82,24 +80,5 @@ public class ShitjetRepository extends BaseRepository<Shitjet, CreateShitjetDto,
             e.printStackTrace();
         }
         return null;
-    }
-    public Map<String, Double> getShitjetMujore(int viti) throws SQLException{
-        String query = """
-                SELECT TO_CHAR(f.dataFatures, 'Month') AS muaji,\s
-                       SUM(f.shumaTotale) AS total
-                FROM faturat f
-                WHERE EXTRACT(YEAR FROM f.dataFatures) = ?
-                GROUP BY TO_CHAR(f.dataFatures, 'Month'), EXTRACT(MONTH FROM f.dataFatures)
-                ORDER BY EXTRACT(MONTH FROM f.dataFatures)
-            """;
-        Map<String, Double> result = new LinkedHashMap<>();
-        try (PreparedStatement stmt = this.connection.prepareStatement(query)){
-            stmt.setInt(1, viti);
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-                result.put(rs.getString("muaji").trim(), rs.getDouble("total"));
-            }
-        }
-        return result;
     }
 }
