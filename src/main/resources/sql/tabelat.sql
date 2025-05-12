@@ -189,3 +189,14 @@ CREATE TABLE Partneret (
     adresa VARCHAR(100) NOT NULL,
     data_bashkepunimit DATE DEFAULT CURRENT_DATE
 );
+
+CREATE TABLE garancia (
+    id SERIAL PRIMARY KEY,
+    vid INT,
+    kid INT,
+    lloji_garancise VARCHAR(40) CHECK (lloji_garancise IN ('6 muaj', '1 vit', '2 vite')),
+    data_fillimit DATE,
+    data_mbarimit DATE,
+    FOREIGN KEY (kid) REFERENCES klientet(id),
+    FOREIGN KEY (vid) REFERENCES veturat(id)
+);
