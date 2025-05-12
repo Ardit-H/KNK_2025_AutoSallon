@@ -9,6 +9,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import models.dto.Rezervimet.CreateRezervimetDto;
 import models.dto.Rezervimet.Rezervimet;
 import models.dto.Rezervimet.UpdateRezervimetDto;
+import services.LanguageManager;
 import services.RezervimetService;
 
 public class RezervimetController {
@@ -48,7 +49,12 @@ public class RezervimetController {
     private TextField rezervimiIdField;
 
 
-    private final RezervimetService rezervimetService = new RezervimetService();
+    private RezervimetService rezervimetService;
+    private LanguageManager languageManager;
+    public RezervimetController(){
+        this.rezervimetService=new RezervimetService();
+        this.languageManager= LanguageManager.getInstance();
+    }
 
     @FXML
     public void initialize(){

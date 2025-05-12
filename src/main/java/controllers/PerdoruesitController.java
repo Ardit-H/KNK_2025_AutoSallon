@@ -8,6 +8,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
+import services.KlientetService;
+import services.LanguageManager;
 import services.PerdoruesitService;
 import java.util.List;
 import models.dto.Perdoruesit.CreatePerdoruesitDto;
@@ -32,8 +34,14 @@ public class PerdoruesitController {
     @FXML private Button btnPerditeso;
     @FXML private Button btnFshij;
 
-    private final PerdoruesitService service = new PerdoruesitService();
+    private PerdoruesitService perdoruesitService;
+    private LanguageManager languageManager;
+    public PerdoruesitController(){
+        this.perdoruesitService=new PerdoruesitService();
+        this.languageManager= LanguageManager.getInstance();
+    }
 
+    private int selectedUserId = -1;
     @FXML
     public void initialize() {
         colEmri.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getEmri()));
@@ -48,7 +56,7 @@ public class PerdoruesitController {
     }
 
     private void loadUsers() {
-        List<Perdoruesit> perdoruesitList = service.getAll();
+        List<Perdoruesit> perdoruesitList = perdoruesitService.getAll();
         ObservableList<Perdoruesit> observableList = FXCollections.observableArrayList(perdoruesitList);
         perdoruesitTable.setItems(observableList);
     }
@@ -56,6 +64,7 @@ public class PerdoruesitController {
     private void populateFields(MouseEvent event) {
         Perdoruesit p = perdoruesitTable.getSelectionModel().getSelectedItem();
         if (p != null) {
+            selectedUserId = p.getPid();
             txtEmri.setText(p.getEmri());
             txtMbiemri.setText(p.getMbiemri());
             txtEmail.setText(p.getEmail());
@@ -69,7 +78,7 @@ public class PerdoruesitController {
     private void handleShto() {
         try {
             String roli = cmbRoli.getValue();
-            if (!roli.equals("admin") && !roli.equals("user")) {
+            if (!roli.equals("Admin") && !roli.equals("User")) {
                 throw new IllegalArgumentException("Roli duhet të jetë 'admin' ose 'user'.");
             }
 
@@ -84,7 +93,7 @@ public class PerdoruesitController {
             );
 
             // Thirrja e metodës create në PerdoruesitService
-            Perdoruesit perdoruesi = service.create(dto);
+            Perdoruesit perdoruesi = perdoruesitService.create(dto);
 
             // Rifreskimi i tabelës pas krijimit
             loadUsers();
@@ -94,11 +103,18 @@ public class PerdoruesitController {
         }
     }
 
+    private UpdatePerdoruesitDto updateDto;
     @FXML
     private void handlePerditeso() {
         try {
 
-            // Krijimi i objektit UpdatePerdoruesitDto
+
+
+            if (selectedUserId == -1) {
+                throw new IllegalArgumentException("Përditësimi nuk mund të bëhet pa zgjedhur një përdorues.");
+            }
+            updateDto.setId(selectedUserId);
+
             UpdatePerdoruesitDto updateDto = new UpdatePerdoruesitDto();
             updateDto.setEmail(txtEmail.getText());
             updateDto.setNrtelefonit(txtNrTelefonit.getText());
@@ -107,7 +123,7 @@ public class PerdoruesitController {
             updateDto.setFjalekalimi(txtFjalekalimi.getText());
 
             // Thirrja e metodës update në PerdoruesitService
-            Perdoruesit updated = service.update(updateDto);
+            Perdoruesit updated = perdoruesitService.update(updateDto);
 
             // Rifreskimi i tabelës pas përditësimit
             loadUsers();

@@ -66,48 +66,54 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
 
         return null;
     }
-    public Perdoruesit update(UpdatePerdoruesitDto perdoruesitDto){
+    public Perdoruesit update(UpdatePerdoruesitDto dto) {
         StringBuilder query = new StringBuilder("UPDATE PERDORUESI SET ");
         ArrayList<Object> params = new ArrayList<>();
 
-        if(perdoruesitDto.getEmail() != null){
-            query.append("EMAIL = ?, ");
-            params.add(perdoruesitDto.getEmail());
+        if (dto.getEmail() != null) {
+            query.append("email = ?, ");
+            params.add(dto.getEmail());
         }
 
-        if(perdoruesitDto.getFjalekalimi() != null){
-            query.append("FJALEKALIMI = ?, ");
-            params.add(perdoruesitDto.getFjalekalimi());
+        if (dto.getFjalekalimi() != null) {
+            query.append("passwordHash = ?, ");
+            params.add(dto.getFjalekalimi());
         }
 
-        if(perdoruesitDto.getRoli() != null){
-            query.append("ROLI = ?, ");
-            params.add(perdoruesitDto.getRoli());
+        if (dto.getSalt() != null) {
+            query.append("salt = ?, ");
+            params.add(dto.getSalt());
         }
 
-        if(params.isEmpty()){
-            return getById(perdoruesitDto.getId());
+        if (dto.getRoli() != null) {
+            query.append("roli = ?, ");
+            params.add(dto.getRoli());
         }
 
-        query.setLength(query.length() - 2);
-        query.append("WHERE ID = ?");
-        params.add(perdoruesitDto.getId());
+        if (params.isEmpty()) {
+            return getById(dto.getId());
+        }
 
+        query.setLength(query.length() - 2); // Remove last comma
+        query.append(" WHERE id = ?");
+        params.add(dto.getId());
 
-        try{
+        try {
             PreparedStatement pstm = this.connection.prepareStatement(query.toString());
-            for(int i =0; i<params.size(); i++){
-                pstm.setObject(i+1, params.get(i));
+            for (int i = 0; i < params.size(); i++) {
+                pstm.setObject(i + 1, params.get(i));
             }
             int updated = pstm.executeUpdate();
-            if(updated ==1){
-                return this.getById(perdoruesitDto.getId());
+            if (updated == 1) {
+                return this.getById(dto.getId());
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return null;
     }
+
     public Perdoruesit getByEmail(String email){
         String sql = "SELECT * FROM perdoruesi WHERE email = ?";
 

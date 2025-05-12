@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/rezervimet.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/KlientetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PerdoruesitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PerdoruesitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PunetoretController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PunetoretController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RezervimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RezervimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/UpdatePerdoruesitDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/UpdatePerdoruesitDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/perdoruesit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/perdoruesit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/punetoret.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/punetoret.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
@@ -19,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>

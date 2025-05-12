@@ -143,17 +143,6 @@ private void loadKlientet() {
         txtNrTelefonit.clear();
         txtAdresa.clear();
     }
-    @FXML
-    private void handleLanguageEnglishClick()throws Exception{
-        loadLanguage(Locale.ENGLISH);
-    }
-    @FXML
-    private void handleLanguageAlbanianClick()throws Exception{
-        loadLanguage(new Locale("sq"));
-    }
-    private void loadLanguage(Locale locale) throws Exception{
-        languageManager.setLocale(locale);
-        SceneManager.reload();
-    }
+
 }
 

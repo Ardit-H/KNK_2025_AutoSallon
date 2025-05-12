@@ -83,37 +83,49 @@ public class PerdoruesitService {
         return s == null || s.trim().length() < minLength;
     }
 
-    public Perdoruesit update(UpdatePerdoruesitDto updatePerdoruesitDto) throws Exception {
-        if (updatePerdoruesitDto.getId() <= 0) {
-            throw new Exception("Id e perdoruesit eshte e pavlefshme!");
+    public Perdoruesit update(UpdatePerdoruesitDto dto) throws Exception {
+        if (dto.getId() <= 0) {
+            throw new Exception("Id e perdoruesit është e pavlefshme!");
         }
-        Perdoruesit perdoruesi = perdoruesitRepository.getById(updatePerdoruesitDto.getId());
+
+        Perdoruesit perdoruesi = perdoruesitRepository.getById(dto.getId());
         if (perdoruesi == null) {
-            throw new Exception("Perdoruesi me ID " + updatePerdoruesitDto.getId() + " nuk ekziston.");
+            throw new Exception("Perdoruesi me ID " + dto.getId() + " nuk ekziston.");
         }
+
         boolean hasChanges = false;
 
-        if (updatePerdoruesitDto.getEmail() != null) {
-            if (!isValidEmail(updatePerdoruesitDto.getEmail())) {
+        if (dto.getEmail() != null) {
+            if (!isValidEmail(dto.getEmail())) {
                 throw new IllegalArgumentException("Email-i është i pavlefshëm.");
             }
             hasChanges = true;
         }
 
+        if (dto.getFjalekalimi() != null) {
+            String salt = PasswordUtil.generateSalt();
+            String hashed = PasswordUtil.hashPassword(dto.getFjalekalimi(), salt);
+            dto.setFjalekalimi(hashed);
+            dto.setSalt(salt);
+            hasChanges = true;
+        }
 
-
-
+        if (dto.getRoli() != null) {
+            hasChanges = true;
+        }
 
         if (!hasChanges) {
             throw new IllegalArgumentException("Duhet të përditësohet të paktën një fushë.");
         }
-        Perdoruesit updated = perdoruesitRepository.update(updatePerdoruesitDto);
+
+        Perdoruesit updated = perdoruesitRepository.update(dto);
         if (updated == null) {
             throw new Exception("Update-i dështoi. Perdoruesi nuk u përditësua.");
         }
 
         return updated;
     }
+
 
     public boolean delete(int id) throws Exception {
         if (id <= 0) {
