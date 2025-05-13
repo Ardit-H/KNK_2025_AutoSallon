@@ -22,6 +22,18 @@ import java.io.IOException;
 import java.util.Locale;
 
 public class Admin_DashboardController {
+    public Button btn_dashboard;
+    public Button btn_klientet;
+    public Button btn_veturat;
+    public Button btn_sherbimet;
+    public Button btn_rezervimet;
+    public Button btn_testdrives;
+    public Button btn_vleresimet;
+    public Button btn_faturat;
+    public Button btn_statistikat;
+    public Button btn_perdoruesit;
+    public Button btn_garancia;
+    public Button btn_profili;
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button btnLogOut;
@@ -44,11 +56,6 @@ public class Admin_DashboardController {
        SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
        SceneManager.load(SceneLocator.KLIENTET, centerPane);
    }
-    @FXML private void handleLoadServices()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.SHERBIMET);
-        SceneManager.load(SceneLocator.SHERBIMET, centerPane);
-    }
-
     @FXML
     private void handleLoadVeturat() throws Exception {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT);
@@ -74,6 +81,15 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_PROFILE);
         SceneManager.load(SceneLocator.ADMIN_PROFILE,centerPane);
     }
+    @FXML private void handleLoadtestDrives()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.TESTDRIVES);
+        SceneManager.load(SceneLocator.TESTDRIVES,centerPane);
+    }
+    @FXML private void handleLoadGarancia()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.GARANCIA);
+        SceneManager.load(SceneLocator.GARANCIA,centerPane);
+    }
+
 
 @FXML private void handleLanguageToggle() throws Exception{
     if (isEnglish) {
