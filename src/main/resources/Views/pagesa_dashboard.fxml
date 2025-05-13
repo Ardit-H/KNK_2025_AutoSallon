@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="46.0" prefWidth="590.0">
@@ -30,20 +29,20 @@
                <children>
                   <HBox alignment="CENTER" layoutX="-1.0" prefHeight="54.0" prefWidth="592.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="101.0" text="Perditso Shumen:" />
-                        <TextField />
+                        <Label prefHeight="18.0" prefWidth="64.0" text="Shuma:" />
+                        <TextField prefHeight="26.0" prefWidth="152.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutY="54.0" prefHeight="63.0" prefWidth="594.0" spacing="10.0">
                      <children>
-                        <Label text="Perditso Metoden: " />
-                        <ComboBox prefWidth="150.0" />
+                        <Label prefHeight="23.0" prefWidth="66.0" text="Metoden: " />
+                        <ComboBox prefHeight="26.0" prefWidth="161.0" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="-1.0" layoutY="115.0" prefHeight="63.0" prefWidth="596.0" spacing="10.0">
                      <children>
-                        <Label text="Perditso Data Pagese: " />
-                        <DatePicker />
+                        <Label text="Data Pagese: " />
+                        <DatePicker prefHeight="26.0" prefWidth="166.0" />
                      </children>
                   </HBox>
                </children>
