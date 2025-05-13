@@ -72,22 +72,27 @@ public class VeturatService {
         return s == null || s.trim().length() < minLength;
     }
 
-    public Veturat update(UpdateVeturatDto updateDto) throws Exception {
-        if (updateDto.getId() <= 0) {
+    public Veturat update(UpdateVeturatDto dto) throws Exception {
+        if (dto.getId() <= 0) {
             throw new Exception("ID e veturës është e pavlefshme!");
         }
 
-        Veturat ekzistuese = veturatRepository.getById(updateDto.getId());
+        Veturat ekzistuese = veturatRepository.getById(dto.getId());
         if (ekzistuese == null) {
-            throw new Exception("Vetura me ID " + updateDto.getId() + " nuk ekziston.");
+            throw new Exception("Vetura me ID " + dto.getId() + " nuk ekziston.");
         }
 
-        validateUpdateDto(updateDto);
-
         boolean hasChanges = false;
-        if ((updateDto.getGjendja() != null && !updateDto.getGjendja().equals(ekzistuese.getGjendja())) ||
-                (updateDto.getNgjyra() != null && !updateDto.getNgjyra().equals(ekzistuese.getNgjyra())) ||
-                (updateDto.getKilometrazha() != ekzistuese.getKilometrazha())) {
+
+        if (dto.getGjendja() != null && !dto.getGjendja().equals(ekzistuese.getGjendja())) {
+            hasChanges = true;
+        }
+
+        if (dto.getNgjyra() != null && !dto.getNgjyra().equals(ekzistuese.getNgjyra())) {
+            hasChanges = true;
+        }
+
+        if (dto.getKilometrazha() != 0 && dto.getKilometrazha() != ekzistuese.getKilometrazha()) {
             hasChanges = true;
         }
 
@@ -95,13 +100,14 @@ public class VeturatService {
             throw new IllegalArgumentException("Asnjë ndryshim nuk u bë në të dhënat e veturës.");
         }
 
-        Veturat updated = veturatRepository.update(updateDto);
+        Veturat updated = veturatRepository.update(dto);
         if (updated == null) {
             throw new Exception("Update-i dështoi. Vetura nuk u përditësua.");
         }
 
         return updated;
     }
+
 
 
     public boolean delete(int id) throws Exception {
