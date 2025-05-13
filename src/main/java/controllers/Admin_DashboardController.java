@@ -74,6 +74,15 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_PROFILE);
         SceneManager.load(SceneLocator.ADMIN_PROFILE,centerPane);
     }
+    @FXML private void handleLoadtestDrives()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.TESTDRIVES);
+        SceneManager.load(SceneLocator.TESTDRIVES,centerPane);
+    }
+    @FXML private void handleLoadGarancia()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.GARANCIA);
+        SceneManager.load(SceneLocator.GARANCIA,centerPane);
+    }
+
 
 @FXML private void handleLanguageToggle() throws Exception{
     if (isEnglish) {
