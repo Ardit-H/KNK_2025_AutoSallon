@@ -74,15 +74,6 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
             query.append("EMAIL = ?, ");
             params.add(perdoruesitDto.getEmail());
         }
-        if(perdoruesitDto.getNrtelefonit() != null){
-            query.append("NRTELEFONIT = ?, ");
-            params.add(perdoruesitDto.getNrtelefonit());
-        }
-
-        if(perdoruesitDto.getAdresa() != null){
-            query.append("ADRESA = ?, ");
-            params.add(perdoruesitDto.getAdresa());
-        }
 
         if(perdoruesitDto.getFjalekalimi() != null){
             query.append("FJALEKALIMI = ?, ");
@@ -99,7 +90,7 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
 
         query.setLength(query.length() - 2);
-        query.append(" WHERE ID = ?");
+        query.append("WHERE ID = ?");
         params.add(perdoruesitDto.getId());
 
 
@@ -116,13 +107,6 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
             e.printStackTrace();
         }
         return null;
-    }
-    public int getTotalPerdoruesit() throws SQLException{
-        String query = "SELECT COUNT(*) FROM perdoruesi";
-        try (PreparedStatement stmt = this.connection.prepareStatement(query);
-             ResultSet rs = stmt.executeQuery()) {
-            return rs.next() ? rs.getInt(1) : 0;
-        }
     }
     public Perdoruesit getByEmail(String email){
         String sql = "SELECT * FROM perdoruesi WHERE email = ?";
