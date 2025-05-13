@@ -42,8 +42,8 @@ public class User_DashboardController {
     }
 
     @FXML private void handleLoadDashboard_Home()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.DASHBOARD_HOME);
-        SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_DASHBOARD_HOME);
+        SceneManager.load(SceneLocator.USER_DASHBOARD_HOME,centerPane);
     }
     @FXML private void handleLoadUserVleresimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.LOGEDUSER_VLERESIMET);
