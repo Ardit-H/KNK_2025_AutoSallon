@@ -83,7 +83,7 @@ public class LoginController {
         }
     }
     @FXML private void handleGuestLogin()throws Exception{
-        SceneManager.load(SceneLocator.USER_DASHBOARD_HOME);
+        SceneManager.load(SceneLocator.USER_DASHBOARD);
     }
     @FXML private void  handleLoadSignUp()throws Exception{
         SceneManager.load(SceneLocator.SIGNUP);

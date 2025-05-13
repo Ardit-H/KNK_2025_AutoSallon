@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="koment">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/VeturatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Veturat/UpdateVeturatDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/VeturatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/VeturatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,26 +387,11 @@
       <option name="project" value="LOCAL" />
       <updated>1747149074652</updated>
     </task>
-    <task id="LOCAL-00029" summary="ndryshime ne admin_dashboard.fxml">
-      <option name="closed" value="true" />
-      <created>1747149376438</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1747149376438</updated>
-    </task>
-    <task id="LOCAL-00030" summary="koment">
-      <option name="closed" value="true" />
-      <created>1747149397867</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1747149397867</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
@@ -434,7 +415,6 @@
     <MESSAGE value="permiresim tek perkthimet" />
     <MESSAGE value="permiresimi i dizajnit tek klientet.fxml" />
     <MESSAGE value="ndryshime ne admin_dashboard.fxml dhe Admin_DashboardController" />
-    <MESSAGE value="ndryshime ne admin_dashboard.fxml" />
     <MESSAGE value="koment" />
     <option name="LAST_COMMIT_MESSAGE" value="koment" />
   </component>
