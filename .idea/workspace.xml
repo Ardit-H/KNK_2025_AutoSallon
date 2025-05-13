@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Permiresime ne user_vleresimet.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App/Porosite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/PorosiaDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2025_22_53.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2025_22_53/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2025_01_05.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2025_01_05/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/OfertaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/OfertaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OfertaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i path ne SceneLocator" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,6 +193,7 @@
       <workItem from="1746989637639" duration="8767000" />
       <workItem from="1747039932588" duration="37053000" />
       <workItem from="1747124988842" duration="130000" />
+      <workItem from="1747128289054" duration="443000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -426,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746827528262</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Shtimi i kontrollerave dhe fxml per oferta dhe porosi">
+      <option name="closed" value="true" />
+      <created>1747128517700</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1747128517700</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Shtimi i path ne SceneLocator">
+      <option name="closed" value="true" />
+      <created>1747128666413</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747128666413</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,8 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="krijimi i folderit per vendosjen e tabelave te sql" />
-    <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
@@ -469,7 +468,9 @@
     <MESSAGE value="Krijimi i UserVleresimetController.java dhe user_vleresimet.fxml ku perdoruesi i regjistruar ne sistem, pasi te bene login mund ti sheh vleresimet e tij" />
     <MESSAGE value="Shtimi i butonit Continue as Guest ne Login qe i mundeson perdoruesit te kete qasje ne faqen e perdoruesve dhe nuk kan qasje ne pjeset qe jane vetem per perdoruesit me llogari" />
     <MESSAGE value="Permiresime ne user_vleresimet.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Permiresime ne user_vleresimet.fxml" />
+    <MESSAGE value="Shtimi i kontrollerave dhe fxml per oferta dhe porosi" />
+    <MESSAGE value="Shtimi i path ne SceneLocator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i path ne SceneLocator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
