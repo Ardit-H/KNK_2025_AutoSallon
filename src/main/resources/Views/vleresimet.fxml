@@ -11,9 +11,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VleresimetController">
    <children>
-      <AnchorPane layoutX="332.0" layoutY="58.0" prefHeight="147.0" prefWidth="600.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
+      <AnchorPane layoutX="332.0" layoutY="58.0" prefHeight="147.0" prefWidth="616.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
          <children>
-            <TextField fx:id="searchField" layoutX="372.0" layoutY="27.0" prefHeight="26.0" prefWidth="201.0" promptText="%SearchByCarOrUser" />
+            <TextField fx:id="searchField" layoutX="372.0" layoutY="27.0" prefHeight="26.0" prefWidth="228.0" promptText="%SearchByCarOrUserOrDate" />
             <Button layoutX="361.0" layoutY="74.0" onAction="#onSearchClicked" text="%Search" />
             <TextField fx:id="komenti" layoutX="42.0" layoutY="28.0" promptText="%Comment" />
             <Button layoutX="55.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#handleDeleteVleresim" text="%btn.remove_rating" />
@@ -37,7 +37,7 @@
             <Label layoutX="133.0" layoutY="11.0" text="%Comment1" />
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-3.0" prefHeight="42.0" prefWidth="1330.0" style="-fx-background-color: lightblue;" text="%Customer_Managment" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-3.0" prefHeight="42.0" prefWidth="1330.0" style="-fx-background-color: lightblue;" text="%Ratings_Managment" textAlignment="CENTER">
          <font>
             <Font name="System Italic" size="22.0" />
          </font>

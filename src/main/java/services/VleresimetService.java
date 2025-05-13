@@ -166,8 +166,11 @@ public class VleresimetService {
     public List<Vleresimet> getVleresimetWithJoins() {
         return vleresimetRepository.getAllWithJoins();
     }
-    public List<Vleresimet> searchByVeturaOrPerdorues(String keyword) {
-        return vleresimetRepository.searchByVehicleOrUserName(keyword);
+    public List<Vleresimet> searchByVeturaOrPerdoruesOrDate(String keyword) {
+        return vleresimetRepository.searchByVehicleOrUserNameOrDate(keyword);
+    }
+    public List<Vleresimet> searchByVeturaOrDate(String keyword) {
+        return vleresimetRepository.searchByVehicleOrDate(keyword);
     }
 
 }
