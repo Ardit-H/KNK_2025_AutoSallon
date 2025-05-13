@@ -22,6 +22,7 @@ public class SceneLocator {
     public static final String GARANCIA="/Views/garancia.fxml";
     public static final String OFERTA="/Views/oferta.fxml";
     public static final String POROSIA="/Views/porosia.fxml";
-    public static final String PorosiaDashboardController="/Views/PorosiaDashboardController.fxml";
+    public static final String PorosiaDashboardController="/Views/porosia_dashboard.fxml";
+    public static final String OfertaDashboardController="/Views/oferta_dashboard.fxml";
 
 }
