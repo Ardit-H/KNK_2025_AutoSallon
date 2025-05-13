@@ -20,6 +20,7 @@ public class User_DashboardController {
     @FXML private VBox sideMenu;
     @FXML private Button btn_vleresimetemia;
     @FXML private Button btn_vleresimet;
+    @FXML private Button btn_profili;
     @FXML private Button languageToggleButton;
     private boolean isEnglish = true;
     private LanguageManager languageManager;
@@ -29,8 +30,10 @@ public class User_DashboardController {
     @FXML public void initialize() {
         if(!SessionManager.getInstance().isLoggedIn()){
             btn_vleresimetemia.setVisible(false);
+            btn_profili.setVisible(false);
         }else {
             btn_vleresimetemia.setVisible(true);
+            btn_profili.setVisible(true);
         }
         if (languageManager.getLocale().equals(new Locale("en"))) {
             setLanguageIcon("/Images/language-en.png");
