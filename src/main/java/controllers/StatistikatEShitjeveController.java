@@ -3,6 +3,10 @@ package controllers;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import models.dto.StatistikatEShitjeve.CreateStatistikatEShitjeveDto;
@@ -23,9 +27,14 @@ public class StatistikatEShitjeveController {
     @FXML private TextField txtTotaliShitjeve;
     @FXML private TextField searchField;
 
+    @FXML private BarChart<String, Number> barChart;
+    @FXML private CategoryAxis xAxis;
+    @FXML private NumberAxis yAxis;
+
 
 
     @FXML private TableView<StatistikatEShitjeve> statistikatEShitjeveTableView;
+    @FXML private TableColumn<StatistikatEShitjeve, String> colId;
     @FXML private TableColumn<StatistikatEShitjeve, String> colMuaji;
     @FXML private TableColumn<StatistikatEShitjeve, String> colFitimi;
     @FXML private TableColumn<StatistikatEShitjeve, String> colShpenzimet;
@@ -57,6 +66,8 @@ public class StatistikatEShitjeveController {
         colTotaliShitjeve.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getTotali_shitjeve())));
 
         loadStatistikatEShitjeve();
+
+        loadChart();
 
     }
 
@@ -164,5 +175,19 @@ public class StatistikatEShitjeveController {
     private void loadLanguage(Locale locale) throws Exception {
         languageManager.setLocale(locale);
         SceneManager.reload();
+    }
+
+    private void loadChart() {
+        barChart.getData().clear();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Fitimi");
+
+        List<StatistikatEShitjeve> statistikat = statistikatEShitjeveService.getAll();
+        for (StatistikatEShitjeve stat : statistikat) {
+            // Kjo do shtojë çdo muaj unik si pikë në grafik
+            series.getData().add(new XYChart.Data<>(stat.getMuaji(), stat.getFitimi()));
+        }
+
+        barChart.getData().add(series);
     }
 }

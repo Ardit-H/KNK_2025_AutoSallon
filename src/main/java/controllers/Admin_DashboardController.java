@@ -73,6 +73,10 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.FATURAT);
         SceneManager.load(SceneLocator.FATURAT, centerPane);
     }
+    @FXML private void handleLoadShitjet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.SHITJET);
+        SceneManager.load(SceneLocator.SHITJET, centerPane);
+    }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_DASHBOARD_HOME);
         SceneManager.load(SceneLocator.ADMIN_DASHBOARD_HOME,centerPane);
