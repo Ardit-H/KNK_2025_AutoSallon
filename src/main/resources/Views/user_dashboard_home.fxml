@@ -35,10 +35,10 @@
         </ImageView>
 
         <!-- Titulli -->
-        <Label alignment="CENTER" layoutY="359.0" prefHeight="30.0" prefWidth="1326.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="%AdminPanelDescriptionTitle" textAlignment="CENTER" />
+        <Label alignment="CENTER" layoutY="359.0" prefHeight="30.0" prefWidth="1326.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="%UserPanelDescriptionTitle" textAlignment="CENTER" />
 
         <!-- Përshkrimi -->
-        <Label alignment="CENTER" layoutX="-2.0" layoutY="392.0" maxWidth="1332.0" prefHeight="49.0" prefWidth="1332.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="%AdminPanelDescription" textAlignment="CENTER" wrapText="true" />
+        <Label alignment="CENTER" layoutX="-2.0" layoutY="392.0" maxWidth="1332.0" prefHeight="49.0" prefWidth="1332.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="%UserPanelDescription" textAlignment="CENTER" wrapText="true" />
         <ImageView fitHeight="277.0" fitWidth="487.0" layoutX="432.0" layoutY="452.0">
             <image>
                 <Image url="@../Images/AdobeStock_930679947_Preview.jpeg" />

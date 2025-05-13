@@ -20,9 +20,7 @@ public class SceneLocator {
     public static final String FATURAT="/Views/faturat.fxml";
     public static final String TESTDRIVES="/Views/testDrives.fxml";
     public static final String GARANCIA="/Views/garancia.fxml";
-    public static final String OFERTA="/Views/oferta.fxml";
-    public static final String POROSIA="/Views/porosia.fxml";
-    public static final String PorosiaDashboardController="/Views/porosia_dashboard.fxml";
-    public static final String OfertaDashboardController="/Views/oferta_dashboard.fxml";
-
+    public static final String SHITJET="/Views/shitjet.fxml";
+    public static final String LOKACIONET="/Views/lokacionet.fxml";
+    public static final String STATISTIKAT="/Views/statistikat.fxml";
 }

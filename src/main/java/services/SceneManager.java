@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.OfertaDashboardController;
+        this.currentPath = SceneLocator.VETURAT;
         this.scene = this.initScene();
     }
 
