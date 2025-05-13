@@ -69,9 +69,9 @@ public class LoginController {
             String roli = loggedUser.getRoli().toLowerCase();
 
             if (roli.equals("admin")) {
-                SceneManager.load(SceneLocator.ADMIN_DASHBOARD_HOME);
+                SceneManager.load(SceneLocator.ADMIN_DASHBOARD);
             } else if (roli.equals("user")) {
-                SceneManager.load(SceneLocator.USER_DASHBOARD_HOME);
+                SceneManager.load(SceneLocator.USER_DASHBOARD);
 
             } else {
                 throw new IllegalStateException("Roli i panjohur: " + roli);

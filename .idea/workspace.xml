@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Perkthimet">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresimi i dizajnit tek klientet.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/klientet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/sherbimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/sherbimet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/vleresimet.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -354,15 +357,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747129051129</updated>
     </task>
-    <task id="LOCAL-00025" summary="Perkthimet">
+    <task id="LOCAL-00025" summary="permiresim tek perkthimet">
       <option name="closed" value="true" />
-      <created>1747138119616</created>
+      <created>1747139466302</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1747138119616</updated>
+      <updated>1747139466302</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="permiresimi i dizajnit tek klientet.fxml">
+      <option name="closed" value="true" />
+      <created>1747140145469</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747140145469</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -389,7 +400,8 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="changes" />
     <MESSAGE value="sthimi i metodes per llogaritjen e numrit te perdoruesve" />
-    <MESSAGE value="Perkthimet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Perkthimet" />
+    <MESSAGE value="permiresim tek perkthimet" />
+    <MESSAGE value="permiresimi i dizajnit tek klientet.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresimi i dizajnit tek klientet.fxml" />
   </component>
 </project>
