@@ -28,8 +28,6 @@ public class KlientetController {
     private TextField txtAdresa;
     @FXML
     private TextField searchField;
-    @FXML
-    private TextField txtPerdoruesiId;
 
     @FXML private TableView<Klientet> KlientetTableView;
     @FXML private TableColumn<Klientet, String> colEmri;
@@ -68,10 +66,10 @@ public class KlientetController {
         loadKlientet();
     }
 
-private void loadKlientet() {
-    List<Klientet> klientet = klientetService.getAll();
-    KlientetTableView.getItems().setAll(klientet);
-}
+    private void loadKlientet() {
+        List<Klientet> klientet = klientetService.getAll();
+        KlientetTableView.getItems().setAll(klientet);
+    }
 
     @FXML
     private void handleCreate(MouseEvent event) {
@@ -82,7 +80,7 @@ private void loadKlientet() {
                     txtEmail.getText(),
                     txtNrTelefonit.getText(),
                     txtAdresa.getText(),
-                   Integer.parseInt(txtPerdoruesiId.getText().trim())
+                   null
             );
             klientetService.create(dto);
             messageLabel.setText("Klienti u shtua me sukses.");
@@ -110,6 +108,7 @@ private void loadKlientet() {
             klientetService.update(dto);
             messageLabel.setText("Klienti u përditësua me sukses.");
             loadKlientet();
+            clearForm();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
@@ -137,6 +136,7 @@ private void loadKlientet() {
         }
         return selected.getKid();
     }
+
     private void clearForm() {
         txtEmri.clear();
         txtMbiemri.clear();
@@ -144,17 +144,6 @@ private void loadKlientet() {
         txtNrTelefonit.clear();
         txtAdresa.clear();
     }
-    @FXML
-    private void handleLanguageEnglishClick()throws Exception{
-        loadLanguage(Locale.ENGLISH);
-    }
-    @FXML
-    private void handleLanguageAlbanianClick()throws Exception{
-        loadLanguage(new Locale("sq"));
-    }
-    private void loadLanguage(Locale locale) throws Exception{
-        languageManager.setLocale(locale);
-        SceneManager.reload();
-    }
+
 }
 

@@ -6,7 +6,7 @@ public class UpdateVeturatDto {
     private String ngjyra;
     private int kilometrazha;
 
-    public UpdateVeturatDto(int selectedId){
+    public UpdateVeturatDto(){
     }
     public int getId(){
         return id;
@@ -34,6 +34,10 @@ public class UpdateVeturatDto {
 
     public void setKilometrazha(int kilometrazha) {
         this.kilometrazha = kilometrazha;
+    }
+
+    public void setId(int id) {
+
     }
 }
 

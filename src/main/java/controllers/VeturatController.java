@@ -1,27 +1,24 @@
 package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
-import javafx.event.ActionEvent;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
+import models.dto.Veturat.CreateVeturatDto;
+import models.dto.Veturat.UpdateVeturatDto;
+import models.dto.Veturat.Veturat;
 import services.LanguageManager;
 import services.SceneManager;
-import models.dto.Veturat.CreateVeturatDto;
-import models.dto.Veturat.Veturat;
-import models.dto.Veturat.UpdateVeturatDto;
 import services.VeturatService;
 
 import java.util.List;
 import java.util.Locale;
 
 public class VeturatController {
-    @FXML public Button btn_shto;
+
     @FXML public Button btn_perditeso;
     @FXML public Button btn_fshij;
-    @FXML public Button btn_shqip;
-    @FXML public Button btn_anglisht;
-
+    @FXML public Button btn_shto;
     @FXML private TextField txtProdhuesi;
     @FXML private TextField txtModeli;
     @FXML private TextField txtVitiProdhimit;
@@ -30,6 +27,8 @@ public class VeturatController {
     @FXML private TextField txtGjendja;
     @FXML private TextField txtKilometrazha;
     @FXML private TextField txtTipiKarburant;
+    @FXML private TextField searchField;
+    @FXML private Label messageLabel;
 
     @FXML private TableView<Veturat> veturatTableView;
     @FXML private TableColumn<Veturat, String> colProdhuesi;
@@ -41,8 +40,6 @@ public class VeturatController {
     @FXML private TableColumn<Veturat, String> colKilometrazha;
     @FXML private TableColumn<Veturat, String> colTipiKarburant;
 
-    @FXML private Label messageLabel;
-
     private final VeturatService veturatService;
     private final LanguageManager languageManager;
 
@@ -50,8 +47,8 @@ public class VeturatController {
         this.veturatService = new VeturatService();
         this.languageManager = LanguageManager.getInstance();
     }
-    @FXML
-    public void initialize() {
+
+    @FXML public void initialize() {
         colProdhuesi.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getProdhuesi()));
         colModeli.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getModeli()));
         colVitiProdhimit.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getVitiProdhimit())));
@@ -60,7 +57,23 @@ public class VeturatController {
         colGjendja.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getGjendja()));
         colKilometrazha.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getKilometrazha())));
         colTipiKarburant.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getTipiKarburant()));
+
         loadVeturat();
+
+        searchField.textProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal == null || newVal.trim().isEmpty()) {
+                loadVeturat();
+                messageLabel.setText("");
+            } else {
+                List<Veturat> filtered = veturatService.kerkoVeturat(newVal.trim());
+                if (filtered.isEmpty()) {
+                    messageLabel.setText("Nuk u gjet asnjë veturë për këtë prodhues.");
+                } else {
+                    messageLabel.setText("");
+                }
+                veturatTableView.setItems(FXCollections.observableArrayList(filtered));
+            }
+        });
     }
 
     private void loadVeturat() {
@@ -68,8 +81,7 @@ public class VeturatController {
         veturatTableView.getItems().setAll(lista);
     }
 
-    @FXML
-    private void handleCreate(ActionEvent event) {
+    @FXML private void handleCreate() {
         try {
             CreateVeturatDto dto = new CreateVeturatDto(
                     txtProdhuesi.getText(),
@@ -86,20 +98,30 @@ public class VeturatController {
             messageLabel.setText("Vetura u shtua me sukses.");
             loadVeturat();
             clearForm();
+        } catch (NumberFormatException e) {
+            messageLabel.setText("Gabim në formatimin e numrave. Ju lutem, kontrolloni fushat numerike.");
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
     }
 
-    @FXML
-    private void handleUpdate(ActionEvent event) {
+    @FXML private void handleUpdate() {
         try {
-            int selectedId = getSelectedVeturaId();
-            if (selectedId == -1) return;
+            Veturat selected = veturatTableView.getSelectionModel().getSelectedItem();
+            if (selected == null) {
+                messageLabel.setText("Zgjidh një veturë!");
+                return;
+            }
 
-            UpdateVeturatDto dto = new UpdateVeturatDto(selectedId);
+            UpdateVeturatDto dto = new UpdateVeturatDto();
+            dto.setId(selected.getId());
+
             if (!txtGjendja.getText().trim().isEmpty())
                 dto.setGjendja(txtGjendja.getText().trim());
+            if (!txtKilometrazha.getText().trim().isEmpty())
+                dto.setKilometrazha(Integer.parseInt(txtKilometrazha.getText().trim()));
+            if (!txtNgjyra.getText().trim().isEmpty())
+                dto.setNgjyra(txtNgjyra.getText().trim());
 
             veturatService.update(dto);
             messageLabel.setText("Vetura u përditësua me sukses.");
@@ -109,27 +131,20 @@ public class VeturatController {
         }
     }
 
-    @FXML
-    private void handleDelete(ActionEvent event) {
+    @FXML private void handleDelete() {
         try {
-            int selectedId = getSelectedVeturaId();
-            if (selectedId == -1) return;
+            Veturat selected = veturatTableView.getSelectionModel().getSelectedItem();
+            if (selected == null) {
+                messageLabel.setText("Zgjidh një veturë!");
+                return;
+            }
 
-            veturatService.delete(selectedId);
+            veturatService.delete(selected.getId());
             messageLabel.setText("Vetura u fshi me sukses.");
             loadVeturat();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
-    }
-
-    private int getSelectedVeturaId() {
-        Veturat selected = veturatTableView.getSelectionModel().getSelectedItem();
-        if (selected == null) {
-            messageLabel.setText("Zgjidh një veturë në tabelë.");
-            return -1;
-        }
-        return selected.getId();
     }
 
     private void clearForm() {
@@ -143,16 +158,4 @@ public class VeturatController {
         txtTipiKarburant.clear();
     }
 
-    @FXML
-    private void handleLanguageEnglishClick()throws Exception{
-        loadLanguage(Locale.ENGLISH);
-    }
-    @FXML
-    private void handleLanguageAlbanianClick()throws Exception{
-        loadLanguage(new Locale("sq"));
-    }
-    private void loadLanguage(Locale locale) throws Exception{
-        languageManager.setLocale(locale);
-        SceneManager.reload();
-    }
 }

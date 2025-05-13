@@ -8,6 +8,9 @@ CREATE TABLE Klientet(
     adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
     data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
+    ALTER TABLE Klientet ADD COLUMN perdoruesi_id INTEGER UNIQUE;
+    ALTER TABLE Klientet ADD CONSTRAINT fk_perdoruesi FOREIGN KEY (perdoruesi_id) REFERENCES perdoruesi(id) ON DELETE SET NULL;
+
 */
 
 CREATE TABLE perdoruesi (
@@ -30,7 +33,7 @@ CREATE TABLE sherbimet(
 );
 
 /*
-CREATE TABLE Veturat (
+CREATE TABLE veturat (
     id SERIAL PRIMARY KEY,
     prodhuesi VARCHAR(50) NOT NULL,
     modeli VARCHAR(50) NOT NULL,
@@ -53,6 +56,9 @@ CREATE TABLE Porosite (
     FOREIGN KEY (kid) REFERENCES Klientet(id),
     FOREIGN KEY (veturaId) REFERENCES Veturat(id)
 );
+ALTER TABLE porosite
+ADD CONSTRAINT porosite_kid_fkey FOREIGN KEY (kid) REFERENCES klientet(id) ON DELETE CASCADE;
+
 */
 
 
@@ -140,6 +146,10 @@ CREATE TABLE rezervimet (
     data_rezervimit DATE NOT NULL,
     statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
 );
+ALTER TABLE rezervimet
+ADD CONSTRAINT rezervimet_klienti_id_fkey
+FOREIGN KEY (klienti_id) REFERENCES klientet(id) ON DELETE CASCADE;
+
 
 CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,
@@ -178,4 +188,30 @@ CREATE TABLE Partneret (
     telefoni VARCHAR(15) CHECK(telefoni ~ '^\+?[0-9]{7,15}$'),
     adresa VARCHAR(100) NOT NULL,
     data_bashkepunimit DATE DEFAULT CURRENT_DATE
+);
+//koment
+CREATE TABLE Lokacionet (
+    lokacionet_id     SERIAL PRIMARY KEY,
+    emri_lokacionit   VARCHAR(100),
+    adresa            VARCHAR(150),
+    qyteti            VARCHAR(50),
+    nr_telefonit      VARCHAR(20)
+);
+//koment
+CREATE TABLE Statistikat_e_shitjeve (
+    statistika_id   SERIAL PRIMARY KEY,
+    muaji           VARCHAR(20),
+    totali_shitjeve INTEGER,
+    fitimi          NUMERIC(10,2) CHECK (fitimi >= 0),
+    shpenzimet      NUMERIC(10,2) CHECK (shpenzimet >= 0)
+);
+CREATE TABLE garancia (
+    id SERIAL PRIMARY KEY,
+    vid INT,
+    kid INT,
+    lloji_garancise VARCHAR(40) CHECK (lloji_garancise IN ('6 muaj', '1 vit', '2 vite')),
+    data_fillimit DATE,
+    data_mbarimit DATE,
+    FOREIGN KEY (kid) REFERENCES klientet(id),
+    FOREIGN KEY (vid) REFERENCES veturat(id)
 );

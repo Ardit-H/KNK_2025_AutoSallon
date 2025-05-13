@@ -75,8 +75,8 @@ public class StatistikatEShitjeveService {
                     }
                     hasChanges = true;
                 }
-                if(updateStatistikatEShitjeveDto.getTotali_shitjeve() != null){
-                    if(updateStatistikatEShitjeveDto.getTotali_shitjeve() < 0){
+                if(updateStatistikatEShitjeveDto.getTotaliShitjeve() != null){
+                    if(updateStatistikatEShitjeveDto.getTotaliShitjeve() < 0){
                         throw new InvalidInputException("Totali shitjeve duhet te kete vlere pozitive.");
                     }
                     hasChanges = true;
@@ -101,7 +101,7 @@ public class StatistikatEShitjeveService {
                 }
                 return statistikatEShitjeveRepository.delete(id);
             }
-            public List<StatistikatEShitjeve> KerkoStatistikat(String muaji){
+            public List<StatistikatEShitjeve> kerkoStatistikat(String muaji){
                 return statistikatEShitjeveRepository.searchhByMonth(muaji);
             }
 }

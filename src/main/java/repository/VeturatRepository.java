@@ -7,32 +7,33 @@ import models.dto.Veturat.UpdateVeturatDto;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto, UpdateVeturatDto>{
     public VeturatRepository(){
         super("veturat");
     }
 
-    public Veturat fromResultSet(ResultSet result) throws SQLException{
+    protected Veturat fromResultSet(ResultSet result) throws SQLException{
         return Veturat.getInstance(result);
     }
 
     public Veturat create(CreateVeturatDto veturatDto){
         String query ="""
-                INSERT INTO VETURAT(prodhuesi,modeli,vitiProdhimit,ngjyra,cmimi,gjendja,kilometrazha,tipiKarburant)
-                 VALUES(?,?,?,?,?)
+                INSERT INTO VETURAT(prodhuesi,modeli,viti_prodhimit,ngjyra,cmimi,gjendja,kilometrazha,tipi_karburant)
+                 VALUES(?, ?, ?, ?, ?, ?, ?, ?)
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(
                     query,Statement.RETURN_GENERATED_KEYS);
             pstm.setString(1,veturatDto.getProdhuesi());
-            pstm.setString(1,veturatDto.getModeli());
-            pstm.setInt(2,veturatDto.getVitiProdhimit());
-            pstm.setString(3,veturatDto.getNgjyra());
-            pstm.setDouble(4,veturatDto.getCmimi());
-            pstm.setString(5,veturatDto.getGjendja());
-            pstm.setInt(2,veturatDto.getKilometrazha());
-            pstm.setString(5,veturatDto.getTipiKarburant());
+            pstm.setString(2,veturatDto.getModeli());
+            pstm.setInt(3,veturatDto.getVitiProdhimit());
+            pstm.setString(4,veturatDto.getNgjyra());
+            pstm.setDouble(5,veturatDto.getCmimi());
+            pstm.setString(6,veturatDto.getGjendja());
+            pstm.setInt(7,veturatDto.getKilometrazha());
+            pstm.setString(8,veturatDto.getTipiKarburant());
 
             pstm.execute();
             ResultSet resultSet=pstm.getGeneratedKeys();
@@ -58,7 +59,10 @@ public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto,
             query.append("NGJYRA = ?, ");
             params.add(veturatDto.getNgjyra());
         }
-
+        if(veturatDto.getKilometrazha() != 0) {
+            query.append("KILOMETRAZHA = ?, ");
+            params.add(veturatDto.getKilometrazha());
+        }
 
         if(params.isEmpty()){
             return getById(veturatDto.getId());
@@ -82,5 +86,43 @@ public class VeturatRepository extends BaseRepository<Veturat, CreateVeturatDto,
         }
         return null;
     }
+    public int getTotalVeturat() throws SQLException{
+        String query="SELECT COUNT(*) FROM veturat";
+        try (PreparedStatement stmt=connection.prepareStatement(query);
+             ResultSet rs=stmt.executeQuery()){
+            return rs.next() ? rs.getInt(1):0;
+        }
+    }
 
+
+    public List<Veturat> kerkoSipasProdhuesit(String prodhuesi) {
+        List<Veturat> rezultatet = new ArrayList<>();
+        String sql = "SELECT * FROM veturat WHERE LOWER(prodhuesi) LIKE ?";
+
+        try (PreparedStatement stmt = this.connection.prepareStatement(sql)){
+
+            stmt.setString(1, "%" + prodhuesi.toLowerCase() + "%");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Veturat v = new Veturat(
+                        rs.getInt("id"),
+                        rs.getString("prodhuesi"),
+                        rs.getString("modeli"),
+                        rs.getInt("viti_prodhimit"),
+                        rs.getString("ngjyra"),
+                        rs.getDouble("cmimi"),
+                        rs.getString("gjendja"),
+                        rs.getInt("kilometrazha"),
+                        rs.getString("tipi_karburant")
+                );
+                rezultatet.add(v);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return rezultatet;
+    }
 }

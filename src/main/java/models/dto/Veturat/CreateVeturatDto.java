@@ -60,7 +60,7 @@ public class CreateVeturatDto {
         this.modeli = modeli;
     }
 
-    public void setViti_prodhimit(int vitiProdhimit) {
+    public void setVitiprodhimit(int vitiProdhimit) {
         this.vitiProdhimit = vitiProdhimit;
     }
 

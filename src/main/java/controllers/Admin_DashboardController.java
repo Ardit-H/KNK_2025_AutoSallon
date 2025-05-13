@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import services.LanguageManager;
 import services.SceneManager;
+import services.SessionManager;
 import utils.SceneLocator;
 
 import java.awt.event.ActionEvent;
@@ -23,9 +24,7 @@ import java.util.Locale;
 public class Admin_DashboardController {
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
-    @FXML private Button menuToggleButton;
     @FXML private Button btnLogOut;
-    private boolean menuVisible = false;
     @FXML private Button languageToggleButton;
     private boolean isEnglish = true;
     private LanguageManager languageManager;
@@ -33,10 +32,6 @@ public class Admin_DashboardController {
         this.languageManager=LanguageManager.getInstance();
     }
     @FXML public void initialize() {
-        sideMenu.setTranslateX(-200);
-        sideMenu.setVisible(false);
-        sideMenu.setManaged(false);
-        menuToggleButton.setOnAction(event -> toggleMenu());
         if (languageManager.getLocale().equals(new Locale("en"))) {
             setLanguageIcon("/Images/language-en.png");
             isEnglish = true;
@@ -44,25 +39,6 @@ public class Admin_DashboardController {
             setLanguageIcon("/Images/language-sq.png");
             isEnglish = false;
         }
-    }
-
-    private void toggleMenu() {
-        TranslateTransition transition = new TranslateTransition(Duration.millis(300), sideMenu);
-        if (!menuVisible) {
-            sideMenu.setVisible(true);
-            sideMenu.setManaged(true);
-            transition.setFromX(-200);
-            transition.setToX(0);
-        } else {
-            transition.setFromX(0);
-            transition.setToX(-200);
-            transition.setOnFinished(event -> {
-                sideMenu.setVisible(false);
-                sideMenu.setManaged(false);
-            });
-        }
-        transition.play();
-        menuVisible =!menuVisible;
     }
    @FXML private void handleLoadKlientet()throws Exception{
        SceneManager.getInstance().setCenterPanePath(SceneLocator.KLIENTET);
@@ -86,8 +62,17 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
         SceneManager.load(SceneLocator.VLERESIMET,centerPane);
     }
+    @FXML private void handleLoadFaturat()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.FATURAT);
+        SceneManager.load(SceneLocator.FATURAT, centerPane);
+    }
     @FXML private void handleLoadDashboard_Home()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.DASHBOARD_HOME);
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
+    }
+    @FXML private void handleLoadAdminProfile()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_PROFILE);
+        SceneManager.load(SceneLocator.ADMIN_PROFILE,centerPane);
     }
 
 @FXML private void handleLanguageToggle() throws Exception{
@@ -101,6 +86,7 @@ public class Admin_DashboardController {
     isEnglish =!isEnglish;
 }
     @FXML private void handleLogOut()throws Exception{
+        SessionManager.getInstance().logout();
         SceneManager.load(SceneLocator.OVERALL_DASHBOARD);
     }
     private void setLanguageIcon(String imagePath) {

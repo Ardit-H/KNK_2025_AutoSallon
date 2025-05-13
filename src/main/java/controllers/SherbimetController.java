@@ -69,6 +69,7 @@ public class SherbimetController {
             Sherbimet sherbimi = sherbimetService.create(new CreateSherbimetDto(emri, pershkrimi, cmimi));
             messageLabel.setText("Shërbimi u shtua me sukses.");
             loadSherbimet();
+            clearForm();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
@@ -90,6 +91,7 @@ public class SherbimetController {
             sherbimetService.update(dto);
             messageLabel.setText("Sherbimi u përditësua me sukses.");
             loadSherbimet();
+            clearForm();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }

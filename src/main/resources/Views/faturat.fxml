@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600" prefWidth="1000" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FaturatController">
+
+    <!-- Titulli në krye -->
+    <top>
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="50" style="-fx-background-color: #2c9ed4; -fx-text-fill: white;" text="Menaxhimi i Faturave">
+            <font>
+                <Font name="System Bold Italic" size="20" />
+            </font>
+        </Label>
+    </top>
+
+    <!-- Formulari majtas -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #f4f4f4;">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Krijo / Përditëso Faturë" />
+
+            <!-- Fusha e re për ID -->
+            <Label text="Shitje ID:" />
+            <TextField fx:id="txtShitjeId" promptText="Shitje ID" />
+
+            <Label text="Data e Faturës:" />
+            <TextField fx:id="txtDataFatures" promptText="YYYY-MM-DD" />
+            <Label text="Shuma Totale:" />
+            <TextField fx:id="txtShumaTotale" promptText="Shuma Totale (€)" />
+            <Label text="Lloji i Pagesës:" />
+            <ComboBox fx:id="cmbLlojiPageses" promptText="Zgjedh llojin e pagesës" />
+
+            <HBox alignment="CENTER" spacing="10">
+                <Button onAction="#handleCreate" text="Shto" />
+                <Button onAction="#handleUpdate" text="Përditëso" />
+                <Button onAction="#handleDelete" text="Fshij" />
+            </HBox>
+        </VBox>
+    </left>
+
+    <!-- Tabela në qendër -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label text="Kërko:" />
+                <TextField fx:id="searchField" promptText="Kërko me ID ose Lloji Pagesës" />
+                <Label fx:id="messageLabel" textFill="red" />
+            </HBox>
+            <TableView fx:id="faturatTableView" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="colShitjeId" prefWidth="100" text="ID" />
+               <TableColumn fx:id="colShitjeId1" prefWidth="100" text="Shitje ID" />
+                    <TableColumn fx:id="colDataFatures" prefWidth="120" text="Data e Faturës" />
+                    <TableColumn fx:id="colShumaTotale" prefWidth="120" text="Shuma Totale (€)" />
+                    <TableColumn fx:id="colLlojiPageses" prefWidth="100" text="Lloji i Pagesës" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

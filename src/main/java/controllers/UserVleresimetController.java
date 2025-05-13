@@ -1,104 +1,88 @@
 package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import models.dto.Klientet.Klientet;
-import models.dto.Klientet.UpdateKlientiDto;
-import models.dto.Vleresimet.UpdateVleresimetDto;
+import javafx.scene.control.Alert;
+import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import models.dto.KomentetDto;
 import models.dto.Vleresimet.Vleresimet;
-import services.SessionManager;
+import services.LanguageManager;
 import services.VleresimetService;
 
-import java.util.List;import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
-import javafx.beans.binding.Bindings;
-import javafx.beans.value.ObservableValue;
-
+import java.util.List;
 
 public class UserVleresimetController {
-    @FXML private TextField komenti;
-    @FXML private TextField searchField;
-    @FXML private Spinner vleresimi;
-    @FXML private TableView<Vleresimet> vleresimetTable;
+    @FXML private TableView<Vleresimet> VleresimetTableView;
+    @FXML private TableColumn<Vleresimet, String> colPerdoruesi;
     @FXML private TableColumn<Vleresimet, String> colVetura;
     @FXML private TableColumn<Vleresimet, String> colVleresimi;
     @FXML private TableColumn<Vleresimet, String> colKomenti;
-    @FXML private TableColumn<Vleresimet, String> colData;
-    @FXML private Label messageLabel;
-    @FXML private Label averageLabel;
-    private  VleresimetService vleresimetService;
+    @FXML private TableColumn<Vleresimet, String> colDataVleresimit;
+    @FXML private VleresimetService vleresimetService;
+    private LanguageManager languageManager;
 
     public UserVleresimetController(){
         this.vleresimetService=new VleresimetService();
+        this.languageManager=LanguageManager.getInstance();
     }
-
     @FXML
     public void initialize() {
-        colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getVeturaEmri()));
+        colPerdoruesi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPerdoruesiEmriPlote())));
+        colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVeturaEmri())));
         colVleresimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVleresimi())));
-        colKomenti.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKomenti()));
-        colData.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDataVleresimit()));
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1);
-        vleresimi.setValueFactory(valueFactory);
-      loadVleresimet();
+        colKomenti.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKomenti()));
+        colDataVleresimit.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDataVleresimit()));
+        loadVleresimet();
+
     }
+
     private void loadVleresimet() {
-        int userId = getCurrentUserId();
-        List<Vleresimet> vleresimet = vleresimetService.getVleresimetByUserId(userId);
-        vleresimetTable.getItems().setAll(vleresimet);
+        List<Vleresimet> vleresimet = vleresimetService.getVleresimetWithJoins();
+        VleresimetTableView.getItems().setAll(vleresimet);
     }
-
-
-    private int getCurrentUserId() {
-        // Merr ID-në e përdoruesit të kyçur permes login
-        return SessionManager.getInstance().getcurrentUser().getPid();
-    }
-    @FXML
-    private void handleUpdate(MouseEvent event) {
-        try {
-            int selectedId = getSelectedVleresimId();
-            if (selectedId == -1) return;
-            Integer vleresimiInt = null;
-            if (vleresimi.getValue() != null) {
-                vleresimiInt = (Integer) vleresimi.getValue();
-            }
-            UpdateVleresimetDto dto = new UpdateVleresimetDto();
-            dto.setVleresimiId(selectedId);
-            if (vleresimiInt != null) {
-                dto.setVleresimi(vleresimiInt);
-            }
-            if (!komenti.getText().trim().isEmpty())
-                dto.setKomenti(komenti.getText().trim());
-            vleresimetService.update(dto);
-            messageLabel.setText("Vlerësimi u përditësua me sukses.");
-            loadVleresimet();
-        } catch (Exception e) {
-            messageLabel.setText("Gabim: " + e.getMessage());
-        }
-    }
-    @FXML
-    private void handleDelete(MouseEvent event) {
-        try {
-            int selectedId = getSelectedVleresimId();
-            if (selectedId == -1) return;
-
-            vleresimetService.delete(selectedId);
-            messageLabel.setText("Klienti u fshi me sukses.");
-            loadVleresimet();
-        } catch (Exception e) {
-            messageLabel.setText("Gabim: " + e.getMessage());
-        }
-    }
-    private int getSelectedVleresimId() {
-        Vleresimet selected = vleresimetTable.getSelectionModel().getSelectedItem();
+    @FXML private void handleShowAverage() {
+        Vleresimet selected = VleresimetTableView.getSelectionModel().getSelectedItem();
         if (selected == null) {
-            messageLabel.setText("Zgjidh një vlerësim në listë.");
-            return -1;
+            showAlert("Gabim", "Ju lutem selektoni një vlerësim!", Alert.AlertType.ERROR);
+            return;
         }
-        return selected.getVleresimiId();
+        int veturaId = selected.getVeturaId();
+        double mesatarja = vleresimetService.getMesatarjaEVleresimevePerVeture(veturaId);
+        KomentetDto komentetDto = vleresimetService.getPositiveAndNegativeVleresimet(veturaId);
+        StringBuilder content = new StringBuilder();
+        content.append("Mesatarja e vlerësimeve për veturën \"")
+                .append(selected.getVeturaEmri())
+                .append("\" është: ")
+                .append(String.format("%.2f", mesatarja))
+                .append("\n\n");
+
+        content.append("💬 Komente Pozitive:\n");
+        if (komentetDto.getKomentetPozitive().isEmpty()) {
+            content.append("- Asnjë koment pozitiv.\n");
+        } else {
+            for (String kom : komentetDto.getKomentetPozitive()) {
+                content.append("- ").append(kom).append("\n");
+            }
+        }
+
+        content.append("\n💬 Komente Negative:\n");
+        if (komentetDto.getKomentetNegative().isEmpty()) {
+            content.append("- Asnjë koment negativ.\n");
+        } else {
+            for (String kom : komentetDto.getKomentetNegative()) {
+                content.append("- ").append(kom).append("\n");
+            }
+        }
+        showAlert("Detaje të Vlerësimeve", content.toString(), Alert.AlertType.INFORMATION);
+    }
+    private void showAlert(String title, String content, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }

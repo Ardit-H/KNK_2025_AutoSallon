@@ -61,6 +61,10 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
             query.append("ADRESA = ?, ");
             params.add(klientetDto.getAdresa());
         }
+        if(klientetDto.getPerdoruesiId()!=null){
+            query.append("perdoruesi_id= ?, ");
+            params.add(klientetDto.getPerdoruesiId());
+        }
         if(params.isEmpty()){
             return getById(klientetDto.getId());
         }
@@ -82,6 +86,13 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
             e.printStackTrace();
         }
         return null;
+    }
+    public int getTotalKlientet() throws SQLException {
+        String query = "SELECT COUNT(*) FROM klientet";
+        try (PreparedStatement stmt = this.connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            return rs.next() ? rs.getInt(1) : 0;
+        }
     }
     public List<Klientet> searchByFullName(String fullName) {
         String where = "LOWER(CONCAT(emri, ' ', mbiemri)) LIKE ?";
@@ -141,6 +152,23 @@ public class KlientetRepository extends BaseRepository<Klientet, CreateKlientetD
             e.printStackTrace();
         }
         return false;
+    }
+    public Klientet findByAllFields(String emri, String mbiemri, String email, String nrTelefonit, String adresa){
+        String sql="SELECT * FROM klientet WHERE emri = ? AND mbiemri = ? AND email = ? AND nrtelefonit = ? AND adresa = ?";
+        try (PreparedStatement stmt=this.connection.prepareStatement(sql)) {
+            stmt.setString(1, emri);
+            stmt.setString(2, mbiemri);
+            stmt.setString(3, email);
+            stmt.setString(4, nrTelefonit);
+            stmt.setString(5, adresa);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()){
+                return Klientet.getInstance(rs);
+            }
+            return null;
+        } catch (SQLException e){
+            throw new RuntimeException("Gabim gjatë kërkimit të klientit: " + e.getMessage());
+        }
     }
 
 }

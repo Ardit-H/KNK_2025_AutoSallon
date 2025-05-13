@@ -79,6 +79,7 @@ public class LoginController {
 
         } catch (Exception e) {
             errorMessageLabel.setText(e.getMessage());
+            e.printStackTrace();
         }
     }
     @FXML private void handleGuestLogin()throws Exception{

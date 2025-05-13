@@ -8,6 +8,8 @@ import javafx.scene.input.MouseEvent;
 import models.dto.Punetoret.CreatePunetoretDto;
 import models.dto.Punetoret.UpdatePunetoretDto;
 import models.dto.Punetoret.Punetoret;
+import services.LanguageManager;
+import services.PerdoruesitService;
 import services.PunetoretService;
 
 import java.util.List;
@@ -35,10 +37,13 @@ public class PunetoretController {
     private Label messageLabel;
 
     private final PunetoretService punetoretService;
-
+    private LanguageManager languageManager;
     public PunetoretController(){
-        this.punetoretService = new PunetoretService();
+        this.punetoretService=new PunetoretService();
+        this.languageManager= LanguageManager.getInstance();
     }
+
+
 
     @FXML
     public void initialize(){

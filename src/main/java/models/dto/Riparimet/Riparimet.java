@@ -9,10 +9,10 @@ public class Riparimet {
     private int veturaId;
     private int sherbimiId;
     private String statusi;
-    private double kostoRiparimit;
+    private Double kostoRiparimit;
     private String dataRiparimit;
 
-    private Riparimet(int id, int veturaId, int sherbimiId, String statusi, double kostoRiparimit, String dataRiparimit) {
+    private Riparimet(int id, int veturaId, int sherbimiId, String statusi, Double kostoRiparimit, String dataRiparimit) {
         this.id = id;
         this.veturaId = veturaId;
         this.sherbimiId = sherbimiId;
@@ -26,7 +26,7 @@ public class Riparimet {
         int veturaId = resultSet.getInt("veturaId");
         int sherbimiId = resultSet.getInt("sherbimiId");
         String statusi = resultSet.getString("statusi");
-        double kostoRiparimit = resultSet.getDouble("kostoRiparimit");
+        Double kostoRiparimit = resultSet.getDouble("kostoRiparimit");
         String dataRiparimit = resultSet.getString("dataRiparimit");
         return new Riparimet(id, veturaId, sherbimiId, statusi, kostoRiparimit, dataRiparimit);
     }
@@ -47,7 +47,7 @@ public class Riparimet {
         return statusi;
     }
 
-    public double getKostoRiparimit() {
+    public Double getKostoRiparimit() {
         return kostoRiparimit;
     }
 

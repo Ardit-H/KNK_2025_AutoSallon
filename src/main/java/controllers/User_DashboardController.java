@@ -20,8 +20,6 @@ public class User_DashboardController {
     @FXML private VBox sideMenu;
     @FXML private Button btn_vleresimetemia;
     @FXML private Button btn_vleresimet;
-    @FXML private Button menuToggleButton;
-    private boolean menuVisible = false;
     @FXML private Button languageToggleButton;
     private boolean isEnglish = true;
     private LanguageManager languageManager;
@@ -34,10 +32,6 @@ public class User_DashboardController {
         }else {
             btn_vleresimetemia.setVisible(true);
         }
-        sideMenu.setTranslateX(-200);
-        sideMenu.setVisible(false);
-        sideMenu.setManaged(false);
-        menuToggleButton.setOnAction(event -> toggleMenu());
         if (languageManager.getLocale().equals(new Locale("en"))) {
             setLanguageIcon("/Images/language-en.png");
             isEnglish = true;
@@ -47,39 +41,25 @@ public class User_DashboardController {
         }
     }
 
-    private void toggleMenu() {
-        TranslateTransition transition = new TranslateTransition(Duration.millis(300), sideMenu);
-        if (!menuVisible) {
-            sideMenu.setVisible(true);
-            sideMenu.setManaged(true);
-            transition.setFromX(-200);
-            transition.setToX(0);
-        } else {
-            transition.setFromX(0);
-            transition.setToX(-200);
-            transition.setOnFinished(event -> {
-                sideMenu.setVisible(false);
-                sideMenu.setManaged(false);
-            });
-        }
-        transition.play();
-        menuVisible =!menuVisible;
-    }
     @FXML private void handleLoadDashboard_Home()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.DASHBOARD_HOME);
         SceneManager.load(SceneLocator.DASHBOARD_HOME,centerPane);
     }
     @FXML private void handleLoadUserVleresimet()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_VLERESIMET);
-        SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.LOGEDUSER_VLERESIMET);
+        SceneManager.load(SceneLocator.LOGEDUSER_VLERESIMET,centerPane);
     }
     @FXML private void handleLoadVleresimet()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.VLERESIMET);
-        SceneManager.load(SceneLocator.VLERESIMET,centerPane);
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_VLERESIMET);
+        SceneManager.load(SceneLocator.USER_VLERESIMET,centerPane);
     }
     @FXML private void handleLoadUserSherbimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_SHERBIMET);
         SceneManager.load(SceneLocator.USER_SHERBIMET,centerPane);
+    }
+    @FXML private void handleLoadUserProfili()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_PROFILE);
+        SceneManager.load(SceneLocator.USER_PROFILE,centerPane);
     }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {

@@ -42,8 +42,8 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         String sql = "INSERT INTO perdoruesi (emri, mbiemri, email, nrtelefonit, adresa, roli, passwordHash, salt) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING *";
 
 
-        try (Connection conn = DBConnector.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (
+             PreparedStatement stmt = this.connection.prepareStatement(sql)) {
 
             stmt.setString(1, emri);
             stmt.setString(2, mbiemri);

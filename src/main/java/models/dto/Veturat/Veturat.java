@@ -30,13 +30,13 @@ public class Veturat {
         int id = resultSet.getInt("id");
         String prodhuesi = resultSet.getString("prodhuesi");
         String modeli = resultSet.getString("modeli");
-        int vitiPordhimit = resultSet.getInt("viti_prodhimit");
+        int vitiProdhimit = resultSet.getInt("viti_prodhimit");
         String ngjyra = resultSet.getString("ngjyra");
         double cmimi = resultSet.getDouble("cmimi");
         String gjendja = resultSet.getString("gjendja");
         int kilometrazha = resultSet.getInt("kilometrazha");
         String tipiKarburant = resultSet.getString("tipi_karburant");
-        return new Veturat(id,prodhuesi,modeli,vitiPordhimit,ngjyra,cmimi,gjendja,kilometrazha,tipiKarburant);
+        return new Veturat(id,prodhuesi,modeli,vitiProdhimit,ngjyra,cmimi,gjendja,kilometrazha,tipiKarburant);
     }
 
 
