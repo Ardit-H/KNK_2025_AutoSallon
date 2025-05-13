@@ -1,5 +1,6 @@
 package App;
 
+import controllers.PorosiaDashboardController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

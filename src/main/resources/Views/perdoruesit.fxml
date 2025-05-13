@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchor" prefHeight="600.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PerdoruesitController">
+<AnchorPane fx:id="Na" prefHeight="600.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PerdoruesitController">
     <children>
 
 
@@ -21,13 +21,13 @@
 
         <!-- Form Inputs -->
         <VBox alignment="CENTER" layoutX="300.0" layoutY="60.0" spacing="15">
-            <TextField fx:id="txtEmri" prefWidth="250" promptText="Emri" />
-            <TextField fx:id="txtMbiemri" prefWidth="250" promptText="Mbiemri" />
-            <TextField fx:id="txtEmail" prefWidth="250" promptText="Email" />
-            <TextField fx:id="txtNrTelefonit" prefWidth="250" promptText="Numri i Telefonit" />
-            <TextField fx:id="txtAdresa" prefWidth="250" promptText="Adresa" />
+            <TextField fx:id="txtEmri" prefWidth="250" promptText="%first_name" />
+            <TextField fx:id="txtMbiemri" prefWidth="250" promptText="%last_name" />
+            <TextField fx:id="txtEmail" prefWidth="250" promptText="%email" />
+            <TextField fx:id="txtNrTelefonit" prefWidth="250" promptText="%phone" />
+            <TextField fx:id="txtAdresa" prefWidth="250" promptText="%address" />
             <PasswordField fx:id="txtFjalekalimi" prefWidth="250" promptText="Fjalëkalimi" />
-            <ComboBox fx:id="cmbRoli" prefWidth="250" promptText="Roli">
+            <ComboBox fx:id="cmbRoli" prefWidth="250" promptText="%role">
                 <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="Admin" />
@@ -39,9 +39,9 @@
 
         <!-- Action Buttons -->
         <HBox alignment="CENTER" layoutX="300.0" layoutY="339.0" spacing="15">
-            <Button onAction="#handleShto" prefWidth="80" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Shto" />
-            <Button onAction="#handlePerditeso" prefWidth="80" style="-fx-background-color: #FFA500; -fx-text-fill: white;" text="Përditëso" />
-            <Button onAction="#handleFshij" prefWidth="80" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Fshij" />
+            <Button onAction="#handleShto" prefWidth="80" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="%btn.add_user"/>
+            <Button onAction="#handlePerditeso" prefWidth="80" style="-fx-background-color: #FFA500; -fx-text-fill: white;" text="%btn.update_user" />
+            <Button onAction="#handleFshij" prefWidth="80" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="%btn.delete_user" />
         </HBox>
 
         <!-- Table for displaying users -->
