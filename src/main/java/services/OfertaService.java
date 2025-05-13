@@ -32,6 +32,17 @@ public class OfertaService {
         return oferta;
     }
 
+    public Oferta getOfertaByVeturaId(int veturaId){
+        if(veturaId < 0){
+            throw new IllegalArgumentException("Id nuk duhet te jete negative!");
+        }
+        Oferta ofertaVetures = this.ofertaRepository.getByVeturaId(veturaId);
+        if(ofertaVetures == null){
+            throw new IllegalArgumentException("Nuk ka oferte per veturen!");
+        }
+        return ofertaVetures;
+    }
+
     public Oferta create(CreateOfertaDto ofertaCreateDto){
         validateCreateOferta(ofertaCreateDto);
         return this.ofertaRepository.create(ofertaCreateDto);
