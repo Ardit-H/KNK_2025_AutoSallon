@@ -1,11 +1,13 @@
 package services;
 
+import controllers.PorosiaController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import models.dto.Veturat.Veturat;
 import utils.SceneLocator;
 
 import java.util.ResourceBundle;
@@ -19,7 +21,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.OVERALL_DASHBOARD;
+        this.currentPath = SceneLocator.PorosiaDashboardController;
         this.scene = this.initScene();
     }
 

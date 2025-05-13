@@ -16,4 +16,8 @@ public class SceneLocator {
     public static final String VETURAT="/Views/veturat.fxml";
     public static final String TESTDRIVES="/Views/testdrives.fxml";
     public static final String GARANCIA="/Views/garancia.fxml";
+    public static final String OFERTA="/Views/oferta.fxml";
+    public static final String POROSIA="/Views/porosia.fxml";
+    public static final String PorosiaDashboardController="/Views/PorosiaDashboardController.fxml";
+
 }
