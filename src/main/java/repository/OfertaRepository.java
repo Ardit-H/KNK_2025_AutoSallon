@@ -32,6 +32,22 @@ public class OfertaRepository extends BaseRepository <Oferta, CreateOfertaDto, U
         return null;
     }
 
+    public Oferta getByVeturaId(int veturaId){
+        String query = "SELECT * FROM ofertat WHERE veturaId = ?";
+        try{
+            PreparedStatement ps = connection.prepareStatement(query);
+            ps.setInt(1, veturaId);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                Oferta oferta = Oferta.getInstance(rs);
+                return oferta;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public Oferta create(CreateOfertaDto ofertaDto) {
         String query = """
                 INSERT INTO OFERTAT(veturaId, zbritja, cmimiFinal, dataFillimit, dataMbarimit)

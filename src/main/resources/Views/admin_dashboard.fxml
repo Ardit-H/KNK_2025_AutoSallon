@@ -63,11 +63,12 @@
             <Button fx:id="btn_dashboard" alignment="CENTER" layoutY="373.0" mnemonicParsing="false" onAction="#handleLoadDashboard_Home" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Dashboard" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_klientet" mnemonicParsing="false" onAction="#handleLoadKlientet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Clients" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_automjetet" mnemonicParsing="false" onAction="#handleLoadVeturat" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Vehicles" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="btn_sherbimet" mnemonicParsing="false" onAction="#handleLoadServices" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Services" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_sherbimet" mnemonicParsing="false" onAction="#handleLoadSherbimet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Services" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_rezervimet" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Reservations" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_testdrives" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%TestDrives" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_vleresimet" mnemonicParsing="false" onAction="#handleLoadVleresimet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Ratingmenubtn" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_faturat" mnemonicParsing="false" onAction="#handleLoadFaturat" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Invoices" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="btn_shitjet" mnemonicParsing="false" onAction="#handleLoadShitjet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Sales" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_statistikat" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Statistics" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_perdoruesit" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Perdoruesi" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btn_profili" mnemonicParsing="false" onAction="#handleLoadAdminProfile" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%UserProfile" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
@@ -81,43 +82,43 @@
       <AnchorPane fx:id="centerPane" style="-fx-background-color: #ecf0f1;">
          <children>
             <!-- Foto Kryesore -->
-            <ImageView fitHeight="94.0" fitWidth="369.0" layoutX="376.0" layoutY="247.0">
+            <ImageView fitHeight="94.0" fitWidth="430.0" layoutX="463.0" layoutY="256.0">
                <image>
                   <Image url="@../Images/LlogoAutoSallon-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="359.0">
+            <ImageView fitHeight="233.0" fitWidth="436.0" layoutY="1.0">
                <image>
                   <Image url="@../Images/AdobeStock_1011767359_Preview.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="348.0" layoutY="452.0">
+            <ImageView fitHeight="280.0" fitWidth="432.0" layoutY="452.0">
                <image>
                   <Image url="@../Images/AdobeStock_1105486701_Preview.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="384.0" layoutX="719.0">
+            <ImageView fitHeight="234.0" fitWidth="412.0" layoutX="919.0">
                <image>
                   <Image url="@../Images/AdobeStock_1079240793_Preview.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="360.0" layoutX="359.0">
+            <ImageView fitHeight="234.0" fitWidth="483.0" layoutX="436.0">
                <image>
                   <Image url="@../Images/AdobeStock_943043323_Preview.jpeg" />
                </image>
             </ImageView>
 
             <!-- Titulli -->
-            <Label layoutX="320.0" layoutY="350.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="%AdminPanelDescriptionTitle" />
+            <Label alignment="CENTER" layoutY="359.0" prefHeight="30.0" prefWidth="1326.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="%AdminPanelDescriptionTitle" textAlignment="CENTER" />
 
             <!-- Përshkrimi -->
-            <Label layoutX="200.0" layoutY="390.0" maxWidth="680.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="%AdminPanelDescription" wrapText="true" />
-            <ImageView fitHeight="219.0" fitWidth="390.0" layoutX="348.0" layoutY="452.0">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="392.0" maxWidth="1332.0" prefHeight="49.0" prefWidth="1332.0" style="-fx-font-size: 14px; -fx-text-fill: #34495e;" text="%AdminPanelDescription" textAlignment="CENTER" wrapText="true" />
+            <ImageView fitHeight="277.0" fitWidth="487.0" layoutX="432.0" layoutY="452.0">
                <image>
                   <Image url="@../Images/AdobeStock_930679947_Preview.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="219.0" fitWidth="365.0" layoutX="738.0" layoutY="452.0">
+            <ImageView fitHeight="276.0" fitWidth="412.0" layoutX="919.0" layoutY="452.0">
                <image>
                   <Image url="@../Images/AdobeStock_735926213_Preview.jpeg" />
                </image>

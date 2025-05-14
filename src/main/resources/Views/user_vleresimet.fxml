@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserVleresimetController">
-    <children>
-        <AnchorPane prefHeight="147.0" prefWidth="600.0">
-         <children>
-            <Label layoutX="21.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbluservleresimet" />
-             <Button layoutX="468.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleShowAverage" text="%AverageOfRatings" />
-         </children></AnchorPane>
-        <AnchorPane prefHeight="312.0" prefWidth="600.0">
-            <children>
-                <TableView fx:id="VleresimetTableView" layoutX="13.0" layoutY="8.0" prefHeight="276.0" prefWidth="574.0">
-                    <columns>
-                        <TableColumn fx:id="colPerdoruesi" prefWidth="75.0" text="%UserName" />
-                        <TableColumn fx:id="colVetura" prefWidth="75.0" text="%CarName" />
-                        <TableColumn fx:id="colVleresimi" prefWidth="75.0" text="%Rating" />
-                        <TableColumn fx:id="colKomenti" prefWidth="241.59991455078125" text="%Comment" />
-                        <TableColumn fx:id="colDataVleresimit" prefWidth="107.20001220703125" text="%DateOfRating" />
-                    </columns>
-                </TableView>
-            </children>
-        </AnchorPane>
-    </children>
-</VBox>
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserVleresimetController">
+   <children>
+      <TextField fx:id="searchField" layoutX="168.0" layoutY="162.0" prefHeight="38.0" prefWidth="291.0" promptText="%SearchByCarOrUserOrDate" />
+
+      <Button layoutX="569.0" layoutY="158.0" mnemonicParsing="false" onAction="#handleShowAverage" prefHeight="34.0" prefWidth="189.0" text="%AverageOfRatings">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="VleresimetTableView" layoutX="168.0" layoutY="221.0" prefHeight="484.0" prefWidth="990.0">
+         <columns>
+            <TableColumn fx:id="colPerdoruesi" prefWidth="144.26663208007812" text="%UserName" />
+            <TableColumn fx:id="colVetura" prefWidth="143.7333984375" text="%CarName" />
+            <TableColumn fx:id="colVleresimi" prefWidth="111.73336791992188" text="%Rating" />
+            <TableColumn fx:id="colKomenti" prefWidth="434.933349609375" text="%Comment" />
+            <TableColumn fx:id="colDataVleresimit" prefWidth="159.466796875" text="%DateOfRating" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="98.0" prefHeight="30.0" prefWidth="1332.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbluservleresimet" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

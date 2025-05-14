@@ -68,7 +68,7 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         if(params.isEmpty()){
             return getById(vleresimetDto.getVleresimiId());
         }
-
+        query.append("DATA_VLERESIMIT = CURRENT_TIMESTAMP, ");
         query.setLength(query.length() - 2);
         query.append(" WHERE ID = ?");
         params.add(vleresimetDto.getVleresimiId());
@@ -132,17 +132,50 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         }
         return vleresimetList;
     }
-    public List<Vleresimet> searchByVehicleOrUserName(String keyword) {
+    public List<Vleresimet> searchByVehicleOrUserNameOrDate(String keyword) {
         List<Vleresimet> results = new ArrayList<>();
         String query = """
         SELECT v.*, 
                ve.prodhuesi || ' ' || ve.modeli AS vetura_emri, 
-               p.emri || ' ' || p.mbiemri AS perdoruesi_emri
+               p.emri || ' ' || p.mbiemri AS perdoruesi_emri,
+               v.data_vleresimit 
         FROM Vleresimet v
         JOIN Veturat ve ON v.vetura_id = ve.id
         JOIN perdoruesi p ON v.perdoruesi_id = p.id
         WHERE LOWER(ve.prodhuesi || ' ' || ve.modeli) LIKE ? 
            OR LOWER(p.emri || ' ' || p.mbiemri) LIKE ?
+           OR TO_CHAR(v.data_vleresimit, 'YYYY-MM-DD') LIKE ?
+    """;
+
+        try (PreparedStatement pstm = this.connection.prepareStatement(query)) {
+            String searchKeyword = "%" + keyword.toLowerCase() + "%";
+            pstm.setString(1, searchKeyword);
+            pstm.setString(2, searchKeyword);
+            pstm.setString(3, searchKeyword);
+            ResultSet rs = pstm.executeQuery();
+
+            while (rs.next()) {
+                Vleresimet v = Vleresimet.getInstance(rs);
+                v.setVeturaEmri(rs.getString("vetura_emri"));
+                v.setPerdoruesiEmriPlote(rs.getString("perdoruesi_emri"));
+                results.add(v);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // ose log.error(...) nëse ke logging
+        }
+        return results;
+    }
+    public List<Vleresimet> searchByVehicleOrDate(String keyword) {
+        List<Vleresimet> results = new ArrayList<>();
+        String query = """
+        SELECT v.*, 
+               ve.prodhuesi || ' ' || ve.modeli AS vetura_emri, 
+               v.data_vleresimit 
+        FROM Vleresimet v
+        JOIN Veturat ve ON v.vetura_id = ve.id
+        JOIN perdoruesi p ON v.perdoruesi_id = p.id
+        WHERE LOWER(ve.prodhuesi || ' ' || ve.modeli) LIKE ? 
+           OR TO_CHAR(v.data_vleresimit, 'YYYY-MM-DD') LIKE ?
     """;
 
         try (PreparedStatement pstm = this.connection.prepareStatement(query)) {
@@ -154,7 +187,6 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
             while (rs.next()) {
                 Vleresimet v = Vleresimet.getInstance(rs);
                 v.setVeturaEmri(rs.getString("vetura_emri"));
-                v.setPerdoruesiEmriPlote(rs.getString("perdoruesi_emri"));
                 results.add(v);
             }
         } catch (SQLException e) {

@@ -8,39 +8,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.KlientetController">
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: light-blue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.KlientetController">
    <children>
       <AnchorPane layoutX="9.0" layoutY="282.0" prefHeight="322.0" prefWidth="890.0">
          <children>
-            <Label fx:id="messageLabel" layoutX="99.0" layoutY="5.0" prefHeight="18.0" prefWidth="467.0" />
-            <TableView fx:id="KlientetTableView" layoutX="37.0" layoutY="23.0" prefHeight="290.0" prefWidth="1048.0">
+            <Label fx:id="messageLabel" layoutX="136.0" layoutY="3.0" prefHeight="18.0" prefWidth="1096.0" />
+            <TableView fx:id="KlientetTableView" layoutX="42.0" layoutY="31.0" prefHeight="379.0" prefWidth="1200.0">
                <columns>
-                  <TableColumn fx:id="colEmri" prefWidth="118.39998817443848" text="%FirstName" />
-                  <TableColumn fx:id="colMbiemri" prefWidth="128.0" text="%LastName" />
-                  <TableColumn fx:id="colEmail" prefWidth="150.4000244140625" text="%Email" />
-                  <TableColumn fx:id="colNrTelefonit" prefWidth="160.00009155273438" text="%Phone" />
-                  <TableColumn fx:id="colAdresa" minWidth="0.0" prefWidth="154.4000244140625" text="%Address" />
-                  <TableColumn fx:id="colDataRegjistrimit" minWidth="0.0" prefWidth="179.99993896484375" text="%RegistrationDate" />
-                  <TableColumn fx:id="colUserId" minWidth="0.0" prefWidth="179.99993896484375" text="%UserId" />
+                  <TableColumn fx:id="colEmri" prefWidth="139.7333641052246" text="%FirstName" />
+                  <TableColumn fx:id="colMbiemri" prefWidth="131.73336791992188" text="%LastName" />
+                  <TableColumn fx:id="colEmail" prefWidth="201.066650390625" text="%Email" />
+                  <TableColumn fx:id="colNrTelefonit" prefWidth="196.53329467773438" text="%Phone" />
+                  <TableColumn fx:id="colAdresa" minWidth="0.0" prefWidth="234.9334716796875" text="%Address" />
+                  <TableColumn fx:id="colDataRegjistrimit" minWidth="0.0" prefWidth="215.199951171875" text="%RegistrationDate" />
+                  <TableColumn fx:id="colUserId" minWidth="0.0" prefWidth="87.73333740234375" text="%UserId" />
                </columns>
             </TableView>
-            <Label layoutX="14.0" layoutY="5.0" prefHeight="18.0" prefWidth="69.0" text="%Comment1" />
+            <Label layoutX="45.0" layoutY="4.0" prefHeight="18.0" prefWidth="69.0" text="%Comment1" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="276.0" layoutY="82.0" prefHeight="199.0" prefWidth="434.0" style="-fx-background-radius: 10; -fx-background-color: e6e6e6;">
+      <AnchorPane layoutX="359.0" layoutY="78.0" prefHeight="207.0" prefWidth="628.0" style="-fx-background-radius: 10; -fx-background-color: lightblue;">
          <children>
-            <TextField fx:id="txtEmri" layoutX="29.0" layoutY="30.0" promptText="%FirstName" />
-            <TextField fx:id="txtMbiemri" layoutX="29.0" layoutY="68.0" promptText="%LastName" />
-            <TextField fx:id="txtEmail" layoutX="198.0" layoutY="30.0" promptText="%Email" />
-            <TextField fx:id="txtNrTelefonit" layoutX="198.0" layoutY="68.0" promptText="%Phone" />
-            <TextField fx:id="txtAdresa" layoutX="28.0" layoutY="108.0" prefHeight="26.0" prefWidth="150.0" promptText="%Address" />
-            <Button layoutX="28.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_client" />
-            <Button layoutX="155.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_client" />
-            <Button layoutX="295.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_client" />
-            <TextField fx:id="searchField" layoutX="198.0" layoutY="108.0" promptText="%SearchClient" />
+            <TextField fx:id="txtEmri" layoutX="119.0" layoutY="27.0" prefHeight="26.0" prefWidth="151.0" promptText="%FirstName" />
+            <TextField fx:id="txtMbiemri" layoutX="119.0" layoutY="67.0" prefHeight="26.0" prefWidth="151.0" promptText="%LastName" />
+            <TextField fx:id="txtEmail" layoutX="341.0" layoutY="28.0" promptText="%Email" />
+            <TextField fx:id="txtNrTelefonit" layoutX="339.0" layoutY="69.0" prefHeight="26.0" prefWidth="155.0" promptText="%Phone" />
+            <TextField fx:id="txtAdresa" layoutX="117.0" layoutY="109.0" prefHeight="26.0" prefWidth="154.0" promptText="%Address" />
+            <Button layoutX="77.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#handleCreate" text="%btn.add_client" />
+            <Button layoutX="234.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#handleUpdate" text="%btn.update_client" />
+            <Button layoutX="393.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="%btn.remove_client" />
+            <TextField fx:id="searchField" layoutX="337.0" layoutY="109.0" prefHeight="26.0" prefWidth="156.0" promptText="%SearchClient" />
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="49.0" prefWidth="906.0" style="-fx-background-color: lightblue;" text="%Customer_Managment" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="50.0" prefWidth="1328.0" style="-fx-background-color: lightblue;" text="%Customer_Managment" textAlignment="CENTER">
          <font>
             <Font name="System Italic" size="22.0" />
          </font>

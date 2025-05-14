@@ -8,24 +8,26 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogedUserVleresimetController">
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogedUserVleresimetController">
     <children>
 
-        <Label layoutX="178.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbllogeduservleresimet" />
+        <Label alignment="CENTER" layoutY="38.0" prefHeight="30.0" prefWidth="1330.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbllogeduservleresimet" textAlignment="CENTER" />
 
-        <TableView fx:id="vleresimetTable" layoutX="20" layoutY="96.0" prefHeight="464.0" prefWidth="860">
+        <TableView fx:id="vleresimetTable" layoutX="164.0" layoutY="230.0" prefHeight="493.0" prefWidth="998.0">
             <columns>
                 <TableColumn fx:id="colVetura" prefWidth="219.20001220703125" text="%CarName" />
-                <TableColumn fx:id="colVleresimi" prefWidth="79.199951171875" text="%Rating" />
-                <TableColumn fx:id="colKomenti" prefWidth="289.60003662109375" text="%Comment" />
-                <TableColumn fx:id="colData" prefWidth="194.4000244140625" text="%DateOfRating" />
+                <TableColumn fx:id="colVleresimi" prefWidth="66.39990234375" text="%Rating" />
+                <TableColumn fx:id="colKomenti" prefWidth="541.6001281738281" text="%Comment" />
+                <TableColumn fx:id="colData" prefWidth="170.9332275390625" text="%DateOfRating" />
             </columns>
         </TableView>
-        <Label fx:id="messageLabel" layoutX="115.0" layoutY="56.0" prefHeight="26.0" prefWidth="670.0" />
-        <TextField fx:id="komenti" layoutX="405.0" layoutY="610.0" promptText="%Comment" />
-        <Spinner fx:id="vleresimi" layoutX="225.0" layoutY="610.0" />
-        <Button layoutX="592.0" layoutY="609.0" onMouseClicked="#handleUpdate" prefWidth="110" text="%btn.update_rating" />
-        <Button layoutX="752.0" layoutY="609.0" onMouseClicked="#handleDelete" prefWidth="110" text="%btn.remove_rating" />
+        <Label fx:id="messageLabel" layoutX="256.0" layoutY="199.0" prefHeight="19.0" prefWidth="907.0" />
+        <TextField fx:id="komenti" layoutX="630.0" layoutY="153.0" promptText="%Comment" />
+        <Spinner fx:id="vleresimi" layoutX="418.0" layoutY="153.0" />
+        <Button layoutX="804.0" layoutY="154.0" onMouseClicked="#handleUpdate" prefHeight="26.0" prefWidth="145.0" text="%btn.update_rating" />
+        <Button layoutX="984.0" layoutY="155.0" onMouseClicked="#handleDelete" prefHeight="26.0" prefWidth="150.0" text="%btn.remove_rating" />
+      <TextField fx:id="searchField" layoutX="169.0" layoutY="150.0" prefHeight="30.0" prefWidth="207.0" promptText="%SearchByCarOrDate" />
+      <Label layoutX="174.0" layoutY="199.0" prefHeight="18.0" prefWidth="69.0" text="%Comment1" />
 
     </children>
 </AnchorPane>

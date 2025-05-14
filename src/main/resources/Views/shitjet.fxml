@@ -26,7 +26,7 @@
         </Text>
     </HBox>
 
-    <VBox layoutX="30.0" layoutY="125.0" prefHeight="100.0" prefWidth="505.0" style="-fx-background-color: #370C93;">
+    <VBox layoutX="450.0" layoutY="143.0" prefHeight="78.0" prefWidth="320.0" style="-fx-background-color: #370C93;">
         <children>
             <Label text="  Kërko sipas Klient ID:" textFill="#fdf5d5">
                 <font>
@@ -37,7 +37,7 @@
         </children>
     </VBox>
 
-    <VBox layoutX="30.0" layoutY="125.0" prefHeight="325.0" prefWidth="505.0" style="-fx-background-color: #370C93;">
+    <VBox layoutX="37.0" layoutY="145.0" prefHeight="260.0" prefWidth="391.0" style="-fx-background-color: #370C93;">
         <children>
             <Label text="%Shitja_ID" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
             <TextField fx:id="txtShitjeId" />
@@ -55,20 +55,20 @@
             <TextField fx:id="txtCmimiFinal" />
         </children>
     </VBox>
-    <Button fx:id="btn_shto" layoutX="37.0" layoutY="475.0" onMouseClicked="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE">
+    <Button fx:id="btn_shto" layoutX="461.0" layoutY="258.0" onMouseClicked="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_perditeso" layoutX="231.0" layoutY="475.0" onMouseClicked="#handleUpdate" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #370C93;" text="%Përditëso" textFill="WHITE">
+    <Button fx:id="btn_perditeso" layoutX="644.0" layoutY="302.0" onMouseClicked="#handleUpdate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Përditëso" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_fshij" layoutX="411.0" layoutY="475.0" onMouseClicked="#handleDelete" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE">
+    <Button fx:id="btn_fshij" layoutX="461.0" layoutY="346.0" onMouseClicked="#handleDelete" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
 
-    <TableView fx:id="shitjetTableView" layoutX="30.0" layoutY="560.0" prefHeight="240.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView fx:id="shitjetTableView" layoutX="30.0" layoutY="491.0" prefHeight="309.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn fx:id="colShitjeId" prefWidth="119.19998168945312" text="%Shitja_ID" />
             <TableColumn fx:id="colKlientId" prefWidth="123.20001220703125" text="%Klient_ID" />
@@ -78,6 +78,6 @@
             <TableColumn fx:id="colCmimiFinal" prefWidth="127.20001220703125" text="%Cmimi_final" />
         </columns>
     </TableView>
-    <Label fx:id="messageLabel" layoutX="37.0" layoutY="529.0" prefHeight="18.0" prefWidth="391.0" textFill="red" />
+    <Label fx:id="messageLabel" layoutX="43.0" layoutY="442.0" prefHeight="18.0" prefWidth="439.0" textFill="red" />
 
 </AnchorPane>
