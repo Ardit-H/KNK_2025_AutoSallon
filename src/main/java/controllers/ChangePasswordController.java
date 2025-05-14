@@ -5,6 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
+import services.LanguageManager;
 import services.PerdoruesitService;
 import services.SceneManager;
 import services.SessionManager;
@@ -16,8 +17,10 @@ public class ChangePasswordController{
     @FXML private PasswordField pwdNewPassword;
     @FXML private PasswordField pwdConfirmPassword;
     private PerdoruesitService perdoruesitService;
+    private LanguageManager languageManager;
     public ChangePasswordController(){
         this.perdoruesitService=new PerdoruesitService();
+        languageManager=LanguageManager.getInstance();
     }
 
     @FXML private void handleChangePassword() {
