@@ -16,6 +16,9 @@ module com.example.knk_2025_autosallon {
     opens models.dto.Pagesat to javafx.base;
     exports models.dto.Pagesat;
 
+    opens models.dto.Rezervimet to javafx.base;
+    exports models.dto.Rezervimet;
+
     opens  controllers to javafx.fxml;
     exports  controllers;
     opens App to javafx.fxml;

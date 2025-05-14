@@ -19,6 +19,7 @@
          <children>
             <HBox prefHeight="26.0" prefWidth="290.0">
                <children>
+                  <Label prefHeight="26.0" prefWidth="182.0" text="%Zbritja" />
                   <Label fx:id="zbritja" prefHeight="26.0" prefWidth="182.0" text="Label" />
                </children>
             </HBox>
@@ -26,16 +27,19 @@
       </HBox>
       <HBox prefHeight="41.0" prefWidth="291.0">
          <children>
+            <Label prefHeight="26.0" prefWidth="182.0" text="%CmimiFinal" />
             <Label fx:id="cmimiFinal" prefHeight="26.0" prefWidth="182.0" text="Label" />
          </children>
       </HBox>
       <HBox prefHeight="40.0" prefWidth="291.0">
          <children>
+            <Label prefHeight="26.0" prefWidth="182.0" text="%Prej" />
             <Label fx:id="dataFillimit" prefHeight="26.0" prefWidth="180.0" text="Label" />
          </children>
       </HBox>
       <HBox prefHeight="42.0" prefWidth="291.0">
          <children>
+            <Label prefHeight="26.0" prefWidth="182.0" text="%Deri" />
             <Label fx:id="dataMbarimit" prefHeight="26.0" prefWidth="183.0" text="Label" />
          </children>
       </HBox>

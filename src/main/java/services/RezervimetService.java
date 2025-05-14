@@ -4,6 +4,7 @@ import models.dto.Rezervimet.CreateRezervimetDto;
 import models.dto.Rezervimet.Rezervimet;
 import models.dto.Rezervimet.UpdateRezervimetDto;
 import repository.RezervimetRepository;
+import repository.VeturatRepository;
 
 import java.util.List;
 

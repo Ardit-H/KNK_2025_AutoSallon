@@ -12,13 +12,15 @@ import models.dto.Rezervimet.UpdateRezervimetDto;
 import services.LanguageManager;
 import services.RezervimetService;
 
+import java.time.LocalDate;
+
 public class RezervimetController {
 
     @FXML
     private TableView<Rezervimet> tabelaRezervimet;
 
     @FXML
-    private TableColumn<Rezervimet, String> colId;
+    private TableColumn<Rezervimet, Integer> colRezervimiId;
 
     @FXML
     private TableColumn<Rezervimet, String> colKlientiId;
@@ -32,7 +34,6 @@ public class RezervimetController {
     @FXML
     private TableColumn<Rezervimet, String> colStatusi;
 
-
     @FXML
     private TextField klientiIdField;
 
@@ -40,7 +41,7 @@ public class RezervimetController {
     private TextField veturaIdField;
 
     @FXML
-    private TextField dataRezervimitField;
+    private DatePicker dataRezervimitPicker;
 
     @FXML
     private TextField statusiField;
@@ -48,17 +49,17 @@ public class RezervimetController {
     @FXML
     private TextField rezervimiIdField;
 
-
     private RezervimetService rezervimetService;
     private LanguageManager languageManager;
+
     public RezervimetController(){
-        this.rezervimetService=new RezervimetService();
-        this.languageManager= LanguageManager.getInstance();
+        this.rezervimetService = new RezervimetService();
+        this.languageManager = LanguageManager.getInstance();
     }
 
     @FXML
     public void initialize(){
-        colId.setCellValueFactory(new PropertyValueFactory<>("rezervimiId"));
+        colRezervimiId.setCellValueFactory(new PropertyValueFactory<>("rezervimiId"));
         colKlientiId.setCellValueFactory(new PropertyValueFactory<>("klientiId"));
         colVeturaId.setCellValueFactory(new PropertyValueFactory<>("veturaId"));
         colDataRezervimit.setCellValueFactory(new PropertyValueFactory<>("dataRezervimit"));
@@ -71,14 +72,13 @@ public class RezervimetController {
         tabelaRezervimet.setItems(rezervimeList);
     }
 
-
     @FXML
     public void handleCreate(){
-        try{
+        try {
             CreateRezervimetDto dto = new CreateRezervimetDto(
                     Integer.parseInt(klientiIdField.getText()),
                     Integer.parseInt(veturaIdField.getText()),
-                    dataRezervimitField.getText(),
+                    dataRezervimitPicker.getValue().toString(),
                     statusiField.getText()
             );
 
@@ -89,28 +89,38 @@ public class RezervimetController {
             showAlert("Gabim gjate krijimit: " + e.getMessage());
         }
     }
+    @FXML
+    public void handleRowSelect(MouseEvent event) {
+        Rezervimet rezervimi = tabelaRezervimet.getSelectionModel().getSelectedItem();
 
+        if (rezervimi != null) {
+            rezervimiIdField.setText(String.valueOf(rezervimi.getRezervimiId()));
+            klientiIdField.setText(String.valueOf(rezervimi.getKlientiId()));
+            veturaIdField.setText(String.valueOf(rezervimi.getVeturaId()));
+            dataRezervimitPicker.setValue(LocalDate.parse(rezervimi.getDataRezervimit()));
+            statusiField.setText(rezervimi.getStatusi());
+        }
+    }
     @FXML
     public void handleUpdate(){
-        try{
+        try {
             UpdateRezervimetDto dto = new UpdateRezervimetDto();
-            dto.setRezervimiId(Integer.parseInt(rezervimiIdField.getText()));
             dto.setKlientiId(Integer.parseInt(klientiIdField.getText()));
             dto.setVeturaId(Integer.parseInt(veturaIdField.getText()));
-            dto.setDataRezervimet(dataRezervimitField.getText());
+            dto.setDataRezervimet(dataRezervimitPicker.getValue().toString());
             dto.setStatusi(statusiField.getText());
 
             rezervimetService.update(dto);
             loadRezervimet();
             clearFields();
         } catch (Exception e) {
-            showAlert("Gabim gjate perditsimit" +  e.getMessage());
+            showAlert("Gabim gjate përditësimit: " + e.getMessage());
         }
     }
 
     @FXML
     public void handleDelete(){
-        try{
+        try {
             int id = Integer.parseInt(rezervimiIdField.getText());
             rezervimetService.delete(id);
             loadRezervimet();
@@ -121,23 +131,12 @@ public class RezervimetController {
     }
 
 
-    @FXML
-    public void handleRowSelect(MouseEvent event) {
-        Rezervimet rezervimi = tabelaRezervimet.getSelectionModel().getSelectedItem();
-        if (rezervimi != null) {
-            rezervimiIdField.setText(String.valueOf(rezervimi.getRezervimiId()));
-            klientiIdField.setText(String.valueOf(rezervimi.getKlientiId()));
-            veturaIdField.setText(String.valueOf(rezervimi.getVeturaId()));
-            dataRezervimitField.setText(rezervimi.getDataRezervimit());
-            statusiField.setText(rezervimi.getStatusi());
-        }
-    }
 
     private void clearFields() {
         rezervimiIdField.clear();
         klientiIdField.clear();
         veturaIdField.clear();
-        dataRezervimitField.clear();
+        dataRezervimitPicker.setValue(null);
         statusiField.clear();
     }
 
@@ -146,4 +145,6 @@ public class RezervimetController {
         alert.setContentText(message);
         alert.show();
     }
+
+
 }

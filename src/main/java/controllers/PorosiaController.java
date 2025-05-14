@@ -40,12 +40,11 @@ public class PorosiaController {
 
 
     public void setVetura(Veturat vetura) {
-        System.out.println("➡️ setVetura() u thirr");
         this.veturaZgjedhur = vetura;
 
-        labelModeli.setText("Modeli i vetures: " + vetura.getModeli());
-        labelProdhuesi.setText("Prodhuesi i vetures: " + vetura.getProdhuesi());
-        labelViti.setText("Viti i prodhimit: " + String.valueOf(vetura.getVitiProdhimit()));
+        labelModeli.setText(vetura.getModeli());
+        labelProdhuesi.setText(vetura.getProdhuesi());
+        labelViti.setText(String.valueOf(vetura.getVitiProdhimit()));
         SessionManager.getInstance().loginUser(
                 new Perdoruesit(
                         1,
@@ -67,10 +66,7 @@ public class PorosiaController {
             Parent ofertaPane = loader.load();
 
             OfertaController ofertaController = loader.getController();
-            System.out.println(vetura);
-            System.out.println("here");
             ofertaController.setOferta(vetura);
-            System.out.println("Oferta u ngarkua në VBox.");
 
             ofertaContainer.getChildren().setAll(ofertaPane);
         } catch (IOException e) {

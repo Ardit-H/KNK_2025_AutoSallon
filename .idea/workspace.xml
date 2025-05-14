@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/UserHelpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/help_user.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i butonave ne dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PagesatDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PagesatDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/help_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/help_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
@@ -73,6 +74,7 @@
     "Application.KlientRepositoryTest.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PerdoruesitRepositoryTest.executor": "Run",
+    "Application.Porosite.executor": "Run",
     "Application.PunetoretServiceTest.executor": "Run",
     "Application.RezervimetServiceTest.executor": "Run",
     "Application.Vleresimet.executor": "Run",
@@ -80,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -105,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PerdoruesitRepositoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.PerdoruesitRepositoryTest" />
+    <configuration name="Porosite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Porosite" />
       <module name="KNK_2025_AutoSallon" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,7 +160,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PerdoruesitRepositoryTest" />
+      <item itemvalue="Application.Porosite" />
       <item itemvalue="Application.PunetoretServiceTest" />
       <item itemvalue="Application.RezervimetServiceTest" />
       <item itemvalue="Application.Vleresimet" />
@@ -167,10 +169,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Porosite" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
-        <item itemvalue="Application.PerdoruesitRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747229914623</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Shtimi i butonave ne dashboard">
+      <option name="closed" value="true" />
+      <created>1747247713554</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1747247713554</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +424,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="krijimi i folderit per vendosjen e tabelave te sql" />
     <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
@@ -439,6 +448,7 @@
     <MESSAGE value="ndryshime" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="Shtimi i butonave ne dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i butonave ne dashboard" />
   </component>
 </project>
