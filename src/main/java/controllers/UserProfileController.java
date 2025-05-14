@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.layout.AnchorPane;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
+import services.LanguageManager;
 import services.SceneManager;
 import services.SessionManager;
 import services.PerdoruesitService;
@@ -23,9 +24,14 @@ public class UserProfileController {
     @FXML private ImageView imgProfilePhoto;
     @FXML private Button buttonEdit;
     @FXML private Button buttonSave;
-
+    private LanguageManager languageManager;
     private Perdoruesit currentUser;
-    private final PerdoruesitService perdoruesitService = new PerdoruesitService();
+    private PerdoruesitService perdoruesitService;
+
+    public UserProfileController(){
+        this.perdoruesitService=new PerdoruesitService();
+        this.languageManager=LanguageManager.getInstance();
+    }
 
     @FXML
     public void initialize(){
