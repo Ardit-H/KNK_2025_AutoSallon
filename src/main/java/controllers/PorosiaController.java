@@ -14,6 +14,7 @@ import services.SessionManager;
 import utils.SceneLocator;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class PorosiaController {
 
@@ -62,6 +63,7 @@ public class PorosiaController {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.OFERTA));
+            loader.setResources(ResourceBundle.getBundle("languages.messages"));
             Parent ofertaPane = loader.load();
 
             OfertaController ofertaController = loader.getController();

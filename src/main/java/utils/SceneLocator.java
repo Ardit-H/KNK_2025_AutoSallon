@@ -6,6 +6,7 @@ public class SceneLocator {
     public static final String LOGIN = "/Views/Login.fxml";
     public static final String CHANGE_PASSWORD = "/Views/change_password.fxml";
     public static final String DASHBOARD_HELP = "/Views/help_dashboard.fxml";
+    public static final String ADMIN_HELP = "/Views/help_admin.fxml";
     public static final String ADMIN_DASHBOARD_HOME = "/Views/dashboard_home.fxml";
     public static final String USER_DASHBOARD_HOME = "/Views/user_dashboard_home.fxml";
     public static final String ADMIN_DASHBOARD = "/Views/admin_dashboard.fxml";
