@@ -17,7 +17,7 @@
    <children>
       <AnchorPane layoutX="376.0" layoutY="27.0" prefHeight="46.0" prefWidth="590.0">
          <children>
-            <Label layoutX="229.0" layoutY="14.0" prefHeight="27.0" prefWidth="162.0" text="%Menaxho pagesat">
+            <Label layoutX="229.0" layoutY="14.0" prefHeight="27.0" prefWidth="162.0" text="%MenaxhoPagesat">
                <font>
                   <Font size="18.0" />
                </font>
@@ -30,26 +30,26 @@
                <children>
                   <HBox alignment="CENTER" layoutX="-1.0" layoutY="57.0" prefHeight="79.0" prefWidth="638.0" spacing="15.0">
                      <children>
-                        <Label fx:id="shumaPagese" prefHeight="18.0" prefWidth="60.0" text="%Shuma:" />
-                        <TextField fx:id="txtShumaPageses" prefHeight="26.0" prefWidth="160.0" promptText="%Shuma e pageses" />
+                        <Label fx:id="shumaPagese" prefHeight="18.0" prefWidth="60.0" text="%Shuma" />
+                        <TextField fx:id="txtShumaPageses" prefHeight="26.0" prefWidth="160.0" promptText="%Shuma_e_pageses" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutY="111.0" prefHeight="79.0" prefWidth="638.0" spacing="10.0">
                      <children>
-                        <Label fx:id="MetodaPageses" prefHeight="23.0" prefWidth="66.0" text="%Pagesa: " />
-                        <ComboBox fx:id="comboMetodaPageses" prefHeight="26.0" prefWidth="162.0" promptText="%Zgjidh Metoden" />
+                        <Label fx:id="MetodaPageses" prefHeight="23.0" prefWidth="66.0" text="%Pagesa" />
+                        <ComboBox fx:id="comboMetodaPageses" prefHeight="26.0" prefWidth="162.0" promptText="%ZgjidhMetoden" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="-1.0" layoutY="184.0" prefHeight="79.0" prefWidth="639.0" spacing="10.0">
                      <children>
-                        <Label fx:id="dataPageses" text="%Data Pagese: " />
-                        <DatePicker fx:id="dataPageses" prefHeight="26.0" prefWidth="159.0" promptText="%Data Pageses" />
+                        <Label fx:id="DataPageses" text="%DataPageses" />
+                        <DatePicker fx:id="dataPageses" prefHeight="26.0" prefWidth="159.0" promptText="%DataPageses" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="79.0" prefWidth="639.0" spacing="50.0">
                      <children>
-                        <Label fx:id="porosiaId" prefHeight="18.0" prefWidth="70.0" text="%Porosia ID:" />
-                        <TextField fx:id="txtPorosia" prefHeight="26.0" prefWidth="115.0" promptText="%Porosia ID" />
+                        <Label fx:id="porosiaId" prefHeight="18.0" prefWidth="70.0" text="%PorosiaID" />
+                        <TextField fx:id="txtPorosia" prefHeight="26.0" prefWidth="115.0" promptText="%PorosiaID" />
                      </children>
                   </HBox>
                </children>
@@ -63,9 +63,9 @@
                     <columns>
                       <TableColumn fx:id="idColumn" prefWidth="62.399993896484375" text="ID" />
                       <TableColumn fx:id="porosiaIdColumn" prefWidth="81.5999755859375" text="%PorosiaID" />
-                        <TableColumn fx:id="metodaPagesesColumn" prefWidth="125.5999755859375" text="%Metoda Pagese" />
+                        <TableColumn fx:id="metodaPagesesColumn" prefWidth="125.5999755859375" text="%MetodaPageses" />
                         <TableColumn fx:id="shumaColumn" prefWidth="105.5999755859375" text="%Shuma" />
-                        <TableColumn fx:id="dataPagesesColumn" prefWidth="149.5999755859375" text="%Data Pageses" />
+                        <TableColumn fx:id="dataPagesesColumn" prefWidth="149.5999755859375" text="%DataPageses" />
                     </columns>
                   </TableView>
                </children>

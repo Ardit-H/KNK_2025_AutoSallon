@@ -15,7 +15,7 @@
    <children>
       <AnchorPane layoutX="5.0" layoutY="10.0" prefHeight="58.0" prefWidth="1304.0">
          <children>
-            <Label layoutX="574.0" layoutY="14.0" prefHeight="30.0" prefWidth="185.0" text="%Menaxho Ofertat">
+            <Label layoutX="574.0" layoutY="14.0" prefHeight="30.0" prefWidth="185.0" text="%MenaxhoOfertat">
                <font>
                   <Font size="20.0" />
                </font>
@@ -28,20 +28,20 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="106.0" prefWidth="678.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="59.0" text="%VeturaID:" />
+                        <Label prefHeight="18.0" prefWidth="59.0" text="%VeturaID" />
                         <TextField fx:id="txtVeturaId" prefHeight="26.0" prefWidth="106.0" promptText="%VeturaID" />
-                        <Label prefHeight="27.0" prefWidth="53.0" text="%Zbritja:" />
+                        <Label prefHeight="27.0" prefWidth="53.0" text="%Zbritja" />
                         <TextField fx:id="txtZbritja" prefHeight="26.0" prefWidth="106.0" promptText="%Zbritja" />
-                        <Label prefHeight="26.0" prefWidth="76.0" text="%Data Fillimit:" />
-                        <DatePicker fx:id="dataFillimit" prefHeight="26.0" prefWidth="138.0" promptText="%Data Fillimit" />
+                        <Label prefHeight="26.0" prefWidth="76.0" text="%DataFillimit" />
+                        <DatePicker fx:id="dataFillimit" prefHeight="26.0" prefWidth="138.0" promptText="%DataFillimit" />
                      </children>
                   </HBox>
                   <HBox fx:id="" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="80.0" text="% Cmimi Final:" />
-                        <TextField fx:id="txtCmimiFinal" prefHeight="26.0" prefWidth="106.0" promptText="%Cmimi final" />
-                        <Label prefHeight="18.0" prefWidth="90.0" text="% Data Mbarimit:" />
-                        <DatePicker fx:id="dataMbarimit" prefHeight="26.0" prefWidth="138.0" promptText="%Data Mbarimit" />
+                        <Label prefHeight="18.0" prefWidth="80.0" text="%CmimiFinal" />
+                        <TextField fx:id="txtCmimiFinal" prefHeight="26.0" prefWidth="106.0" promptText="%CmimiFinal" />
+                        <Label prefHeight="18.0" prefWidth="97.0" text="%DataMbarimit" />
+                        <DatePicker fx:id="dataMbarimit" prefHeight="26.0" prefWidth="138.0" promptText="%DataMbarimit" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="210.0" prefWidth="678.0">
@@ -51,9 +51,9 @@
                             <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
                             <TableColumn fx:id="veturaIdColumn" prefWidth="75.0" text="%VeturaID" />
                               <TableColumn fx:id="zbritjaIdColumn" prefWidth="75.0" text="%Zbritja" />
-                              <TableColumn fx:id="cmimiFinalColumn" prefWidth="91.199951171875" text="%Cmimi Final" />
-                              <TableColumn fx:id="dataFillimitColumn" prefWidth="99.199951171875" text="%Data Fillimit" />
-                              <TableColumn fx:id="dataMbarimitColumn" prefWidth="102.39999389648438" text="%Data Mbarimit" />
+                              <TableColumn fx:id="cmimiFinalColumn" prefWidth="91.199951171875" text="%CmimiFinal" />
+                              <TableColumn fx:id="dataFillimitColumn" prefWidth="99.199951171875" text="%DataFillimit" />
+                              <TableColumn fx:id="dataMbarimitColumn" prefWidth="102.39999389648438" text="%DataMbarimit" />
                           </columns>
                         </TableView>
                      </children>
