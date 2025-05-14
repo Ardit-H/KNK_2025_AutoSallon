@@ -142,4 +142,11 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
         return null;
     }
+    public int getTotalPerdoruesit() throws SQLException {
+        String query = "SELECT COUNT(*) FROM perdoruesi";
+        try (PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            return rs.next() ? rs.getInt(1) : 0;
+        }
+    }
 }

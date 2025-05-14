@@ -1,11 +1,10 @@
 package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.SpinnerValueFactory;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import models.dto.Klientet.Klientet;
 import models.dto.KomentetDto;
 import models.dto.Vleresimet.Vleresimet;
 import services.LanguageManager;
@@ -14,6 +13,7 @@ import services.VleresimetService;
 import java.util.List;
 
 public class UserVleresimetController {
+    @FXML private TextField searchField;
     @FXML private TableView<Vleresimet> VleresimetTableView;
     @FXML private TableColumn<Vleresimet, String> colPerdoruesi;
     @FXML private TableColumn<Vleresimet, String> colVetura;
@@ -29,6 +29,14 @@ public class UserVleresimetController {
     }
     @FXML
     public void initialize() {
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null || newValue.trim().isEmpty()) {
+                VleresimetTableView.setItems(FXCollections.observableArrayList(vleresimetService.getVleresimetWithJoins()));
+            } else {
+                List<Vleresimet> filtruar = vleresimetService.searchByVeturaOrPerdoruesOrDate(newValue);
+                VleresimetTableView.setItems(FXCollections.observableArrayList(filtruar));
+            }
+        });
         colPerdoruesi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPerdoruesiEmriPlote())));
         colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVeturaEmri())));
         colVleresimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVleresimi())));
