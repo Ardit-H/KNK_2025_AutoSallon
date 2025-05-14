@@ -13,6 +13,8 @@ module com.example.knk_2025_autosallon {
     exports models.dto.Porosite;
     opens models.dto.Ofertat to javafx.base;
     exports models.dto.Ofertat;
+    opens models.dto.Pagesat to javafx.base;
+    exports models.dto.Pagesat;
 
     opens models.dto.Rezervimet to javafx.base;
     exports models.dto.Rezervimet;

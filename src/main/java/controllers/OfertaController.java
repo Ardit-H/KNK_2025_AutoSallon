@@ -41,15 +41,14 @@ public class OfertaController {
 
     public void setOferta(Veturat vetura) {
         this.veturaZgjedhur = vetura;
-        System.out.println("setOferta thirrur me vetura: " + vetura.getModeli());
         try {
             this.ofertaZgjedhur = ofertaService.getOfertaByVeturaId(vetura.getId());
 
             if (ofertaZgjedhur != null) {
-                zbritja.setText("Zbritja: " + ofertaZgjedhur.getZbritja() + "€");
-                cmimiFinal.setText("Cmimi Final: " + ofertaZgjedhur.getCmimiFinal());
-                dataFillimit.setText("Prej: " + ofertaZgjedhur.getDataFillimit());
-                dataMbarimit.setText("Deri më: " + ofertaZgjedhur.getDataMbarimit());
+                zbritja.setText(ofertaZgjedhur.getZbritja() + "€");
+                cmimiFinal.setText("" + ofertaZgjedhur.getCmimiFinal());
+                dataFillimit.setText(ofertaZgjedhur.getDataFillimit());
+                dataMbarimit.setText(ofertaZgjedhur.getDataMbarimit());
             }
         } catch (IllegalArgumentException ex) {
             setOfertaAsNA();

@@ -3,33 +3,28 @@ package controllers;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.event.ActionEvent;
 import services.LanguageManager;
-import services.SceneManager;
 import models.dto.TestDrives.CreateTestDrivesDto;
 import models.dto.TestDrives.UpdateTestDrivesDto;
 import models.dto.TestDrives.TestDrives;
 import services.TestDrivesService;
 
 import java.util.List;
-import java.util.Locale;
 
 public class TestDrivesController {
+    @FXML public TextField kid;
+    @FXML public TextField vid;
+    @FXML public TextField statusi;
+    @FXML public TextField searchField;
     @FXML private TextField duration;
     @FXML private TextField feedback;
     @FXML private TextField location;
-    @FXML private TextField statusi;
-    @FXML private TextField kid;
-    @FXML private TextField vid;
 
     @FXML private Label messageLabel;
     @FXML public Button btn_shto;
     @FXML public Button btn_perditeso;
     @FXML public Button btn_fshij;
-    @FXML public Button btn_shqip;
-    @FXML public Button btn_anglisht;
-
 
     @FXML private TableView<TestDrives> testDrivesTableView;
     @FXML private TableColumn<TestDrives, String> colTestDriveKlienti;
@@ -38,12 +33,11 @@ public class TestDrivesController {
     @FXML private TableColumn<TestDrives, String> colTestDriveFeedback;
     @FXML private TableColumn<TestDrives, String> colTestDriveDuration;
     @FXML private TableColumn<TestDrives, String> colTestDriveLocation;
-    private TestDrivesService testDrivesService;
-    private LanguageManager languageManager;
+   @FXML private final TestDrivesService testDrivesService;
 
     public TestDrivesController(){
         this.testDrivesService = new TestDrivesService();
-        this.languageManager=LanguageManager.getInstance();
+        LanguageManager languageManager = LanguageManager.getInstance();
     }
 
     @FXML
@@ -65,21 +59,32 @@ public class TestDrivesController {
     }
 
     @FXML
-    private void handleCreateTestDrive( ActionEvent event) throws Exception {
-        int durationInt = Integer.parseInt(duration.getText().trim());
+    private void handleCreateTestDrive() {
+        try {
+            CreateTestDrivesDto dto = new CreateTestDrivesDto(
+                    Integer.parseInt(kid.getText().trim()),
+                    Integer.parseInt(vid.getText().trim()),
+                    statusi.getText().trim(),
+                    feedback.getText().trim(),
+                    Integer.parseInt(duration.getText().trim()),
+                    location.getText().trim()
+            );
 
-        CreateTestDrivesDto dto = new CreateTestDrivesDto(
-                "New", feedback.getText().trim(), durationInt, location.getText().trim()
-        );
-        testDrivesService.create(dto);
-        messageLabel.setText("Test Drive u shtua me sukses.");
-        loadTestDrives();
-        clearForm();
+            testDrivesService.create(dto);
+            messageLabel.setText("Test Drive u shtua me sukses.");
+
+            loadTestDrives();
+            clearForm();
+
+        } catch (NumberFormatException e) {
+            messageLabel.setText("Gabim në formatimin e numrave. Ju lutem, kontrolloni fushat numerike.");
+        } catch (Exception e) {
+            messageLabel.setText("Gabim: " + e.getMessage());
+        }
     }
 
-
     @FXML
-    private void handleUpdateTestDrive(ActionEvent event) {
+    private void handleUpdateTestDrive() {
         try {
             int selectedId = getSelectedTestDriveId();
             if (selectedId == -1) return;
@@ -109,7 +114,7 @@ public class TestDrivesController {
     }
 
     @FXML
-    private void handleDeleteTestDrive(ActionEvent event) {
+    private void handleDeleteTestDrive() {
         try {
             int selectedId = getSelectedTestDriveId();
             if (selectedId == -1) return;
@@ -135,20 +140,9 @@ public class TestDrivesController {
         feedback.clear();
         location.clear();
         duration.clear();
-    }
-
-    @FXML
-    private void handleLanguageEnglishClick()throws Exception{
-        loadLanguage(Locale.ENGLISH);
-    }
-    @FXML
-    private void handleLanguageAlbanianClick()throws Exception{
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception{
-        languageManager.setLocale(locale);
-        SceneManager.reload();
+        kid.clear();
+        vid.clear();
+        statusi.clear();
     }
 
 }

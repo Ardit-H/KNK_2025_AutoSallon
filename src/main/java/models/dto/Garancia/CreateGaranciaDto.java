@@ -7,7 +7,9 @@ public class CreateGaranciaDto {
     private String dataFillimit;
     private String dataMbarimit;
 
-    public CreateGaranciaDto(String llojiGarancise, String dataFillimit, String dataMbarimit, int kid, int vid) {
+    public CreateGaranciaDto(int vid, int kid, String llojiGarancise, String dataFillimit, String dataMbarimit) {
+        this.vid = vid;
+        this.kid = kid;
         this.llojiGarancise = llojiGarancise;
         this.dataFillimit = dataFillimit;
         this.dataMbarimit = dataMbarimit;

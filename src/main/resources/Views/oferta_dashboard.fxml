@@ -13,56 +13,56 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OfertaDashboardController">
    <children>
-      <AnchorPane layoutX="5.0" layoutY="10.0" prefHeight="58.0" prefWidth="1304.0">
+      <AnchorPane layoutX="-2.0" prefHeight="50.0" prefWidth="1336.0" style="-fx-background-color: lightblue;">
          <children>
-            <Label layoutX="574.0" layoutY="14.0" prefHeight="30.0" prefWidth="156.0" text="Menaxho Ofertat">
+            <Label layoutX="574.0" layoutY="14.0" prefHeight="30.0" prefWidth="185.0" text="%MenaxhoOfertat">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Italic" size="22.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="8.0" layoutY="89.0" prefHeight="425.0" prefWidth="678.0">
+      <AnchorPane layoutX="10.0" layoutY="89.0" prefHeight="425.0" prefWidth="1312.0">
          <children>
             <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="710.0" prefWidth="1315.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="106.0" prefWidth="678.0" spacing="10.0">
+                  <HBox alignment="CENTER" prefHeight="106.0" prefWidth="786.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="59.0" text="VeturaID:" />
-                        <TextField fx:id="txtVeturaId" prefHeight="26.0" prefWidth="106.0" promptText="VeturaID" />
-                        <Label prefHeight="27.0" prefWidth="44.0" text="Zbritja:" />
-                        <TextField fx:id="txtZbritja" prefHeight="26.0" prefWidth="106.0" promptText="Zbritja" />
-                        <Label prefHeight="26.0" prefWidth="76.0" text="Data Fillimit:" />
-                        <DatePicker fx:id="dataFillimit" prefHeight="26.0" prefWidth="138.0" promptText="Data Fillimit" />
+                        <Label prefHeight="18.0" prefWidth="59.0" text="%VeturaID" />
+                        <TextField fx:id="txtVeturaId" prefHeight="26.0" prefWidth="106.0" promptText="%VeturaID" />
+                        <Label prefHeight="27.0" prefWidth="53.0" text="%Zbritja" />
+                        <TextField fx:id="txtZbritja" prefHeight="26.0" prefWidth="106.0" promptText="%Zbritja" />
+                        <Label prefHeight="26.0" prefWidth="76.0" text="%DataFillimit" />
+                        <DatePicker fx:id="dataFillimit" prefHeight="26.0" prefWidth="138.0" promptText="%DataFillimit" />
                      </children>
                   </HBox>
-                  <HBox fx:id="" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox fx:id="" alignment="CENTER" prefHeight="100.0" prefWidth="1318.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="80.0" text=" Cmimi Final:" />
-                        <TextField fx:id="txtCmimiFinal" prefHeight="26.0" prefWidth="106.0" promptText="Cmimi final" />
-                        <Label prefHeight="18.0" prefWidth="90.0" text=" Data Mbarimit:" />
-                        <DatePicker fx:id="dataMbarimit" prefHeight="26.0" prefWidth="138.0" promptText="Data Mbarimit" />
+                        <Label prefHeight="18.0" prefWidth="80.0" text="%CmimiFinal" />
+                        <TextField fx:id="txtCmimiFinal" prefHeight="26.0" prefWidth="106.0" promptText="%CmimiFinal" />
+                        <Label prefHeight="18.0" prefWidth="97.0" text="%DataMbarimit" />
+                        <DatePicker fx:id="dataMbarimit" prefHeight="26.0" prefWidth="138.0" promptText="%DataMbarimit" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="210.0" prefWidth="678.0">
                      <children>
-                        <TableView fx:id="ofertaTable" prefHeight="224.0" prefWidth="478.0">
+                        <TableView fx:id="ofertaTable" prefHeight="210.0" prefWidth="518.0">
                           <columns>
                             <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-                            <TableColumn fx:id="veturaIdColumn" prefWidth="75.0" text="VeturaID" />
-                              <TableColumn fx:id="zbritjaIdColumn" prefWidth="75.0" text="Zbritja" />
-                              <TableColumn fx:id="cmimiFinalColumn" prefWidth="75.0" text="Cmimi Final" />
-                              <TableColumn fx:id="dataFillimitColumn" prefWidth="80.800048828125" text="Data Fillimit" />
-                              <TableColumn fx:id="dataMbarimitColumn" prefWidth="95.19992065429688" text="Data Mbarimit" />
+                            <TableColumn fx:id="veturaIdColumn" prefWidth="75.0" text="%VeturaID" />
+                              <TableColumn fx:id="zbritjaIdColumn" prefWidth="75.0" text="%Zbritja" />
+                              <TableColumn fx:id="cmimiFinalColumn" prefWidth="91.199951171875" text="%CmimiFinal" />
+                              <TableColumn fx:id="dataFillimitColumn" prefWidth="99.199951171875" text="%DataFillimit" />
+                              <TableColumn fx:id="dataMbarimitColumn" prefWidth="102.39999389648438" text="%DataMbarimit" />
                           </columns>
                         </TableView>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="112.0" prefWidth="1315.0" spacing="10.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#handleCreate" prefHeight="26.0" prefWidth="49.0" text="Krijo" />
-                        <Button mnemonicParsing="false" onAction="#handleUpdate" text="Perditso" />
-                        <Button mnemonicParsing="false" onAction="#handleDelete" text="Fshije" />
+                        <Button mnemonicParsing="false" onAction="#handleCreate" prefHeight="26.0" prefWidth="58.0" text="%Krijo" />
+                        <Button mnemonicParsing="false" onAction="#handleUpdate" text="%Perditso" />
+                        <Button mnemonicParsing="false" onAction="#handleDelete" text="%Fshije" />
                      </children>
                   </HBox>
                </children>

@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PorosiaController">
    <children>
-      <Label layoutX="568.0" layoutY="98.0" prefHeight="27.0" prefWidth="172.0" text="Bëj Porosi për Veturë">
+      <Label layoutX="533.0" layoutY="98.0" prefHeight="27.0" prefWidth="262.0" text="%Bej_Porosi_per_Veture">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -21,37 +21,40 @@
          <children>
             <VBox prefHeight="328.0" prefWidth="269.0" spacing="10.0" style="-fx-padding: 10; -fx-spacing: 10;">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Porosite:" wrappingWidth="271.73673820495605">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%Porosite" wrappingWidth="271.73673820495605">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Text>
                   <HBox prefHeight="40.0" prefWidth="291.0">
                      <children>
-                        <Label fx:id="labelModeli" prefHeight="27.0" prefWidth="190.0" text="Label" />
+                        <Label prefHeight="27.0" prefWidth="145.0" text="%ModeliVetures" />
+                        <Label fx:id="labelModeli" prefHeight="27.0" prefWidth="92.0" text="Label" />
                      </children>
                   </HBox>
                   <HBox prefHeight="40.0" prefWidth="291.0">
                      <children>
-                        <Label fx:id="labelProdhuesi" prefHeight="22.0" prefWidth="187.0" text="Label" />
+                        <Label prefHeight="27.0" prefWidth="176.0" text="%ProdhuesiVetures" />
+                        <Label fx:id="labelProdhuesi" prefHeight="25.0" prefWidth="167.0" text="Label" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="31.0" prefWidth="272.0">
+                  <HBox prefHeight="31.0" prefWidth="272.0" spacing="15.0">
                      <children>
+                        <Label prefHeight="18.0" prefWidth="197.0" text="%VitiProdhimit" />
                         <Label fx:id="labelViti" prefHeight="18.0" prefWidth="206.0" text="Label" />
                      </children>
                   </HBox>
                   <BorderPane prefHeight="24.0" prefWidth="272.0">
                      <left>
-                        <Label fx:id="cmimiOfruar" prefHeight="18.0" prefWidth="87.0" text="Cmimi i ofruar:" BorderPane.alignment="CENTER" />
+                        <Label fx:id="cmimiOfruar" prefHeight="18.0" prefWidth="98.0" text="%Cmimi_i_ofruar" BorderPane.alignment="CENTER" />
                      </left>
                      <right>
-                        <TextField fx:id="txtCmimiOfruar" prefHeight="38.0" prefWidth="184.0" BorderPane.alignment="CENTER" />
+                        <TextField fx:id="txtCmimiOfruar" prefHeight="38.0" prefWidth="184.0" promptText="Cmimi_i_ofruar" BorderPane.alignment="CENTER" />
                      </right>
                   </BorderPane>
                   <HBox alignment="CENTER" prefHeight="71.0" prefWidth="272.0">
                      <children>
-                        <Button fx:id="dergoPorosineButoni" mnemonicParsing="false" onAction="#handleDergo" prefHeight="30.0" prefWidth="107.0" text="Dergo" />
+                        <Button fx:id="dergoPorosineButoni" mnemonicParsing="false" onAction="#handleDergo" prefHeight="30.0" prefWidth="107.0" text="%Dergo" />
                      </children>
                      <VBox.margin>
                         <Insets />
