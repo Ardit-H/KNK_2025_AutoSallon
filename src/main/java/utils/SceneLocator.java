@@ -23,4 +23,9 @@ public class SceneLocator {
     public static final String SHITJET="/Views/shitjet.fxml";
     public static final String LOKACIONET="/Views/lokacionet.fxml";
     public static final String STATISTIKAT="/Views/statistikat.fxml";
+    public static final String POROSIA="/Views/porosia.fxml";
+    public static final String OFERTA="/Views/oferta.fxml";
+    public static final String POROSIA_DASHBOARD="/Views/porosia_dashboard.fxml";
+    public static final String OFERTA_DASHBOARD="/Views/oferta_dashboard.fxml";
+    public static final String PAGESA_DASHBOARD="/Views/pagesa_dashboard.fxml";
 }
