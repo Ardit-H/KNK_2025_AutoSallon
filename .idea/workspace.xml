@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i funksioneve showError dhe showSuccess">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/PagesatDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PagesaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PagesaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +182,7 @@
       <workItem from="1747202867316" duration="25000" />
       <workItem from="1747204281952" duration="1389000" />
       <workItem from="1747221151950" duration="2079000" />
-      <workItem from="1747226113724" duration="1951000" />
+      <workItem from="1747226113724" duration="3288000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -384,7 +368,39 @@
       <option name="project" value="LOCAL" />
       <updated>1747069480972</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Shtimi i funksioneve per ngarkimin e faqeve kur shtypen butonat">
+      <option name="closed" value="true" />
+      <created>1747229301921</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747229301921</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Ndryshime ne dizajnin dhe emrimin e elementeve ne FXML">
+      <option name="closed" value="true" />
+      <created>1747229342558</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747229342558</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Shtimi i PagesaDashboardController">
+      <option name="closed" value="true" />
+      <created>1747229359518</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747229359518</updated>
+    </task>
+    <task id="LOCAL-00027" summary="workspace">
+      <option name="closed" value="true" />
+      <created>1747229389561</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1747229389561</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +418,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init commit" />
     <MESSAGE value="krijimi i folderit per vendosjen e tabelave te sql" />
     <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
@@ -424,6 +439,10 @@
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Perkthimi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Perkthimi" />
+    <MESSAGE value="Shtimi i funksioneve per ngarkimin e faqeve kur shtypen butonat" />
+    <MESSAGE value="Ndryshime ne dizajnin dhe emrimin e elementeve ne FXML" />
+    <MESSAGE value="Shtimi i PagesaDashboardController" />
+    <MESSAGE value="workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
   </component>
 </project>
