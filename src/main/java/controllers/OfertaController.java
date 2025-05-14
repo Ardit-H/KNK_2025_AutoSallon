@@ -33,10 +33,10 @@ public class OfertaController {
 
 
     private void setOfertaAsNA() {
-        zbritja.setText("Zbritja: N/A");
-        cmimiFinal.setText("Cmimi Final: N/A");
-        dataFillimit.setText("Prej: N/A");
-        dataMbarimit.setText("Deri më: N/A");
+        zbritja.setText("N/A");
+        cmimiFinal.setText("N/A");
+        dataFillimit.setText("N/A");
+        dataMbarimit.setText("N/A");
     }
 
     public void setOferta(Veturat vetura) {
