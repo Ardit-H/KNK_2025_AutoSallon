@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controllers.VeturatController"
-            prefHeight="800.0" prefWidth="800.0">
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Veturat_UserController">
 
+    <HBox layoutX="31.0" layoutY="25.0" prefHeight="72.0" prefWidth="1281.0" style="-fx-background-color: #335778;">
+        <children>
+            <ImageView fitHeight="65.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../Images/sport-car.png" />
+                </image>
+            </ImageView>
+            <Text fill="#f1f1f4" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #F0E263;" text="%Veturat" textAlignment="CENTER" wrappingWidth="247.5582275390625">
+                <font>
+                    <Font name="Bernard MT Condensed" size="52.0" />
+                </font>
+            </Text>
+        </children>
+    </HBox>
+    <ImageView fitHeight="170.0" fitWidth="266.0" layoutX="56.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Images/mercedes.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="150.0" fitWidth="275.0" layoutX="711.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Images/bmw.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="148.0" fitWidth="287.0" layoutX="382.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Images/mcL.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="148.0" fitWidth="266.0" layoutX="1013.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../Images/audi.jpg" />
+        </image>
+    </ImageView>
+    <TextField fx:id="searchField" layoutX="551.0" layoutY="174.0" prefHeight="27.0" prefWidth="266.0" promptText="%Kërko_sipas_prodhuesit" />
+    <Label layoutX="473.0" layoutY="178.0" prefHeight="20.0" prefWidth="72.0" text="%Kërko">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+    </Label>
 
+     <TableView id="veturatTableView" fx:id="veturatTableView" layoutX="56.0" layoutY="393.0" prefHeight="311.0" prefWidth="1189.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
+         <columns>
+             <TableColumn id="colProdhuesi" fx:id="colProdhuesi" prefWidth="134.40003204345703" text="%Prodhuesi" />
+             <TableColumn id="colModeli" fx:id="colModeli" prefWidth="128.79998779296875" text="%Modeli" />
+             <TableColumn id="colVitiProdhimit" fx:id="colVitiProdhimit" prefWidth="134.39999389648438" text="%Viti_i_prodhimit" />
+             <TableColumn id="colNgjyra" fx:id="colNgjyra" prefWidth="137.5999755859375" text="%Ngjyra" />
+             <TableColumn id="colCmimi" fx:id="colCmimi" minWidth="0.0" prefWidth="123.20001220703125" text="%Çmimi" />
+             <TableColumn id="colGjendja" fx:id="colGjendja" minWidth="7.199951171875" prefWidth="124.79998779296875" text="%Gjendja" />
+             <TableColumn id="colKilometrazha" fx:id="colKilometrazha" prefWidth="135.20001220703125" text="%Kilometrazha" />
+             <TableColumn id="colTipiKarburant" fx:id="colTipiKarburant" minWidth="7.20001220703125" prefWidth="175.19989013671875" text="%Tipi_i_karburantit" />
+         </columns>
+     </TableView>
+   <Text fill="#021959" layoutX="339.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Veturat_nga_brendet_me_te_ndryshme_i_gjeni_vetem_ne_Premium_Cars" wrappingWidth="665.3367309570312">
+      <font>
+         <Font name="System Bold Italic" size="19.0" />
+      </font>
+   </Text>
+   <Label id="messageLabel" fx:id="messageLabel" layoutX="103.0" layoutY="116.0" prefHeight="18.0" prefWidth="202.0" />
 
 </AnchorPane>
