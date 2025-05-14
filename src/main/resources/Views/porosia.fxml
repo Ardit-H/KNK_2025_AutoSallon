@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PorosiaController">
    <children>
-      <Label layoutX="568.0" layoutY="98.0" prefHeight="27.0" prefWidth="190.0" text="%Bëj Porosi për Veturë">
+      <Label layoutX="568.0" layoutY="98.0" prefHeight="27.0" prefWidth="190.0" text="%Bej_Porosi_per_Veture">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -21,7 +21,7 @@
          <children>
             <VBox prefHeight="328.0" prefWidth="269.0" spacing="10.0" style="-fx-padding: 10; -fx-spacing: 10;">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%Porosite:" wrappingWidth="271.73673820495605">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%Porosite" wrappingWidth="271.73673820495605">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -43,10 +43,10 @@
                   </HBox>
                   <BorderPane prefHeight="24.0" prefWidth="272.0">
                      <left>
-                        <Label fx:id="cmimiOfruar" prefHeight="18.0" prefWidth="98.0" text="%Cmimi i ofruar:" BorderPane.alignment="CENTER" />
+                        <Label fx:id="cmimiOfruar" prefHeight="18.0" prefWidth="98.0" text="%Cmimi_i_ofruar" BorderPane.alignment="CENTER" />
                      </left>
                      <right>
-                        <TextField fx:id="txtCmimiOfruar" prefHeight="38.0" prefWidth="184.0" BorderPane.alignment="CENTER" />
+                        <TextField fx:id="txtCmimiOfruar" prefHeight="38.0" prefWidth="184.0" promptText="Cmimi_i_ofruar" BorderPane.alignment="CENTER" />
                      </right>
                   </BorderPane>
                   <HBox alignment="CENTER" prefHeight="71.0" prefWidth="272.0">
