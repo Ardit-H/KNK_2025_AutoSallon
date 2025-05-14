@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PorosiaController">
    <children>
-      <Label layoutX="568.0" layoutY="98.0" prefHeight="27.0" prefWidth="190.0" text="%Bej_Porosi_per_Veture">
+      <Label layoutX="533.0" layoutY="98.0" prefHeight="27.0" prefWidth="262.0" text="%Bej_Porosi_per_Veture">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -28,16 +28,19 @@
                   </Text>
                   <HBox prefHeight="40.0" prefWidth="291.0">
                      <children>
-                        <Label fx:id="labelModeli" prefHeight="27.0" prefWidth="190.0" text="Label" />
+                        <Label prefHeight="27.0" prefWidth="145.0" text="%ModeliVetures" />
+                        <Label fx:id="labelModeli" prefHeight="27.0" prefWidth="92.0" text="Label" />
                      </children>
                   </HBox>
                   <HBox prefHeight="40.0" prefWidth="291.0">
                      <children>
-                        <Label fx:id="labelProdhuesi" prefHeight="22.0" prefWidth="187.0" text="Label" />
+                        <Label prefHeight="27.0" prefWidth="176.0" text="%ProdhuesiVetures" />
+                        <Label fx:id="labelProdhuesi" prefHeight="25.0" prefWidth="167.0" text="Label" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="31.0" prefWidth="272.0">
+                  <HBox prefHeight="31.0" prefWidth="272.0" spacing="15.0">
                      <children>
+                        <Label prefHeight="18.0" prefWidth="197.0" text="%VitiProdhimit" />
                         <Label fx:id="labelViti" prefHeight="18.0" prefWidth="206.0" text="Label" />
                      </children>
                   </HBox>
