@@ -76,6 +76,8 @@ public class OfertaController {
 
             porosiaService.create(dto);
 
+            aktivizoButoni.setDisable(true);
+
             Alert success = new Alert(Alert.AlertType.INFORMATION);
             success.setTitle("Sukses");
             success.setHeaderText(null);

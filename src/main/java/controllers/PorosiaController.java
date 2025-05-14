@@ -29,7 +29,7 @@ public class PorosiaController {
     private VBox ofertaContainer;
 
     @FXML
-    private Button handleDergo;
+    private Button dergoButoni;
     @FXML
     private TextField txtCmimiOfruar;
 
@@ -96,6 +96,8 @@ public class PorosiaController {
             porosiaService.create(dto);
 
             showSuccess("Porosia u dërgua me sukses!");
+            dergoButoni.setDisable(true);
+
             clearForm();
 
         } catch (Exception e) {

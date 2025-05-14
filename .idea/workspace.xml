@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i dizajnit ne faqet Porosite, Ofertat dhe Pagesat">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshim ne dizajne">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,7 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Porosite">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="KNK_2025_AutoSallon" />
@@ -160,8 +161,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Porosite" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Porosite" />
         <item itemvalue="Application.Vleresimet" />
         <item itemvalue="Application.PunetoretServiceTest" />
         <item itemvalue="Application.RezervimetServiceTest" />
@@ -409,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747256004261</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Ndryshim ne dizajne">
+      <option name="closed" value="true" />
+      <created>1747260316875</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1747260316875</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,7 +433,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
     <MESSAGE value="Krijimi i klases User" />
@@ -449,6 +457,7 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="Shtimi i dizajnit ne faqet Porosite, Ofertat dhe Pagesat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i dizajnit ne faqet Porosite, Ofertat dhe Pagesat" />
+    <MESSAGE value="Ndryshim ne dizajne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshim ne dizajne" />
   </component>
 </project>
