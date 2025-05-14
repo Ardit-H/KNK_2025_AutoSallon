@@ -16,7 +16,7 @@
    <children>
       <AnchorPane layoutX="267.0" layoutY="14.0" prefHeight="48.0" prefWidth="1059.0">
          <children>
-            <Label layoutX="298.0" layoutY="9.0" prefHeight="30.0" prefWidth="178.0" text="Menaxho Porosite">
+            <Label layoutX="298.0" layoutY="9.0" prefHeight="30.0" prefWidth="183.0" text="%MenaxhoPorosite">
                <font>
                   <Font size="20.0" />
                </font>
@@ -29,14 +29,14 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="70.0" prefWidth="490.0" spacing="10.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="109.0" text="Cmimi Perditsuar:" />
-                        <TextField fx:id="txtCmimiOfruar" promptText="Shtyp cmimin" />
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="117.0" text="%Cmimi_i_Perditsuar" />
+                        <TextField fx:id="txtCmimiOfruar" promptText="%ShtypCmimin" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="78.0" prefWidth="506.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="110.0" text="Statusi i Perditesuar:" />
-                        <ComboBox fx:id="comboStatusi" prefHeight="26.0" prefWidth="147.0" promptText="Zgjidh Statusin" />
+                        <Label prefHeight="18.0" prefWidth="117.0" text="%Statusi_i_Perditesuar" />
+                        <ComboBox fx:id="comboStatusi" prefHeight="26.0" prefWidth="147.0" promptText="%ZgjidhStatusin" />
                      </children>
                   </HBox>
                   <HBox prefHeight="219.0" prefWidth="506.0">
@@ -44,10 +44,10 @@
                         <TableView fx:id="porosiaTable" prefHeight="218.0" prefWidth="507.0">
                           <columns>
                             <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-                            <TableColumn fx:id="kidColumn" prefWidth="75.0" text="KlientiID" />
-                              <TableColumn fx:id="veturaIdColumn" prefWidth="100.00006103515625" text="VeturaID" />
-                              <TableColumn fx:id="cmimiColumn" prefWidth="132.7999267578125" text="Cmimi Ofruar" />
-                              <TableColumn fx:id="statusColumn" prefWidth="123.20004272460938" text="Statusi Porosise" />
+                            <TableColumn fx:id="kidColumn" prefWidth="75.0" text="%KlientiID" />
+                              <TableColumn fx:id="veturaIdColumn" prefWidth="100.00006103515625" text="%VeturaID" />
+                              <TableColumn fx:id="cmimiColumn" prefWidth="132.7999267578125" text="%CmimiOfruar" />
+                              <TableColumn fx:id="statusColumn" prefWidth="123.20004272460938" text="%StatusiPorosise" />
                           </columns>
                         </TableView>
                      </children>
@@ -60,8 +60,8 @@
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="202.0" prefWidth="506.0" spacing="10.0">
                <children>
-                  <Button fx:id="btnPerditeso" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="26.0" prefWidth="77.0" text="Perditso" />
-                  <Button fx:id="btnFshije" mnemonicParsing="false" onAction="#handleDelete" prefHeight="26.0" prefWidth="77.0" text="Fshije" />
+                  <Button fx:id="btnPerditeso" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="26.0" prefWidth="77.0" text="%Perditso" />
+                  <Button fx:id="btnFshije" mnemonicParsing="false" onAction="#handleDelete" prefHeight="26.0" prefWidth="77.0" text="%Fshije" />
                </children>
                <padding>
                   <Insets top="10.0" />

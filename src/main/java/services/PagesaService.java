@@ -14,7 +14,7 @@ public class PagesaService {
     private PagesaRepository pagesaRepository;
 
     public PagesaService() { this.pagesaRepository = new PagesaRepository(); }
-    List<Pagesa> getAll(){return this.pagesaRepository.getAll();}
+    public List<Pagesa> getAll(){return this.pagesaRepository.getAll();}
 
     public Pagesa getById(int id){
         if(id < 0){

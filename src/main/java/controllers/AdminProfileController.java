@@ -15,7 +15,9 @@ import repository.PerdoruesitRepository;
 import repository.ShitjetRepository;
 import repository.VeturatRepository;
 import services.PerdoruesitService;
+import services.SceneManager;
 import services.SessionManager;
+import utils.SceneLocator;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -118,8 +120,8 @@ public class AdminProfileController {
             }
         }
     }
-    @FXML private void handleChangePassword(){
-
-        System.out.println("Ndrysho fjalëkalimin...");
+    @FXML private void handleChangePassword()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.CHANGE_PASSWORD);
+        SceneManager.reload();
     }
 }
