@@ -20,7 +20,7 @@ public class Porosite extends Application {
         System.out.println("➡️ Controller: " + controller);
         controller.setVetura(new Veturat(9, "Bmw", "bmw", 2019, "e zeza", 2000.00, "e re", 100000, "Benzines")); // nëse teston manualisht
 
-        stage.setScene(new Scene(root, 700, 500));
+        stage.setScene(new Scene(root, 1330, 700));
         stage.setTitle("Test Porosia");
         stage.show();
     }
