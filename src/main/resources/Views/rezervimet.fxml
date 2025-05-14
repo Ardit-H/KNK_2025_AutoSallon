@@ -20,9 +20,12 @@
         </Label>
 
         <!-- Tabela -->
-        <TableView fx:id="tabelaRezervimet" prefHeight="200">
+
+
+        <TableView fx:id="tabelaRezervimet" onMouseClicked="#handleRowSelect" prefHeight="200">
             <columns>
-                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="colRezervimiId" text="Rezervimi ID" prefWidth="100"/>
+
                 <TableColumn fx:id="colKlientiId" text="Klienti ID" prefWidth="100"/>
                 <TableColumn fx:id="colVeturaId" text="Vetura ID" prefWidth="100"/>
                 <TableColumn fx:id="colDataRezervimit" text="Data e Rezervimit" prefWidth="150"/>
@@ -37,9 +40,6 @@
                 <ColumnConstraints prefWidth="250"/>
             </columnConstraints>
 
-            <Label text="Rezervimi ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <TextField fx:id="rezervimiIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-
             <Label text="Klienti ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
             <TextField fx:id="klientiIdField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
@@ -47,13 +47,16 @@
             <TextField fx:id="veturaIdField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
             <Label text="Data e Rezervimit:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-            <TextField fx:id="dataRezervimitField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <DatePicker fx:id="dataRezervimitPicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
 
             <Label text="Statusi:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
             <TextField fx:id="statusiField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Rezervimi ID:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextField fx:id="rezervimiIdField" GridPane.rowIndex="5" GridPane.columnIndex="1" editable="false"/>
         </GridPane>
 
-
+        <!-- Butonat -->
         <HBox spacing="10" alignment="CENTER">
             <Button text="Krijo" onAction="#handleCreate"/>
             <Button text="Përditëso" onAction="#handleUpdate"/>

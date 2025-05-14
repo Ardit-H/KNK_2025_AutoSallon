@@ -25,4 +25,5 @@ public class SceneLocator {
     public static final String POROSIA= "/Views/porosia.fxml";
     public static final String OFERTA= "/Views/oferta.fxml";
     public static final String PERDORUESI= "/Views/perdoruesit.fxml";
+    public static final String REZERVIMET = "/Views/rezervimet.fxml";
 }
