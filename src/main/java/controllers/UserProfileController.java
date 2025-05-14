@@ -99,6 +99,6 @@ public class UserProfileController {
     @FXML
     private void handleChangePassword()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.CHANGE_PASSWORD);
-        SceneManager.load(SceneLocator.CHANGE_PASSWORD,anchorPane);
+        SceneManager.reload();
     }
 }

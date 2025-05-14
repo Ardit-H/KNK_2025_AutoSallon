@@ -64,7 +64,8 @@ public class ChangePasswordController{
         }
     }
    @FXML private void handleCloseChangePassword()throws Exception{
-       SceneManager.load(SceneLocator.USER_DASHBOARD);
+       SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_PROFILE);
+       SceneManager.reload();
     }
     private void showAlert(Alert.AlertType type, String message) {
         Alert alert = new Alert(type);
