@@ -101,7 +101,14 @@ public class PerdoruesitService {
             }
             hasChanges = true;
         }
+        if(dto.getPasswordhash()!=null){
+            hasChanges = true;
 
+        }
+        if(dto.getSalt()!=null){
+            hasChanges = true;
+
+        }
         if (dto.getFjalekalimi() != null) {
             String salt = PasswordUtil.generateSalt();
             String hashed = PasswordUtil.hashPassword(dto.getFjalekalimi(), salt);

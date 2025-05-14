@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="ndryshime ne SceneLocator.java">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="shtimi i PERDORUESI ne SceneLocator.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/ChangePasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/change_password.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/UpdatePerdoruesitDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Perdoruesit/UpdatePerdoruesitDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PerdoruesitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_profile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,7 +378,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747216543896</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ndryshime ne admin_dashboard.fxml">
+      <option name="closed" value="true" />
+      <created>1747217314129</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1747217314129</updated>
+    </task>
+    <task id="LOCAL-00028" summary="shtimi i PERDORUESI ne SceneLocator.java">
+      <option name="closed" value="true" />
+      <created>1747217469569</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1747217469569</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,8 +409,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init commit" />
-    <MESSAGE value="krijimi i folderit per vendosjen e tabelave te sql" />
     <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
@@ -411,6 +432,8 @@
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="ndryshime ne SceneLocator.java" />
+    <MESSAGE value="ndryshime ne admin_dashboard.fxml" />
+    <MESSAGE value="shtimi i PERDORUESI ne SceneLocator.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="shtimi i PERDORUESI ne SceneLocator.java" />
   </component>
 </project>
