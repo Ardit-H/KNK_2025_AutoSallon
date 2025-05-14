@@ -34,6 +34,9 @@ public class Admin_DashboardController {
     public Button btn_perdoruesit;
     public Button btn_garancia;
     public Button btn_profili;
+    public Button btn_porosite;
+    public Button btn_ofertat;
+    public Button btn_pagesat;
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button btnLogOut;
@@ -92,6 +95,18 @@ public class Admin_DashboardController {
     @FXML private void handleLoadGarancia()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.GARANCIA);
         SceneManager.load(SceneLocator.GARANCIA,centerPane);
+    }
+    @FXML private void handleLoadPorosite()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.POROSIA_DASHBOARD);
+        SceneManager.load(SceneLocator.POROSIA_DASHBOARD,centerPane);
+    }
+    @FXML private void handleLoadOfertat()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.OFERTA_DASHBOARD);
+        SceneManager.load(SceneLocator.OFERTA_DASHBOARD,centerPane);
+    }
+    @FXML private void handleLoadPagesat()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.PAGESA_DASHBOARD);
+        SceneManager.load(SceneLocator.PAGESA_DASHBOARD,centerPane);
     }
 
 
