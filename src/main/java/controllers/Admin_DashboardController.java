@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -108,7 +109,10 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.PAGESA_DASHBOARD);
         SceneManager.load(SceneLocator.PAGESA_DASHBOARD,centerPane);
     }
-
+    @FXML private void handleLoadInfo(MouseEvent me)throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_HELP);
+        SceneManager.load(SceneLocator.ADMIN_HELP,centerPane);
+    }
 
 @FXML private void handleLanguageToggle() throws Exception{
     if (isEnglish) {

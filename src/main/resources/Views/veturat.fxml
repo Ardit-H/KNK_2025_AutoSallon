@@ -111,8 +111,9 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Button>
-           <TextField fx:id="searchField" layoutX="367.0" layoutY="143.0" prefHeight="27.0" prefWidth="266.0" promptText="%Kërko_sipas_prodhuesit" />
-           <Label layoutX="306.0" layoutY="147.0" text="Kërko:">
+
+        <TextField fx:id="searchField" layoutX="367.0" layoutY="143.0" prefHeight="27.0" prefWidth="266.0" promptText="%Kërko_sipas_prodhuesit" />
+        <Label layoutX="306.0" layoutY="147.0" text="%Kërko">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>

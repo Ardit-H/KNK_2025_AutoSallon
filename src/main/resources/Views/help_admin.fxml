@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminHelpController">
+    <children>
+      <AnchorPane layoutX="297.0" layoutY="22.0" prefHeight="685.0" prefWidth="715.0" style="-fx-background-color: white;">
+         <children>
+              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff" height="650.0" layoutX="17.0" layoutY="17.0" stroke="#a5cef2" strokeType="INSIDE" style="-fx-fill: transparent;" width="683.0" />
+              <ImageView fx:id="helpLogo" fitHeight="107.0" fitWidth="117.0" layoutX="308.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../Images/information.png" />
+                  </image>
+              </ImageView>
+              <Label layoutX="253.0" layoutY="182.0" prefHeight="35.0" prefWidth="214.0" text="%lblManualiPerdoruesit" textFill="#0a84ff">
+                  <font>
+                      <Font name="Arial" size="20.0" />
+                  </font>
+              </Label>
+              <Line endX="271.800048828125" layoutX="376.0" layoutY="288.0" startX="-289.26666259765625" stroke="#a5cef2" />
+              <Label alignment="CENTER" layoutX="252.0" layoutY="324.0" prefHeight="38.0" prefWidth="192.0" style="-fx-border-color: #a5cef2; -fx-border-width: 0px 0px 2px 0px;" text="%ElementeteSiperme" textAlignment="CENTER">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </Label>
+              <Text layoutX="45.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%logoutbutton" wrappingWidth="638.0033569335938" />
+              <ImageView fx:id="closeIcon" fitHeight="55.0" fitWidth="44.0" layoutX="642.0" layoutY="25.0" onMouseClicked="#handleCloseInfo" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../Images/close.png" />
+                  </image>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </ImageView>
+              <Label alignment="CENTER" layoutX="253.0" layoutY="422.0" prefHeight="38.0" prefWidth="200.0" style="-fx-border-color: #a5cef2; -fx-border-width: 0px 0px 2px 0px;" text="%ElementeteMenus" textAlignment="CENTER">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </Label>
+              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="231.0" prefHeight="50.0" prefWidth="558.0" text="%lblManInfo" textAlignment="CENTER" textFill="#0a84ff">
+                  <font>
+                      <Font size="13.0" />
+                  </font>
+              </Label>
+              <Text layoutX="41.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%languagebutton" wrappingWidth="635.8700256347656" />
+            <Text layoutX="37.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblClients" wrappingWidth="635.8700256347656" />
+            <Text layoutX="40.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblServices" wrappingWidth="635.8700256347656" />
+            <Text layoutX="40.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblRatings" wrappingWidth="636.9366455078125" />
+            <Text layoutX="40.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblProfile" wrappingWidth="634.8033752441406" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
