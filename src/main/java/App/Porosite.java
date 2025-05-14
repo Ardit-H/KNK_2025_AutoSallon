@@ -12,7 +12,7 @@ import utils.SceneLocator;
 public class Porosite extends Application {
     public void start(Stage stage) throws Exception{
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.POROSIA));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.PERDORUESI));
 
         Parent root = loader.load();
 
