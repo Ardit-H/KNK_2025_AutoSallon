@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -12,60 +13,70 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PagesatDashboardController">
    <children>
-      <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="46.0" prefWidth="590.0">
+      <AnchorPane layoutX="376.0" layoutY="27.0" prefHeight="46.0" prefWidth="590.0">
          <children>
-            <Label layoutX="229.0" layoutY="14.0" prefHeight="18.0" prefWidth="148.0" text="Menaxho pagesat">
+            <Label layoutX="229.0" layoutY="14.0" prefHeight="27.0" prefWidth="162.0" text="%Menaxho pagesat">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <VBox layoutX="5.0" layoutY="50.0" prefHeight="306.0" prefWidth="590.0">
+      <VBox layoutX="373.0" layoutY="141.0" prefHeight="491.0" prefWidth="630.0">
          <children>
-            <AnchorPane prefHeight="171.0" prefWidth="595.0">
+            <AnchorPane prefHeight="246.0" prefWidth="622.0">
                <children>
-                  <HBox alignment="CENTER" layoutX="-1.0" prefHeight="54.0" prefWidth="592.0" spacing="10.0">
+                  <HBox alignment="CENTER" layoutX="-1.0" layoutY="57.0" prefHeight="79.0" prefWidth="638.0" spacing="15.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="64.0" text="Shuma:" />
-                        <TextField prefHeight="26.0" prefWidth="152.0" />
+                        <Label fx:id="shumaPagese" prefHeight="18.0" prefWidth="60.0" text="%Shuma:" />
+                        <TextField fx:id="txtShumaPageses" prefHeight="26.0" prefWidth="160.0" promptText="%Shuma e pageses" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutY="54.0" prefHeight="63.0" prefWidth="594.0" spacing="10.0">
+                  <HBox alignment="CENTER" layoutY="111.0" prefHeight="79.0" prefWidth="638.0" spacing="10.0">
                      <children>
-                        <Label prefHeight="23.0" prefWidth="66.0" text="Metoden: " />
-                        <ComboBox prefHeight="26.0" prefWidth="161.0" />
+                        <Label fx:id="MetodaPageses" prefHeight="23.0" prefWidth="66.0" text="%Pagesa: " />
+                        <ComboBox fx:id="comboMetodaPageses" prefHeight="26.0" prefWidth="162.0" promptText="%Zgjidh Metoden" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="-1.0" layoutY="115.0" prefHeight="63.0" prefWidth="596.0" spacing="10.0">
+                  <HBox alignment="CENTER" layoutX="-1.0" layoutY="184.0" prefHeight="79.0" prefWidth="639.0" spacing="10.0">
                      <children>
-                        <Label text="Data Pagese: " />
-                        <DatePicker prefHeight="26.0" prefWidth="166.0" />
+                        <Label fx:id="dataPageses" text="%Data Pagese: " />
+                        <DatePicker fx:id="dataPageses" prefHeight="26.0" prefWidth="159.0" promptText="%Data Pageses" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="79.0" prefWidth="639.0" spacing="50.0">
+                     <children>
+                        <Label fx:id="porosiaId" prefHeight="18.0" prefWidth="70.0" text="%Porosia ID:" />
+                        <TextField fx:id="txtPorosia" prefHeight="26.0" prefWidth="115.0" promptText="%Porosia ID" />
                      </children>
                   </HBox>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </AnchorPane>
-            <HBox alignment="CENTER" prefHeight="143.0" prefWidth="595.0">
+            <HBox alignment="CENTER" prefHeight="216.0" prefWidth="614.0">
                <children>
-                  <TableView prefHeight="128.0" prefWidth="378.0">
+                  <TableView fx:id="pagesatTable" prefHeight="258.0" prefWidth="524.0">
                     <columns>
-                      <TableColumn prefWidth="48.80004960298538" text="ID" />
-                      <TableColumn prefWidth="63.999935150146484" text="PorosiaID" />
-                        <TableColumn prefWidth="100.79998779296875" text="Metoda Pagese" />
-                        <TableColumn prefWidth="75.20002746582031" text="Shuma" />
-                        <TableColumn prefWidth="88.79998779296875" text="Data Pageses" />
+                      <TableColumn fx:id="idColumn" prefWidth="62.399993896484375" text="ID" />
+                      <TableColumn fx:id="porosiaIdColumn" prefWidth="81.5999755859375" text="%PorosiaID" />
+                        <TableColumn fx:id="metodaPagesesColumn" prefWidth="125.5999755859375" text="%Metoda Pagese" />
+                        <TableColumn fx:id="shumaColumn" prefWidth="105.5999755859375" text="%Shuma" />
+                        <TableColumn fx:id="dataPagesesColumn" prefWidth="149.5999755859375" text="%Data Pageses" />
                     </columns>
                   </TableView>
                </children>
             </HBox>
          </children>
       </VBox>
-      <HBox alignment="CENTER" layoutX="2.0" layoutY="358.0" prefHeight="39.0" prefWidth="596.0" spacing="10.0">
+      <HBox alignment="CENTER" layoutX="385.0" layoutY="592.0" prefHeight="99.0" prefWidth="596.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" text="Perditso" />
-            <Button mnemonicParsing="false" text="Fshije" />
+            <Button fx:id="btnKrijo" mnemonicParsing="false" onAction="#handleCreate" prefHeight="26.0" prefWidth="62.0" text="%Krijo" />
+            <Button fx:id="btnPerditso" mnemonicParsing="false" onAction="#handleUpdate" text="%Perditso" />
+            <Button fx:id="btnFshije" mnemonicParsing="false" onAction="#handleDelete" text="%Fshije" />
          </children>
       </HBox>
    </children>
