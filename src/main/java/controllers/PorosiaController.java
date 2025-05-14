@@ -38,7 +38,6 @@ public class PorosiaController {
     private final PorosiaService porosiaService = new PorosiaService();
 
 
-
     public void setVetura(Veturat vetura) {
         this.veturaZgjedhur = vetura;
 
@@ -73,32 +72,55 @@ public class PorosiaController {
             e.printStackTrace();
         }
     }
+
     @FXML
     private void handleDergo(ActionEvent event) {
         try {
             double cmimiOfruar = Double.parseDouble(txtCmimiOfruar.getText());
+            if (cmimiOfruar <= 0) {
+                showError("Cmimi i ofruar nuk mund te jete numer negativ!");
+                return;
+            }
 
             int klientiId;
             if (SessionManager.getInstance().isLoggedIn()) {
                 Perdoruesit user = SessionManager.getInstance().getcurrentUser();
                 klientiId = user.getPid();
             } else {
-                throw new Exception("Ju nuk jeni te kyqur");
+                showError("Ju nuk jeni te kyqur");
+                return;
             }
 
             CreatePorosiaDto dto = new CreatePorosiaDto(klientiId, veturaZgjedhur.getId(), cmimiOfruar, "Ne pritje");
 
             porosiaService.create(dto);
 
-            Alert success = new Alert(Alert.AlertType.INFORMATION);
-            success.setTitle("Sukses");
-            success.setHeaderText(null);
-            success.setContentText("Porosia u dërgua me sukses!");
-            success.showAndWait();
+            showSuccess("Porosia u dërgua me sukses!");
+            clearForm();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    private void clearForm() {
+        txtCmimiOfruar.clear();
+    }
+
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Gabim");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showSuccess(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Sukses");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+
+    }
 }
