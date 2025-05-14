@@ -13,15 +13,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #F8F6DE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VeturatController">
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: #F8F6DE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VeturatController">
     <children>
-        <ImageView fitHeight="239.0" fitWidth="415.0" layoutX="31.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="233.0" fitWidth="401.0" layoutX="264.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../Images/Car.jpg" />
             </image>
         </ImageView>
-        <Separator layoutX="33.0" layoutY="123.0" prefHeight="0.0" prefWidth="834.0" />
-        <HBox layoutX="31.0" layoutY="25.0" prefHeight="72.0" prefWidth="823.0" style="-fx-background-color: #335778;">
+        <Separator layoutX="33.0" layoutY="120.0" prefHeight="6.0" prefWidth="1282.0" />
+        <HBox layoutX="31.0" layoutY="25.0" prefHeight="72.0" prefWidth="1281.0" style="-fx-background-color: #335778;">
             <children>
                 <ImageView fitHeight="65.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -35,7 +35,7 @@
                 </Text>
             </children>
         </HBox>
-        <TableView id="veturatTableView" fx:id="veturatTableView" layoutX="33.0" layoutY="498.0" prefHeight="288.0" prefWidth="834.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
+        <TableView id="veturatTableView" fx:id="veturatTableView" layoutX="258.0" layoutY="507.0" prefHeight="288.0" prefWidth="832.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
             <columns>
                 <TableColumn id="colProdhuesi" fx:id="colProdhuesi" prefWidth="90.39998626708984" text="%Prodhuesi" />
                 <TableColumn id="colModeli" fx:id="colModeli" prefWidth="111.20000457763672" text="%Modeli" />
@@ -47,72 +47,72 @@
                 <TableColumn id="colTipiKarburant" fx:id="colTipiKarburant" minWidth="7.20001220703125" prefWidth="144.80002441406248" text="%Tipi_i_karburantit" />
             </columns>
         </TableView>
-        <Text layoutX="498.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Prodhuesi" wrappingWidth="81.74414062499977">
+        <Text layoutX="734.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Prodhuesi" wrappingWidth="81.74414062499977">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="512.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Modeli" wrappingWidth="58.4541015625">
+        <Text layoutX="753.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Modeli" wrappingWidth="58.4541015625">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="461.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Viti_i_prodhimit" wrappingWidth="133.3411865234375">
+        <Text layoutX="700.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Viti_i_prodhimit" wrappingWidth="133.3411865234375">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="515.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Ngjyra">
+        <Text layoutX="748.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Ngjyra">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="515.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Çmimi">
+        <Text layoutX="749.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Çmimi">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="512.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Gjendja">
+        <Text layoutX="745.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Gjendja">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="482.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Kilometrazha">
+        <Text layoutX="707.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Kilometrazha">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <Text layoutX="454.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Tipi_i_karburantit">
+        <Text layoutX="687.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Tipi_i_karburantit">
             <font>
                 <Font size="14.0" />
             </font>
         </Text>
-        <TextField fx:id="txtProdhuesi" layoutX="576.0" layoutY="132.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtModeli" layoutX="576.0" layoutY="166.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtVitiProdhimit" layoutX="576.0" layoutY="204.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtNgjyra" layoutX="576.0" layoutY="246.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtCmimi" layoutX="576.0" layoutY="284.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtGjendja" layoutX="576.0" layoutY="324.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtKilometrazha" layoutX="576.0" layoutY="364.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
-        <TextField fx:id="txtTipiKarburant" layoutX="576.0" layoutY="400.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtProdhuesi" layoutX="813.0" layoutY="129.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtModeli" layoutX="813.0" layoutY="165.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtVitiProdhimit" layoutX="812.0" layoutY="202.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtNgjyra" layoutX="811.0" layoutY="244.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtCmimi" layoutX="813.0" layoutY="282.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtGjendja" layoutX="811.0" layoutY="321.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtKilometrazha" layoutX="811.0" layoutY="361.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
+        <TextField fx:id="txtTipiKarburant" layoutX="812.0" layoutY="398.0" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: white; -fx-border-color: #335778;" />
 
-        <Button fx:id="btn_shto" layoutX="461.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="%Shto" textFill="#fcfcfc">
+        <Button fx:id="btn_shto" layoutX="665.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleCreate" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="%Shto" textFill="#fcfcfc">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Button>
-        <Button fx:id="btn_perditeso" layoutX="590.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="%Perditeso" textFill="WHITE">
+        <Button fx:id="btn_perditeso" layoutX="811.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="%Perditeso" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Button>
-        <Button fx:id="btn_fshij" layoutX="734.0" layoutY="448.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="%Fshij" textFill="WHITE">
+        <Button fx:id="btn_fshij" layoutX="969.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="36.0" prefWidth="108.0" style="-fx-background-color: #335778; -fx-background-radius: 20;" text="%Fshij" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Button>
-           <TextField fx:id="searchField" layoutX="111.0" layoutY="153.0" prefHeight="27.0" prefWidth="266.0" promptText="%Kërko_sipas_prodhuesit" />
-           <Label layoutX="55.0" layoutY="156.0" text="Kërko:">
+           <TextField fx:id="searchField" layoutX="367.0" layoutY="143.0" prefHeight="27.0" prefWidth="266.0" promptText="%Kërko_sipas_prodhuesit" />
+           <Label layoutX="306.0" layoutY="147.0" text="Kërko:">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>

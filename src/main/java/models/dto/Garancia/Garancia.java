@@ -24,9 +24,9 @@ public class Garancia {
         int id = resultSet.getInt("id");
         int vid = resultSet.getInt("vid");
         int kid = resultSet.getInt("kid");
-        String llojiGarancise = resultSet.getString("Lloji i garancise");
-        String dataFillimit = resultSet.getString("Data e fillimit");
-        String dataMbarimit = resultSet.getString("Data e mbarimit");
+        String llojiGarancise = resultSet.getString("lloji_garancise");
+        String dataFillimit = resultSet.getString("data_fillimit");
+        String dataMbarimit = resultSet.getString("data_mbarimit");
         return new Garancia(id,vid,kid,llojiGarancise,dataFillimit,dataMbarimit);
     }
 

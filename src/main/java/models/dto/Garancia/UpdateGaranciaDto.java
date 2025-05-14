@@ -2,6 +2,7 @@ package models.dto.Garancia;
 
 public class UpdateGaranciaDto {
     private int id;
+    private String llojiGarancise;
     private String dataFillimit;
     private String dataMbarimit;
 
@@ -9,6 +10,14 @@ public class UpdateGaranciaDto {
 
     public int getId() {
         return id;
+    }
+
+    public String getLlojiGarancise() {
+        return llojiGarancise;
+    }
+
+    public void setLlojiGarancise(String llojiGarancise) {
+        this.llojiGarancise = llojiGarancise;
     }
 
     public void setId(int id) {
