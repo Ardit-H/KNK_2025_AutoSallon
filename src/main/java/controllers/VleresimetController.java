@@ -101,7 +101,7 @@ public class VleresimetController {
         if (keyword == null || keyword.isBlank()) {
             loadVleresimet();
         } else {
-            List<Vleresimet> filtered = vleresimetService.searchByVeturaOrPerdorues(keyword);
+            List<Vleresimet> filtered = vleresimetService.searchByVeturaOrPerdoruesOrDate(keyword);
             VleresimetTableView.setItems(FXCollections.observableArrayList(filtered));
         }
     }
