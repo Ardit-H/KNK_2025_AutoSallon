@@ -32,4 +32,5 @@ public class SceneLocator {
     public static final String PAGESA_DASHBOARD = "/Views/pagesa_dashboard.fxml";
     public static final String PERDORUESI= "/Views/perdoruesit.fxml";
     public static final String LOKACIONET="/Views/lokacionet.fxml";
+    public static final String STATISTIKAT="/Views/statistikat.fxml";
 }
