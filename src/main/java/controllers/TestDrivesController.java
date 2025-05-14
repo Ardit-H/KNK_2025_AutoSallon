@@ -33,8 +33,7 @@ public class TestDrivesController {
     @FXML private TableColumn<TestDrives, String> colTestDriveFeedback;
     @FXML private TableColumn<TestDrives, String> colTestDriveDuration;
     @FXML private TableColumn<TestDrives, String> colTestDriveLocation;
-    private final TestDrivesService testDrivesService;
-
+   @FXML private final TestDrivesService testDrivesService;
 
     public TestDrivesController(){
         this.testDrivesService = new TestDrivesService();
