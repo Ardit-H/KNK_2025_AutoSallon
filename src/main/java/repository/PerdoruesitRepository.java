@@ -75,11 +75,14 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
             params.add(perdoruesitDto.getEmail());
         }
 
-        if(perdoruesitDto.getFjalekalimi() != null){
-            query.append("FJALEKALIMI = ?, ");
-            params.add(perdoruesitDto.getFjalekalimi());
+        if(perdoruesitDto.getPasswordhash() != null){
+            query.append("PASSWORDHASH = ?, ");
+            params.add(perdoruesitDto.getPasswordhash());
         }
-
+        if(perdoruesitDto.getSalt() != null){
+            query.append("SALT = ?, ");
+            params.add(perdoruesitDto.getSalt());
+        }
         if(perdoruesitDto.getRoli() != null){
             query.append("ROLI = ?, ");
             params.add(perdoruesitDto.getRoli());
@@ -90,7 +93,7 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
         }
 
         query.setLength(query.length() - 2);
-        query.append("WHERE ID = ?");
+        query.append(" WHERE ID = ?");
         params.add(perdoruesitDto.getId());
 
 
