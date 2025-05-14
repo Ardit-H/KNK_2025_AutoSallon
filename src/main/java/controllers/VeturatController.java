@@ -105,29 +105,53 @@ public class VeturatController {
         }
     }
 
-    @FXML private void handleUpdate() {
+    @FXML
+    private void handleUpdate() {
         try {
             Veturat selected = veturatTableView.getSelectionModel().getSelectedItem();
             if (selected == null) {
-                messageLabel.setText("Zgjidh një veturë!");
+                messageLabel.setText("Zgjidh një veturë nga tabela!");
                 return;
             }
 
             UpdateVeturatDto dto = new UpdateVeturatDto();
             dto.setId(selected.getId());
 
-            if (!txtGjendja.getText().trim().isEmpty())
-                dto.setGjendja(txtGjendja.getText().trim());
-            if (!txtKilometrazha.getText().trim().isEmpty())
-                dto.setKilometrazha(Integer.parseInt(txtKilometrazha.getText().trim()));
-            if (!txtNgjyra.getText().trim().isEmpty())
-                dto.setNgjyra(txtNgjyra.getText().trim());
+            String gjendja = txtGjendja.getText().trim();
+            String ngjyra = txtNgjyra.getText().trim();
+            String kmText = txtKilometrazha.getText().trim();
+
+            if (!gjendja.isEmpty()) {
+                dto.setGjendja(gjendja);
+            }
+
+            if (!ngjyra.isEmpty()) {
+                dto.setNgjyra(ngjyra);
+            }
+
+            if (!kmText.isEmpty()) {
+                try {
+                    int km = Integer.parseInt(kmText);
+                    if (km >= 0) {
+                        dto.setKilometrazha(km);
+                    } else {
+                        messageLabel.setText("Kilometrazha nuk mund të jetë negative.");
+                        return;
+                    }
+                } catch (NumberFormatException e) {
+                    messageLabel.setText("Kilometrazha duhet të jetë numër.");
+                    return;
+                }
+            }
 
             veturatService.update(dto);
             messageLabel.setText("Vetura u përditësua me sukses.");
             loadVeturat();
-        } catch (Exception e) {
+
+        } catch (IllegalArgumentException e) {
             messageLabel.setText("Gabim: " + e.getMessage());
+        } catch (Exception e) {
+            messageLabel.setText("Gabim gjatë përditësimit: " + e.getMessage());
         }
     }
 
