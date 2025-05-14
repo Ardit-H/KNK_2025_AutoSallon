@@ -28,9 +28,9 @@
             <TableColumn fx:id="colCmimi" minWidth="0.0" prefWidth="167.19989013671875" text="%Price" />
          </columns>
       </TableView>
-      <Label layoutX="90.0" layoutY="237.0" text="%Comment1" />
-      <Label fx:id="messageLabel" layoutX="182.0" layoutY="236.0" prefHeight="18.0" prefWidth="930.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="1330.0" style="-fx-background-color: lightblue;" text="%Customer_Managment" textAlignment="CENTER">
+      <Label layoutX="90.0" layoutY="245.0" text="%Comment1" />
+      <Label fx:id="messageLabel" layoutX="182.0" layoutY="245.0" prefHeight="18.0" prefWidth="930.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="1330.0" style="-fx-background-color: lightblue;" text="%Services_Managment" textAlignment="CENTER">
          <font>
             <Font name="System Italic" size="22.0" />
          </font>

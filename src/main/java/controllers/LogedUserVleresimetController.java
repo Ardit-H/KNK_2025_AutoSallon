@@ -1,6 +1,7 @@
 package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
@@ -31,6 +32,14 @@ public class LogedUserVleresimetController {
 
     @FXML
     public void initialize() {
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null || newValue.trim().isEmpty()) {
+                vleresimetTable.setItems(FXCollections.observableArrayList(vleresimetService.getVleresimetWithJoins()));
+            } else {
+                List<Vleresimet> filtruar = vleresimetService.searchByVeturaOrDate(newValue);
+                vleresimetTable.setItems(FXCollections.observableArrayList(filtruar));
+            }
+        });
         colVetura.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getVeturaEmri()));
         colVleresimi.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVleresimi())));
         colKomenti.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getKomenti()));
