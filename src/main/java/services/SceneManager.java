@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.VETURAT;
+        this.currentPath = SceneLocator.REZERVIMET;
         this.scene = this.initScene();
     }
 
