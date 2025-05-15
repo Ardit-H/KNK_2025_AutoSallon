@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i butonave ne dashboard" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi tek SceneLocator i VETURAT_USER">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TestDrivesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TestDrivesController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -426,7 +430,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="shtimi i tabeles Klientet" />
     <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
@@ -451,6 +454,7 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
-    <option name="LAST_COMMIT_MESSAGE" value="ndryshime" />
+    <MESSAGE value="Shtimi tek SceneLocator i VETURAT_USER" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi tek SceneLocator i VETURAT_USER" />
   </component>
 </project>
