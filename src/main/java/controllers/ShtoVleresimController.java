@@ -7,7 +7,10 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.dto.Vleresimet.CreateVleresimetDto;
+import services.SceneManager;
+import services.SessionManager;
 import services.VleresimetService;
+import utils.SceneLocator;
 
 public class ShtoVleresimController {
     @FXML
@@ -21,11 +24,8 @@ public class ShtoVleresimController {
 
     public void initialize() {
         vleresimi.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 3));
-    }
-
-    public void setUseriDheVetura(int userId, int veturaId) {
-        this.userId = userId;
-        this.veturaId = veturaId;
+        userId = SessionManager.getInstance().getTempUserId();
+        veturaId = SessionManager.getInstance().getTempVeturaId();
     }
 
     @FXML
@@ -54,8 +54,9 @@ public class ShtoVleresimController {
     }
 
     @FXML
-    private void handleKthehu() {
-        ((Stage) komentiField.getScene().getWindow()).close();
+    private void handleKthehu()throws Exception {
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT_USER);
+        SceneManager.reload();
     }
 }
 

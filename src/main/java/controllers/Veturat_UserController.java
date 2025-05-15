@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import models.dto.Perdoruesit.Perdoruesit;
@@ -105,18 +107,15 @@ public class Veturat_UserController {
         Veturat selectedVetura = veturatTableView.getSelectionModel().getSelectedItem();
         if (selectedVetura != null) {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.SHTO_VLERESIM));
-                Parent root = loader.load();
-                // Merr controllerin dhe dërgo të dhënat e veturës dhe userit
-                ShtoVleresimController controller = loader.getController();
-                Perdoruesit currentUser=SessionManager.getInstance().getcurrentUser();
-                controller.setUseriDheVetura(currentUser.getPid(), selectedVetura.getId());
+                int userId = SessionManager.getInstance().getcurrentUser().getPid();
+                int veturaId = selectedVetura.getId();
+                SessionManager.getInstance().setTempVeturaId(veturaId);
+                SessionManager.getInstance().setTempUserId(userId);
 
-                Stage stage = new Stage();
-                stage.setTitle("Shto Vlerësim");
-                stage.setScene(new Scene(root));
-                stage.initModality(Modality.APPLICATION_MODAL); // bllokon prindin derisa të mbyllet kjo dritare
-                stage.showAndWait();
+                // Vendos path-in në SceneManager dhe ngarko ne centerPane
+                SceneManager.getInstance().setCenterPanePath(SceneLocator.SHTO_VLERESIM);
+                SceneManager.load(SceneLocator.SHTO_VLERESIM,
+                        (AnchorPane) ((BorderPane) SceneManager.getInstance().getScene().getRoot()).getCenter());
             } catch (IOException e) {
                 e.printStackTrace();
             }
