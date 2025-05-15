@@ -98,8 +98,8 @@ public class Admin_DashboardController {
         SceneManager.load(SceneLocator.ADMIN_PROFILE,centerPane);
     }
     @FXML private void handleLoadTestDrives()throws Exception{
-        SceneManager.getInstance().setCenterPanePath(SceneLocator.TESTDRIVES);
-        SceneManager.load(SceneLocator.TESTDRIVES,centerPane);
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.TESTDRIVE);
+        SceneManager.load(SceneLocator.TESTDRIVE,centerPane);
     }
     @FXML private void handleLoadGarancia()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.GARANCIA);

@@ -13,8 +13,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: #FDF5D5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestDrivesController">
-    <HBox layoutX="22.0" layoutY="26.0" prefHeight="79.0" prefWidth="1257.0" style="-fx-background-color: #5169E7;">
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: #FDF5D5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestdrivesController">
+    <HBox layoutX="22.0" layoutY="26.0" prefHeight="79.0" prefWidth="1257.0" style="-fx-background-color: #1633A6;">
         <ImageView fitHeight="79.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../Images/testdrive.png" />
         </ImageView>
@@ -33,7 +33,7 @@
             <Font name="System Bold Italic" size="14.0" />
         </font>
     </Label>
-    <VBox layoutX="69.0" layoutY="398.0" prefHeight="238.0" prefWidth="398.0" style="-fx-background-color: #5169E7;">
+    <VBox layoutX="69.0" layoutY="398.0" prefHeight="238.0" prefWidth="398.0" style="-fx-background-color: #1633A6;">
         <Label prefHeight="44.0" prefWidth="114.0" text="%Kohezgjatja" textFill="#fdf5d5">
             <font>
                 <Font name="System Bold" size="15.0" />
@@ -53,7 +53,7 @@
         </Label>
         <TextField fx:id="location" prefHeight="25.0" prefWidth="229.0" />
     </VBox>
-    <VBox layoutX="71.0" layoutY="152.0" prefHeight="202.0" prefWidth="398.0" style="-fx-background-color: #5169E7;">
+    <VBox layoutX="71.0" layoutY="152.0" prefHeight="202.0" prefWidth="398.0" style="-fx-background-color: #1633A6;">
         <Label prefHeight="44.0" prefWidth="114.0" text="%Klienti_ID" textFill="#fdf5d5">
             <font>
                 <Font name="System Bold" size="15.0" />
@@ -73,15 +73,15 @@
         </Label>
         <TextField fx:id="statusi" prefHeight="25.0" prefWidth="229.0" />
     </VBox>
-    <Button fx:id="btn_shto" layoutX="217.0" layoutY="664.0" onAction="#handleCreateTestDrive" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #5169E7;" text="%Shto" textFill="WHITE">
+    <Button fx:id="btn_shto" layoutX="217.0" layoutY="664.0" onAction="#handleCreateTestDrive" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #1633A6;" text="%Shto" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_fshij" layoutX="364.0" layoutY="664.0" onAction="#handleDeleteTestDrive" prefHeight="44.0" prefWidth="95.0" style="-fx-background-color: #5169E7;" text="%Fshij" textFill="WHITE">
+    <Button fx:id="btn_fshij" layoutX="364.0" layoutY="664.0" onAction="#handleDeleteTestDrive" prefHeight="44.0" prefWidth="95.0" style="-fx-background-color: #1633A6;" text="%Fshij" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_perditeso" layoutX="69.0" layoutY="664.0" onAction="#handleUpdateTestDrive" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #5169E7;" text="%Perditeso" textFill="WHITE">
+    <Button fx:id="btn_perditeso" layoutX="69.0" layoutY="664.0" onAction="#handleUpdateTestDrive" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #1633A6;" text="%Perditeso" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>

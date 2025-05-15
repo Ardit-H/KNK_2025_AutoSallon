@@ -10,7 +10,7 @@ import models.dto.TestDrives.TestDrives;
 import services.TestDrivesService;
 import java.util.List;
 
-public class TestDrivesController {
+public class TestdrivesController {
     @FXML public TextField kid;
     @FXML public TextField vid;
     @FXML public TextField statusi;
@@ -35,7 +35,7 @@ public class TestDrivesController {
     private final TestDrivesService testDrivesService;
     private final LanguageManager languageManager;
 
-    public TestDrivesController(){
+    public TestdrivesController(){
         this.testDrivesService = new TestDrivesService();
         this.languageManager = LanguageManager.getInstance();
 
