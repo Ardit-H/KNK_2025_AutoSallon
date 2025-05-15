@@ -16,7 +16,7 @@
 
     <!-- Titulli në krye -->
     <top>
-        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="50" style="-fx-background-color: #2c9ed4; -fx-text-fill: white;" text="Menaxhimi i Faturave">
+        <Label alignment="CENTER" maxWidth="Infinity" prefHeight="50" style="-fx-background-color: #2c9ed4; -fx-text-fill: white;" text="%Menaxhimi_Faturave">
             <font>
                 <Font name="System Bold Italic" size="20" />
             </font>
@@ -29,23 +29,23 @@
             <padding>
                 <Insets bottom="20" left="20" right="20" top="20" />
             </padding>
-            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Krijo / Përditëso Faturë" />
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="%Krijo_Përditëso_Faturë" />
 
             <!-- Fusha e re për ID -->
-            <Label text="Shitje ID:" />
-            <TextField fx:id="txtShitjeId" promptText="Shitje ID" />
+            <Label text="%Shitje_ID_" />
+            <TextField fx:id="txtShitjeId" promptText="%Shitje_ID" />
 
-            <Label text="Data e Faturës:" />
+            <Label text="%Data_Faturës_" />
             <TextField fx:id="txtDataFatures" promptText="YYYY-MM-DD" />
-            <Label text="Shuma Totale:" />
-            <TextField fx:id="txtShumaTotale" promptText="Shuma Totale (€)" />
-            <Label text="Lloji i Pagesës:" />
-            <ComboBox fx:id="cmbLlojiPageses" promptText="Zgjedh llojin e pagesës" />
+            <Label text="%Shuma_Totale_" />
+            <TextField fx:id="txtShumaTotale" promptText="%Shuma_Totale" />
+            <Label text="%Lloji_Pagesës_" />
+            <ComboBox fx:id="cmbLlojiPageses" promptText="%Zgjedh_llojin_pagesës" />
 
             <HBox alignment="CENTER" spacing="10">
-                <Button onAction="#handleCreate" text="Shto" />
-                <Button onAction="#handleUpdate" text="Përditëso" />
-                <Button onAction="#handleDelete" text="Fshij" />
+                <Button onAction="#handleCreate" text="%Shto" />
+                <Button onAction="#handleUpdate" text="%Përditëso" />
+                <Button onAction="#handleDelete" text="%Fshij" />
             </HBox>
         </VBox>
     </left>
@@ -57,17 +57,17 @@
                 <Insets bottom="15" left="15" right="15" top="15" />
             </padding>
             <HBox alignment="CENTER_LEFT" spacing="10">
-                <Label text="Kërko:" />
-                <TextField fx:id="searchField" promptText="Kërko me ID ose Lloji Pagesës" />
+                <Label text="%Kërko_" />
+                <TextField fx:id="searchField" promptText="%Kërko_ID_Lloji_Pagesës" />
                 <Label fx:id="messageLabel" textFill="red" />
             </HBox>
             <TableView fx:id="faturatTableView" prefHeight="400">
                 <columns>
                     <TableColumn fx:id="colShitjeId" prefWidth="100" text="ID" />
-               <TableColumn fx:id="colShitjeId1" prefWidth="100" text="Shitje ID" />
-                    <TableColumn fx:id="colDataFatures" prefWidth="120" text="Data e Faturës" />
-                    <TableColumn fx:id="colShumaTotale" prefWidth="120" text="Shuma Totale (€)" />
-                    <TableColumn fx:id="colLlojiPageses" prefWidth="100" text="Lloji i Pagesës" />
+               <TableColumn fx:id="colShitjeId1" prefWidth="100" text="%Shitje_ID" />
+                    <TableColumn fx:id="colDataFatures" prefWidth="120" text="%Data_Faturës" />
+                    <TableColumn fx:id="colShumaTotale" prefWidth="120" text="%Shuma_Totale" />
+                    <TableColumn fx:id="colLlojiPageses" prefWidth="100" text="%Lloji_Pagesës" />
                 </columns>
             </TableView>
         </VBox>
