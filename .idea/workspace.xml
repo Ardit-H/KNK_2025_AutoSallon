@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/rating.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ShtoVleresimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ShtoVleresimController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Veturat_UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Veturat_UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/shto_vleresim_per_veturen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/shto_vleresim_per_veturen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/veturat_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/veturat_user.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +37,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
-    "accountId": "07a821b6-b56b-4d90-9f1e-133de9cb9d67"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -70,19 +78,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
@@ -166,14 +177,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -182,7 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-      <workItem from="1747329745451" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -448,11 +450,32 @@
       <option name="project" value="LOCAL" />
       <updated>1747318858251</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java">
+      <option name="closed" value="true" />
+      <created>1747327125999</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1747327125999</updated>
+    </task>
+    <task id="LOCAL-00035" summary="changes">
+      <option name="closed" value="true" />
+      <created>1747327145157</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1747327145157</updated>
+    </task>
+    <task id="LOCAL-00036" summary="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml">
+      <option name="closed" value="true" />
+      <created>1747329818889</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1747329818889</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -466,9 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i DBConnector" />
-    <MESSAGE value="Testimi i lidhjes me Database" />
-    <MESSAGE value="Krijimi i paketave models and dto" />
     <MESSAGE value="Krijimi i klases User" />
     <MESSAGE value="Krijimi i klases Klientet" />
     <MESSAGE value="Organizimi i dto brenda models" />
@@ -491,6 +511,9 @@
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ndryshimi i tabeles riparimet" />
+    <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
+    <MESSAGE value="changes" />
+    <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
   </component>
 </project>

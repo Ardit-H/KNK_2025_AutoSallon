@@ -24,6 +24,7 @@ public class Veturat_UserController {
     @FXML private TextField searchField;
     @FXML private Label messageLabel;
     @FXML private Button porositeButton;
+    @FXML private Button vleresoButton;
 
     @FXML private TableView<Veturat> veturatTableView;
     @FXML private TableColumn<Veturat, String> colProdhuesi;
@@ -58,6 +59,7 @@ public class Veturat_UserController {
 
         if (!SessionManager.getInstance().isLoggedIn()) {
             porositeButton.setDisable(true);
+            vleresoButton.setDisable(true);
         }
 
         searchField.textProperty().addListener((obs, oldVal, newVal) -> {
@@ -102,6 +104,24 @@ public class Veturat_UserController {
             centerPane.getChildren().setAll(porosiaPane);
         } catch (Exception e) {
             showError("Nuk u mundësua hapja e faqes së porosisë.");
+        }
+    }
+    public void handleRate()throws Exception {
+        Veturat selectedVetura = veturatTableView.getSelectionModel().getSelectedItem();
+        if (selectedVetura == null) {
+            showError("Zgjidh një veturë për të bërë vlerësimin!");
+        }else{
+            try {
+                int userId = SessionManager.getInstance().getcurrentUser().getPid();
+                int veturaId = selectedVetura.getId();
+                SessionManager.getInstance().setTempVeturaId(veturaId);
+                SessionManager.getInstance().setTempUserId(userId);
+                SceneManager.getInstance().setCenterPanePath(SceneLocator.SHTO_VLERESIM);
+                SceneManager.load(SceneLocator.SHTO_VLERESIM,
+                        (AnchorPane) ((BorderPane) SceneManager.getInstance().getScene().getRoot()).getCenter());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
     private void showError(String message) {
