@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class LokacionetController {
-    @FXML private TextField txtLokacioniId;
     @FXML private TextField txtEmriLokacionit;
     @FXML private TextField txtAdresa;
     @FXML private TextField txtQyteti;
@@ -25,7 +24,6 @@ public class LokacionetController {
 
     @FXML private TableView<Lokacionet> lokacionetTableView;
     @FXML private TableColumn<Lokacionet, String> colEmriLokacionit;
-    @FXML private TableColumn<Lokacionet, String> colLokacioniId;
     @FXML private TableColumn<Lokacionet, String> colAdresa;
     @FXML private TableColumn<Lokacionet, String> colQyteti;
     @FXML private TableColumn<Lokacionet, String> colNrTelefonit;
@@ -65,7 +63,7 @@ public class LokacionetController {
     }
 
     @FXML
-    private void handleCreate(MouseEvent event) {
+    private void handleCreateLokacionet() {
         try {
             String emriLokacionit = txtEmriLokacionit.getText();
             String adresa = txtAdresa.getText();
@@ -91,7 +89,7 @@ public class LokacionetController {
     }
 
     @FXML
-    private void handleUpdate(MouseEvent event) {
+    private void handleUpdateLokacionet() {
         try {
             int selectedId = getSelectedLokacionId();
             if (selectedId == -1) return;
@@ -114,7 +112,7 @@ public class LokacionetController {
     }
 
     @FXML
-    private void handleDelete(MouseEvent event) {
+    private void handleDeleteLokacionet() {
         try {
             int selectedId = getSelectedLokacionId();
             if (selectedId == -1) return;
@@ -141,20 +139,5 @@ public class LokacionetController {
         txtAdresa.clear();
         txtQyteti.clear();
         txtNrTelefonit.clear();
-    }
-
-    @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        loadLanguage(Locale.ENGLISH);
-    }
-
-    @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception {
-        languageManager.setLocale(locale);
-        SceneManager.reload();
     }
 }

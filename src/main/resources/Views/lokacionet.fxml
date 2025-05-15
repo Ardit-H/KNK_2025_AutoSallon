@@ -23,9 +23,6 @@
 
     <VBox layoutX="30.0" layoutY="165.0" prefHeight="245.0" prefWidth="391.0" style="-fx-background-color: #370C93;">
         <children>
-            <Label text="%Lokacioni_ID" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
-            <TextField fx:id="txtLokacioniId" />
-
             <Label text="%Emri_Lokacionit" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
             <TextField fx:id="txtEmriLokacionit" />
 
@@ -40,22 +37,22 @@
         </children>
     </VBox>
 
-    <Label layoutX="460.0" layoutY="134.0" text="Kërko:" textFill="black">
+    <Label layoutX="460.0" layoutY="134.0" text="%Kërko" textFill="black">
         <font>
             <Font name="System Bold" size="14.0" />
         </font>
     </Label>
     <TextField fx:id="searchField" layoutX="519.0" layoutY="131.0" prefHeight="26.0" prefWidth="250.0" />
 
-    <Button fx:id="btn_shto" layoutX="457.0" layoutY="211.0" onMouseClicked="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE">
+    <Button fx:id="btn_shto" layoutX="457.0" layoutY="211.0" onAction="#handleCreateLokacionet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_perditeso" layoutX="654.0" layoutY="266.0" onMouseClicked="#handleUpdate" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #370C93;" text="%Përditëso" textFill="WHITE">
+    <Button fx:id="btn_perditeso" layoutX="654.0" layoutY="266.0" onAction="#handleUpdateLokacionet" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #370C93;" text="%Përditëso" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_fshij" layoutX="457.0" layoutY="324.0" onMouseClicked="#handleDelete" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE">
+    <Button fx:id="btn_fshij" layoutX="457.0" layoutY="324.0" onAction="#handleDeleteLokacionet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
@@ -63,11 +60,10 @@
 
     <TableView fx:id="lokacionetTableView" layoutX="30.0" layoutY="514.0" prefHeight="406.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
-            <TableColumn fx:id="colLokacioniId" prefWidth="119.19998168945312" text="%Lokacioni_ID" />
             <TableColumn fx:id="colEmriLokacionit" prefWidth="166.39999389648438" text="%Emri_Lokacionit" />
-            <TableColumn fx:id="colAdresa" prefWidth="171.20001220703125" text="%Adresa_lokacionit" />
-            <TableColumn fx:id="colQyteti" prefWidth="129.60003662109375" text="%Qyteti" />
-            <TableColumn fx:id="colNrTelefonit" prefWidth="152.00006103515625" text="%Nr_telefonit" />
+            <TableColumn fx:id="colAdresa" prefWidth="198.4000244140625" text="%Adresa_lokacionit" />
+            <TableColumn fx:id="colQyteti" prefWidth="169.5999755859375" text="%Qyteti" />
+            <TableColumn fx:id="colNrTelefonit" prefWidth="203.20001220703125" text="%Nr_telefonit" />
         </columns>
     </TableView>
     <Label fx:id="messageLabel" layoutX="43.0" layoutY="457.0" prefHeight="26.0" prefWidth="574.0" textFill="red" />
