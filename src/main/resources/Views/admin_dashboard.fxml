@@ -89,6 +89,7 @@
             <Button fx:id="btnOfertat" mnemonicParsing="false" onAction="#handleLoadOfertat" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #34495e; -fx-font-weight: bold; -fx-border-color: grey; -fx-border-width: 0 0 1 0;" text="%VehicleOffers" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#handleLoadPagesat" prefHeight="32.0" prefWidth="179.0" style="-fx-background-color: #34495e; -fx-font-weight: bold; -fx-border-width: 0 0 1 0; -fx-border-color: grey;" text="%Payments" textFill="WHITE" />
 
+
          </children>
       </VBox>
    </left>
