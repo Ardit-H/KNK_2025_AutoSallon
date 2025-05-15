@@ -63,8 +63,8 @@
             </HBox>
             <TableView fx:id="faturatTableView" prefHeight="400">
                 <columns>
-                    <TableColumn fx:id="colShitjeId" prefWidth="100" text="ID" />
-               <TableColumn fx:id="colShitjeId1" prefWidth="100" text="%Shitje_ID" />
+                    <TableColumn fx:id="colId" prefWidth="100" text="%ID" />
+                    <TableColumn fx:id="colShitjeId" prefWidth="100" text="%Shitje_ID" />
                     <TableColumn fx:id="colDataFatures" prefWidth="120" text="%Data_Faturës" />
                     <TableColumn fx:id="colShumaTotale" prefWidth="120" text="%Shuma_Totale" />
                     <TableColumn fx:id="colLlojiPageses" prefWidth="100" text="%Lloji_Pagesës" />
