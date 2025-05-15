@@ -4,6 +4,7 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -63,6 +64,14 @@ public class User_DashboardController {
     @FXML private void handleLoadUserProfili()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_PROFILE);
         SceneManager.load(SceneLocator.USER_PROFILE,centerPane);
+    }
+    @FXML private void handleLoadInfo(MouseEvent me)throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_HELP);
+        SceneManager.load(SceneLocator.USER_HELP,centerPane);
+    }
+    @FXML private void handleLoadUserLokacionet()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_LOKACIONET);
+        SceneManager.load(SceneLocator.USER_LOKACIONET, centerPane);
     }
     @FXML private void handleLoadVeturat()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT_USER);

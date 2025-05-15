@@ -20,7 +20,7 @@
                       <Image url="@../Images/information.png" />
                   </image>
               </ImageView>
-              <Label layoutX="253.0" layoutY="182.0" prefHeight="35.0" prefWidth="214.0" text="%lblManualiPerdoruesit" textFill="#0a84ff">
+              <Label alignment="CENTER" layoutX="19.0" layoutY="182.0" prefHeight="35.0" prefWidth="677.0" text="%lblAdminManual" textAlignment="CENTER" textFill="#0a84ff">
                   <font>
                       <Font name="Arial" size="20.0" />
                   </font>
