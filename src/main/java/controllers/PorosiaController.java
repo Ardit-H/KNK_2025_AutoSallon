@@ -45,7 +45,7 @@ public class PorosiaController {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.OFERTA));
-            loader.setResources(ResourceBundle.getBundle("languages.messages"));
+            loader.setResources(services.LanguageManager.getInstance().getResourceBundle());
             Parent ofertaPane = loader.load();
 
             OfertaController ofertaController = loader.getController();

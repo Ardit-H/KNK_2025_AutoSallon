@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import models.dto.Veturat.Veturat;
 import services.SceneManager;
@@ -22,6 +24,7 @@ public class Veturat_UserController {
     @FXML private TextField searchField;
     @FXML private Label messageLabel;
     @FXML private Button porositeButton;
+    @FXML private Button vleresoButton;
 
     @FXML private TableView<Veturat> veturatTableView;
     @FXML private TableColumn<Veturat, String> colProdhuesi;
@@ -56,6 +59,7 @@ public class Veturat_UserController {
 
         if (!SessionManager.getInstance().isLoggedIn()) {
             porositeButton.setDisable(true);
+            vleresoButton.setDisable(true);
         }
 
         searchField.textProperty().addListener((obs, oldVal, newVal) -> {
@@ -89,14 +93,35 @@ public class Veturat_UserController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.POROSIA));
             loader.setResources(LanguageManager.getInstance().getResourceBundle());
-            Parent root = loader.load();
+
+            AnchorPane porosiaPane = loader.load();
 
             PorosiaController controller = loader.getController();
             controller.setVetura(vetura);
 
-            SceneManager.getInstance().getScene().setRoot(root);
+            BorderPane root = (BorderPane) SceneManager.getInstance().getScene().getRoot();
+            AnchorPane centerPane = (AnchorPane) root.getCenter();
+            centerPane.getChildren().setAll(porosiaPane);
         } catch (Exception e) {
             showError("Nuk u mundësua hapja e faqes së porosisë.");
+        }
+    }
+    public void handleRate()throws Exception {
+        Veturat selectedVetura = veturatTableView.getSelectionModel().getSelectedItem();
+        if (selectedVetura == null) {
+            showError("Zgjidh një veturë për të bërë vlerësimin!");
+        }else{
+            try {
+                int userId = SessionManager.getInstance().getcurrentUser().getPid();
+                int veturaId = selectedVetura.getId();
+                SessionManager.getInstance().setTempVeturaId(veturaId);
+                SessionManager.getInstance().setTempUserId(userId);
+                SceneManager.getInstance().setCenterPanePath(SceneLocator.SHTO_VLERESIM);
+                SceneManager.load(SceneLocator.SHTO_VLERESIM,
+                        (AnchorPane) ((BorderPane) SceneManager.getInstance().getScene().getRoot()).getCenter());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
     private void showError(String message) {
