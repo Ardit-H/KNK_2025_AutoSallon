@@ -8,8 +8,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import utils.SceneLocator;
 
-import java.util.ResourceBundle;
-
 public class SceneManager {
     private static SceneManager sceneManager;
     private Scene scene;
@@ -19,7 +17,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.FATURAT;
+        this.currentPath = SceneLocator.TESTDRIVES;
         this.scene = this.initScene();
     }
 
@@ -73,7 +71,6 @@ public class SceneManager {
         return loader.load();
     }
 
- //Shtese-nevojitet tek AdminDashboard
     public void setCenterPanePath(String path) {
         this.centerPanePath = path;
     }

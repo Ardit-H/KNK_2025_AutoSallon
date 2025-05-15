@@ -33,7 +33,7 @@ public class TestDrivesController {
     @FXML private TableColumn<TestDrives, String> colLocation;
 
     private final TestDrivesService testDrivesService;
-    private  LanguageManager languageManager;
+    private final LanguageManager languageManager;
 
     public TestDrivesController(){
         this.testDrivesService = new TestDrivesService();
