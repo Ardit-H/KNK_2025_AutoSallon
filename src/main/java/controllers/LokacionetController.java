@@ -4,7 +4,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import models.dto.Lokacionet.CreateLokacionetDto;
 import models.dto.Lokacionet.Lokacionet;
 import models.dto.Lokacionet.UpdateLokacionetDto;
@@ -27,7 +26,6 @@ public class LokacionetController {
     @FXML private TableColumn<Lokacionet, String> colAdresa;
     @FXML private TableColumn<Lokacionet, String> colQyteti;
     @FXML private TableColumn<Lokacionet, String> colNrTelefonit;
-
     @FXML private Label messageLabel;
 
     private LokacionetService lokacionetService;
