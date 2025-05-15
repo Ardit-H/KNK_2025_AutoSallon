@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShtoVleresimController">
+   <children>
+      <AnchorPane layoutX="222.0" layoutY="33.0" prefHeight="678.0" prefWidth="810.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="-6.0" layoutY="30.0" prefHeight="32.0" prefWidth="813.0" text="VleresoVeturen" textAlignment="CENTER">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="253.0" layoutY="209.0" prefHeight="66.0" prefWidth="82.0" text="Vleresimi:" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="vleresimi" layoutX="368.0" layoutY="226.0" prefHeight="31.0" prefWidth="176.0" />
+            <Label alignment="CENTER" layoutX="254.0" layoutY="292.0" prefHeight="66.0" prefWidth="82.0" text="Koment:" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="komentiField" layoutX="342.0" layoutY="292.0" prefHeight="83.0" prefWidth="346.0" />
+            <Button layoutX="263.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleVlereso"  prefHeight="50.0" prefWidth="106.0" text="Vlereso" />
+            <Button layoutX="414.0" layoutY="515.0" mnemonicParsing="false" onAction="#handleKthehu" prefHeight="50.0" prefWidth="106.0" text="Kthehu" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

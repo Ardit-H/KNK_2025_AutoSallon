@@ -67,5 +67,6 @@
    </Text>
    <Label id="messageLabel" fx:id="messageLabel" layoutX="103.0" layoutY="116.0" prefHeight="18.0" prefWidth="202.0" />
    <Button fx:id="porositeButton" layoutX="622.0" layoutY="713.0" mnemonicParsing="false" onAction="#handleOrder" prefHeight="26.0" prefWidth="84.0" text="%Porosite" />
+   <Button fx:id="vleresoButton" layoutX="842.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleRate" prefHeight="26.0" prefWidth="84.0" text="%Porosite" />
 
 </AnchorPane>
