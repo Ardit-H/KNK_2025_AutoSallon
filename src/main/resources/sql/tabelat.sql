@@ -151,13 +151,21 @@ ADD CONSTRAINT rezervimet_klienti_id_fkey
 FOREIGN KEY (klienti_id) REFERENCES klientet(id) ON DELETE CASCADE;
 
 
-CREATE TABLE Riparimet (
+CREATE TABLE riparimet (
     id SERIAL PRIMARY KEY,
-    veturaId INTEGER NOT NULL,
-    pershkrimi TEXT NOT NULL,
-    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
-    kostoRiparimit NUMERIC(10,2) NOT NULL,
-    FOREIGN KEY (veturaId) REFERENCES veturat(id)
+    veturaid INTEGER NOT NULL,
+    sherbimiid INTEGER,
+    statusi VARCHAR(30) NOT NULL,
+    kostoriparimit NUMERIC(10,2) NOT NULL CHECK (kostoriparimit >= 0),
+    datariparimit DATE NOT NULL DEFAULT CURRENT_DATE,
+
+    CONSTRAINT riparimet_veturaid_fkey FOREIGN KEY (veturaid)
+        REFERENCES public.veturat (id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT riparimet_sherbimiid_fkey FOREIGN KEY (sherbimiid)
+        REFERENCES public.sherbimet (id)
+        ON DELETE SET NULL
 );
 
 CREATE TABLE Pagesat (
