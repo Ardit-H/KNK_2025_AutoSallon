@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/rating.png" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ShtoVleresimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ShtoVleresimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Veturat_UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Veturat_UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/shto_vleresim_per_veturen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/shto_vleresim_per_veturen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/veturat_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/veturat_user.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -474,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747329818889</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
+      <option name="closed" value="true" />
+      <created>1747333250275</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1747333250275</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -489,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i klases User" />
     <MESSAGE value="Krijimi i klases Klientet" />
     <MESSAGE value="Organizimi i dto brenda models" />
     <MESSAGE value="Shtova tabelen Veturat ne databaze" />
@@ -514,6 +514,7 @@
     <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
     <MESSAGE value="changes" />
     <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
   </component>
 </project>
