@@ -105,6 +105,7 @@ public class RezervimetController {
     public void handleUpdate(){
         try {
             UpdateRezervimetDto dto = new UpdateRezervimetDto();
+            dto.setRezervimiId(Integer.parseInt(rezervimiIdField.getText()));
             dto.setKlientiId(Integer.parseInt(klientiIdField.getText()));
             dto.setVeturaId(Integer.parseInt(veturaIdField.getText()));
             dto.setDataRezervimet(dataRezervimitPicker.getValue().toString());
@@ -142,6 +143,7 @@ public class RezervimetController {
 
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Njoftim");
         alert.setContentText(message);
         alert.show();
     }

@@ -71,7 +71,7 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
         }
 
         query.setLength(query.length() - 2);
-        query.append("WHERE ID = ?");
+        query.append(" WHERE ID = ?");
         params.add(rezervimetDto.getRezervimiId());
 
         try {

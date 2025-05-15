@@ -9,7 +9,7 @@ public class Rezervimet {
     private String dataRezervimit;
     private String statusi;
 
-    private Rezervimet(int rezervimiId, int klientiId, int veturaId, String dataRezervimit, String statusi){
+    public Rezervimet(int rezervimiId, int klientiId, int veturaId, String dataRezervimit, String statusi){
         this.rezervimiId = rezervimiId;
         this.klientiId = klientiId;
         this.veturaId = veturaId;
