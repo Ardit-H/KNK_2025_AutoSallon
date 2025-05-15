@@ -26,7 +26,7 @@
       </AnchorPane>
       <VBox layoutX="373.0" layoutY="141.0" prefHeight="491.0" prefWidth="630.0" style="-fx-background-radius: 10;">
          <children>
-            <AnchorPane prefHeight="246.0" prefWidth="622.0" style="-fx-background-color: lightblue; -fx-border-radius: 5;">
+            <AnchorPane prefHeight="246.0" prefWidth="622.0" style="-fx-background-color: lightblue; -fx-border-radius: 10;">
                <children>
                   <HBox alignment="CENTER" layoutX="-1.0" layoutY="57.0" prefHeight="79.0" prefWidth="638.0" spacing="15.0">
                      <children>
