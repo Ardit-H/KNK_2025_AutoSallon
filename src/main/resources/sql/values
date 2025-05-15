@@ -208,15 +208,15 @@ CREATE TABLE garancia (
 INSERT INTO Klientet (emri, mbiemri, email, nrtelefonit, adresa)
 VALUES
   ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë'),
-  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë'),
-  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë'),
-  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë'),
-  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë'),
-  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë'),
-  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë'),
-  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë'),
-  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë'),
-  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë');
+  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Ferizaj'),
+  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, GJilan'),
+  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prizren'),
+  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Gjakovë'),
+  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Lipjan'),
+  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Shtime'),
+  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Mitrovicë'),
+  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Drenas'),
+  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Podujevë');
 
 
 
