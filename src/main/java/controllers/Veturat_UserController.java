@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import models.dto.Veturat.Veturat;
 import services.SceneManager;
@@ -89,12 +91,15 @@ public class Veturat_UserController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.POROSIA));
             loader.setResources(LanguageManager.getInstance().getResourceBundle());
-            Parent root = loader.load();
+
+            AnchorPane porosiaPane = loader.load();
 
             PorosiaController controller = loader.getController();
             controller.setVetura(vetura);
 
-            SceneManager.getInstance().getScene().setRoot(root);
+            BorderPane root = (BorderPane) SceneManager.getInstance().getScene().getRoot();
+            AnchorPane centerPane = (AnchorPane) root.getCenter();
+            centerPane.getChildren().setAll(porosiaPane);
         } catch (Exception e) {
             showError("Nuk u mundësua hapja e faqes së porosisë.");
         }
