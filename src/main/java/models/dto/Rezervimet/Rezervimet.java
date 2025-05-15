@@ -21,7 +21,7 @@ public class Rezervimet {
         int rezervimiId = resultSet.getInt("id");
         int klientiId = resultSet.getInt("klienti_id");
         int veturaId = resultSet.getInt("vetura_id");
-        String dataRezervimit = resultSet.getString("dataRezervimit");
+        String dataRezervimit = resultSet.getString("data_rezervimit");
         String statusi = resultSet.getString("statusi");
         return new Rezervimet(rezervimiId, klientiId, veturaId, dataRezervimit, statusi);
     }

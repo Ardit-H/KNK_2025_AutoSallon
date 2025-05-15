@@ -5,13 +5,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
+import services.LanguageManager;
+import services.SceneManager;
 import services.SessionManager;
 import services.PerdoruesitService;
+import utils.SceneLocator;
 
 public class UserProfileController {
-
+    @FXML private AnchorPane anchorPane;
     @FXML private TextField txtFirstName;
     @FXML private TextField txtLastName;
     @FXML private TextField txtEmail;
@@ -20,9 +24,14 @@ public class UserProfileController {
     @FXML private ImageView imgProfilePhoto;
     @FXML private Button buttonEdit;
     @FXML private Button buttonSave;
-
+    private LanguageManager languageManager;
     private Perdoruesit currentUser;
-    private final PerdoruesitService perdoruesitService = new PerdoruesitService();
+    private PerdoruesitService perdoruesitService;
+
+    public UserProfileController(){
+        this.perdoruesitService=new PerdoruesitService();
+        this.languageManager=LanguageManager.getInstance();
+    }
 
     @FXML
     public void initialize(){
@@ -88,8 +97,8 @@ public class UserProfileController {
     }
 
     @FXML
-    private void handleChangePassword(){
-
-        System.out.println("Ndrysho fjalëkalimin...");
+    private void handleChangePassword()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.CHANGE_PASSWORD);
+        SceneManager.reload();
     }
 }

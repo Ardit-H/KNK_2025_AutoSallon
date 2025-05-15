@@ -14,6 +14,7 @@ import services.SessionManager;
 import utils.SceneLocator;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class PorosiaController {
 
@@ -28,7 +29,7 @@ public class PorosiaController {
     private VBox ofertaContainer;
 
     @FXML
-    private Button handleDergo;
+    private Button dergoButoni;
     @FXML
     private TextField txtCmimiOfruar;
 
@@ -37,14 +38,12 @@ public class PorosiaController {
     private final PorosiaService porosiaService = new PorosiaService();
 
 
-
     public void setVetura(Veturat vetura) {
-        System.out.println("➡️ setVetura() u thirr");
         this.veturaZgjedhur = vetura;
 
-        labelModeli.setText("Modeli i vetures: " + vetura.getModeli());
-        labelProdhuesi.setText("Prodhuesi i vetures: " + vetura.getProdhuesi());
-        labelViti.setText("Viti i prodhimit: " + String.valueOf(vetura.getVitiProdhimit()));
+        labelModeli.setText(vetura.getModeli());
+        labelProdhuesi.setText(vetura.getProdhuesi());
+        labelViti.setText(String.valueOf(vetura.getVitiProdhimit()));
         SessionManager.getInstance().loginUser(
                 new Perdoruesit(
                         1,
@@ -62,45 +61,68 @@ public class PorosiaController {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.OFERTA));
+            loader.setResources(ResourceBundle.getBundle("languages.messages"));
             Parent ofertaPane = loader.load();
 
             OfertaController ofertaController = loader.getController();
-            System.out.println(vetura);
-            System.out.println("here");
             ofertaController.setOferta(vetura);
-            System.out.println("Oferta u ngarkua në VBox.");
 
             ofertaContainer.getChildren().setAll(ofertaPane);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     @FXML
     private void handleDergo(ActionEvent event) {
         try {
             double cmimiOfruar = Double.parseDouble(txtCmimiOfruar.getText());
+            if (cmimiOfruar <= 0) {
+                showError("Cmimi i ofruar nuk mund te jete numer negativ!");
+                return;
+            }
 
             int klientiId;
             if (SessionManager.getInstance().isLoggedIn()) {
                 Perdoruesit user = SessionManager.getInstance().getcurrentUser();
                 klientiId = user.getPid();
             } else {
-                throw new Exception("Ju nuk jeni te kyqur");
+                showError("Ju nuk jeni te kyqur");
+                return;
             }
 
             CreatePorosiaDto dto = new CreatePorosiaDto(klientiId, veturaZgjedhur.getId(), cmimiOfruar, "Ne pritje");
 
             porosiaService.create(dto);
 
-            Alert success = new Alert(Alert.AlertType.INFORMATION);
-            success.setTitle("Sukses");
-            success.setHeaderText(null);
-            success.setContentText("Porosia u dërgua me sukses!");
-            success.showAndWait();
+            showSuccess("Porosia u dërgua me sukses!");
+            dergoButoni.setDisable(true);
+
+            clearForm();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    private void clearForm() {
+        txtCmimiOfruar.clear();
+    }
+
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Gabim");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showSuccess(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Sukses");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+
+    }
 }

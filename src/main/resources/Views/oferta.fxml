@@ -10,7 +10,7 @@
 
 <VBox fx:id="ofertaBox" prefHeight="277.0" prefWidth="291.0" spacing="10.0" style="-fx-padding: 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OfertaController">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Oferta per veturen:" wrappingWidth="172.5367488861084">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%Oferta_per_veturen" wrappingWidth="172.5367488861084">
          <font>
             <Font size="18.0" />
          </font>
@@ -19,6 +19,7 @@
          <children>
             <HBox prefHeight="26.0" prefWidth="290.0">
                <children>
+                  <Label prefHeight="26.0" prefWidth="182.0" text="%Zbritja" />
                   <Label fx:id="zbritja" prefHeight="26.0" prefWidth="182.0" text="Label" />
                </children>
             </HBox>
@@ -26,22 +27,25 @@
       </HBox>
       <HBox prefHeight="41.0" prefWidth="291.0">
          <children>
+            <Label prefHeight="26.0" prefWidth="182.0" text="%CmimiFinal" />
             <Label fx:id="cmimiFinal" prefHeight="26.0" prefWidth="182.0" text="Label" />
          </children>
       </HBox>
       <HBox prefHeight="40.0" prefWidth="291.0">
          <children>
+            <Label prefHeight="26.0" prefWidth="182.0" text="%Prej" />
             <Label fx:id="dataFillimit" prefHeight="26.0" prefWidth="180.0" text="Label" />
          </children>
       </HBox>
       <HBox prefHeight="42.0" prefWidth="291.0">
          <children>
+            <Label prefHeight="26.0" prefWidth="182.0" text="%Deri" />
             <Label fx:id="dataMbarimit" prefHeight="26.0" prefWidth="183.0" text="Label" />
          </children>
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="48.0" prefWidth="291.0">
          <children>
-            <Button fx:id="aktivizoButoni" mnemonicParsing="false" onAction="#handleAktivizoOferten" prefHeight="30.0" prefWidth="107.0" text="Aktivizo Oferten" />
+            <Button fx:id="aktivizoButoni" mnemonicParsing="false" onAction="#handleAktivizoOferten" prefHeight="30.0" prefWidth="118.0" text="%AktivizoOferten" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />

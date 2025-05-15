@@ -9,16 +9,18 @@ import javafx.stage.Stage;
 import models.dto.Veturat.Veturat;
 import utils.SceneLocator;
 
+import java.util.ResourceBundle;
+
 public class Porosite extends Application {
     public void start(Stage stage) throws Exception{
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.PERDORUESI));
-
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.POROSIA));
+        loader.setResources(ResourceBundle.getBundle("languages.messages"));
         Parent root = loader.load();
 
         PorosiaController controller = loader.getController();
         System.out.println("➡️ Controller: " + controller);
-        controller.setVetura(new Veturat(9, "Bmw", "bmw", 2019, "e zeza", 2000.00, "e re", 100000, "Benzines")); // nëse teston manualisht
+        controller.setVetura(new Veturat(4, "Bmw", "bmw", 2019, "e zeza", 2000.00, "e re", 100000, "Benzines")); // nëse teston manualisht
 
         stage.setScene(new Scene(root, 1330, 700));
         stage.setTitle("Test Porosia");

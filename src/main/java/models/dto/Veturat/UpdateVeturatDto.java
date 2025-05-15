@@ -12,6 +12,7 @@ public class UpdateVeturatDto {
         return id;
     }
 
+
     public String getGjendja() {
         return gjendja;
     }
@@ -37,7 +38,7 @@ public class UpdateVeturatDto {
     }
 
     public void setId(int id) {
-
+        this.id = id;
     }
 }
 
