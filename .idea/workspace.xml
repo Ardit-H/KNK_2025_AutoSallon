@@ -6,12 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i butonave ne dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RezervimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RezervimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/Rezervimet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/Rezervimet/Rezervimet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/RezervimetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RezervimetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OfertaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PagesatDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PagesatDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PorosiaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/values" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747247713554</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ndryshime">
+      <option name="closed" value="true" />
+      <created>1747311057035</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747311057035</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,10 +453,10 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
-    <MESSAGE value="ndryshime" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
     <MESSAGE value="workspace" />
     <MESSAGE value="Shtimi i butonave ne dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i butonave ne dashboard" />
+    <MESSAGE value="ndryshime" />
+    <option name="LAST_COMMIT_MESSAGE" value="ndryshime" />
   </component>
 </project>
