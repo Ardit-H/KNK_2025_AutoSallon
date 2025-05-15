@@ -256,7 +256,7 @@ VALUES
   ('Volkswagen', 'Golf 7', 2017, 'E gri', 14000.00, 'E përdorur', 75000, 'Naftë'),
   ('Volkswagen', 'Passat', 2019, 'E zezë', 21000.00, 'E përdorur', 45000, 'Naftë'),
   ('Audi', 'A4', 2020, 'E bardhë', 22000.00, 'E përdorur', 25000, 'Naftë'),
-  ('Toyota', 'Corolla', 2020, 'E kuqe', 19000.00, 'E përdorur', 30000, 'Hibrid');
+  ('Toyota', 'Corolla', 2020, 'E kuqe', 19000.00, 'E përdorur', 30000, 'Hibrid')
 
 
 
