@@ -7,7 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Veturat.Veturat;
 import services.SceneManager;
 import services.SessionManager;
@@ -99,6 +101,30 @@ public class Veturat_UserController {
             showError("Nuk u mundësua hapja e faqes së porosisë.");
         }
     }
+    public void handleRate()throws Exception{
+        Veturat selectedVetura = veturatTableView.getSelectionModel().getSelectedItem();
+        if (selectedVetura != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.SHTO_VLERESIM));
+                Parent root = loader.load();
+                // Merr controllerin dhe dërgo të dhënat e veturës dhe userit
+                ShtoVleresimController controller = loader.getController();
+                Perdoruesit currentUser=SessionManager.getInstance().getcurrentUser();
+                controller.setUseriDheVetura(currentUser.getPid(), selectedVetura.getId());
+
+                Stage stage = new Stage();
+                stage.setTitle("Shto Vlerësim");
+                stage.setScene(new Scene(root));
+                stage.initModality(Modality.APPLICATION_MODAL); // bllokon prindin derisa të mbyllet kjo dritare
+                stage.showAndWait();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            showError("Zgjidh një veturë për të bërë vlerësimin!");
+
+        }
+        }
     private void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Gabim");
