@@ -1,0 +1,452 @@
+
+CREATE TABLE Klientet(
+    id SERIAL PRIMARY KEY,
+    emri VARCHAR(50) NOT NULL CHECK(char_length(emri)>=3),
+    mbiemri VARCHAR(50) NOT NULL CHECK(char_length(mbiemri)>=3),
+    email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\.[A-Za-z]{2,}$'),
+    nrtelefonit VARCHAR(15) CHECK(nrtelefonit ~ '^\+?[0-9]{7,15}$'),
+    adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
+    data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    ALTER TABLE Klientet ADD COLUMN perdoruesi_id INTEGER UNIQUE;
+    ALTER TABLE Klientet ADD CONSTRAINT fk_perdoruesi FOREIGN KEY (perdoruesi_id) REFERENCES perdoruesi(id) ON DELETE SET NULL;
+
+
+
+CREATE TABLE perdoruesi (
+    id SERIAL PRIMARY KEY,
+   emri VARCHAR(50) NOT NULL CHECK(char_length(emri)>=3),
+   mbiemri VARCHAR(50) NOT NULL CHECK(char_length(mbiemri)>=3),
+   email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\.[A-Za-z]{2,}$'),
+   nrtelefonit VARCHAR(15) CHECK(nrtelefonit ~ '^\+?[0-9]{7,15}$'),
+   adresa VARCHAR(200) CHECK(char_length(adresa)>=5),
+   data_regjistrimit TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   roli VARCHAR(50) DEFAULT 'user',
+   passwordHash VARCHAR(255) NOT NULL,
+   salt VARCHAR(255) NOT NULL
+);
+CREATE TABLE sherbimet(
+    id SERIAL PRIMARY KEY,
+    emri VARCHAR(100) NOT NULL,
+    pershkrimi VARCHAR(500),
+    çmimi DECIMAL(10,2) DEFAULT 0 CHECK (çmimi>=0)
+);
+
+
+CREATE TABLE veturat (
+    id SERIAL PRIMARY KEY,
+    prodhuesi VARCHAR(50) NOT NULL,
+    modeli VARCHAR(50) NOT NULL,
+    viti_prodhimit INT CHECK (viti_prodhimit >= 1900 AND viti_prodhimit <= EXTRACT(YEAR FROM CURRENT_DATE)),
+    ngjyra VARCHAR(30),
+    cmimi DECIMAL(10,2) CHECK (cmimi >= 0),
+    gjendja VARCHAR(20) CHECK (gjendja IN ('E re', 'E përdorur')),
+    kilometrazha INT CHECK (kilometrazha >= 0),
+    tipi_karburant VARCHAR(20) CHECK (tipi_karburant IN ('Benzinë', 'Naftë', 'Elektrik', 'Hibrid'))
+);
+
+
+CREATE TABLE Porosite (
+    id SERIAL PRIMARY KEY,
+    kid INTEGER NOT NULL,
+    veturaId INTEGER NOT NULL,
+    cmimiOfruar NUMERIC(10, 2) CHECK (cmimiOfruar > 0),
+    statusiPorosise VARCHAR(20) CHECK (statusiPorosise IN ('Ne pritje', 'Ne proces', 'E kompletuar', 'E refuzuar')),
+    FOREIGN KEY (kid) REFERENCES Klientet(id),
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id)
+)
+ALTER TABLE porosite
+ADD CONSTRAINT porosite_kid_fkey FOREIGN KEY (kid) REFERENCES klientet(id) ON DELETE CASCADE;
+
+
+
+
+CREATE TABLE Punetoret (
+    id SERIAL PRIMARY KEY,
+    emri VARCHAR(50) NOT NULL,
+    mbiemri VARCHAR(50) NOT NULL,
+    pozita VARCHAR(50) NOT NULL,
+    telefoni VARCHAR(15) UNIQUE,
+    email VARCHAR(100) UNIQUE,
+    paga DECIMAL(10,2) CHECK (paga >= 0),
+    data_punesimit DATE NOT NULL
+);
+
+
+
+CREATE TABLE Shitjet (
+       id SERIAL PRIMARY KEY,
+	   kid INTEGER NOT NULL,
+	   vetura_id INTEGER NOT NULL ,
+	   punetor_id INTEGER NOT NULL,
+	   data_shitjes DATE NOT NULL,
+	   cmimi_final DECIMAL(10,2) CHECK (cmimi_final > 0),
+	   FOREIGN KEY (kid) REFERENCES Klientet(id),
+	   FOREIGN KEY (vetura_id) REFERENCES Veturat(id),
+	   FOREIGN KEY (punetor_id) REFERENCES Punetoret(id)
+);
+
+CREATE TABLE faturat(
+    id SERIAL PRIMARY KEY,
+    shitje_id INTEGER  NOT NULL,
+    dataFatures DATE NOT NULL,
+    shumaTotale NUMERIC(10,2) NOT NULL CHECK (shumaTotale >= 0),
+    llojiPageses TEXT NOT NULL CHECK (llojiPageses IN('CASH', 'KARTE', 'BANK', 'TJETER')),
+    FOREIGN KEY (shitje_id) REFERENCES Shitjet(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Vleresimet (
+    id SERIAL PRIMARY KEY,
+    perdoruesi_id INT NOT NULL,
+    vetura_id INT NOT NULL,
+    vleresimi INT CHECK (vleresimi BETWEEN 1 AND 5),
+    komenti TEXT,
+    data_vleresimit DATE DEFAULT CURRENT_DATE,
+    FOREIGN KEY(perdoruesi_id) REFERENCES perdoruesi(id) ON DELETE CASCADE,
+    FOREIGN KEY(vetura_id) REFERENCES Veturat(id) ON DELETE CASCADE
+);
+ALTER TABLE Vleresimet
+ALTER COLUMN data_vleresimit TYPE TIMESTAMP
+USING data_vleresimit::timestamp,
+ALTER COLUMN data_vleresimit SET DEFAULT CURRENT_TIMESTAMP;
+
+
+
+
+CREATE TABLE testDrives (
+    id SERIAL PRIMARY KEY,
+    kid INT NOT NULL,
+    vetura_id INT NOT NULL,
+    status VARCHAR(50),
+    feedback TEXT,
+    duration INT,
+    location VARCHAR(255),
+    CONSTRAINT fk_klient FOREIGN KEY (id)
+        REFERENCES Klientet(id) ON DELETE CASCADE,
+    CONSTRAINT fk_vetura FOREIGN KEY (id)
+        REFERENCES Veturat(id) ON DELETE CASCADE
+);
+
+CREATE TABLE rezervimet (
+    id SERIAL PRIMARY KEY,
+    klienti_id INTEGER REFERENCES Klientet(id),
+    vetura_id INTEGER REFERENCES Veturat(id),
+    data_rezervimit DATE NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
+);
+ALTER TABLE rezervimet
+ADD CONSTRAINT rezervimet_klienti_id_fkey
+FOREIGN KEY (klienti_id) REFERENCES klientet(id) ON DELETE CASCADE;
+
+
+CREATE TABLE Riparimet (
+    id SERIAL PRIMARY KEY,
+    veturaId INTEGER NOT NULL,
+    pershkrimi TEXT NOT NULL,
+    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
+    kostoRiparimit NUMERIC(10,2) NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES veturat(id)
+);
+
+CREATE TABLE Pagesat (
+    id SERIAL PRIMARY KEY,
+    porosiaId INTEGER NOT NULL,
+    metodaPageses VARCHAR(20) CHECK (metodaPageses IN ('KARTELE', 'CASH', 'KREDI', 'TJETER')),
+    shuma NUMERIC(10, 2) NOT NULL CHECK (shuma >= 0),
+    dataPageses DATE DEFAULT CURRENT_DATE,
+    FOREIGN KEY (porosiaId) REFERENCES Porosite(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Ofertat (
+    id SERIAL PRIMARY KEY,
+    veturaId INT NOT NULL,
+    zbritja DECIMAL(5,2) CHECK (zbritja >= 0),
+    cmimiFinal DECIMAL(10,2) CHECK (cmimiFinal >= 0),
+    dataFillimit DATE NOT NULL,
+    dataMbarimit DATE NOT NULL,
+    FOREIGN KEY (veturaId) REFERENCES Veturat(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Partneret (
+    id SERIAL PRIMARY KEY,
+    emri_kompanise VARCHAR(100) NOT NULL,
+    lloji_partnerit VARCHAR(50) CHECK (lloji_partnerit IN ('Servis', 'Sigurim', 'Marketing', 'Tjetër')) NOT NULL,
+    person_kontakti VARCHAR(100),
+    email VARCHAR(100) UNIQUE CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
+    telefoni VARCHAR(15) CHECK(telefoni ~ '^\+?[0-9]{7,15}$'),
+    adresa VARCHAR(100) NOT NULL,
+    data_bashkepunimit DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE Lokacionet (
+    id     SERIAL PRIMARY KEY,
+    emri_lokacionit   VARCHAR(100),
+    adresa            VARCHAR(150),
+    qyteti            VARCHAR(50),
+    nr_telefonit      VARCHAR(20)
+);
+
+CREATE TABLE Statistikat_e_shitjeve (
+    id   SERIAL PRIMARY KEY,
+    muaji           VARCHAR(20),
+    totali_shitjeve INTEGER,
+    fitimi          NUMERIC(10,2) CHECK (fitimi >= 0),
+    shpenzimet      NUMERIC(10,2) CHECK (shpenzimet >= 0)
+);
+CREATE TABLE garancia (
+    id SERIAL PRIMARY KEY,
+    vid INT,
+    kid INT,
+    lloji_garancise VARCHAR(40) CHECK (lloji_garancise IN ('6 muaj', '1 vit', '2 vite')),
+    data_fillimit DATE,
+    data_mbarimit DATE,
+    FOREIGN KEY (kid) REFERENCES klientet(id),
+    FOREIGN KEY (vid) REFERENCES veturat(id)
+);
+
+
+INSERT INTO Klientet (emri, mbiemri, email, nrtelefonit, adresa)
+VALUES
+  ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë'),
+  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë'),
+  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë'),
+  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë'),
+  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë'),
+  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë'),
+  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë'),
+  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë'),
+  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë'),
+  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë');
+
+
+  INSERT INTO Perdoruesi (emri, mbiemri, email, nrtelefonit, adresa, passwordHash, salt)
+VALUES
+  ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë', 'hash1', 'salt1'),
+  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë', 'hash2', 'salt2'),
+  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë', 'hash3', 'salt3'),
+  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë', 'hash4', 'salt4'),
+  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë', 'hash5', 'salt5'),
+  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë', 'hash6', 'salt6'),
+  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë', 'hash7', 'salt7'),
+  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë', 'hash8', 'salt8'),
+  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë', 'hash9', 'salt9'),
+  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë', 'hash10', 'salt10');
+
+  INSERT INTO Sherbimet (emri, pershkrimi, çmimi)
+VALUES
+  ('Servis i plotë', 'Kontroll dhe servis i plotë i veturës', 150.00),
+  ('Ndërrim i vajit', 'Ndërrim i vajit dhe filtrave', 50.00),
+  ('Balancim i gomave', 'Balancim dhe rregullim i gomave', 30.00),
+  ('Kontroll teknik', 'Kontroll teknik i detajuar', 70.00),
+  ('Pastrim i brendshëm', 'Pastrim i brendshëm i veturës', 40.00),
+  ('Pastrim i jashtëm', 'Larje dhe pastrim i jashtëm', 25.00),
+  ('Diagnostikim elektronik', 'Kontroll elektronik i sistemit', 60.00),
+  ('Ndërrim i frenave', 'Ndërrim i disqeve dhe pllakave të frenave', 120.00),
+  ('Ndërrim i baterisë', 'Zëvendësim i baterisë së veturës', 80.00),
+  ('Rregullim i klimës', 'Servis dhe mbushje e sistemit të klimës', 90.00);
+
+
+  INSERT INTO Veturat (prodhuesi, modeli, viti_prodhimit, ngjyra, cmimi, gjendja, kilometrazha, tipi_karburant)
+VALUES
+  ('Volkswagen', 'Golf 7', 2018, 'E bardhë', 15000.00, 'E përdorur', 60000, 'Naftë'),
+  ('BMW', '320d', 2019, 'E zezë', 22000.00, 'E përdorur', 45000, 'Naftë'),
+  ('Mercedes-Benz', 'C200', 2020, 'Gri', 25000.00, 'E re', 10000, 'Benzinë'),
+  ('Audi', 'A4', 2017, 'E kuqe', 18000.00, 'E përdorur', 70000, 'Naftë'),
+  ('Toyota', 'Corolla', 2021, 'Blu', 20000.00, 'E re', 5000, 'Hibrid'),
+  ('Ford', 'Focus', 2016, 'E verdhë', 12000.00, 'E përdorur', 80000, 'Benzinë'),
+  ('Opel', 'Astra', 2015, 'E gjelbër', 10000.00, 'E përdorur', 90000, 'Naftë'),
+  ('Renault', 'Megane', 2018, 'Portokalli', 14000.00, 'E përdorur', 65000, 'Naftë'),
+  ('Hyundai', 'i30', 2019, 'E kaltër', 16000.00, 'E re', 15000, 'Benzinë'),
+  ('Kia', 'Ceed', 2020, 'E bardhë', 17000.00, 'E re', 10000, 'Hibrid');
+
+
+  INSERT INTO Porosite (kid, veturaId, cmimiOfruar, statusiPorosise)
+VALUES
+  (1, 1, 14500.00, 'Ne pritje'),
+  (2, 2, 21000.00, 'Ne proces'),
+  (3, 3, 24000.00, 'E kompletuar'),
+  (4, 4, 17500.00, 'E refuzuar'),
+  (5, 5, 19500.00, 'Ne pritje'),
+  (6, 6, 11500.00, 'Ne proces'),
+  (7, 7, 9500.00, 'E kompletuar'),
+  (8, 8, 13500.00, 'E refuzuar'),
+  (9, 9, 15500.00, 'Ne pritje'),
+  (10, 10, 16500.00, 'Ne proces');
+
+
+  INSERT INTO Punetoret (emri, mbiemri, pozita, telefoni, email, paga, data_punesimit)
+VALUES
+('Arben', 'Hoxha', 'Menaxher', '0681234567', 'arben.hoxha@example.com', 950.00, '2020-03-15'),
+('Elira', 'Shehu', 'Financiare', '0698765432', 'elira.shehu@example.com', 870.50, '2021-06-01'),
+('Gentian', 'Kryeziu', 'Inxhinier', '0672345678', 'gentian.k@example.com', 1200.00, '2019-11-23'),
+('Blerina', 'Dauti', 'Sekretare', '0693344556', 'blerina.d@example.com', 600.00, '2022-02-10'),
+('Erion', 'Meta', 'IT Specialist', '0689988776', 'erion.meta@example.com', 1100.00, '2023-01-05'),
+('Lindita', 'Mema', 'HR', '0679988775', 'lindita.mema@example.com', 750.00, '2020-09-30'),
+('Valon', 'Ismaili', 'Shofer', '0684433221', 'valon.i@example.com', 500.00, '2021-12-12'),
+('Anila', 'Toska', 'Zyrtare', '0695544332', 'anila.toska@example.com', 700.00, '2022-07-20'),
+('Dritan', 'Bajrami', 'Teknik', '0673322110', 'dritan.b@example.com', 650.00, '2018-04-18'),
+('Nora', 'Zeqiri', 'Analiste', '0692211445', 'nora.z@example.com', 900.00, '2023-08-01');
+
+INSERT INTO Shitjet (kid, vetura_id, punetor_id, data_shitjes, cmimi_final) VALUES
+(1, 1, 1, '2024-12-01', 15000.00),
+(2, 2, 2, '2025-01-15', 43000.00),
+(3, 3, 3, '2025-02-20', 25000.00),
+(4, 4, 4, '2025-03-05', 12000.00),
+(5, 5, 5, '2025-03-25', 18000.00),
+(6, 6, 6, '2025-04-10', 22000.00),
+(7, 7, 7, '2025-04-20', 27000.00),
+(8, 8, 8, '2025-04-25', 33000.00),
+(9, 9, 9, '2025-05-01', 29000.00),
+(10, 10, 10, '2025-05-10', 31000.00);
+
+
+INSERT INTO faturat (shitje_id, dataFatures, shumaTotale, llojiPageses)
+VALUES
+(1, '2024-01-05', 2500.00, 'BANK'),
+(2, '2024-01-10', 340.50, 'CASH'),
+(3, '2024-01-15', 1230.75, 'KARTE'),
+(4, '2024-02-01', 456.00, 'TJETER'),
+(5, '2024-02-20', 890.00, 'CASH'),
+(6, '2024-03-02', 1670.30, 'BANK'),
+(7, '2024-03-15', 520.90, 'KARTE'),
+(8, '2024-04-05', 730.00, 'CASH'),
+(9, '2024-04-20', 998.99, 'BANK'),
+(10, '2024-05-01', 300.00, 'KARTE');
+
+
+INSERT INTO Vleresimet (perdoruesi_id, vetura_id, vleresimi, komenti)
+VALUES
+(1, 3, 5, 'Shume i kenaqur me sherbimin dhe veturen.'),
+(2, 1, 4, 'Vetura ishte ne gjendje te mire.'),
+(3, 2, 3, 'Nuk ishte ashtu si pritej, por e pranueshme.'),
+(4, 5, 5, 'Perfekte! Pa asnje problem.'),
+(5, 4, 2, 'Vetura kishte disa defekte teknike.'),
+(6, 2, 4, 'Sherbim korrekt dhe profesional.'),
+(7, 3, 1, 'Eshte dashur te prisja shume per dorezim.'),
+(8, 1, 5, 'Cilesi e larte dhe staf i sjellshem.'),
+(9, 4, 3, 'Mesatare, asgje speciale.'),
+(10, 5, 5, 'Shume e kenaqur me gjithçka!');
+
+
+INSERT INTO testDrives (kid, vetura_id, status, feedback, duration, location)
+VALUES
+(1, 3, 'kompletuar', 'Eksperiencë shumë pozitive', 30, 'Tirana'),
+(2, 5, 'ne pritje', NULL, NULL, 'Durres'),
+(3, 1, 'kompletuar', 'Vetura shumë komode', 45, 'Shkodër'),
+(4, 2, 'anuluar', 'Klienti nuk u paraqit', 0, 'Elbasan'),
+(5, 4, 'kompletuar', 'Test drive i shkurtër, por i mjaftueshëm', 20, 'Fier'),
+(6, 6, 'ne pritje', NULL, NULL, 'Vlorë'),
+(7, 3, 'kompletuar', 'Makina me performancë të lartë', 40, 'Berat'),
+(8, 7, 'anuluar', 'Vetura nuk ishte në dispozicion', 0, 'Gjirokastër'),
+(9, 9, 'kompletuar', 'Shërbim shumë profesional', 35, 'Kukës'),
+(10, 10, 'ne pritje', NULL, NULL, 'Lezhë');
+
+
+INSERT INTO rezervimet (klienti_id, vetura_id, data_rezervimit, statusi)
+VALUES
+(1, 2, '2025-05-01', 'aktiv'),
+(2, 3, '2025-05-02', 'anuluar'),
+(3, 1, '2025-05-03', 'aktiv'),
+(4, 4, '2025-05-04', 'anuluar'),
+(5, 5, '2025-05-05', 'aktiv'),
+(6, 6, '2025-05-06', 'aktiv'),
+(7, 7, '2025-05-07', 'anuluar'),
+(8, 8, '2025-05-08', 'anuluar'),
+(9, 9, '2025-05-09', 'aktiv'),
+(10, 10, '2025-05-10', 'aktiv');
+
+
+INSERT INTO Riparimet (veturaId, pershkrimi, statusi, kostoRiparimit)
+VALUES
+(1, 'Ndërrim vaji', 'E rregulluar', 50.00),
+(2, 'Probleme ABS', 'Në përparim', 120.00),
+(3, 'Ndërrim i gomave', 'E rregulluar', 80.00),
+(4, 'Defekt në motor', 'Nuk mund të riparohet', 05.00),
+(5, 'Riparim', 'E rregulluar', 150.00),
+(6, 'Ndërrim i baterisë', 'E rregulluar', 70.00),
+(7, 'Kontroll', 'Në përparim', 60.00);
+
+ALTER TABLE Riparimet
+ALTER COLUMN statusi TYPE VARCHAR(30);
+
+
+INSERT INTO Pagesat (porosiaId, metodaPageses, shuma, dataPageses)
+VALUES
+(1, 'KARTELE', 250.00, '2025-05-01'),
+(2, 'CASH', 120.50, '2025-05-02'),
+(3, 'KREDI', 350.00, '2025-05-03'),
+(4, 'TJETER', 90.00, '2025-05-04'),
+(5, 'KARTELE', 500.00, '2025-05-05'),
+(6, 'CASH', 80.00, '2025-05-06'),
+(7, 'KREDI', 275.25, '2025-05-07'),
+(8, 'TJETER', 130.00, '2025-05-08'),
+(9, 'KARTELE', 95.75, '2025-05-09'),
+(10, 'CASH', 300.00, '2025-05-10');
+
+INSERT INTO Ofertat (veturaId, zbritja, cmimiFinal, dataFillimit, dataMbarimit)
+VALUES
+(1, 10.00, 13500.00, '2025-05-01', '2025-05-31'),
+(2, 5.00, 9500.00, '2025-05-01', '2025-05-20'),
+(3, 7.50, 18600.00, '2025-05-05', '2025-06-05'),
+(4, 0.00, 21000.00, '2025-05-10', '2025-06-10'),
+(5, 12.00, 12320.00, '2025-05-15', '2025-06-15'),
+(6, 15.00, 10200.00, '2025-05-01', '2025-05-30'),
+(7, 3.00, 19400.00, '2025-05-03', '2025-06-03'),
+(8, 20.00, 8000.00, '2025-05-01', '2025-05-31'),
+(9, 8.50, 14350.00, '2025-05-07', '2025-06-07'),
+(10, 10.00, 11000.00, '2025-05-12', '2025-06-12');
+
+
+INSERT INTO Partneret (emri_kompanise, lloji_partnerit, person_kontakti, email, telefoni, adresa)
+VALUES
+('AutoServis Tirana', 'Servis', 'Arjan Hoxha', 'kontakt@autoservis.al', '+355682345678', 'Rr. e Kavajës, Tiranë'),
+('Sigma Sigurime', 'Sigurim', 'Elira Dauti', 'info@sigmasigurime.com', '+355692112233', 'Rr. Myslym Shyri, Tiranë'),
+('Mediaview', 'Marketing', 'Dritan Gashi', 'd.gashi@mediaview.al', '+355683456789', 'Rr. Dëshmorët e Kombit, Tiranë'),
+('FixAuto Durrës', 'Servis', 'Ilir Muça', 'ilir@fixauto.al', '+355682334455', 'Lagjja 13, Durrës'),
+('Albania Promo', 'Marketing', 'Gentiana Beqiri', 'g.beqiri@albania-promo.com', '+355681234567', 'Rr. Elbasanit, Tiranë'),
+('Siguria Plus', 'Sigurim', 'Besnik Lala', 'besnik@siguriaplus.al', '+355689876543', 'Rr. e Barrikadave, Tiranë'),
+('AutoHelp Shkodër', 'Servis', 'Aldo Dedaj', 'aldo@autohelp-shkoder.al', '+355682223344', 'Sheshi Demokracia, Shkodër'),
+('Partner Media', 'Marketing', 'Era Dervishi', 'era@partnermedia.al', '+355687654321', 'Rr. e Dibrës, Tiranë'),
+('Besa Sigurime', 'Sigurim', 'Luljeta Meta', 'l.meta@besasigurime.al', '+355696969696', 'Rr. Sami Frashëri, Tiranë'),
+('Kompania Tjetër', 'Tjetër', 'Artan Selimi', 'artan@kompaniatjeter.al', '+355684321987', 'Rr. Jordan Misja, Tiranë');
+
+
+INSERT INTO Lokacionet (emri_lokacionit, adresa, qyteti, nr_telefonit)
+VALUES
+('Qendra Tirana', 'Rr. Dritan Hoxha, Nr.10', 'Tiranë', '+355682000001'),
+('Auto Center Durrës', 'Lagjja 18, Rr. Iliria', 'Durrës', '+355682000002'),
+('Servis Shkodër', 'Rr. 28 Nëntori, Nr. 45', 'Shkodër', '+355682000003'),
+('Pika Elbasan', 'Bulevardi Qemal Stafa', 'Elbasan', '+355682000004'),
+('Vlorë Partner', 'Rr. Ismail Qemali, Nr. 21', 'Vlorë', '+355682000005'),
+('Fier Lokacioni', 'Rr. Dëshmorët, Fier', 'Fier', '+355682000006'),
+('Gjirokastër Zyrë', 'Rr. Gjin Zenebisi, Nr. 3', 'Gjirokastër', '+355682000007'),
+('Korçë Showroom', 'Rr. Fan Noli, Nr. 88', 'Korçë', '+355682000008'),
+('Kukës Servis', 'Lagjja 5, Sheshi Skënderbej', 'Kukës', '+355682000009'),
+('Lezhë Pika', 'Rr. Besëlidhja, Lezhë', 'Lezhë', '+355682000010');
+
+
+INSERT INTO Statistikat_e_shitjeve (muaji, totali_shitjeve, fitimi, shpenzimet)
+VALUES
+('Janar', 30, 15000.00, 5000.00),
+('Shkurt', 25, 13000.00, 4500.00),
+('Mars', 40, 20000.00, 6000.00),
+('Prill', 35, 18000.00, 5500.00),
+('Maj', 50, 25000.00, 8000.00),
+('Qershor', 45, 22000.00, 7000.00),
+('Korrik', 55, 27000.00, 8500.00),
+('Gusht', 60, 29000.00, 9000.00),
+('Shtator', 38, 19500.00, 5800.00),
+('Tetor', 42, 21000.00, 6200.00);
+
+INSERT INTO garancia (vid, kid, lloji_garancise, data_fillimit, data_mbarimit)
+VALUES
+(1, 1, '1 vit', '2025-01-15', '2026-01-15'),
+(2, 2, '6 muaj', '2025-03-01', '2025-09-01'),
+(3, 3, '2 vite', '2025-02-10', '2027-02-10'),
+(4, 4, '1 vit', '2025-04-05', '2026-04-05'),
+(5, 5, '6 muaj', '2025-05-01', '2025-11-01'),
+(6, 6, '1 vit', '2025-05-10', '2026-05-10'),
+(7, 7, '2 vite', '2025-06-01', '2027-06-01'),
+(8, 8, '1 vit', '2025-06-15', '2026-06-15'),
+(9, 9, '6 muaj', '2025-07-01', '2025-12-31'),
+(10, 10, '2 vite', '2025-07-10', '2027-07-10');
