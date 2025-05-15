@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class ShitjetController {
-    @FXML private TextField txtShitjeId;
     @FXML private TextField txtKlientId;
     @FXML private TextField txtVeturaId;
     @FXML private TextField txtPunetorId;
@@ -24,7 +23,6 @@ public class ShitjetController {
     @FXML private TextField searchField;
 
     @FXML private TableView<Shitjet> shitjetTableView;
-    @FXML private TableColumn<Shitjet, String> colShitjeId;
     @FXML private TableColumn<Shitjet, String> colKlientId;
     @FXML private TableColumn<Shitjet, String> colVeturaId;
     @FXML private TableColumn<Shitjet, String> colPunetorId;
@@ -57,7 +55,6 @@ public class ShitjetController {
             }
         });
 
-        colShitjeId.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getShitje_id())));
         colKlientId.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getKid())));
         colVeturaId.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getVetura_id())));
         colPunetorId.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPunetor_id())));
@@ -72,8 +69,7 @@ public class ShitjetController {
         shitjetTableView.getItems().setAll(shitjet);
     }
 
-    @FXML
-    private void handleCreate(MouseEvent event) {
+    @FXML private void handleCreateShitjet() {
         try {
             Integer klientId = Integer.parseInt(txtKlientId.getText());
             Integer veturaId = Integer.parseInt(txtVeturaId.getText());
@@ -97,7 +93,7 @@ public class ShitjetController {
     }
 
     @FXML
-    private void handleUpdate(MouseEvent event) {
+    private void handleUpdateShitjet() {
         try {
             int selectedId = getSelectedShitjeId();
             if (selectedId == -1) return;
@@ -119,7 +115,7 @@ public class ShitjetController {
     }
 
     @FXML
-    private void handleDelete(MouseEvent event) {
+    private void handleDeleteShitjet() {
         try {
             int selectedId = getSelectedShitjeId();
             if (selectedId == -1) return;
