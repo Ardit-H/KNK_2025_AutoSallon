@@ -7,8 +7,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import models.dto.Ofertat.Oferta;
+import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Porosite.CreatePorosiaDto;
 import models.dto.Veturat.Veturat;
+import services.LanguageManager;
 import services.OfertaService;
 import services.PorosiaService;
 import services.SessionManager;
@@ -18,6 +20,7 @@ public class OfertaController {
     private final PorosiaService porosiaService = new PorosiaService();
     private Veturat veturaZgjedhur;
     private Oferta ofertaZgjedhur;
+    private final LanguageManager languageManager = new LanguageManager();
     @FXML
     private VBox ofertaBox;
     @FXML
@@ -64,11 +67,17 @@ public class OfertaController {
                 throw new Exception("Ju nuk jeni të kyçur.");
             }
 
-            int klientiId = SessionManager.getInstance().getcurrentUser().getPid();
+            Perdoruesit user;
+            if (SessionManager.getInstance().isLoggedIn()) {
+                user = SessionManager.getInstance().getcurrentUser();
+            } else {
+                showError("Ju nuk jeni te kyqur");
+                return;
+            }
             double cmimi = ofertaZgjedhur.getCmimiFinal();
 
             CreatePorosiaDto dto = new CreatePorosiaDto(
-                    klientiId,
+                    user.getPid(),
                     veturaZgjedhur.getId(),
                     cmimi,
                     "Ne pritje"
@@ -77,21 +86,27 @@ public class OfertaController {
             porosiaService.create(dto);
 
             aktivizoButoni.setDisable(true);
-
-            Alert success = new Alert(Alert.AlertType.INFORMATION);
-            success.setTitle("Sukses");
-            success.setHeaderText(null);
-            success.setContentText("Oferta u aktivizua me sukses!");
-            success.showAndWait();
+            showSuccess("Oferta u aktivizua me sukses!");
 
         } catch (Exception e) {
-            e.printStackTrace();
-            Alert error = new Alert(Alert.AlertType.ERROR);
-            error.setTitle("Gabim");
-            error.setHeaderText(null);
-            error.setContentText(e.getMessage());
-            error.showAndWait();
+            showError(e.getMessage());
         }
+    }
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Gabim");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private void showSuccess(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Sukses");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+
     }
 
 }

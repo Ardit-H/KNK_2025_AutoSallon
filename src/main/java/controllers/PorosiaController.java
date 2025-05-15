@@ -37,31 +37,15 @@ public class PorosiaController {
 
     private final PorosiaService porosiaService = new PorosiaService();
 
-
     public void setVetura(Veturat vetura) {
         this.veturaZgjedhur = vetura;
-
         labelModeli.setText(vetura.getModeli());
         labelProdhuesi.setText(vetura.getProdhuesi());
         labelViti.setText(String.valueOf(vetura.getVitiProdhimit()));
-        SessionManager.getInstance().loginUser(
-                new Perdoruesit(
-                        1,
-                        "Ardit",
-                        "Berisha",
-                        "ardit@example.com",
-                        "+38349111222",
-                        "Rr. B Prishtinë",
-                        "2025-05-12 10:00:00",
-                        "klient",
-                        "hashed_password_value",
-                        "random_salt_value"
-                )
-        );
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(SceneLocator.OFERTA));
-            loader.setResources(ResourceBundle.getBundle("languages.messages"));
+            loader.setResources(services.LanguageManager.getInstance().getResourceBundle());
             Parent ofertaPane = loader.load();
 
             OfertaController ofertaController = loader.getController();
@@ -76,23 +60,19 @@ public class PorosiaController {
     @FXML
     private void handleDergo(ActionEvent event) {
         try {
-            double cmimiOfruar = Double.parseDouble(txtCmimiOfruar.getText());
-            if (cmimiOfruar <= 0) {
-                showError("Cmimi i ofruar nuk mund te jete numer negativ!");
+            if(!isValidInput())
                 return;
-            }
 
-            int klientiId;
+            double cmimiOfruar = Double.parseDouble(txtCmimiOfruar.getText());
+            Perdoruesit user;
             if (SessionManager.getInstance().isLoggedIn()) {
-                Perdoruesit user = SessionManager.getInstance().getcurrentUser();
-                klientiId = user.getPid();
+                user = SessionManager.getInstance().getcurrentUser();
             } else {
                 showError("Ju nuk jeni te kyqur");
                 return;
             }
 
-            CreatePorosiaDto dto = new CreatePorosiaDto(klientiId, veturaZgjedhur.getId(), cmimiOfruar, "Ne pritje");
-
+            CreatePorosiaDto dto = new CreatePorosiaDto(user.getPid(), veturaZgjedhur.getId(), cmimiOfruar, "Ne pritje");
             porosiaService.create(dto);
 
             showSuccess("Porosia u dërgua me sukses!");
@@ -101,8 +81,29 @@ public class PorosiaController {
             clearForm();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            showError(e.getMessage());
         }
+    }
+    private boolean isValidInput() {
+        String cmimiOfruar = txtCmimiOfruar.getText();
+
+        if (cmimiOfruar.isEmpty()) {
+            showError("Mbush fushën: Cmimi i ofruar!");
+            return false;
+        }
+
+        try {
+            double cmimi = Double.parseDouble(cmimiOfruar);
+            if (cmimi <= 0) {
+                showError("Cmimi i ofruar nuk mund të jetë numër negativ ose zero!");
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            showError("Cmimi i ofruar duhet të jetë numër.");
+            return false;
+        }
+
+        return true;
     }
 
     private void clearForm() {

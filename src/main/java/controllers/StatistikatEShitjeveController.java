@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class StatistikatEShitjeveController {
-    @FXML private TextField txtId;
     @FXML private TextField txtMuaji;
     @FXML private TextField txtFitimi;
     @FXML private TextField txtShpenzimet;
@@ -34,7 +33,6 @@ public class StatistikatEShitjeveController {
 
 
     @FXML private TableView<StatistikatEShitjeve> statistikatEShitjeveTableView;
-    @FXML private TableColumn<StatistikatEShitjeve, String> colId;
     @FXML private TableColumn<StatistikatEShitjeve, String> colMuaji;
     @FXML private TableColumn<StatistikatEShitjeve, String> colFitimi;
     @FXML private TableColumn<StatistikatEShitjeve, String> colShpenzimet;
@@ -77,7 +75,7 @@ public class StatistikatEShitjeveController {
     }
 
     @FXML
-    private void handleCreate(MouseEvent event) {
+    private void handleCreateStatistikat() {
         try {
             String muaji = txtMuaji.getText();
             Double fitimi = Double.parseDouble(txtFitimi.getText());
@@ -104,7 +102,7 @@ public class StatistikatEShitjeveController {
     }
 
     @FXML
-    private void handleUpdate(MouseEvent event) {
+    private void handleUpdateStatistikat() {
         try {
             int selectedId = getSelectedStatistikaId();
             if (selectedId == -1) return;
@@ -133,7 +131,7 @@ public class StatistikatEShitjeveController {
     }
 
     @FXML
-    private void handleDelete(MouseEvent event) {
+    private void handleDeleteStatistikat() {
         try {
             int selectedId = getSelectedStatistikaId();
             if (selectedId == -1) return;
@@ -162,20 +160,6 @@ public class StatistikatEShitjeveController {
         txtTotaliShitjeve.clear();
     }
 
-    @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        loadLanguage(Locale.ENGLISH);
-    }
-
-    @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception {
-        languageManager.setLocale(locale);
-        SceneManager.reload();
-    }
 
     private void loadChart() {
         barChart.getData().clear();
