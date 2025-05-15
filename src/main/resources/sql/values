@@ -179,7 +179,7 @@ CREATE TABLE Partneret (
 );
 
 CREATE TABLE Lokacionet (
-    id     SERIAL PRIMARY KEY,
+    lokacionet_id     SERIAL PRIMARY KEY,
     emri_lokacionit   VARCHAR(100),
     adresa            VARCHAR(150),
     qyteti            VARCHAR(50),
@@ -187,7 +187,7 @@ CREATE TABLE Lokacionet (
 );
 
 CREATE TABLE Statistikat_e_shitjeve (
-    id   SERIAL PRIMARY KEY,
+    statistika_id   SERIAL PRIMARY KEY,
     muaji           VARCHAR(20),
     totali_shitjeve INTEGER,
     fitimi          NUMERIC(10,2) CHECK (fitimi >= 0),
@@ -208,29 +208,18 @@ CREATE TABLE garancia (
 INSERT INTO Klientet (emri, mbiemri, email, nrtelefonit, adresa)
 VALUES
   ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë'),
-  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë'),
-  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë'),
-  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë'),
-  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë'),
-  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë'),
-  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë'),
-  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë'),
-  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë'),
-  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë');
+  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Ferizaj'),
+  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, GJilan'),
+  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prizren'),
+  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Gjakovë'),
+  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Lipjan'),
+  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Shtime'),
+  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Mitrovicë'),
+  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Drenas'),
+  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Podujevë');
 
 
-  INSERT INTO Perdoruesi (emri, mbiemri, email, nrtelefonit, adresa, passwordHash, salt)
-VALUES
-  ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë', 'hash1', 'salt1'),
-  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë', 'hash2', 'salt2'),
-  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë', 'hash3', 'salt3'),
-  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë', 'hash4', 'salt4'),
-  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë', 'hash5', 'salt5'),
-  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë', 'hash6', 'salt6'),
-  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë', 'hash7', 'salt7'),
-  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë', 'hash8', 'salt8'),
-  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë', 'hash9', 'salt9'),
-  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë', 'hash10', 'salt10');
+
 
   INSERT INTO Sherbimet (emri, pershkrimi, çmimi)
 VALUES
@@ -258,6 +247,20 @@ VALUES
   ('Renault', 'Megane', 2018, 'Portokalli', 14000.00, 'E përdorur', 65000, 'Naftë'),
   ('Hyundai', 'i30', 2019, 'E kaltër', 16000.00, 'E re', 15000, 'Benzinë'),
   ('Kia', 'Ceed', 2020, 'E bardhë', 17000.00, 'E re', 10000, 'Hibrid');
+  ('Mercedes-Benz', 'C200', 2021, 'E zezë', 27000.00, 'E re', 5000, 'Benzinë'),
+  ('Mercedes-Benz', 'E220', 2019, 'E hirit', 32000.00, 'E përdorur', 40000, 'Naftë'),
+  ('Mercedes-Benz', 'C200', 2018, 'E bardhë', 23000.00, 'E përdorur', 55000, 'Benzinë'),
+  ('BMW', '320d', 2020, 'E kaltër', 26000.00, 'E përdorur', 30000, 'Naftë'),
+  ('BMW', 'X5', 2018, 'E zezë', 35000.00, 'E përdorur', 60000, 'Naftë'),
+  ('BMW', '520d', 2021, 'E hirit', 38000.00, 'E re', 10000, 'Naftë'),
+  ('Volkswagen', 'Golf 7', 2017, 'E gri', 14000.00, 'E përdorur', 75000, 'Naftë'),
+  ('Volkswagen', 'Passat', 2019, 'E zezë', 21000.00, 'E përdorur', 45000, 'Naftë'),
+  ('Audi', 'A4', 2020, 'E bardhë', 22000.00, 'E përdorur', 25000, 'Naftë'),
+  ('Toyota', 'Corolla', 2020, 'E kuqe', 19000.00, 'E përdorur', 30000, 'Hibrid');
+
+
+
+
 
 
   INSERT INTO Porosite (kid, veturaId, cmimiOfruar, statusiPorosise)
