@@ -93,7 +93,7 @@ public class SignUpController {
                 klientetService.create(klientDto);
                 errorMessageLabel.setText("Klienti u shtua me sukses!");
             }
-            SceneManager.load(SceneLocator.USER_DASHBOARD_HOME);
+            SceneManager.load(SceneLocator.USER_DASHBOARD);
             SessionManager.getInstance().loginUser(perdoruesiIRegjistruar);
             btnContinue.setVisible(false);
             clearForm();
