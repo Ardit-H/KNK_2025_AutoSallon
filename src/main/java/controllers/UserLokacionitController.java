@@ -19,8 +19,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class UserLokacionitController {
-    @FXML
-    private TextField txtLokacioniId;
     @FXML private TextField txtEmriLokacionit;
     @FXML private TextField txtAdresa;
     @FXML private TextField txtQyteti;
@@ -29,7 +27,6 @@ public class UserLokacionitController {
 
     @FXML private TableView<Lokacionet> lokacionetTableView;
     @FXML private TableColumn<Lokacionet, String> colEmriLokacionit;
-    @FXML private TableColumn<Lokacionet, String> colLokacioniId;
     @FXML private TableColumn<Lokacionet, String> colAdresa;
     @FXML private TableColumn<Lokacionet, String> colQyteti;
     @FXML private TableColumn<Lokacionet, String> colNrTelefonit;
@@ -83,20 +80,5 @@ public class UserLokacionitController {
         txtAdresa.clear();
         txtQyteti.clear();
         txtNrTelefonit.clear();
-    }
-
-    @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        loadLanguage(Locale.ENGLISH);
-    }
-
-    @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception {
-        languageManager.setLocale(locale);
-        SceneManager.reload();
     }
 }

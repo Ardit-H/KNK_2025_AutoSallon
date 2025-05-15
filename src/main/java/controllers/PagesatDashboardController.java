@@ -79,6 +79,8 @@ public class PagesatDashboardController {
             if (porosiaService.getById(porosiaId) == null) {
                 showError("Porosia me këtë ID nuk ekziston.");
                 return;
+            } else if(porosiaId <= 0){
+                showError("ID e porosise nuk mund te jete numer negative.");
             }
 
             CreatePagesaDto dto = new CreatePagesaDto(

@@ -7,11 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PorosiaController">
    <children>
-      <Label layoutX="533.0" layoutY="98.0" prefHeight="27.0" prefWidth="262.0" text="%Bej_Porosi_per_Veture">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <HBox alignment="TOP_CENTER" layoutX="379.0" layoutY="217.0" prefHeight="305.0" prefWidth="588.0">
+      <HBox alignment="TOP_CENTER" layoutX="379.0" layoutY="217.0" prefHeight="305.0" prefWidth="588.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
          <children>
             <VBox prefHeight="328.0" prefWidth="269.0" spacing="10.0" style="-fx-padding: 10; -fx-spacing: 10;">
                <children>
@@ -62,5 +58,14 @@
             <VBox fx:id="ofertaContainer" prefHeight="277.0" prefWidth="291.0" spacing="10.0" style="-fx-spacing: 10; -fx-padding: 10;" />
          </children>
       </HBox>
+      <AnchorPane prefHeight="50.0" prefWidth="1330.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="560.0" layoutY="-5.0" prefHeight="50.0" prefWidth="252.0" text="%Bej_Porosi_per_Veture">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

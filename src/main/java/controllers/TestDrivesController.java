@@ -14,11 +14,11 @@ public class TestDrivesController {
     @FXML public TextField kid;
     @FXML public TextField vid;
     @FXML public TextField statusi;
-    @FXML public TextField searchField;
     @FXML public TextField duration;
     @FXML public TextField feedback;
     @FXML public TextField location;
 
+    @FXML public TextField searchField;
     @FXML public Label messageLabel;
     @FXML public Button btn_shto;
     @FXML public Button btn_perditeso;
