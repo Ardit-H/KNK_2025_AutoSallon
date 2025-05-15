@@ -208,29 +208,16 @@ CREATE TABLE garancia (
 INSERT INTO Klientet (emri, mbiemri, email, nrtelefonit, adresa)
 VALUES
   ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë'),
-  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë'),
-  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë'),
-  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë'),
-  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë'),
-  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë'),
-  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë'),
-  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë'),
-  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë'),
-  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë');
+  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Ferizaj'),
+  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Gjilan'),
+  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Gjakovë'),
+  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Mitrovicë'),
+  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Shtime'),
+  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Lipjan'),
+  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prizren'),
+  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Podujevë'),
+  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Drenas');
 
-
-  INSERT INTO Perdoruesi (emri, mbiemri, email, nrtelefonit, adresa, passwordHash, salt)
-VALUES
-  ('Arben', 'Gashi', 'arben.gashi@example.com', '+38344111222', 'Rr. Dëshmorët e Kombit, Prishtinë', 'hash1', 'salt1'),
-  ('Lirije', 'Krasniqi', 'lirije.k@example.com', '+38344111223', 'Rr. Nënë Tereza, Prishtinë', 'hash2', 'salt2'),
-  ('Driton', 'Berisha', 'driton.b@example.com', '+38344111224', 'Rr. Agim Ramadani, Prishtinë', 'hash3', 'salt3'),
-  ('Valbona', 'Shala', 'valbona.s@example.com', '+38344111225', 'Rr. UÇK, Prishtinë', 'hash4', 'salt4'),
-  ('Blerim', 'Hoxha', 'blerim.h@example.com', '+38344111226', 'Rr. Fehmi Lladrovci, Prishtinë', 'hash5', 'salt5'),
-  ('Arta', 'Musa', 'arta.m@example.com', '+38344111227', 'Rr. Iliria, Prishtinë', 'hash6', 'salt6'),
-  ('Erion', 'Rexhepi', 'erion.r@example.com', '+38344111228', 'Rr. Adem Jashari, Prishtinë', 'hash7', 'salt7'),
-  ('Gentiana', 'Ismaili', 'gentiana.i@example.com', '+38344111229', 'Rr. Lidhja e Prizrenit, Prishtinë', 'hash8', 'salt8'),
-  ('Besnik', 'Dervishi', 'besnik.d@example.com', '+38344111230', 'Rr. Bajram Curri, Prishtinë', 'hash9', 'salt9'),
-  ('Elira', 'Morina', 'elira.m@example.com', '+38344111231', 'Rr. Migjeni, Prishtinë', 'hash10', 'salt10');
 
   INSERT INTO Sherbimet (emri, pershkrimi, çmimi)
 VALUES
