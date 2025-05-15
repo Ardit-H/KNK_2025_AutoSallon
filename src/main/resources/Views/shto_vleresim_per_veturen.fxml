@@ -4,33 +4,46 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShtoVleresimController">
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShtoVleresimController">
    <children>
-      <AnchorPane layoutX="222.0" layoutY="33.0" prefHeight="678.0" prefWidth="810.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="334.0" layoutY="227.0" prefHeight="286.0" prefWidth="949.0" style="-fx-background-color: #335778;">
          <children>
-            <Label alignment="CENTER" layoutX="-6.0" layoutY="30.0" prefHeight="32.0" prefWidth="813.0" text="%RateTheCar" textAlignment="CENTER">
+            <Spinner fx:id="vleresimi" layoutX="385.0" layoutY="86.0" prefHeight="31.0" prefWidth="187.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="270.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-text-fill: #F0E263;" text="%Rating">
                <font>
-                  <Font size="22.0" />
+                  <Font name="Bernard MT Condensed" size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="253.0" layoutY="209.0" prefHeight="66.0" prefWidth="82.0" text="%Rating" textAlignment="CENTER">
+            <TextField fx:id="komentiField" layoutX="384.0" layoutY="164.0" prefHeight="62.0" prefWidth="527.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="246.0" layoutY="151.0" prefHeight="66.0" prefWidth="130.0" style="-fx-text-fill: #F0E263;" text="%Comment1">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Bernard MT Condensed" size="20.0" />
                </font>
             </Label>
-            <Spinner fx:id="vleresimi" layoutX="368.0" layoutY="226.0" prefHeight="31.0" prefWidth="176.0" />
-            <Label alignment="CENTER" layoutX="254.0" layoutY="292.0" prefHeight="66.0" prefWidth="82.0" text="%Comment1" textAlignment="CENTER">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <TextField fx:id="komentiField" layoutX="342.0" layoutY="292.0" prefHeight="83.0" prefWidth="346.0" />
-            <Button layoutX="263.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleVlereso"  prefHeight="50.0" prefWidth="106.0" text="%Send" />
-            <Button layoutX="414.0" layoutY="515.0" mnemonicParsing="false" onAction="#handleKthehu" prefHeight="50.0" prefWidth="106.0" text="%GoBack" />
          </children>
       </AnchorPane>
+      <Label alignment="CENTER" layoutX="-2.0" prefHeight="92.0" prefWidth="1334.0" style="-fx-text-fill: #F0E263; -fx-background-color: #335778;" text="%RateTheCar" textAlignment="CENTER">
+         <font>
+            <Font name="Bernard MT Condensed" size="52.0" />
+         </font>
+      </Label>
+      <Button layoutX="804.0" layoutY="571.0" mnemonicParsing="false" onAction="#handleKthehu" prefHeight="50.0" prefWidth="213.0" style="-fx-text-fill: #F0E263; -fx-background-color: #335778;" text="%GoBack">
+         <font>
+            <Font name="Bernard MT Condensed" size="20.0" />
+         </font></Button>
+      <Button layoutX="631.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleVlereso" prefHeight="50.0" prefWidth="119.0" style="-fx-text-fill: #F0E263; -fx-background-color: #335778;" text="%Send">
+         <font>
+            <Font name="Bernard MT Condensed" size="20.0" />
+         </font></Button>
+      <ImageView fitHeight="260.0" fitWidth="230.0" layoutX="59.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/rating.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

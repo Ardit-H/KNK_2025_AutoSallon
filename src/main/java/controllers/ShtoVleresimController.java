@@ -23,7 +23,7 @@ public class ShtoVleresimController {
     private final VleresimetService vleresimetService = new VleresimetService();
 
     public void initialize() {
-        vleresimi.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 3));
+        vleresimi.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1));
         userId = SessionManager.getInstance().getTempUserId();
         veturaId = SessionManager.getInstance().getTempVeturaId();
     }
@@ -38,16 +38,14 @@ public class ShtoVleresimController {
             vleresimetService.create(dto);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Sukses");
-            alert.setContentText("Vlerësimi u ruajt me sukses.");
+            alert.setTitle("Sukses!");
+            alert.setContentText("Faleminderit për vlerësimin.Vlerësimi u ruajt me sukses.");
             alert.showAndWait();
-
-            // Mbyll dritaren
-            ((Stage) komentiField.getScene().getWindow()).close();
+            clearForm();
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Gabim");
-            alert.setContentText("Ndodhi një gabim gjatë ruajtjes së vlerësimit.");
+            alert.setContentText("Ndodhi një gabim gjatë ruajtjes së vlerësimit.Duhet ti përcaktosh të dy fushat!");
             alert.showAndWait();
             e.printStackTrace();
         }
@@ -57,6 +55,10 @@ public class ShtoVleresimController {
     private void handleKthehu()throws Exception {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT_USER);
         SceneManager.reload();
+    }
+    private void clearForm() {
+        vleresimi.getValueFactory().setValue(1);
+        komentiField.clear();
     }
 }
 
