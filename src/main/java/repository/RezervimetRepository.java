@@ -24,14 +24,14 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
         String query = """
                 INSERT INTO
                  REZERVIMET 
-                (KLIENTI_ID, VETURA_ID, DATAREZERVIMIT, STATUSI)
+                (KLIENTI_ID, VETURA_ID, DATA_REZERVIMIT, STATUSI)
                 VALUES(?, ?, ?, ?)
                 """;
         try {
             PreparedStatement pstm = this.connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             pstm.setInt(1, rezervimetDto.getKlientiId());
             pstm.setInt(2, rezervimetDto.getVeturaId());
-            pstm.setString(3, rezervimetDto.getDataRezervimit());
+            pstm.setDate(3, java.sql.Date.valueOf(rezervimetDto.getDataRezervimit()));
             pstm.setString(4, rezervimetDto.getStatusi());
             pstm.execute();
             ResultSet res = pstm.getGeneratedKeys();
@@ -57,7 +57,7 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
             params.add(rezervimetDto.getVeturaId());
         }
         if (rezervimetDto.getDataRezervimit() != null) {
-            query.append("DATAREZERVIMIT = ?, ");
+            query.append("DATA_REZERVIMIT = ?, ");
             params.add(rezervimetDto.getDataRezervimit());
         }
 
@@ -89,4 +89,7 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
         return null;
 
     }
+
+
+
 }

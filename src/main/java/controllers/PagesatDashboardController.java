@@ -50,7 +50,7 @@ public class PagesatDashboardController {
 
     @FXML
     public void initialize() {
-        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("PagesaId"));
         porosiaIdColumn.setCellValueFactory(new PropertyValueFactory<>("porosiaId"));
         metodaPagesesColumn.setCellValueFactory(new PropertyValueFactory<>("metodaPageses"));
         shumaColumn.setCellValueFactory(new PropertyValueFactory<>("shuma"));
