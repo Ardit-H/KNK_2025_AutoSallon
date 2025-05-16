@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshimi i tabeles riparimet">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshimi te perkthimi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/faturat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/faturat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -449,7 +444,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
     <MESSAGE value="Krijimi i klases User" />
@@ -474,6 +468,7 @@
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ndryshimi i tabeles riparimet" />
+    <MESSAGE value="Ndryshimi te perkthimi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshimi te perkthimi" />
   </component>
 </project>
