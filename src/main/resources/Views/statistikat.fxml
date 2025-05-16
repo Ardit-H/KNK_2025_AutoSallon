@@ -61,7 +61,12 @@
         </yAxis>
     </BarChart>
 
-    <TextField fx:id="searchField" layoutX="22.0" layoutY="540.0" prefWidth="300.0" promptText="%Kërko_sipas_muajit" />
+    <Label layoutX="37.0" layoutY="428.0" text="%Kërko_sipas_muajit" textFill="black">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="searchField" layoutX="193.0" layoutY="425.0" prefWidth="300.0" />
 
     <TableView fx:id="statistikatEShitjeveTableView" layoutX="22.0" layoutY="574.0" prefHeight="238.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>

@@ -10,6 +10,7 @@ import models.dto.Ofertat.Oferta;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Porosite.CreatePorosiaDto;
 import models.dto.Veturat.Veturat;
+import services.LanguageManager;
 import services.OfertaService;
 import services.PorosiaService;
 import services.SessionManager;
@@ -19,6 +20,7 @@ public class OfertaController {
     private final PorosiaService porosiaService = new PorosiaService();
     private Veturat veturaZgjedhur;
     private Oferta ofertaZgjedhur;
+    private final LanguageManager languageManager = new LanguageManager();
     @FXML
     private VBox ofertaBox;
     @FXML
