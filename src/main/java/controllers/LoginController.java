@@ -1,10 +1,12 @@
 package controllers;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import models.dto.Perdoruesit.Perdoruesit;
@@ -56,6 +58,7 @@ public class LoginController {
             showHidePasswordCheckbox.setSelected(!showHidePasswordCheckbox.isSelected());
             handleShowHidePassword();
         });
+        setupEnterKeyHandler();
     }
     @FXML
     private void handleLogin() {
@@ -119,5 +122,17 @@ public class LoginController {
     private void loadLanguage(Locale locale) throws Exception{
         languageManager.setLocale(locale);
         SceneManager.reload();
+    }
+
+    private void setupEnterKeyHandler(){
+        EventHandler<KeyEvent> enterKeyHandler = event -> {
+            if (event.getCode().toString().equals("ENTER")) {
+//                loginBtn.fire();
+                handleLogin();
+            }
+        };
+        userEmail.setOnKeyPressed(enterKeyHandler);
+        userPassword.setOnKeyPressed(enterKeyHandler);
+        userPasswordVisible.setOnKeyPressed(enterKeyHandler);
     }
 }

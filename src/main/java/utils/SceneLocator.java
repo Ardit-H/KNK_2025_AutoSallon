@@ -22,6 +22,7 @@ public class SceneLocator {
     public static final String USER_VLERESIMET= "/Views/user_vleresimet.fxml";
     public static final String VETURAT="/Views/veturat.fxml";
     public static final String VETURAT_USER = "/Views/veturat_user.fxml";
+    public static final String SHTO_VLERESIM="/Views/shto_vleresim_per_veturen.fxml";
     public static final String FATURAT="/Views/faturat.fxml";
     public static final String TESTDRIVES="/Views/testdrives.fxml";
     public static final String GARANCIA="/Views/garancia.fxml";

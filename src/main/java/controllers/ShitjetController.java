@@ -4,7 +4,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import models.dto.Shitjet.CreateShitjetDto;
 import models.dto.Shitjet.UpdateShitjeDto;
 import models.dto.Shitjet.Shitjet;

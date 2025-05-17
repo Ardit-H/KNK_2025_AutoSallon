@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshimi i tabeles riparimet">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/UserRezervimetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/istockphoto-1439820420-612x612.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/rezervimetUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/RezervimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RezervimetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/values" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,7 +33,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
+    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -65,34 +57,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PerdoruesitRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Porosite.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PunetoretServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RezervimetServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Vleresimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PerdoruesitRepositoryTest.executor": "Run",
+    "Application.Porosite.executor": "Run",
+    "Application.PunetoretServiceTest.executor": "Run",
+    "Application.RezervimetServiceTest.executor": "Run",
+    "Application.Vleresimet.executor": "Run",
+    "Application.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\OneDrive\Desktop\KNK_2025_AutoSallon\src\main\resources\Images" />
+      <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -162,11 +154,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Porosite" />
       <item itemvalue="Application.PunetoretServiceTest" />
       <item itemvalue="Application.RezervimetServiceTest" />
       <item itemvalue="Application.Vleresimet" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
@@ -451,7 +443,39 @@
       <option name="project" value="LOCAL" />
       <updated>1747318858251</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java">
+      <option name="closed" value="true" />
+      <created>1747327125999</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1747327125999</updated>
+    </task>
+    <task id="LOCAL-00035" summary="changes">
+      <option name="closed" value="true" />
+      <created>1747327145157</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1747327145157</updated>
+    </task>
+    <task id="LOCAL-00036" summary="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml">
+      <option name="closed" value="true" />
+      <created>1747329818889</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1747329818889</updated>
+    </task>
+    <task id="LOCAL-00037" summary="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
+      <option name="closed" value="true" />
+      <created>1747333250275</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1747333250275</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,9 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Testimi i lidhjes me Database" />
-    <MESSAGE value="Krijimi i paketave models and dto" />
-    <MESSAGE value="Krijimi i klases User" />
     <MESSAGE value="Krijimi i klases Klientet" />
     <MESSAGE value="Organizimi i dto brenda models" />
     <MESSAGE value="Shtova tabelen Veturat ne databaze" />
@@ -490,7 +511,10 @@
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
-    <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
+    <MESSAGE value="changes" />
+    <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
   </component>
 </project>
