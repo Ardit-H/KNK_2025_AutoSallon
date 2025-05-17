@@ -5,62 +5,75 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.RezervimetController" prefWidth="700" prefHeight="500">
+<AnchorPane style="-fx-background-color: #328E6E;"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.RezervimetController"
+            prefWidth="700" prefHeight="500">
 
-    <VBox spacing="15">
+    <VBox spacing="15" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
         <padding>
             <Insets top="20" right="20" bottom="20" left="20"/>
         </padding>
 
         <!-- Titulli -->
-        <Label text="Menaxhimi i Rezervimeve">
+        <Label text="%reservationManagement" style="-fx-text-fill: #E1EEBC;">
             <font>
                 <Font size="18" />
             </font>
         </Label>
 
         <!-- Tabela -->
-
-
-        <TableView fx:id="tabelaRezervimet" onMouseClicked="#handleRowSelect" prefHeight="200">
+        <TableView fx:id="tabelaRezervimet" onMouseClicked="#handleRowSelect" prefHeight="200"
+                   VBox.vgrow="ALWAYS"
+                   style="-fx-background-color: #E1EEBC;">
             <columns>
-                <TableColumn fx:id="colRezervimiId" text="Rezervimi ID" prefWidth="100"/>
-
-                <TableColumn fx:id="colKlientiId" text="Klienti ID" prefWidth="100"/>
-                <TableColumn fx:id="colVeturaId" text="Vetura ID" prefWidth="100"/>
-                <TableColumn fx:id="colDataRezervimit" text="Data e Rezervimit" prefWidth="150"/>
-                <TableColumn fx:id="colStatusi" text="Statusi" prefWidth="100"/>
+                <TableColumn fx:id="colRezervimiId" text="%reservationId" prefWidth="100" style="-fx-text-fill: #328E6E;"/>
+                <TableColumn fx:id="colKlientiId" text="%clientId" prefWidth="100" style="-fx-text-fill: #328E6E;"/>
+                <TableColumn fx:id="colVeturaId" text="%carId" prefWidth="100" style="-fx-text-fill: #328E6E;"/>
+                <TableColumn fx:id="colDataRezervimit" text="%reservationDate" prefWidth="150" style="-fx-text-fill: #328E6E;"/>
+                <TableColumn fx:id="colStatusi" text="%status" prefWidth="100" style="-fx-text-fill: #328E6E;"/>
             </columns>
         </TableView>
 
         <!-- Fushat e inputit -->
-        <GridPane hgap="10" vgap="10">
+        <GridPane hgap="10" vgap="10" VBox.vgrow="NEVER" maxHeight="200">
             <columnConstraints>
-                <ColumnConstraints halignment="RIGHT"/>
-                <ColumnConstraints prefWidth="250"/>
+                <ColumnConstraints halignment="RIGHT" percentWidth="35"/>
+                <ColumnConstraints prefWidth="250" percentWidth="65"/>
             </columnConstraints>
 
-            <Label text="Klienti ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-            <TextField fx:id="klientiIdField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="%clientId" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-text-fill: #E1EEBC;" />
+            <TextField fx:id="klientiIdField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                       style="-fx-background-color: #E1EEBC; -fx-text-fill: #328E6E;" />
 
-            <Label text="Vetura ID:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-            <TextField fx:id="veturaIdField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="%carId" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-text-fill: #E1EEBC;" />
+            <TextField fx:id="veturaIdField" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                       style="-fx-background-color: #E1EEBC; -fx-text-fill: #328E6E;" />
 
-            <Label text="Data e Rezervimit:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-            <DatePicker fx:id="dataRezervimitPicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="%reservationDate" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-text-fill: #E1EEBC;" />
+            <DatePicker fx:id="dataRezervimitPicker" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                        style="-fx-background-color: #E1EEBC; -fx-text-fill: #328E6E;" />
 
-            <Label text="Statusi:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-            <TextField fx:id="statusiField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="%status" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-text-fill: #E1EEBC;" />
+            <TextField fx:id="statusiField" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                       style="-fx-background-color: #E1EEBC; -fx-text-fill: #328E6E;" />
 
-            <Label text="Rezervimi ID:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-            <TextField fx:id="rezervimiIdField" GridPane.rowIndex="5" GridPane.columnIndex="1" editable="false"/>
+            <Label text="%reservationId" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-text-fill: #E1EEBC;" />
+            <TextField fx:id="rezervimiIdField" GridPane.rowIndex="5" GridPane.columnIndex="1" editable="false"
+                       style="-fx-background-color: #E1EEBC; -fx-text-fill: #328E6E;" />
         </GridPane>
 
         <!-- Butonat -->
         <HBox spacing="10" alignment="CENTER">
-            <Button text="Krijo" onAction="#handleCreate"/>
-            <Button text="Përditëso" onAction="#handleUpdate"/>
-            <Button text="Fshij" onAction="#handleDelete"/>
+            <Button text="%create" onAction="#handleCreate"
+                    style="-fx-background-color: #67AE6E; -fx-text-fill: #E1EEBC; -fx-font-weight: bold; -fx-background-radius: 8;" />
+            <Button text="%update" onAction="#handleUpdate"
+                    style="-fx-background-color: #67AE6E; -fx-text-fill: #E1EEBC; -fx-font-weight: bold; -fx-background-radius: 8;" />
+            <Button text="%delete" onAction="#handleDelete"
+                    style="-fx-background-color: #67AE6E; -fx-text-fill: #E1EEBC; -fx-font-weight: bold; -fx-background-radius: 8;" />
         </HBox>
     </VBox>
 </AnchorPane>
+
+

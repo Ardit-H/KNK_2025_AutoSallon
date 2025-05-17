@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import models.dto.Rezervimet.CreateRezervimetDto;
 import models.dto.Veturat.Veturat;
+import services.LanguageManager;
 import services.RezervimetService;
 
 import java.time.LocalDate;
@@ -36,9 +37,11 @@ public class UserRezervimetController {
     private Label lblStatus;
 
     private RezervimetService rezervimetService;
+    private LanguageManager languageManager;
 
-    public UserRezervimetController() {
+    public UserRezervimetController(){
         this.rezervimetService = new RezervimetService();
+        this.languageManager = LanguageManager.getInstance();
     }
 
     @FXML
