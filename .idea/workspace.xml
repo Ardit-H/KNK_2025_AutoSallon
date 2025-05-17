@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshimi i tabeles riparimet">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/UserRezervimetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/istockphoto-1439820420-612x612.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Views/rezervimetUser.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/RezervimetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RezervimetService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/faturat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/faturat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/values" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/values" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -37,7 +41,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -86,6 +90,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\OneDrive\Desktop\KNK_2025_AutoSallon\src\main\resources\Images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
@@ -153,11 +162,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Porosite" />
       <item itemvalue="Application.PunetoretServiceTest" />
       <item itemvalue="Application.RezervimetServiceTest" />
       <item itemvalue="Application.Vleresimet" />
-      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
@@ -457,7 +466,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i DBConnector" />
     <MESSAGE value="Testimi i lidhjes me Database" />
     <MESSAGE value="Krijimi i paketave models and dto" />
     <MESSAGE value="Krijimi i klases User" />
@@ -482,6 +490,7 @@
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ndryshimi i tabeles riparimet" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>

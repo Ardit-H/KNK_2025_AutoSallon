@@ -3,10 +3,14 @@ package services;
 import models.dto.Rezervimet.CreateRezervimetDto;
 import models.dto.Rezervimet.Rezervimet;
 import models.dto.Rezervimet.UpdateRezervimetDto;
+import models.dto.Veturat.Veturat;
 import repository.RezervimetRepository;
+import services.VeturatService;
 import repository.VeturatRepository;
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class RezervimetService {
     private RezervimetRepository rezervimetRepository;
@@ -63,4 +67,21 @@ public class RezervimetService {
         }
         return rezervimetRepository.delete(id);
     }
+
+
+    public List<Veturat> gjejVeturatELiraPerDate(String data) throws Exception {
+        VeturatRepository veturatRepository = new VeturatRepository();
+        List<Veturat> teGjitha = veturatRepository.getAll();
+        List<Rezervimet> rezervime = rezervimetRepository.getAll();
+        Set<Integer> veturaTeRezervuara = rezervime.stream()
+                .filter(r -> r.getDataRezervimit().equals(data))
+                .map(r -> r.getVeturaId())
+                .collect(Collectors.toSet());
+
+        return teGjitha.stream()
+                .filter(v -> !veturaTeRezervuara.contains(v.getId()))
+                .collect(Collectors.toList());
+    }
+
+
 }
