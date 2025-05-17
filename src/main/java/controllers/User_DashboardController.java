@@ -77,6 +77,11 @@ public class User_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT_USER);
         SceneManager.load(SceneLocator.VETURAT_USER,centerPane);
     }
+
+    @FXML private void handleLoadRezervimetUser()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.REZERVIMET_USER);
+        SceneManager.load(SceneLocator.REZERVIMET_USER,centerPane);
+    }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {
             loadLanguage(new Locale("sq"));
