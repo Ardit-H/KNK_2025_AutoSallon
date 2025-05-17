@@ -76,16 +76,16 @@ public class UserRezervimetController {
         }
 
         try {
-            // Shembull: klientiId është 1
+
             CreateRezervimetDto dto = new CreateRezervimetDto(
-                    1, // klientiId
+                    1,
                     veturaZgjedhur.getId(),
                     data.toString(),
                     "aktiv"
             );
             rezervimetService.create(dto);
             lblStatus.setText("Rezervimi u bë me sukses!");
-            loadVeturatELira(data); // rifresko listën
+            loadVeturatELira(data);
         } catch (Exception e) {
             lblStatus.setText("Gabim gjatë rezervimit: " + e.getMessage());
         }
