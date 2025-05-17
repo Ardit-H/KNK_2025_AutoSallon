@@ -2,7 +2,7 @@ package models.dto.Punetoret;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class Punetoret {
-    private int punetorId;
+    private int id;
     private String emri;
     private String mbiemri;
     private String pozita;
@@ -11,8 +11,8 @@ public class Punetoret {
     private double paga;
     private String dataPunesimit;
 
-    private Punetoret(int punetorId, String emri, String mbiemri, String pozita, String telefoni,String email, double paga, String dataPunesimit){
-        this.punetorId = punetorId;
+    private Punetoret(int id, String emri, String mbiemri, String pozita, String telefoni,String email, double paga, String dataPunesimit){
+        this.id = id;
         this.emri = emri;
         this.mbiemri = mbiemri;
         this.pozita = pozita;
@@ -23,7 +23,7 @@ public class Punetoret {
     }
 
     public static Punetoret getInstance(ResultSet resultSet) throws SQLException{
-        int punetorId = resultSet.getInt("punetor_id");
+        int punetorId = resultSet.getInt("id");
         String emri = resultSet.getString("emri");
         String mbiemri = resultSet.getString("mbiemri");
         String pozita = resultSet.getString("pozita");
@@ -36,7 +36,7 @@ public class Punetoret {
     }
 
     public int getPunetor_id(){
-        return punetorId;
+        return id;
     }
 
     public String getEmri(){

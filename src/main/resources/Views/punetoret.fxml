@@ -40,7 +40,7 @@
 
         <!-- Button Section -->
         <HBox spacing="10" alignment="CENTER">
-            <Button text="Shto" onMouseClicked="#handleCreate" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+            <Button text="Shto"  onMouseClicked="#handleCreate" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
             <Button text="Përditëso" onMouseClicked="#handleUpdate" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
             <Button text="Fshi" onMouseClicked="#handleDelete" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
         </HBox>
@@ -49,7 +49,9 @@
         <Label fx:id="messageLabel" style="-fx-text-fill: red; -fx-font-weight: bold;"/>
 
         <!-- List View Section -->
+        <ListView fx:id="txtPunetoretList" onMouseClicked="#handleSelect" style="-fx-pref-height: 200;"/>
+
         <Label text="Lista e Punëtorëve:" style="-fx-font-weight: bold;"/>
-        <ListView fx:id="txtPunetoretList" style="-fx-pref-height: 200;"/>
+
     </VBox>
 </AnchorPane>
