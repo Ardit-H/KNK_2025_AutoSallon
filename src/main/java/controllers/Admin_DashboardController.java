@@ -65,6 +65,18 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT);
         SceneManager.load(SceneLocator.VETURAT, centerPane);
     }
+
+    @FXML private void handleLoadPunetoret(MouseEvent me)throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.PUNETORET);
+        SceneManager.load(SceneLocator.PUNETORET,centerPane);
+    }
+
+    @FXML
+    private void handleLoadRezervimet() throws Exception{
+            SceneManager.getInstance().setCenterPanePath(SceneLocator.REZERVIMET);
+            SceneManager.load(SceneLocator.REZERVIMET, centerPane);
+    }
+
     @FXML private void handleLoadSherbimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.SHERBIMET);
         SceneManager.load(SceneLocator.SHERBIMET, centerPane);
@@ -121,6 +133,8 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_HELP);
         SceneManager.load(SceneLocator.ADMIN_HELP,centerPane);
     }
+
+
 
 @FXML private void handleLanguageToggle() throws Exception{
     if (isEnglish) {

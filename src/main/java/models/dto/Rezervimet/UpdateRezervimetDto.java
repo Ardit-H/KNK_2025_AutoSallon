@@ -3,18 +3,20 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 
 public class UpdateRezervimetDto {
-    private int rezervimiId;
+    private int id;
     private Integer klientiId;
     private Integer veturaId;
     private String dataRezervimit;
     private String statusi;
 
-    public void setRezervimiId(int rezervimiId){
-        this.rezervimiId = rezervimiId;
+    public UpdateRezervimetDto() {}
+
+    public void setRezervimiId(int id){
+        this.id = id;
     }
 
     public int getRezervimiId(){
-        return rezervimiId;
+        return id;
     }
 
     public void setKlientiId(Integer klientiId){
@@ -33,12 +35,12 @@ public class UpdateRezervimetDto {
         return veturaId;
     }
 
-    public void setDataRezervimet(String dataRezervimit){
+    public void setDataRezervimit(String dataRezervimit){
         this.dataRezervimit = dataRezervimit;
     }
 
     public String getDataRezervimit(){
-        return  dataRezervimit;
+        return dataRezervimit;
     }
 
     public void setStatusi(String statusi){
@@ -48,8 +50,4 @@ public class UpdateRezervimetDto {
     public String getStatusi(){
         return statusi;
     }
-
-    public UpdateRezervimetDto(){
-
-    };
 }
