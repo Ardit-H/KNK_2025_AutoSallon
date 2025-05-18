@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.FATURAT;
+        this.currentPath = SceneLocator.RIPARIMET;
         this.scene = this.initScene();
     }
 

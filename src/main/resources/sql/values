@@ -359,15 +359,18 @@ VALUES
 (10, 10, '2025-05-10', 'aktiv');
 
 
-INSERT INTO Riparimet (veturaId, pershkrimi, statusi, kostoRiparimit)
-VALUES
-(1, 'Ndërrim vaji', 'E rregulluar', 50.00),
-(2, 'Probleme ABS', 'Në përparim', 120.00),
-(3, 'Ndërrim i gomave', 'E rregulluar', 80.00),
-(4, 'Defekt në motor', 'Nuk mund të riparohet', 05.00),
-(5, 'Riparim', 'E rregulluar', 150.00),
-(6, 'Ndërrim i baterisë', 'E rregulluar', 70.00),
-(7, 'Kontroll', 'Në përparim', 60.00);
+INSERT INTO riparimet (veturaid, sherbimiid, statusi, kostoriparimit, datariparimit) VALUES
+(1, 1, 'Ne proces', 150.00, '2025-05-01'),
+(2, 2, 'Perfunduar', 300.00, '2025-04-20'),
+(3, 3, 'Ne pritje', 100.50, '2025-05-10'),
+(4, 4, 'Ne proces', 220.00, '2025-05-12'),
+(5, 5, 'Perfunduar', 450.75, '2025-03-28'),
+(6, 2, 'Ne proces', 175.00, '2025-05-13'),
+(7, NULL, 'Ne pritje', 80.00, '2025-05-02'),
+(8, 1, 'Perfunduar', 260.00, '2025-04-15'),
+(9, NULL, 'Ne proces', 95.00, '2025-05-07'),
+(10, 3, 'Ne pritje', 130.00, '2025-05-14');
+
 
 ALTER TABLE Riparimet
 ALTER COLUMN statusi TYPE VARCHAR(30);
