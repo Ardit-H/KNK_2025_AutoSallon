@@ -23,7 +23,7 @@ public class RiparimetServiceTest {
 //                System.out.println("ID: " + r.getId());
 //                System.out.println("Vetura ID: " + r.getVeturaId());
 //                System.out.println("Sherbimi ID: " + r.getSherbimiId());
-//                System.out.println("Statusi: " + r.getStatusi());
+//                System.out.println("Statusi: " + r.getStatus());
 //                System.out.println("Kosto Riparimi: " + r.getKostoRiparimit());
 //                System.out.println("Data Riparimit: " + r.getDataRiparimit());
 //                System.out.println("---------------------------");
@@ -33,7 +33,7 @@ public class RiparimetServiceTest {
 //            CreateRiparimetDto dto = new CreateRiparimetDto();
 //            dto.setVeturaId(1);
 //            dto.setSherbimiId(1);
-//            dto.setStatusi("Ne proces");
+//            dto.setStatus("Ne proces");
 //            dto.setKostoRiparimit(50.0);
 //            dto.setDataRiparimit("2024-05-10");
 //            riparimetService.create(dto);
@@ -41,7 +41,7 @@ public class RiparimetServiceTest {
             // Testimi i update
 //            UpdateRiparimetDto update = new UpdateRiparimetDto();
 //            update.setId(2);
-//            update.setStatusi("Perfundohet");
+//            update.setStatus("Perfundohet");
 //            update.setKostoRiparimit(70.0);
 //            riparimetService.update(update);
 

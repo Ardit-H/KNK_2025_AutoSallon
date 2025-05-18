@@ -132,7 +132,7 @@ CREATE TABLE rezervimet (
     klienti_id INTEGER REFERENCES Klientet(id),
     vetura_id INTEGER REFERENCES Veturat(id),
     data_rezervimit DATE NOT NULL,
-    statusi VARCHAR(20) CHECK (statusi IN ('aktiv', 'anuluar', 'etj.'))
+    status VARCHAR(20) CHECK (status IN ('aktiv', 'anuluar', 'etj.'))
 );
 ALTER TABLE rezervimet
 ADD CONSTRAINT rezervimet_klienti_id_fkey
@@ -143,7 +143,7 @@ CREATE TABLE Riparimet (
     id SERIAL PRIMARY KEY,
     veturaId INTEGER NOT NULL,
     pershkrimi TEXT NOT NULL,
-    statusi VARCHAR(20) CHECK (statusi IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
+    status VARCHAR(20) CHECK (status IN ('Në përparim', 'Nuk mund të riparohet', 'E rregulluar')) NOT NULL,
     kostoRiparimit NUMERIC(10,2) NOT NULL,
     FOREIGN KEY (veturaId) REFERENCES veturat(id)
 );
@@ -345,7 +345,7 @@ VALUES
 (10, 10, 'ne pritje', NULL, NULL, 'Lezhë');
 
 
-INSERT INTO rezervimet (klienti_id, vetura_id, data_rezervimit, statusi)
+INSERT INTO rezervimet (klienti_id, vetura_id, data_rezervimit, status)
 VALUES
 (1, 2, '2025-05-01', 'aktiv'),
 (2, 3, '2025-05-02', 'anuluar'),
@@ -359,7 +359,7 @@ VALUES
 (10, 10, '2025-05-10', 'aktiv');
 
 
-INSERT INTO Riparimet (veturaId, pershkrimi, statusi, kostoRiparimit)
+INSERT INTO Riparimet (veturaId, pershkrimi, status, kostoRiparimit)
 VALUES
 (1, 'Ndërrim vaji', 'E rregulluar', 50.00),
 (2, 'Probleme ABS', 'Në përparim', 120.00),
@@ -370,7 +370,7 @@ VALUES
 (7, 'Kontroll', 'Në përparim', 60.00);
 
 ALTER TABLE Riparimet
-ALTER COLUMN statusi TYPE VARCHAR(30);
+ALTER COLUMN status TYPE VARCHAR(30);
 
 
 INSERT INTO Pagesat (porosiaId, metodaPageses, shuma, dataPageses)

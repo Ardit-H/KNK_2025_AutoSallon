@@ -2,10 +2,9 @@ package models.dto.TestDrives;
 
 public class UpdateTestDrivesDto {
     private int id;
-    private String statusi;
+    private String status;
     private String feedback;
     private int duration;
-    private String location;
 
     public int getId() {
         return id;
@@ -15,12 +14,12 @@ public class UpdateTestDrivesDto {
         this.id = id;
     }
 
-    public String getStatusi() {
-        return statusi;
+    public String getStatus() {
+        return status;
     }
 
-    public void setStatusi(String statusi) {
-        this.statusi = statusi;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getFeedback() {
@@ -39,12 +38,5 @@ public class UpdateTestDrivesDto {
         this.duration = duration;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 }
 
