@@ -33,6 +33,7 @@ public class SceneManager {
         try{
             return new Scene(this.getParent(currentPath));
         }catch (Exception e){
+            e.printStackTrace();
             return null;
         }
     }
@@ -53,9 +54,14 @@ public class SceneManager {
     }
 
     private void loadParent(String path) throws Exception{
-        Parent parent = getParent(path);
-        this.currentPath = path;
-        scene.setRoot(parent);
+        try {
+            Parent parent = getParent(path);
+            this.currentPath = path;
+            scene.setRoot(parent);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     private void loadParent(String path, Pane pane) throws Exception{
