@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -475,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747333250275</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1747576934997</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1747576934997</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,7 +508,6 @@
     <MESSAGE value="Krijimi i tabeles faturat" />
     <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
@@ -515,6 +519,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
     <MESSAGE value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
   </component>
 </project>
