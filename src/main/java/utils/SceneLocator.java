@@ -37,5 +37,7 @@ public class SceneLocator {
     public static final String STATISTIKAT="/Views/statistikat.fxml";
     public static final String USER_LOKACIONET="/Views/user_lokacionit.fxml";
     public static final String REZERVIMET = "/Views/rezervimet.fxml";
-    public static final String RIPARIMET="/Views/riparimet.fxml";
+    public static final String REZERVIMET_USER= "/Views/rezervimetUser.fxml";
+    public static final String PUNETORET = "/Views/punetoret.fxml";
 }
+

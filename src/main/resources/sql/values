@@ -277,7 +277,7 @@ VALUES
   (10, 10, 16500.00, 'Ne proces');
 
 
-  INSERT INTO Punetoret (emri, mbiemri, pozita, telefoni, email, paga, data_punesimit)
+INSERT INTO Punetoret (emri, mbiemri, pozita, telefoni, email, paga, data_punesimit)
 VALUES
 ('Arben', 'Hoxha', 'Menaxher', '0681234567', 'arben.hoxha@example.com', 950.00, '2020-03-15'),
 ('Elira', 'Shehu', 'Financiare', '0698765432', 'elira.shehu@example.com', 870.50, '2021-06-01'),
