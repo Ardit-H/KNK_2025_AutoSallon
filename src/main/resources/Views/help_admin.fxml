@@ -54,7 +54,11 @@
             <Text layoutX="37.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblClients" wrappingWidth="635.8700256347656" />
             <Text layoutX="40.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblServices" wrappingWidth="635.8700256347656" />
             <Text layoutX="40.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblRatings" wrappingWidth="636.9366455078125" />
-            <Text layoutX="40.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblProfile" wrappingWidth="634.8033752441406" />
+             <Text layoutX="40.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblCars" wrappingWidth="636.9366455078125" />
+             <Text layoutX="40.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblWarranty" wrappingWidth="636.9366455078125" />
+             <Text layoutX="40.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblTestDrives" wrappingWidth="636.9366455078125" />
+
+             <Text layoutX="40.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblProfile" wrappingWidth="634.8033752441406" />
          </children>
       </AnchorPane>
     </children>

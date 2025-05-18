@@ -22,7 +22,7 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
     @Override
     public Riparimet create(CreateRiparimetDto dto) {
         String query = """
-            INSERT INTO riparimet (veturaId, sherbimiId, statusi, kostoRiparimit, dataRiparimit)
+            INSERT INTO riparimet (veturaId, sherbimiId, status, kostoRiparimit, dataRiparimit)
             VALUES (?, ?, ?, ?, ?)
         """;
 
@@ -51,7 +51,7 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
         ArrayList<Object> params = new ArrayList<>();
 
         if (dto.getStatusi() != null) {
-            query.append("statusi = ?, ");
+            query.append("status = ?, ");
             params.add(dto.getStatusi());
         }
         if (dto.getKostoRiparimit() != 0.0) {
@@ -83,17 +83,17 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
     }
 
     public List<Riparimet> searchByStatus(String status) {
-        String where = "LOWER(statusi) LIKE ?";
+        String where = "LOWER(status) LIKE ?";
         String searchValue = "%" + status.toLowerCase() + "%";
         return searchWithCustomWhere(where, searchValue);
     }
 
-    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String statusi, Double kostoRiparimit, String dataRiparimit) {
-        String sql = "SELECT * FROM riparimet WHERE vetura_id = ? AND sherbimi_id = ? AND statusi = ? AND kosto_riparimit = ? AND data_riparimit = ?";
+    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String status, Double kostoRiparimit, String dataRiparimit) {
+        String sql = "SELECT * FROM riparimet WHERE vetura_id = ? AND sherbimi_id = ? AND status = ? AND kosto_riparimit = ? AND data_riparimit = ?";
         try (PreparedStatement stmt = this.connection.prepareStatement(sql)) {
             stmt.setInt(1, veturaId);
             stmt.setInt(2, sherbimiId);
-            stmt.setString(3, statusi);
+            stmt.setString(3, status);
             stmt.setDouble(4, kostoRiparimit);
             stmt.setString(5, dataRiparimit);
             ResultSet rs = stmt.executeQuery();

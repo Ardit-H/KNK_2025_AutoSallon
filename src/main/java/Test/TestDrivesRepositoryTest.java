@@ -19,7 +19,7 @@ public class TestDrivesRepositoryTest {
             if(result.next()){
                 TestDrives testdrives=TestDrives.getInstance(result);
                  System.out.println("id: "+testdrives.getId());
-                System.out.println("Statusi: "+testdrives.getStatusi());
+                System.out.println("Statusi: "+testdrives.getStatus());
                 System.out.println("Feedback: "+testdrives.getFeedback());
             }
         }catch (SQLException e){

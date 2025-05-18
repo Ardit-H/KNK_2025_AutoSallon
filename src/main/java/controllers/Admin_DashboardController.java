@@ -25,7 +25,6 @@ import java.util.Locale;
 public class Admin_DashboardController {
     public Button btn_dashboard;
     public Button btn_klientet;
-    public Button btn_veturat;
     public Button btn_sherbimet;
     public Button btn_rezervimet;
     public Button btn_testdrives;
@@ -38,6 +37,7 @@ public class Admin_DashboardController {
     public Button btn_porosite;
     public Button btn_ofertat;
     public Button btn_pagesat;
+    public Button btn_automjetet;
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button btnLogOut;
@@ -113,7 +113,7 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_PROFILE);
         SceneManager.load(SceneLocator.ADMIN_PROFILE,centerPane);
     }
-    @FXML private void handleLoadtestDrives()throws Exception{
+    @FXML private void handleLoadTestDrives()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.TESTDRIVES);
         SceneManager.load(SceneLocator.TESTDRIVES,centerPane);
     }
