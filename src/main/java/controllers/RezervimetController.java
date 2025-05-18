@@ -73,22 +73,44 @@ public class RezervimetController {
     }
 
     @FXML
-    public void handleCreate(){
+    public void handleCreate() {
         try {
+
+            if (klientiIdField.getText().isEmpty() || veturaIdField.getText().isEmpty() ||
+                    dataRezervimitPicker.getValue() == null || statusiField.getText().isEmpty()) {
+
+                showAlert("Ju lutem plotësoni të gjitha fushat!");
+                return;
+            }
+
+            int klientiId;
+            int veturaId;
+
+            try {
+                klientiId = Integer.parseInt(klientiIdField.getText());
+                veturaId = Integer.parseInt(veturaIdField.getText());
+            } catch (NumberFormatException e) {
+                showAlert("Klienti ID dhe Vetura ID duhet të jenë numra të vlefshëm!");
+                return;
+            }
+
+            String dataRezervimit = dataRezervimitPicker.getValue().toString();
+            String statusi = statusiField.getText();
+
             CreateRezervimetDto dto = new CreateRezervimetDto(
-                    Integer.parseInt(klientiIdField.getText()),
-                    Integer.parseInt(veturaIdField.getText()),
-                    dataRezervimitPicker.getValue().toString(),
-                    statusiField.getText()
+                    klientiId, veturaId, dataRezervimit, statusi
             );
 
             rezervimetService.create(dto);
             loadRezervimet();
             clearFields();
+            showAlert("Rezervimi u krijua me sukses!");
+
         } catch (Exception e) {
-            showAlert("Gabim gjate krijimit: " + e.getMessage());
+            showAlert("Gabim gjatë krijimit: " + e.getMessage());
         }
     }
+
     @FXML
     public void handleRowSelect(MouseEvent event) {
         Rezervimet rezervimi = tabelaRezervimet.getSelectionModel().getSelectedItem();
@@ -108,7 +130,7 @@ public class RezervimetController {
             dto.setRezervimiId(Integer.parseInt(rezervimiIdField.getText()));
             dto.setKlientiId(Integer.parseInt(klientiIdField.getText()));
             dto.setVeturaId(Integer.parseInt(veturaIdField.getText()));
-            dto.setDataRezervimet(dataRezervimitPicker.getValue().toString());
+            dto.setDataRezervimit(dataRezervimitPicker.getValue().toString());
             dto.setStatusi(statusiField.getText());
 
             rezervimetService.update(dto);

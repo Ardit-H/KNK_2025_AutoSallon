@@ -43,13 +43,12 @@ public class RezervimetRepositoryTest {
 
 
         UpdateRezervimetDto update = new UpdateRezervimetDto();
-        update.setRezervimiId(1);
+
         //update.setStatusi("anuluar"); // shembull
         rezervimetRepository.update(update);
 
 
-       // CreateRezervimetDto createDto = new CreateRezervimetDto(1, 2, "2025-04-20", "aktiv");
-        //rezervimetRepository.create(createDto);
+
     }
 }
 

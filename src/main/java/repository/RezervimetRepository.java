@@ -48,6 +48,7 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
     public Rezervimet update(UpdateRezervimetDto rezervimetDto) {
         StringBuilder query = new StringBuilder("UPDATE REZERVIMET SET ");
         ArrayList<Object> params = new ArrayList<>();
+
         if (rezervimetDto.getKlientiId() != null) {
             query.append("KLIENTI_ID = ?, ");
             params.add(rezervimetDto.getKlientiId());
@@ -58,9 +59,8 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
         }
         if (rezervimetDto.getDataRezervimit() != null) {
             query.append("DATA_REZERVIMIT = ?, ");
-            params.add(rezervimetDto.getDataRezervimit());
+            params.add(java.sql.Date.valueOf(rezervimetDto.getDataRezervimit()));
         }
-
         if (rezervimetDto.getStatusi() != null) {
             query.append("STATUSI = ?, ");
             params.add(rezervimetDto.getStatusi());
@@ -70,7 +70,7 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
             return getById(rezervimetDto.getRezervimiId());
         }
 
-        query.setLength(query.length() - 2);
+        query.setLength(query.length() - 2); 
         query.append(" WHERE ID = ?");
         params.add(rezervimetDto.getRezervimiId());
 
@@ -86,9 +86,10 @@ public class RezervimetRepository extends BaseRepository<Rezervimet, CreateRezer
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
 
+        return null;
     }
+
 
 
 
