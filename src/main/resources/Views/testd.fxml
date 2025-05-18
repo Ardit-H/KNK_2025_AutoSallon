@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: #FDF5D5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TestdrivesController">
+    <HBox layoutX="22.0" layoutY="26.0" prefHeight="79.0" prefWidth="1283.0" style="-fx-background-color: #5169E7;">
+    <ImageView fitHeight="79.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/testdrive.png" />
+    </ImageView>
+    <Text fill="#ffee7d" strokeType="OUTSIDE" strokeWidth="0.0" text="%Testimet_e_vozitjeve">
+        <font>
+            <Font name="System Bold" size="47.0" />
+        </font>
+    </Text>
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="116.0" prefHeight="18.0" prefWidth="266.0" spacing="10">
+        <Label fx:id="messageLabel" textFill="red" />
+    </HBox>
+
+    <TextField fx:id="searchField" layoutX="917.0" layoutY="215.0" prefHeight="27.0" prefWidth="266.0" promptText="%Kërko_sipas_statusit" />
+    <Label layoutX="847.0" layoutY="219.0" prefHeight="20.0" prefWidth="58.0" text="%Kërko">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+    </Label>
+    <VBox layoutX="69.0" layoutY="398.0" prefHeight="238.0" prefWidth="398.0" style="-fx-background-color: #5169E7;">
+        <Label prefHeight="44.0" prefWidth="114.0" text="%Kohezgjatja" textFill="#fdf5d5">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="duration" prefHeight="26.0" prefWidth="409.0" />
+        <Label prefHeight="31.0" prefWidth="101.0" text="%Feedback" textFill="#fdf5d5">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="feedback" prefHeight="55.0" prefWidth="382.0" style="-fx-border-color: #FDEB9D; -fx-border-style: solid;" />
+    </VBox>
+
+    <VBox layoutX="71.0" layoutY="152.0" prefHeight="202.0" prefWidth="398.0" style="-fx-background-color: #5169E7;">
+        <Label prefHeight="44.0" prefWidth="114.0" text="%Klienti_ID" textFill="#fdf5d5">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="kid" prefHeight="26.0" prefWidth="409.0" />
+        <Label prefHeight="31.0" prefWidth="105.0" text="%Vetura_ID" textFill="#fdf5d5">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="vid" prefHeight="27.0" prefWidth="387.0" style="-fx-border-color: #FDEB9D; -fx-border-style: solid;" />
+        <Label prefHeight="30.0" prefWidth="114.0" text="%Statusi" textFill="#fdf5d5">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="status" prefHeight="25.0" prefWidth="229.0" />
+    </VBox>
+    <Button fx:id="btn_shto" layoutX="217.0" layoutY="664.0" onAction="#handleCreateTestDrive" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #5169E7;" text="%Shto" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font></Button>
+    <Button fx:id="btn_fshij" layoutX="364.0" layoutY="664.0" onAction="#handleDeleteTestDrive" prefHeight="44.0" prefWidth="95.0" style="-fx-background-color: #5169E7;" text="%Fshij" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font></Button>
+    <Button fx:id="btn_perditeso" layoutX="69.0" layoutY="664.0" onAction="#handleUpdateTestDrive" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #5169E7;" text="%Perditeso" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font></Button>
+    <TableView fx:id="testDrivesTableView" layoutX="511.0" layoutY="354.0" prefHeight="303.0" prefWidth="775.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+        <columns>
+            <TableColumn fx:id="colKlienti" prefWidth="85.5999755859375" text="%Klienti_ID" />
+            <TableColumn fx:id="colVetura" prefWidth="108.0" text="%Vetura_ID" />
+            <TableColumn fx:id="colStatusi" prefWidth="132.800048828125" text="%Statusi" />
+            <TableColumn fx:id="colFeedback" prefWidth="283.9998779296875" text="%Feedback" />
+            <TableColumn fx:id="colDuration" prefWidth="163.99993896484375" text="%Kohezgjatja" />
+        </columns>
+    </TableView>
+    <ImageView fitHeight="153.0" fitWidth="266.0" layoutX="511.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../Images/test.jpg" />
+    </ImageView>
+
+</AnchorPane>
