@@ -73,24 +73,22 @@ public class RiparimetController {
 
     private void loadRiparimet() {
         List<Riparimet> lista = riparimetService.getAll();
-        riparimetList.setAll(lista);
+        riparimetTableView.getItems().setAll(lista);
     }
 
     @FXML
     private void handleCreate() {
         try {
-            Integer veturaId = Integer.parseInt(txtVeturaId.getText());
-            Integer sherbimiId = Integer.parseInt(txtSherbimiId.getText());
+            int veturaId = Integer.parseInt(txtVeturaId.getText());
+            int sherbimiId = Integer.parseInt(txtSherbimiId.getText());
             String statusi = txtStatusi.getText();
             Double kostoRiparimit = Double.parseDouble(txtKostoRiparimit.getText());
-            String dataRiparimit = txtDataRiparimit.getText();
 
             CreateRiparimetDto dto = new CreateRiparimetDto(
                     veturaId,
                     sherbimiId,
                     statusi,
-                    kostoRiparimit,
-                    dataRiparimit
+                    kostoRiparimit
             );
 
             riparimetService.create(dto);
@@ -103,7 +101,7 @@ public class RiparimetController {
     }
 
     @FXML
-    private void handleUpdate() {
+    private void handleUpdat() {
         try {
             Riparimet selected = riparimetTableView.getSelectionModel().getSelectedItem();
             if (selected == null) {
@@ -120,6 +118,10 @@ public class RiparimetController {
             if (!txtKostoRiparimit.getText().trim().isEmpty())
                 dto.setKostoRiparimit(Double.parseDouble(txtKostoRiparimit.getText().trim()));
 
+            if (!txtDataRiparimit.getText().trim().isEmpty())
+                dto.setDataRiparimit(txtDataRiparimit.getText().trim());
+
+
             riparimetService.update(dto);
             messageLabel.setText("Riparimi u përditësua me sukses.");
             loadRiparimet();
@@ -130,7 +132,7 @@ public class RiparimetController {
     }
 
     @FXML
-    private void handleDelete() {
+    private void handleDelet() {
         try {
             Riparimet selected = riparimetTableView.getSelectionModel().getSelectedItem();
             if (selected == null) {
@@ -154,18 +156,4 @@ public class RiparimetController {
         txtDataRiparimit.clear();
     }
 
-    @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        loadLanguage(Locale.ENGLISH);
-    }
-
-    @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception {
-        languageManager.setLocale(locale);
-        SceneManager.reload();
-    }
 }
