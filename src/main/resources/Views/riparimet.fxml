@@ -13,74 +13,59 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="823.0" prefWidth="800.0" style="-fx-background-color: #FDF5D5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RiparimetController">
+<AnchorPane prefHeight="823.0" prefWidth="800.0" style="-fx-background-color: #FDF5D5;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.RiparimetController">
 
-    <HBox layoutX="22.0" layoutY="26.0" prefHeight="78.0" prefWidth="754.0" style="-fx-background-color: #370C93;">
-        <ImageView fitHeight="79.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+    <!-- Header Bar -->
+    <HBox layoutX="22.0" layoutY="26.0" prefHeight="78.0" prefWidth="754.0" style="-fx-background-color: #370C93;" spacing="10" alignment="CENTER_LEFT">
+        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../Images/repair.jpg" />
         </ImageView>
-        <Text fill="#ffee7d" strokeType="OUTSIDE" strokeWidth="0.0" text=" Riparimet">
+        <Text fill="#ffee7d" strokeType="OUTSIDE" strokeWidth="0.0" text="%Riparimet">
             <font>
-                <Font name="System Bold" size="47.0" />
+                <Font name="System Bold" size="40.0" />
             </font>
         </Text>
     </HBox>
 
-    <VBox layoutX="29.0" layoutY="125.0" prefHeight="325.0" prefWidth="505.0" style="-fx-background-color: #370C93;">
-        <children>
-            <Label text="  Vetura ID:" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
-            <TextField fx:id="txtVeturaId" />
+    <!-- Input Form -->
+    <VBox layoutX="29.0" layoutY="125.0" prefHeight="325.0" prefWidth="505.0" style="-fx-background-color: #370C93;" spacing="10" padding="15">
+        <Label text="%Vetura_ID_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <TextField fx:id="txtVeturaId" promptText="%Shkruaj_Vetura_ID" />
 
-            <Label text="  Sherbimi ID:" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
-            <TextField fx:id="txtSherbimiId" />
+        <Label text="%Sherbimi_ID_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <TextField fx:id="txtSherbimiId" promptText="%Shkruaj_Sherbimi_ID" />
 
-            <Label text="  Statusi:" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
-            <TextField fx:id="txtStatusi" />
-            <Label text="  Kostoja e riparimit:" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
-            <TextField fx:id="txtKostoRiparimit" />
+        <Label text="%Statusi_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <TextField fx:id="txtStatusi" promptText="%Shkruaj_Statusin" />
 
-            <Label text="  Data e riparimit:" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
-            <TextField fx:id="txtDataRiparimit" />
-        </children>
+        <Label text="%Kostoja_e_Riparimit_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <TextField fx:id="txtKostoRiparimit" promptText="%Shkruaj_Kostot" />
+
+        <Label text="%Data_e_Riparimit_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <TextField fx:id="txtDataRiparimit" promptText="%Shkruaj_Datën_dd_MM_yyyy" />
     </VBox>
 
-    <Button fx:id="btn_shto" layoutX="37.0" layoutY="475.0" onMouseClicked="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="Shto" textFill="WHITE">
-      <font>
-         <Font name="System Bold" size="14.0" />
-      </font></Button>
-    <Button fx:id="btn_perditeso" layoutX="231.0" layoutY="475.0" onMouseClicked="#handleUpdate" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #370C93;" text="Përditëso" textFill="WHITE">
-      <font>
-         <Font name="System Bold" size="14.0" />
-      </font></Button>
-    <Button fx:id="btn_fshij" layoutX="411.0" layoutY="475.0" onMouseClicked="#handleDelete" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="Fshij" textFill="WHITE">
-      <font>
-         <Font name="System Bold" size="14.0" />
-      </font></Button>
+    <!-- Action Buttons -->
+    <HBox layoutX="30.0" layoutY="475.0" spacing="40">
+        <Button fx:id="btn_shto" onMouseClicked="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE" styleClass="bold-button" />
+        <Button fx:id="btn_perditeso" onMouseClicked="#handleUpdate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Perditeso" textFill="WHITE" styleClass="bold-button" />
+        <Button fx:id="btn_fshij" onMouseClicked="#handleDelete" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE" styleClass="bold-button" />
+    </HBox>
 
-    <Button fx:id="btn_shqip" layoutX="684.0" layoutY="153.0" onAction="#handleLanguageEnglishClick" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #370C93;" text="Shqip" textFill="#fdf5d5">
-      <font>
-         <Font name="System Bold" size="14.0" />
-      </font></Button>
-    <Button fx:id="btn_anglisht" layoutX="684.0" layoutY="208.0" onAction="#handleLanguageAlbanianClick" prefHeight="38.0" prefWidth="79.0" style="-fx-background-color: #370C93;" text="Anglisht" textFill="#fdf5d5">
-      <font>
-         <Font name="System Bold" size="14.0" />
-      </font></Button>
-
-    <Text layoutX="660.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zgjidh gjuhën:">
-        <font>
-            <Font name="System Bold" size="14.0" />
-        </font>
-    </Text>
-
-    <TableView fx:id="riparimetTableView" layoutX="30.0" layoutY="560.0" prefHeight="240.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <!-- TableView -->
+    <TableView fx:id="riparimetTableView" layoutX="29.0" layoutY="560.0" prefHeight="240.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
-            <TableColumn fx:id="colVeturaId" prefWidth="100.0" text="Vetura ID" />
-            <TableColumn fx:id="colSherbimiId" prefWidth="100.0" text="Sherbimi ID" />
-            <TableColumn fx:id="colStatusi" prefWidth="120.0" text="Statusi" />
-            <TableColumn fx:id="colKostoRiparimit" prefWidth="120.0" text="Kosto" />
-            <TableColumn fx:id="colDataRiparimit" prefWidth="150.0" text="Data e Riparimit" />
+            <TableColumn fx:id="colVeturaId" prefWidth="100.0" text="%Vetura_ID" />
+            <TableColumn fx:id="colSherbimiId" prefWidth="100.0" text="%Sherbimi_ID" />
+            <TableColumn fx:id="colStatusi" prefWidth="120.0" text="%Statusi" />
+            <TableColumn fx:id="colKostoRiparimit" prefWidth="120.0" text="%Kostoja" />
+            <TableColumn fx:id="colDataRiparimit" prefWidth="150.0" text="%Data_e_Riparimit" />
         </columns>
     </TableView>
-    <Label fx:id="messageLabel" layoutX="30.0" layoutY="510.0" textFill="red" />
+
+    <!-- Message Label -->
+    <Label fx:id="messageLabel" layoutX="29.0" layoutY="515.0" textFill="red" style="-fx-font-weight: bold;" />
 
 </AnchorPane>

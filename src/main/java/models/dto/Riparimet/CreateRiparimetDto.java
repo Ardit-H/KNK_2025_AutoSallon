@@ -6,7 +6,7 @@ public class CreateRiparimetDto {
     private String statusi;
     private double kostoRiparimit;
 
-    public CreateRiparimetDto(int veturaId, int sherbimiId, String statusi, double kostoRiparimit) {
+    public CreateRiparimetDto(int veturaId, int sherbimiId, String statusi, double kostoRiparimit, String dataRiparimit) {
         this.veturaId = veturaId;
         this.sherbimiId = sherbimiId;
         this.statusi = statusi;
