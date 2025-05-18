@@ -8,6 +8,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import utils.SceneLocator;
 
+import java.util.ResourceBundle;
+
 public class SceneManager {
     private static SceneManager sceneManager;
     private Scene scene;
@@ -17,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.TESTDRIVES;
+        this.currentPath = SceneLocator.OVERALL_DASHBOARD;
         this.scene = this.initScene();
     }
 

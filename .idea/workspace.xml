@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim ne messages_sq.properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/RezervimetRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/RezervimetRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/RiparimetRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/RiparimetRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/RiparimetServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/RiparimetServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/TestDrivesRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/TestDrivesServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/TestDrivesServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TestdrivesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TestdrivesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/CreateTestDrivesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/CreateTestDrivesDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/TestDrives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/TestDrives.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/UpdateTestDrivesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/dto/TestDrives/UpdateTestDrivesDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/RiparimetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/RiparimetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/TestDrivesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/TestDrivesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TestDrivesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TestDrivesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SceneLocator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/testdrive.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/values" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/values" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+    &quot;accountId&quot;: &quot;2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -485,7 +469,39 @@
       <option name="project" value="LOCAL" />
       <updated>1747329818889</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
+      <option name="closed" value="true" />
+      <created>1747333250275</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1747333250275</updated>
+    </task>
+    <task id="LOCAL-00038" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1747576934997</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1747576934997</updated>
+    </task>
+    <task id="LOCAL-00039" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1747587665670</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1747587665670</updated>
+    </task>
+    <task id="LOCAL-00040" summary="permiresim ne messages_sq.properties">
+      <option name="closed" value="true" />
+      <created>1747592639674</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1747592639674</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -500,8 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i klases User" />
-    <MESSAGE value="Krijimi i klases Klientet" />
     <MESSAGE value="Organizimi i dto brenda models" />
     <MESSAGE value="Shtova tabelen Veturat ne databaze" />
     <MESSAGE value="Krijimi i klases Veturat" />
@@ -514,7 +528,6 @@
     <MESSAGE value="Krijimi i tabeles faturat" />
     <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
@@ -525,6 +538,9 @@
     <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
     <MESSAGE value="changes" />
     <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="permiresim ne messages_sq.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim ne messages_sq.properties" />
   </component>
 </project>
