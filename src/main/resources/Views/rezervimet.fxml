@@ -9,7 +9,7 @@
             xmlns="http://javafx.com/javafx/8.0.171"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controllers.RezervimetController"
-            prefWidth="700" prefHeight="500">
+            prefWidth="1330.0" prefHeight="740.0">
 
     <VBox spacing="15" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
         <padding>
@@ -25,6 +25,7 @@
 
         <!-- Tabela -->
         <TableView fx:id="tabelaRezervimet" onMouseClicked="#handleRowSelect" prefHeight="200"
+                   prefWidth="550.0"
                    VBox.vgrow="ALWAYS"
                    style="-fx-background-color: #E1EEBC;">
             <columns>
