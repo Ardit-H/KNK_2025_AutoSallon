@@ -11,30 +11,30 @@
 4. Maven – për menaxhimin e varësive
 
 ## Struktura e Projektit
- KNK_2025_AutoSallon/
- │
- ├── src/
- │   └── main/
- │       ├── java/
- │       │   ├── App/
- │       │   ├── com.example.knk_2025_autosallon/
- │       │   ├── controllers/
- │       │   ├── CustomExceptions/
- │       │   ├── Database/
- │       │   ├── models.dto/           → 18 modelet për tabelat në DB
- │       │   ├── repository/           → Repository për secilën tabelë
- │       │   ├── services/             → Servicet për logjikën e biznesit
- │       │   ├── Test/                 → Teste për repository & service
- │       │   └── utils/                → Funksione ndihmëse (p.sh. enums, helpers)
- │       │
- │       └── resources/
- │           ├── com.example.knk_2025_autosallon/
- │           ├── Images/
- │           ├── languages/            → Skedarët për përkthim (anglisht & shqip)
- │           ├── sql/                  → Skripte për krijimin e tabelave
- │           └── Views/                → FXML për çdo komponent UI
- │
- └── README.md 
+-  KNK_2025_AutoSallon/
+-   │
+-   ── src/
+- │   └── main/
+- │       ├── java/
+- │       │   ├── App/
+- │       │   ├── com.example.knk_2025_autosallon/
+- │       │   ├── controllers/
+- │       │   ├── CustomExceptions/
+- │       │   ├── Database/
+- │       │   ├── models.dto/           → 18 modelet për tabelat në DB
+- │       │   ├── repository/           → Repository për secilën tabelë
+- │       │   ├── services/             → Servicet për logjikën e biznesit
+- │       │   ├── Test/                 → Teste për repository & service
+- │       │   └── utils/                → Funksione ndihmëse (p.sh. enums, helpers)
+- │       │
+- │       └── resources/
+- │           ├── com.example.knk_2025_autosallon/
+- │           ├── Images/
+- │           ├── languages/            → Skedarët për përkthim (anglisht & shqip)
+- │           ├── sql/                  → Skripte për krijimin e tabelave
+- │           └── Views/                → FXML për çdo komponent UI
+- │
+- └── README.md 
 
 ## Modelet (DTO)
  - Janë implementuar 18 klasa model, secila duke përfaqësuar një tabelë në bazën e të dhënave:
