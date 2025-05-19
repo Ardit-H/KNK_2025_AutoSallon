@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController">
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/riparimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/riparimet.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="ndryshime ne riparimet.fxml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -533,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747612504186</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="ndryshime ne riparimet.fxml">
+      <option name="closed" value="true" />
+      <created>1747656593187</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1747656593187</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -548,7 +553,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
@@ -573,6 +577,7 @@
     <MESSAGE value="Ndryshime nr RiparimetController dhe riparimet.fxml si dhe ne perkthime" />
     <MESSAGE value="Rregullimi i butonit ne admin_dashboard.fxml dhe Admin_DashboardController" />
     <MESSAGE value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
+    <MESSAGE value="ndryshime ne riparimet.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="ndryshime ne riparimet.fxml" />
   </component>
 </project>
