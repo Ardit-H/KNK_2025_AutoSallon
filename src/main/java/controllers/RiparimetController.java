@@ -50,10 +50,7 @@ public class RiparimetController {
                 String keyword = newVal.toLowerCase();
                 ObservableList<Riparimet> filtered = originalList.filtered(r ->
                         String.valueOf(r.getId()).toLowerCase().contains(keyword) ||
-                                String.valueOf(r.getVeturaId()).toLowerCase().contains(keyword) ||
-                                String.valueOf(r.getSherbimiId()).toLowerCase().contains(keyword) ||
-                                r.getStatusi().toLowerCase().contains(keyword) ||
-                                String.valueOf(r.getKostoRiparimit()).toLowerCase().contains(keyword)
+                                r.getStatusi().toLowerCase().contains(keyword)
                 );
                 riparimetList.setAll(filtered);
             }
