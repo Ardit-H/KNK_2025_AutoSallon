@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.TESTDRIVES;
+        this.currentPath = SceneLocator.REZERVIMET_USER;
         this.scene = this.initScene();
     }
 
@@ -33,7 +33,6 @@ public class SceneManager {
         try{
             return new Scene(this.getParent(currentPath));
         }catch (Exception e){
-            e.printStackTrace();
             return null;
         }
     }
@@ -54,14 +53,9 @@ public class SceneManager {
     }
 
     private void loadParent(String path) throws Exception{
-        try {
-            Parent parent = getParent(path);
-            this.currentPath = path;
-            scene.setRoot(parent);
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw e;
-        }
+        Parent parent = getParent(path);
+        this.currentPath = path;
+        scene.setRoot(parent);
     }
 
     private void loadParent(String path, Pane pane) throws Exception{

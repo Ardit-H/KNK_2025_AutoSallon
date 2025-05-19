@@ -30,6 +30,7 @@ public class Admin_DashboardController {
     public Button btn_testdrives;
     public Button btn_vleresimet;
     public Button btn_faturat;
+    public Button btn_riparimet;
     public Button btn_statistikat;
     public Button btn_perdoruesit;
     public Button btn_garancia;

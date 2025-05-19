@@ -2,6 +2,8 @@ package models.dto.Perdoruesit;
 
 public class UpdatePerdoruesitDto {
     private int id;
+    private String emri;
+    private String mbimeri;
     private String email;
     private String nrtelefonit;
     private String adresa;
@@ -13,7 +15,14 @@ public class UpdatePerdoruesitDto {
     public UpdatePerdoruesitDto() {
     }
 
+
     public int getId() { return id; }
+    public String getEmri(){
+        return emri;
+    }
+    public String getMbimeri(){
+        return mbimeri;
+    }
     public String getEmail() { return email; }
     public String getNrtelefonit() { return nrtelefonit; }
     public String getAdresa() { return adresa; }
@@ -25,6 +34,12 @@ public class UpdatePerdoruesitDto {
     }
 
     public void setId(int id) { this.id = id; }
+    public String setEmri(){
+        return this.emri = emri;
+    }
+    public String setMbimeri(){
+        return this.mbimeri = mbimeri;
+    }
     public void setEmail(String email) { this.email = email; }
     public void setNrtelefonit(String nrtelefonit) { this.nrtelefonit = nrtelefonit; }
     public void setAdresa(String adresa) { this.adresa = adresa; }
