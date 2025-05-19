@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/rating.png" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Rregullimi i testdrives butonit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ShtoVleresimController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ShtoVleresimController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Veturat_UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Veturat_UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/shto_vleresim_per_veturen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/shto_vleresim_per_veturen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/veturat_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/veturat_user.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+    &quot;accountId&quot;: &quot;a3187b7a-c112-4f16-a232-35cfff71446e&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -78,15 +73,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/resources/languages/messages_en.properties",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "two.files.diff.last.used.file": "C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/resources/languages/messages_en.properties"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -474,7 +471,103 @@
       <option name="project" value="LOCAL" />
       <updated>1747329818889</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml">
+      <option name="closed" value="true" />
+      <created>1747333250275</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1747333250275</updated>
+    </task>
+    <task id="LOCAL-00038" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1747576934997</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1747576934997</updated>
+    </task>
+    <task id="LOCAL-00039" summary="workspace.xml">
+      <option name="closed" value="true" />
+      <created>1747587665670</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1747587665670</updated>
+    </task>
+    <task id="LOCAL-00040" summary="permiresim ne messages_sq.properties">
+      <option name="closed" value="true" />
+      <created>1747592639674</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1747592639674</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Ndryshimet e te dhenave ne tabelen Riparimet">
+      <option name="closed" value="true" />
+      <created>1747600320402</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1747600320402</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Ndryshime nr RiparimetController dhe riparimet.fxml si dhe ne perkthime">
+      <option name="closed" value="true" />
+      <created>1747608201292</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608201292</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Rregullimi i butonit ne admin_dashboard.fxml dhe Admin_DashboardController">
+      <option name="closed" value="true" />
+      <created>1747609260298</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1747609260298</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController">
+      <option name="closed" value="true" />
+      <created>1747612504186</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1747612504186</updated>
+    </task>
+    <task id="LOCAL-00045" summary="ndryshime ne riparimet.fxml">
+      <option name="closed" value="true" />
+      <created>1747656593187</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1747656593187</updated>
+    </task>
+    <task id="LOCAL-00046" summary="shtimi i onAction tek butoni garancia">
+      <option name="closed" value="true" />
+      <created>1747662212216</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1747662212216</updated>
+    </task>
+    <task id="LOCAL-00047" summary="koment">
+      <option name="closed" value="true" />
+      <created>1747663580957</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1747663580957</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Rregullimi i testdrives butonit">
+      <option name="closed" value="true" />
+      <created>1747664138995</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1747664138996</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -489,21 +582,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i klases User" />
-    <MESSAGE value="Krijimi i klases Klientet" />
-    <MESSAGE value="Organizimi i dto brenda models" />
-    <MESSAGE value="Shtova tabelen Veturat ne databaze" />
-    <MESSAGE value="Krijimi i klases Veturat" />
-    <MESSAGE value="Krijimi i klases UpdateKlientetEmailDto" />
-    <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
-    <MESSAGE value="Krijimi i klases KlientetRepository" />
-    <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
-    <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
     <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
@@ -514,6 +596,17 @@
     <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
     <MESSAGE value="changes" />
     <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="permiresim ne messages_sq.properties" />
+    <MESSAGE value="Ndryshimet e te dhenave ne tabelen Riparimet" />
+    <MESSAGE value="Ndryshime nr RiparimetController dhe riparimet.fxml si dhe ne perkthime" />
+    <MESSAGE value="Rregullimi i butonit ne admin_dashboard.fxml dhe Admin_DashboardController" />
+    <MESSAGE value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
+    <MESSAGE value="ndryshime ne riparimet.fxml" />
+    <MESSAGE value="shtimi i onAction tek butoni garancia" />
+    <MESSAGE value="koment" />
+    <MESSAGE value="Rregullimi i testdrives butonit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rregullimi i testdrives butonit" />
   </component>
 </project>

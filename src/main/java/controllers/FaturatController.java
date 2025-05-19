@@ -32,12 +32,13 @@ public class FaturatController {
     @FXML private TableColumn<Faturat, String> colLlojiPageses;
 
     @FXML private Label messageLabel;
-
+    private LanguageManager languageManager;
     private final FaturatService faturatService = new FaturatService();
-    private final LanguageManager languageManager = LanguageManager.getInstance();
     private final ObservableList<Faturat> faturatList = FXCollections.observableArrayList();
 
-    public FaturatController() {}
+    public FaturatController() {
+        this.languageManager = LanguageManager.getInstance();
+    }
 
     @FXML
     public void initialize() {
@@ -51,7 +52,7 @@ public class FaturatController {
         colLlojiPageses.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getLlojiPageses()));
 
         faturatTableView.setItems(faturatList);
-        loadFaturat();
+
 
         searchField.textProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal == null || newVal.trim().isEmpty()) {
@@ -101,7 +102,7 @@ public class FaturatController {
     }
 
     @FXML
-    private void handleUpdate() {
+    private void handleUpdat() {
         try {
             Faturat selected = faturatTableView.getSelectionModel().getSelectedItem();
             if (selected == null) {
@@ -128,7 +129,7 @@ public class FaturatController {
     }
 
     @FXML
-    private void handleDelete() {
+    private void handleDelet() {
         try {
             Faturat selected = faturatTableView.getSelectionModel().getSelectedItem();
             if (selected == null) {
@@ -152,18 +153,4 @@ public class FaturatController {
         cmbLlojiPageses.setValue(null);
     }
 
-    @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        loadLanguage(Locale.ENGLISH);
-    }
-
-    @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception {
-        languageManager.setLocale(locale);
-        SceneManager.reload();
-    }
 }

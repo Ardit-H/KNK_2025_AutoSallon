@@ -17,10 +17,16 @@ import utils.SceneLocator;
 import java.util.Locale;
 
 public class User_DashboardController {
+    public Button btn_userLokacionet;
+    public Button btn_faturat;
+    public Button btn_sherbimet;
+    public Button btn_rezervimetUser;
+    public Button btn_automjetet;
+    public Button btn_dashboard;
+    public Button btn_vleresimet;
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button btn_vleresimetemia;
-    @FXML private Button btn_vleresimet;
     @FXML private Button btn_profili;
     @FXML private Button languageToggleButton;
     private boolean isEnglish = true;
@@ -73,9 +79,14 @@ public class User_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_LOKACIONET);
         SceneManager.load(SceneLocator.USER_LOKACIONET, centerPane);
     }
-    @FXML private void handleLoadVeturat()throws Exception{
+    @FXML private void handleLoadVeturatUser()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT_USER);
         SceneManager.load(SceneLocator.VETURAT_USER,centerPane);
+    }
+
+    @FXML private void handleLoadRezervimetUser()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.REZERVIMET_USER);
+        SceneManager.load(SceneLocator.REZERVIMET_USER,centerPane);
     }
     @FXML private void handleLanguageToggle() throws Exception{
         if (isEnglish) {

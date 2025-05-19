@@ -6,6 +6,7 @@ import models.dto.TestDrives.UpdateTestDrivesDto;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class TestDrivesRepository extends BaseRepository<TestDrives, CreateTestDrivesDto, UpdateTestDrivesDto>{
     public TestDrivesRepository(){
@@ -18,16 +19,17 @@ public class TestDrivesRepository extends BaseRepository<TestDrives, CreateTestD
 
     public TestDrives create(CreateTestDrivesDto testDrivesDto){
         String query ="""
-                INSERT INTO TESTDRIVES(statusi,feedback,duration,location)
+                INSERT INTO TESTDRIVES(kid,vid,status,feedback,duration)
                  VALUES(?,?,?,?,?)
                 """;
         try{
             PreparedStatement pstm=this.connection.prepareStatement(
                     query,Statement.RETURN_GENERATED_KEYS);
-            pstm.setString(1,testDrivesDto.getStatusi());
-            pstm.setString(2,testDrivesDto.getFeedback());
-            pstm.setString(3, testDrivesDto.getLocation());
-            pstm.setInt(4,testDrivesDto.getDuration());
+            pstm.setInt(1,testDrivesDto.getKid());
+            pstm.setInt(2,testDrivesDto.getVid());
+            pstm.setString(3,testDrivesDto.getStatus());
+            pstm.setString(4,testDrivesDto.getFeedback());
+            pstm.setInt(5,testDrivesDto.getDuration());
             pstm.execute();
             ResultSet resultSet=pstm.getGeneratedKeys();
             if(resultSet.next()){
@@ -44,18 +46,20 @@ public class TestDrivesRepository extends BaseRepository<TestDrives, CreateTestD
         StringBuilder query=new StringBuilder("UPDATE TESTDRIVES SET ");
         ArrayList<Object> params=new ArrayList<>();
 
-        if(testDrivesDto.getStatusi() != null){
-            query.append("STATUSI = ?, ");
-            params.add(testDrivesDto.getStatusi());
+        if(testDrivesDto.getStatus() != null){
+            query.append("STATUS = ?, ");
+            params.add(testDrivesDto.getStatus());
         }
         if(testDrivesDto.getFeedback() != null){
             query.append("FEEDBACK = ?, ");
             params.add(testDrivesDto.getFeedback());
         }
-        if(testDrivesDto.getLocation() != null){
-            query.append("LOKACIONI = ?, ");
-            params.add(testDrivesDto.getLocation());
+
+        if (testDrivesDto.getDuration() > 0) {
+            query.append("DURATION = ?, ");
+            params.add(testDrivesDto.getDuration());
         }
+
         if(params.isEmpty()){
             return getById(testDrivesDto.getId());
         }
@@ -78,4 +82,32 @@ public class TestDrivesRepository extends BaseRepository<TestDrives, CreateTestD
         }
         return null;
     }
+
+    public List<TestDrives> kerkoSipasStatusit(String statusi) {
+        List<TestDrives> rezultatet = new ArrayList<>();
+        String sql = "SELECT * FROM testdrives WHERE LOWER(status) LIKE ?";
+
+        try (PreparedStatement stmt = this.connection.prepareStatement(sql)) {
+            stmt.setString(1, "%" + statusi.toLowerCase() + "%");
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                TestDrives td = new TestDrives(
+                        rs.getInt("id"),
+                        rs.getInt("kid"),
+                        rs.getInt("vid"),
+                        rs.getString("status"),
+                        rs.getString("feedback"),
+                        rs.getInt("duration")
+                );
+                rezultatet.add(td);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return rezultatet;
+    }
+
 }

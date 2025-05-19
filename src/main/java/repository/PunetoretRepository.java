@@ -18,11 +18,26 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
     public Punetoret fromResultSet(ResultSet result) throws SQLException {
         return Punetoret.getInstance(result);
     }
+    public Punetoret getById(int id) {
+        String query = "SELECT * FROM PUNETORET WHERE id = ?";
+        try {
+            PreparedStatement pstm = this.connection.prepareStatement(query);
+            pstm.setInt(1, id);
+            ResultSet rs = pstm.executeQuery();
+            if (rs.next()) {
+                return fromResultSet(rs);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
     @Override
     public Punetoret create(CreatePunetoretDto dto) {
         String query = """
-            INSERT INTO PUNETORET (emri, mbiemri, pozita, telefoni, email, paga, dataPunesimit)
+            INSERT INTO PUNETORET (emri, mbiemri, pozita, telefoni, email, paga, data_punesimit)
             VALUES (?, ?, ?, ?, ?, ?, ?)
         """;
         try {
@@ -33,7 +48,7 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
             pstm.setString(4, dto.getTelefoni());
             pstm.setString(5, dto.getEmail());
             pstm.setDouble(6, dto.getPaga());
-            pstm.setString(7, dto.getDataPunesimit());
+            pstm.setDate(7, Date.valueOf(dto.getDataPunesimit()));
             pstm.execute();
 
             ResultSet rs = pstm.getGeneratedKeys();
@@ -51,6 +66,16 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
         StringBuilder query = new StringBuilder("UPDATE PUNETORET SET ");
         ArrayList<Object> params = new ArrayList<>();
 
+        if (dto.getEmri() != null) {
+            query.append("EMRI = ?, ");
+            params.add(dto.getEmri());
+        }
+
+        if (dto.getMbiemri() != null) {
+            query.append("MBIEMRI = ?, ");
+            params.add(dto.getMbiemri());
+        }
+
         if (dto.getEmail() != null) {
             query.append("EMAIL = ?, ");
             params.add(dto.getEmail());
@@ -61,7 +86,7 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
             params.add(dto.getPozita());
         }
 
-        if (dto.getPaga() != 0) {
+        if (dto.getPaga() != null) {
             query.append("PAGA = ?, ");
             params.add(dto.getPaga());
         }
@@ -69,7 +94,6 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
         if (params.isEmpty()) {
             return getById(dto.getId());
         }
-
 
         query.setLength(query.length() - 2);
         query.append(" WHERE ID = ?");
@@ -89,6 +113,21 @@ public class PunetoretRepository extends BaseRepository<Punetoret, CreatePunetor
         }
         return null;
     }
+
+
+    public boolean delete(int id) {
+        String query = "DELETE FROM PUNETORET WHERE id = ?";
+        try {
+            PreparedStatement pstm = this.connection.prepareStatement(query);
+            pstm.setInt(1, id);
+            int affected = pstm.executeUpdate();
+            return affected == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
 
 

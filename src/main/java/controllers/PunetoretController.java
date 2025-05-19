@@ -1,5 +1,7 @@
 package controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -8,10 +10,13 @@ import javafx.scene.input.MouseEvent;
 import models.dto.Punetoret.CreatePunetoretDto;
 import models.dto.Punetoret.UpdatePunetoretDto;
 import models.dto.Punetoret.Punetoret;
+import models.dto.Rezervimet.Rezervimet;
 import services.LanguageManager;
 import services.PerdoruesitService;
 import services.PunetoretService;
 
+
+import java.awt.event.ActionEvent;
 import java.util.List;
 
 public class PunetoretController {
@@ -50,13 +55,39 @@ public class PunetoretController {
         loadPunetoret();
     }
 
-    private void loadPunetoret(){
+    public void loadPunetoret(){
         txtPunetoretList.getItems().clear();
         List<Punetoret> punetoret = punetoretService.getAll();
-        for(Punetoret p : punetoret){
+        for(Punetoret p : punetoret) {
             txtPunetoretList.getItems().add(p.getPunetor_id() + "-" + p.getEmri() + " " + p.getMbiemri());
+        }}
+
+    @FXML
+    private void handleSelect() {
+        String selected = txtPunetoretList.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            return;
+        }
+
+        int id = Integer.parseInt(selected.split("-")[0].trim());
+
+        try {
+            Punetoret p = punetoretService.getById(id);
+            if (p != null) {
+                txtEmri.setText(p.getEmri());
+                txtMbiemri.setText(p.getMbiemri());
+                txtPozita.setText(p.getPozita());
+                txtTelefoni.setText(p.getTelefoni());
+                txtEmail.setText(p.getEmail());
+                txtPaga.setText(String.valueOf(p.getPaga()));
+                txtDataPunesimit.setText(p.getData_punesimit().toString());
+            }
+        } catch (Exception e) {
+            messageLabel.setText("Gabim gjatë përzgjedhjes së punëtorit: " + e.getMessage());
         }
     }
+
+
 
 
     @FXML
@@ -79,41 +110,70 @@ public class PunetoretController {
         }
     }
     @FXML
-    private void handleUpdate(MouseEvent event){
+    private void handleUpdate(MouseEvent event) {
         try {
             int selectedId = getSelectedPunetorId();
             if (selectedId == -1) return;
 
             UpdatePunetoretDto dto = new UpdatePunetoretDto();
             dto.setId(selectedId);
+
+            // Vetëm fusha që nuk janë bosh i vendosim në DTO, në mënyrë që të përditësohen
+            if (!txtEmri.getText().trim().isEmpty())
+                dto.setEmri(txtEmri.getText().trim());
+
+            if (!txtMbiemri.getText().trim().isEmpty())
+                dto.setMbiemri(txtMbiemri.getText().trim());
+
             if (!txtEmail.getText().trim().isEmpty())
                 dto.setEmail(txtEmail.getText().trim());
+
             if (!txtPozita.getText().trim().isEmpty())
                 dto.setPozita(txtPozita.getText().trim());
+
             if (!txtPaga.getText().trim().isEmpty())
                 dto.setPaga(Double.parseDouble(txtPaga.getText().trim()));
 
-            punetoretService.update(dto);
-            messageLabel.setText("Punëtori u përditësua me sukses.");
-            loadPunetoret();
+            Punetoret updated = punetoretService.update(dto);
+            if (updated != null) {
+                messageLabel.setText("Punëtori u përditësua me sukses.");
+                loadPunetoret();
+                clearForm();
+            } else {
+                messageLabel.setText("Gabim gjatë përditësimit të punëtorit.");
+            }
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
     }
 
-    @FXML
-    private void handleDelete(MouseEvent event){
-        try{
-            int selectedId = getSelectedPunetorId();
-            if(selectedId == -1) return;
 
-            punetoretService.delete(selectedId);
-            messageLabel.setText("Punetori u fshi me sukses!");
-            loadPunetoret();
-        }catch (Exception e){
-            messageLabel.setText("Gabim: " + e.getMessage());
+    @FXML
+    private void handleDelete(MouseEvent event) {
+        String selected = txtPunetoretList.getSelectionModel().getSelectedItem();
+        if (selected == null) {
+            messageLabel.setText("Zgjedh një punëtor për ta fshirë.");
+            return;
+        }
+
+        int id = Integer.parseInt(selected.split("-")[0].trim());
+
+        try {
+            boolean success = punetoretService.delete(id);
+
+            if (success) {
+                messageLabel.setText("Punëtori u fshi me sukses.");
+                clearForm();
+                loadPunetoret();
+            } else {
+                messageLabel.setText("Fshirja dështoi. Ky punetor lidhet me shitjet!!");
+            }
+        } catch (Exception e) {
+            messageLabel.setText("Gabim gjatë fshirjes: " + e.getMessage());
+
         }
     }
+
 
     private int getSelectedPunetorId() {
         String selected = txtPunetoretList.getSelectionModel().getSelectedItem();
@@ -121,7 +181,7 @@ public class PunetoretController {
             messageLabel.setText("Zgjidh një punëtor në listë.");
             return -1;
         }
-        return Integer.parseInt(selected.split(" - ")[0]);
+        return Integer.parseInt(selected.split("-")[0]);
     }
 
     private void clearForm() {
