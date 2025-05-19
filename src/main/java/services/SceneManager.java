@@ -19,7 +19,7 @@ public class SceneManager {
 
     private SceneManager(){
         this.languageManager = LanguageManager.getInstance();
-        this.currentPath = SceneLocator.REZERVIMET_USER;
+        this.currentPath = SceneLocator.PERDORUESI;
         this.scene = this.initScene();
     }
 
@@ -33,6 +33,7 @@ public class SceneManager {
         try{
             return new Scene(this.getParent(currentPath));
         }catch (Exception e){
+            e.printStackTrace();
             return null;
         }
     }
