@@ -11,30 +11,30 @@
 4. Maven – për menaxhimin e varësive
 
 ## Struktura e Projektit
-KNK_2025_AutoSallon/
-│
-├── src/
-│   └── main/
-│       ├── java/
-│       │   ├── App/
-│       │   ├── com.example.knk_2025_autosallon/
-│       │   ├── controllers/
-│       │   ├── CustomExceptions/
-│       │   ├── Database/
-│       │   ├── models.dto/           → 18 modelet për tabelat në DB
-│       │   ├── repository/           → Repository për secilën tabelë
-│       │   ├── services/             → Servicet për logjikën e biznesit
-│       │   ├── Test/                 → Teste për repository & service
-│       │   └── utils/                → Funksione ndihmëse (p.sh. enums, helpers)
-│       │
-│       └── resources/
-│           ├── com.example.knk_2025_autosallon/
-│           ├── Images/
-│           ├── languages/            → Skedarët për përkthim (anglisht & shqip)
-│           ├── sql/                  → Skripte për krijimin e tabelave
-│           └── Views/                → FXML për çdo komponent UI
-│
-└── README.md 
+ KNK_2025_AutoSallon/
+ │
+ ├── src/
+ │   └── main/
+ │       ├── java/
+ │       │   ├── App/
+ │       │   ├── com.example.knk_2025_autosallon/
+ │       │   ├── controllers/
+ │       │   ├── CustomExceptions/
+ │       │   ├── Database/
+ │       │   ├── models.dto/           → 18 modelet për tabelat në DB
+ │       │   ├── repository/           → Repository për secilën tabelë
+ │       │   ├── services/             → Servicet për logjikën e biznesit
+ │       │   ├── Test/                 → Teste për repository & service
+ │       │   └── utils/                → Funksione ndihmëse (p.sh. enums, helpers)
+ │       │
+ │       └── resources/
+ │           ├── com.example.knk_2025_autosallon/
+ │           ├── Images/
+ │           ├── languages/            → Skedarët për përkthim (anglisht & shqip)
+ │           ├── sql/                  → Skripte për krijimin e tabelave
+ │           └── Views/                → FXML për çdo komponent UI
+ │
+ └── README.md 
 
 ## Modelet (DTO)
  - Janë implementuar 18 klasa model, secila duke përfaqësuar një tabelë në bazën e të dhënave:
@@ -61,7 +61,7 @@ KNK_2025_AutoSallon/
      - Update klasë – për përditësimin e të dhënave ekzistuese
 
 ## Logjika e Aplikacionit
-# Repository Pattern
+### Repository Pattern
  - Për çdo model është krijuar një klasë repository me operacionet:
 1. create
 2. update
@@ -70,7 +70,7 @@ KNK_2025_AutoSallon/
 5. findById
 6. search (ne disa ku ishte e nevojshme)
 
-# Service Layer
+### Service Layer
  - Secila repository ka përkatësinë e saj në paketën services/, ku bëhet logjika e ndërmjetme dhe menaxhimi i transaksioneve.
 
 ##  Controller-at dhe Pamjet
