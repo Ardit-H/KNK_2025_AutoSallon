@@ -13,6 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.geometry.Insets?>
 <AnchorPane prefHeight="823.0" prefWidth="800.0" style="-fx-background-color: #FDF5D5;"
             xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controllers.RiparimetController">
@@ -36,7 +37,10 @@
     </HBox>
 
     <!-- Input Form -->
-    <VBox layoutX="29.0" layoutY="160.0" prefHeight="325.0" prefWidth="505.0" style="-fx-background-color: #370C93;" spacing="10" padding="15.0">
+    <VBox layoutX="29.0" layoutY="160.0" prefHeight="325.0" prefWidth="505.0" style="-fx-background-color: #370C93;" spacing="10" >
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
         <Label text="%Vetura_ID_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
         <TextField fx:id="txtVeturaId" promptText="%Shkruaj_Vetura_ID" />
 
