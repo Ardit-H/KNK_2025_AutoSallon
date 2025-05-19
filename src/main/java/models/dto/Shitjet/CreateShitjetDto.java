@@ -5,7 +5,6 @@ public class CreateShitjetDto {
     private int vetura_id;
     private int punetor_id;
     private String data_shitjes;
-
     private double cmimi_final;
 
     public CreateShitjetDto( int kid, int vetura_id, int punetor_id, double cmimi_final){
