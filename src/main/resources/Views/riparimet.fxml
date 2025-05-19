@@ -27,12 +27,6 @@
             </font>
         </Text>
     </HBox>
-
-    <!-- Search Field without separate button -->
-    <HBox layoutX="570.0" layoutY="115.0" spacing="10">
-        <Label fx:id="messageLabel" textFill="red" />
-    </HBox>
-
     <!-- Input Form -->
     <VBox layoutX="36.0" layoutY="181.0" prefHeight="325.0" prefWidth="505.0" spacing="10" style="-fx-background-color: #370C93;">
         <padding>
@@ -64,7 +58,8 @@
             <TableColumn fx:id="colKostoRiparimit" prefWidth="130.0" text="%Kostoja" />
         </columns>
     </TableView>
-     <Button layoutX="227.0" layoutY="591.0" onAction="#handleUpdat" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" styleClass="bold-button" text="%Perditeso" textFill="WHITE">
+    <Label fx:id="messageLabel" layoutX="36.0" layoutY="550.0" textFill="red" />
+    <Button layoutX="227.0" layoutY="591.0" onAction="#handleUpdat" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" styleClass="bold-button" text="%Perditeso" textFill="WHITE">
       <font>
          <Font name="System Bold" size="13.0" />
       </font>
