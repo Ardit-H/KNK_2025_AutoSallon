@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -13,13 +14,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.geometry.Insets?>
-<AnchorPane prefHeight="823.0" prefWidth="800.0" style="-fx-background-color: #FDF5D5;"
-            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.RiparimetController">
+<AnchorPane prefHeight="741.0" prefWidth="1330.0" style="-fx-background-color: #FDF5D5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RiparimetController">
 
     <!-- Header Bar -->
-    <HBox layoutX="22.0" layoutY="26.0" prefHeight="78.0" prefWidth="754.0" style="-fx-background-color: #370C93;" spacing="10" alignment="CENTER_LEFT">
+    <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="26.0" prefHeight="78.0" prefWidth="1270.0" spacing="10" style="-fx-background-color: #370C93;">
         <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../Images/repair.jpg" />
         </ImageView>
@@ -32,50 +30,64 @@
 
     <!-- Search Field without separate button -->
     <HBox layoutX="570.0" layoutY="115.0" spacing="10">
-        <TextField fx:id="searchField" promptText="%Kerko_sipas_emrit" prefWidth="180.0" />
         <Label fx:id="messageLabel" textFill="red" />
     </HBox>
 
     <!-- Input Form -->
-    <VBox layoutX="29.0" layoutY="160.0" prefHeight="325.0" prefWidth="505.0" style="-fx-background-color: #370C93;" spacing="10" >
+    <VBox layoutX="36.0" layoutY="181.0" prefHeight="325.0" prefWidth="505.0" spacing="10" style="-fx-background-color: #370C93;">
         <padding>
-            <Insets top="15" right="15" bottom="15" left="15"/>
+            <Insets bottom="15" left="15" right="15" top="15" />
         </padding>
-        <Label text="%Vetura_ID_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 15;" text="%Vetura_ID_" textFill="#fdf5d5" />
         <TextField fx:id="txtVeturaId" promptText="%Shkruaj_Vetura_ID" />
 
-        <Label text="%Sherbimi_ID_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 15;" text="%Sherbimi_ID_" textFill="#fdf5d5" />
         <TextField fx:id="txtSherbimiId" promptText="%Shkruaj_Sherbimi_ID" />
 
-        <Label text="%Statusi_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 15;" text="%Statusi_" textFill="#fdf5d5" />
         <TextField fx:id="txtStatusi" promptText="%Shkruaj_Statusin" />
 
-        <Label text="%Kostoja_e_Riparimit_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
+        <Label style="-fx-font-weight: bold; -fx-font-size: 15;" text="%Kostoja_e_Riparimit_" textFill="#fdf5d5" />
         <TextField fx:id="txtKostoRiparimit" promptText="%Shkruaj_Kostot" />
-
-        <Label text="%Data_e_Riparimit_" textFill="#fdf5d5" style="-fx-font-weight: bold; -fx-font-size: 15;" />
-        <TextField fx:id="txtDataRiparimit" promptText="%Shkruaj_Datën_dd_MM_yyyy" />
     </VBox>
 
     <!-- Action Buttons with correct method names -->
-    <HBox layoutX="30.0" layoutY="510.0" spacing="40">
-        <Button onAction="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE" styleClass="bold-button" />
-        <Button onAction="#handleUpdat" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Perditeso" textFill="WHITE" styleClass="bold-button" />
-        <Button onAction="#handleDelet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE" styleClass="bold-button" />
-    </HBox>
+    <HBox layoutX="30.0" layoutY="510.0" spacing="40" />
 
     <!-- TableView -->
-    <TableView fx:id="riparimetTableView" layoutX="29.0" layoutY="570.0" prefHeight="220.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView fx:id="riparimetTableView" layoutX="586.0" layoutY="241.0" prefHeight="446.0" prefWidth="690.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn fx:id="colId" prefWidth="70.0" text="%ID" />
             <TableColumn fx:id="colVeturaId" prefWidth="100.0" text="%Vetura_ID" />
             <TableColumn fx:id="colSherbimiId" prefWidth="100.0" text="%Sherbimi_ID" />
-            <TableColumn fx:id="colStatusi" prefWidth="120.0" text="%Statusi" />
-            <TableColumn fx:id="colKostoRiparimit" prefWidth="120.0" text="%Kostoja" />
-            <TableColumn fx:id="colDataRiparimit" prefWidth="150.0" text="%Data_e_Riparimit" />
+            <TableColumn fx:id="colStatusi" prefWidth="130.39996337890625" text="%Statusi" />
+            <TableColumn fx:id="colKostoRiparimit" prefWidth="126.4000244140625" text="%Kostoja" />
         </columns>
     </TableView>
 
-    <!-- Footer Info -->
-    <Label layoutX="600.0" layoutY="805.0" text="Amanpuri App ©2025" textFill="#370C93" style="-fx-font-size: 12; -fx-font-weight: bold;" />
+    <Button layoutX="227.0" layoutY="591.0" onAction="#handleUpdat" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" styleClass="bold-button" text="%Perditeso" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Button>
+
+    <Button layoutX="418.0" layoutY="591.0" onAction="#handleDelet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" styleClass="bold-button" text="%Fshij" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Button>
+
+    <Button layoutX="36.0" layoutY="591.0" onAction="#handleCreate" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" styleClass="bold-button" text="%Shto" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0" />
+        </font>
+    </Button>
+
+    <TextField fx:id="searchField" layoutX="751.0" layoutY="168.0" prefWidth="180.0" promptText="%Kerko_sipas_statusit" />
+
+    <Text layoutX="636.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%Kërko_" wrappingWidth="88.7999999999999">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Text>
 </AnchorPane>

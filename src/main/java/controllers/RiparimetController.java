@@ -17,7 +17,6 @@ public class RiparimetController {
     @FXML private TextField txtSherbimiId;
     @FXML private TextField txtStatusi;
     @FXML private TextField txtKostoRiparimit;
-    @FXML private TextField txtDataRiparimit;
     @FXML private TextField searchField;
 
     @FXML private TableView<Riparimet> riparimetTableView;
@@ -26,7 +25,6 @@ public class RiparimetController {
     @FXML private TableColumn<Riparimet, String> colSherbimiId;
     @FXML private TableColumn<Riparimet, String> colStatusi;
     @FXML private TableColumn<Riparimet, String> colKostoRiparimit;
-    @FXML private TableColumn<Riparimet, String> colDataRiparimit;
 
     @FXML private Label messageLabel;
 
@@ -42,7 +40,6 @@ public class RiparimetController {
         colSherbimiId.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getSherbimiId())));
         colStatusi.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getStatusi()));
         colKostoRiparimit.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getKostoRiparimit())));
-        colDataRiparimit.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDataRiparimit()));
 
         riparimetTableView.setItems(riparimetList);
 
@@ -56,8 +53,7 @@ public class RiparimetController {
                                 String.valueOf(r.getVeturaId()).toLowerCase().contains(keyword) ||
                                 String.valueOf(r.getSherbimiId()).toLowerCase().contains(keyword) ||
                                 r.getStatusi().toLowerCase().contains(keyword) ||
-                                String.valueOf(r.getKostoRiparimit()).toLowerCase().contains(keyword) ||
-                                r.getDataRiparimit().toLowerCase().contains(keyword)
+                                String.valueOf(r.getKostoRiparimit()).toLowerCase().contains(keyword)
                 );
                 riparimetList.setAll(filtered);
             }
@@ -114,9 +110,6 @@ public class RiparimetController {
             if (!txtKostoRiparimit.getText().trim().isEmpty())
                 dto.setKostoRiparimit(Double.parseDouble(txtKostoRiparimit.getText().trim()));
 
-            if (!txtDataRiparimit.getText().trim().isEmpty())
-                dto.setDataRiparimit(txtDataRiparimit.getText().trim());
-
             riparimetService.update(dto);
             messageLabel.setText("Riparimi u përditësua me sukses.");
             loadRiparimet();
@@ -148,6 +141,5 @@ public class RiparimetController {
         txtSherbimiId.clear();
         txtStatusi.clear();
         txtKostoRiparimit.clear();
-        txtDataRiparimit.clear();
     }
 }
