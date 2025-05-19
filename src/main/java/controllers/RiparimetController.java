@@ -5,16 +5,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import models.dto.Riparimet.CreateRiparimetDto;
 import models.dto.Riparimet.Riparimet;
 import models.dto.Riparimet.UpdateRiparimetDto;
 import services.RiparimetService;
-import services.LanguageManager;
-import services.SceneManager;
 
 import java.util.List;
-import java.util.Locale;
 
 public class RiparimetController {
     @FXML private TextField txtVeturaId;
@@ -34,13 +30,9 @@ public class RiparimetController {
 
     @FXML private Label messageLabel;
 
-    private LanguageManager languageManager;
     private final RiparimetService riparimetService = new RiparimetService();
     private final ObservableList<Riparimet> riparimetList = FXCollections.observableArrayList();
-
-    public RiparimetController() {
-        this.languageManager = LanguageManager.getInstance();
-    }
+    private final ObservableList<Riparimet> originalList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
@@ -56,15 +48,18 @@ public class RiparimetController {
 
         searchField.textProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal == null || newVal.trim().isEmpty()) {
-                riparimetTableView.setItems(riparimetList);
+                riparimetList.setAll(originalList);
             } else {
-                String searchTerm = newVal.toLowerCase();
-                ObservableList<Riparimet> filtered = riparimetList.filtered(r ->
-                        String.valueOf(r.getId()).contains(searchTerm) ||
-                                String.valueOf(r.getVeturaId()).contains(searchTerm) ||
-                                r.getStatusi().toLowerCase().contains(searchTerm)
+                String keyword = newVal.toLowerCase();
+                ObservableList<Riparimet> filtered = originalList.filtered(r ->
+                        String.valueOf(r.getId()).toLowerCase().contains(keyword) ||
+                                String.valueOf(r.getVeturaId()).toLowerCase().contains(keyword) ||
+                                String.valueOf(r.getSherbimiId()).toLowerCase().contains(keyword) ||
+                                r.getStatusi().toLowerCase().contains(keyword) ||
+                                String.valueOf(r.getKostoRiparimit()).toLowerCase().contains(keyword) ||
+                                r.getDataRiparimit().toLowerCase().contains(keyword)
                 );
-                riparimetTableView.setItems(filtered);
+                riparimetList.setAll(filtered);
             }
         });
 
@@ -73,7 +68,8 @@ public class RiparimetController {
 
     private void loadRiparimet() {
         List<Riparimet> lista = riparimetService.getAll();
-        riparimetTableView.getItems().setAll(lista);
+        originalList.setAll(lista);
+        riparimetList.setAll(lista);
     }
 
     @FXML
@@ -121,7 +117,6 @@ public class RiparimetController {
             if (!txtDataRiparimit.getText().trim().isEmpty())
                 dto.setDataRiparimit(txtDataRiparimit.getText().trim());
 
-
             riparimetService.update(dto);
             messageLabel.setText("Riparimi u përditësua me sukses.");
             loadRiparimet();
@@ -155,5 +150,4 @@ public class RiparimetController {
         txtKostoRiparimit.clear();
         txtDataRiparimit.clear();
     }
-
 }
