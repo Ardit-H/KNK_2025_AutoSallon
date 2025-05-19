@@ -23,22 +23,25 @@ import java.io.IOException;
 import java.util.Locale;
 
 public class Admin_DashboardController {
-    public Button btn_dashboard;
-    public Button btn_klientet;
-    public Button btn_sherbimet;
-    public Button btn_rezervimet;
-    public Button btn_testdrives;
-    public Button btn_vleresimet;
-    public Button btn_faturat;
-    public Button btn_riparimet;
-    public Button btn_statistikat;
-    public Button btn_perdoruesit;
-    public Button btn_garancia;
-    public Button btn_profili;
-    public Button btn_porosite;
-    public Button btn_ofertat;
-    public Button btn_pagesat;
-    public Button btn_automjetet;
+    @FXML public Button btn_dashboard;
+    @FXML public Button btn_klientet;
+    @FXML public Button btn_sherbimet;
+    @FXML public Button btn_rezervimet;
+    @FXML public Button btn_testdrives;
+    @FXML public Button btn_vleresimet;
+    @FXML public Button btn_faturat;
+    @FXML public Button btn_riparimet;
+    @FXML public Button btn_statistikat;
+    @FXML public Button btn_perdoruesit;
+    @FXML public Button btn_garancia;
+    @FXML public Button btn_profili;
+    @FXML public Button btn_pagesat;
+    @FXML public Button btn_automjetet;
+    @FXML public Button btnPorosite;
+    @FXML public Button btn_lokacionet;
+    @FXML public Button btn_shitjet;
+    @FXML public Button btnOfertat;
+    @FXML public Button btn_punetoret;
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button btnLogOut;
@@ -67,7 +70,7 @@ public class Admin_DashboardController {
         SceneManager.load(SceneLocator.VETURAT, centerPane);
     }
 
-    @FXML private void handleLoadPunetoret(MouseEvent me)throws Exception{
+    @FXML private void handleLoadPunetoret()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.PUNETORET);
         SceneManager.load(SceneLocator.PUNETORET,centerPane);
     }
@@ -76,6 +79,12 @@ public class Admin_DashboardController {
     private void handleLoadRezervimet() throws Exception{
             SceneManager.getInstance().setCenterPanePath(SceneLocator.REZERVIMET);
             SceneManager.load(SceneLocator.REZERVIMET, centerPane);
+    }
+
+    @FXML
+    private void handleLoadPerdoruesit() throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.PERDORUESI);
+        SceneManager.load(SceneLocator.PERDORUESI, centerPane);
     }
 
     @FXML private void handleLoadSherbimet()throws Exception{
@@ -114,7 +123,7 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_PROFILE);
         SceneManager.load(SceneLocator.ADMIN_PROFILE,centerPane);
     }
-    @FXML private void handleLoadTestDrives()throws Exception{
+    @FXML private void handleLoadTestDrive()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.TESTDRIVES);
         SceneManager.load(SceneLocator.TESTDRIVES,centerPane);
     }
@@ -134,7 +143,7 @@ public class Admin_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.PAGESA_DASHBOARD);
         SceneManager.load(SceneLocator.PAGESA_DASHBOARD,centerPane);
     }
-    @FXML private void handleLoadInfo(MouseEvent me)throws Exception{
+    @FXML private void handleLoadInfo()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.ADMIN_HELP);
         SceneManager.load(SceneLocator.ADMIN_HELP,centerPane);
     }

@@ -12,6 +12,9 @@ module com.example.knk_2025_autosallon {
     opens models.dto.Veturat to javafx.base, javafx.fxml;
     exports models.dto.Veturat;
 
+    opens models.dto.Perdoruesit to javafx.base;
+    exports models.dto.Perdoruesit;
+
     opens models.dto.Porosite to javafx.base;
     exports models.dto.Porosite;
     opens models.dto.Ofertat to javafx.base;
