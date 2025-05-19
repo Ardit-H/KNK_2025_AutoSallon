@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_10_32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_10_32/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_11_04.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_11_04/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_11_08.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_11_08/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2025_10_13_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2025_10_13_AM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime ne RiparimetController">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RiparimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RiparimetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/riparimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/riparimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +30,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
-    "accountId": "a3187b7a-c112-4f16-a232-35cfff71446e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+    &quot;accountId&quot;: &quot;a3187b7a-c112-4f16-a232-35cfff71446e&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -544,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747612504186</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Ndryshime ne RiparimetController">
+      <option name="closed" value="true" />
+      <created>1747652843337</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1747652843337</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -559,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
@@ -584,6 +580,7 @@
     <MESSAGE value="Ndryshime nr RiparimetController dhe riparimet.fxml si dhe ne perkthime" />
     <MESSAGE value="Rregullimi i butonit ne admin_dashboard.fxml dhe Admin_DashboardController" />
     <MESSAGE value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
+    <MESSAGE value="Ndryshime ne RiparimetController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshime ne RiparimetController" />
   </component>
 </project>
