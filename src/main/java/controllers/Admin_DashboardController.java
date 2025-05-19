@@ -78,6 +78,12 @@ public class Admin_DashboardController {
             SceneManager.load(SceneLocator.REZERVIMET, centerPane);
     }
 
+    @FXML
+    private void handleLoadPerdoruesit() throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.PERDORUESI);
+        SceneManager.load(SceneLocator.PERDORUESI, centerPane);
+    }
+
     @FXML private void handleLoadSherbimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.SHERBIMET);
         SceneManager.load(SceneLocator.SHERBIMET, centerPane);
