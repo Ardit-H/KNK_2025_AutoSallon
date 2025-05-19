@@ -1,165 +1,163 @@
 package controllers;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import models.dto.Perdoruesit.CreatePerdoruesitDto;
 import models.dto.Perdoruesit.Perdoruesit;
 import models.dto.Perdoruesit.UpdatePerdoruesitDto;
-import services.KlientetService;
-import services.LanguageManager;
 import services.PerdoruesitService;
-import java.util.List;
-import models.dto.Perdoruesit.CreatePerdoruesitDto;
+
+import javafx.event.ActionEvent;
+
 
 public class PerdoruesitController {
-    @FXML private AnchorPane anchor;
-    @FXML private TableView<Perdoruesit> perdoruesitTable;
+
+    @FXML private TableView<Perdoruesit> tableUsers;
+    @FXML private TableColumn<Perdoruesit, Integer> colId;
     @FXML private TableColumn<Perdoruesit, String> colEmri;
     @FXML private TableColumn<Perdoruesit, String> colMbiemri;
     @FXML private TableColumn<Perdoruesit, String> colEmail;
-    @FXML private TableColumn<Perdoruesit, String> colNrTelefonit;
     @FXML private TableColumn<Perdoruesit, String> colRoli;
 
     @FXML private TextField txtEmri;
     @FXML private TextField txtMbiemri;
     @FXML private TextField txtEmail;
     @FXML private TextField txtNrTelefonit;
-    @FXML private TextField txtAdresa;
-    @FXML private ComboBox<String> cmbRoli;
+
     @FXML private PasswordField txtFjalekalimi;
-    @FXML private Button btnShto;
-    @FXML private Button btnPerditeso;
-    @FXML private Button btnFshij;
+    @FXML private ComboBox<String> cmbRoli;
 
-    private PerdoruesitService perdoruesitService;
-    private LanguageManager languageManager;
-    public PerdoruesitController(){
-        this.perdoruesitService=new PerdoruesitService();
-        this.languageManager= LanguageManager.getInstance();
-    }
-
+    private final PerdoruesitService perdoruesitService = new PerdoruesitService();
     private int selectedUserId = -1;
+
     @FXML
     public void initialize() {
-        colEmri.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getEmri()));
-        colMbiemri.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getMbiemri()));
-        colEmail.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getEmail()));
-        colNrTelefonit.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getNrtelefonit()));
-        colRoli.setCellValueFactory(cell -> new javafx.beans.property.SimpleStringProperty(cell.getValue().getRoli()));
+        colId.setCellValueFactory(new PropertyValueFactory<>("Pid"));
+        colEmri.setCellValueFactory(new PropertyValueFactory<>("emri"));
+        colMbiemri.setCellValueFactory(new PropertyValueFactory<>("mbiemri"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colRoli.setCellValueFactory(new PropertyValueFactory<>("roli"));
 
+        cmbRoli.setItems(FXCollections.observableArrayList("Admin", "User"));
         loadUsers();
 
-        perdoruesitTable.setOnMouseClicked(this::populateFields);
+        tableUsers.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
+            if (newSel != null) {
+                selectedUserId = newSel.getPid();
+                txtEmri.setText(newSel.getEmri());
+                txtMbiemri.setText(newSel.getMbiemri());
+                txtEmail.setText(newSel.getEmail());
+                txtNrTelefonit.setText(newSel.getNrtelefonit());
+
+                cmbRoli.setValue(newSel.getRoli());
+                txtFjalekalimi.clear(); // nuk ruhet fjalëkalimi origjinal
+            }
+        });
     }
 
     private void loadUsers() {
-        List<Perdoruesit> perdoruesitList = perdoruesitService.getAll();
-        ObservableList<Perdoruesit> observableList = FXCollections.observableArrayList(perdoruesitList);
-        perdoruesitTable.setItems(observableList);
+        tableUsers.setItems(FXCollections.observableArrayList(perdoruesitService.getAll()));
     }
 
-    private void populateFields(MouseEvent event) {
-        Perdoruesit p = perdoruesitTable.getSelectionModel().getSelectedItem();
-        if (p != null) {
-            selectedUserId = p.getPid();
-            txtEmri.setText(p.getEmri());
-            txtMbiemri.setText(p.getMbiemri());
-            txtEmail.setText(p.getEmail());
-            txtNrTelefonit.setText(p.getNrtelefonit());
-            txtAdresa.setText(p.getAdresa());
-            cmbRoli.setValue(p.getRoli());
-        }
-    }
+
 
     @FXML
-    private void handleShto() {
+    private void handleShto(MouseEvent event) {
         try {
+            CreatePerdoruesitDto dto = new CreatePerdoruesitDto();
+            dto.setEmri(txtEmri.getText());
+            dto.setMbiemri(txtMbiemri.getText());
+            dto.setEmail(txtEmail.getText());
+            dto.setNrtelefonit(txtNrTelefonit.getText());
+
+
             String roli = cmbRoli.getValue();
-            if (!roli.equals("Admin") && !roli.equals("User")) {
-                throw new IllegalArgumentException("Roli duhet të jetë 'admin' ose 'user'.");
+            if (roli == null || (!roli.equals("Admin") && !roli.equals("User"))) {
+                throw new IllegalArgumentException("Roli duhet të jetë 'Admin' ose 'User'.");
             }
+            dto.setRoli(roli);
 
-            // Krijimi i objektit CreatePerdoruesitDto
-            CreatePerdoruesitDto dto = new CreatePerdoruesitDto(
-                    txtEmri.getText(),
-                    txtMbiemri.getText(),
-                    txtEmail.getText(),
-                    txtNrTelefonit.getText(),
-                    txtAdresa.getText(),
-                    txtFjalekalimi.getText()
-            );
+            dto.setFjalekalimi(txtFjalekalimi.getText());
 
-            // Thirrja e metodës create në PerdoruesitService
-            Perdoruesit perdoruesi = perdoruesitService.create(dto);
-
-            // Rifreskimi i tabelës pas krijimit
+            perdoruesitService.create(dto);
             loadUsers();
             clearFields();
         } catch (Exception e) {
-            showError(e.getMessage());
+            showMessage(e.getMessage());
         }
     }
-
-    private UpdatePerdoruesitDto updateDto;
-    @FXML
-    private void handlePerditeso() {
-        try {
-
-
-
-            if (selectedUserId == -1) {
-                throw new IllegalArgumentException("Përditësimi nuk mund të bëhet pa zgjedhur një përdorues.");
-            }
-            updateDto.setId(selectedUserId);
-
-            UpdatePerdoruesitDto updateDto = new UpdatePerdoruesitDto();
-            updateDto.setEmail(txtEmail.getText());
-            updateDto.setNrtelefonit(txtNrTelefonit.getText());
-            updateDto.setAdresa(txtAdresa.getText());
-            updateDto.setRoli(cmbRoli.getValue());
-            updateDto.setFjalekalimi(txtFjalekalimi.getText());
-
-            // Thirrja e metodës update në PerdoruesitService
-            Perdoruesit updated = perdoruesitService.update(updateDto);
-
-            // Rifreskimi i tabelës pas përditësimit
-            loadUsers();
-            clearFields();
-        } catch (Exception e) {
-            showError(e.getMessage());
-        }
-    }
-
-
 
     @FXML
-    private void handleFshij() {
+    private void handlePerditeso(MouseEvent event) {
+        if (selectedUserId == -1) {
+            showMessage("Ju lutem zgjidhni një përdorues për ta përditësuar.");
+            return;
+        }
+
+        String email = txtEmail.getText();
+        String nrTelefonit = txtNrTelefonit.getText();
+        String fjalekalimi = txtFjalekalimi.getText();
+        String roli = cmbRoli.getValue();
+
+        UpdatePerdoruesitDto dto = new UpdatePerdoruesitDto();
+        dto.setId(selectedUserId);
+        dto.setEmail(email);
+        dto.setNrtelefonit(nrTelefonit);
+        dto.setRoli(roli);
+
+        if (fjalekalimi != null && !fjalekalimi.trim().isEmpty()) {
+            dto.setFjalekalimi(fjalekalimi); // do kriptohet në service
+        }
+
         try {
+            perdoruesitService.update(dto);
+            showMessage("Përdoruesi u përditësua me sukses.");
             loadUsers();
             clearFields();
         } catch (Exception e) {
-            showError(e.getMessage());
+            showMessage("Gabim gjatë përditësimit: " + e.getMessage());
         }
     }
 
+    @FXML
+    private void handleFshij(MouseEvent event) {
+        if (selectedUserId == -1) {
+            showMessage("Ju lutem zgjidhni një përdorues për ta fshirë.");
+            return;
+        }
+
+        try {
+            boolean deleted = perdoruesitService.delete(selectedUserId);
+            if (deleted) {
+                showMessage("Përdoruesi u fshi me sukses.");
+                loadUsers();
+                clearFields();
+            } else {
+                showMessage("Përdoruesi nuk u fshi.");
+            }
+        } catch (Exception e) {
+            showMessage("Gabim gjatë fshirjes: " + e.getMessage());
+        }
+    }
 
     private void clearFields() {
-
+        selectedUserId = -1;
         txtEmri.clear();
         txtMbiemri.clear();
         txtEmail.clear();
         txtNrTelefonit.clear();
-        txtAdresa.clear();
-        cmbRoli.setValue(null);
         txtFjalekalimi.clear();
+        cmbRoli.setValue(null);
     }
 
-    private void showError(String message) {
+    private void showMessage(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Gabim");
+        alert.setHeaderText(null);
         alert.setContentText(message);
-        alert.show();
+        alert.showAndWait();
     }
 }

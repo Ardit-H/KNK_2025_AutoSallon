@@ -19,13 +19,13 @@
 
         <Label layoutX="380.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Menaxho Perdoruesit" />
 
-        <!-- Form Inputs -->
+
         <VBox alignment="CENTER" layoutX="300.0" layoutY="60.0" spacing="15">
             <TextField fx:id="txtEmri" prefWidth="250" promptText="%first_name" />
             <TextField fx:id="txtMbiemri" prefWidth="250" promptText="%last_name" />
             <TextField fx:id="txtEmail" prefWidth="250" promptText="%email" />
             <TextField fx:id="txtNrTelefonit" prefWidth="250" promptText="%phone" />
-            <TextField fx:id="txtAdresa" prefWidth="250" promptText="%address" />
+
             <PasswordField fx:id="txtFjalekalimi" prefWidth="250" promptText="Fjalëkalimi" />
             <ComboBox fx:id="cmbRoli" prefWidth="250" promptText="%role">
                 <items>
@@ -39,16 +39,18 @@
 
         <!-- Action Buttons -->
         <HBox alignment="CENTER" layoutX="300.0" layoutY="339.0" spacing="15">
-            <Button onAction="#handleShto" prefWidth="80" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="%btn.add_user"/>
-            <Button onAction="#handlePerditeso" prefWidth="80" style="-fx-background-color: #FFA500; -fx-text-fill: white;" text="%btn.update_user" />
-            <Button onAction="#handleFshij" prefWidth="80" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="%btn.delete_user" />
+            <Button onMouseClicked="#handleShto" prefWidth="80" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="%btn.add_user"/>
+            <Button onMouseClicked="#handlePerditeso" prefWidth="80" style="-fx-background-color: #FFA500; -fx-text-fill: white;" text="%btn.update_user" />
+            <Button onMouseClicked="#handleFshij" prefWidth="80" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="%btn.delete_user" />
         </HBox>
 
-        <!-- Table for displaying users -->
-        <TableView fx:id="perdoruesitTable" layoutX="50.0" layoutY="380.0" prefHeight="180.0" prefWidth="820.0">
+
+        <!-- Table for displaying users -->  <TableView fx:id="tableUsers" layoutX="50.0" layoutY="380.0" prefHeight="180.0" prefWidth="820.0">
             <columns>
+                <TableColumn fx:id="colId"  prefWidth="150.0" text="ID"/>
                 <TableColumn fx:id="colEmri" prefWidth="150.0" text="Emri" />
             <TableColumn fx:id="colMbiemri" prefWidth="150.0" text="Mbiemri" />
+
                 <TableColumn fx:id="colEmail" prefWidth="200.0" text="Email" />
                 <TableColumn fx:id="colRoli" prefWidth="150.0" text="Roli" />
                 <TableColumn fx:id="colNrTelefonit" prefWidth="150.0" text="Numri i Telefonit" />
