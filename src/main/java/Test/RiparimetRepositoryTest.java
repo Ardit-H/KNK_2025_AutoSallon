@@ -49,7 +49,7 @@ public class RiparimetRepositoryTest {
 //        CreateRiparimetDto createDto = new CreateRiparimetDto();
 //        createDto.setVeturaId(1);
 //        createDto.setSherbimiId(1);
-//        createDto.setStatusi("Ne Pritje");
+//        createDto.setStatus("Ne Pritje");
 //        createDto.setKostoRiparimit(45.5);
 //        createDto.setDataRiparimit("2024-05-10");
 //        repository.create(createDto);

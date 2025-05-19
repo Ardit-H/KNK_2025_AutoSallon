@@ -4,6 +4,7 @@ public class UpdateRiparimetDto {
     private int id;
     private String statusi;
     private double kostoRiparimit;
+    private String dataRiparimit;
 
     public UpdateRiparimetDto() {}
 
@@ -29,5 +30,12 @@ public class UpdateRiparimetDto {
 
     public void setKostoRiparimit(double kostoRiparimit) {
         this.kostoRiparimit = kostoRiparimit;
+    }
+    public String getDataRiparimit() {
+        return dataRiparimit;
+    }
+
+    public void setDataRiparimit(String dataRiparimit) {
+        this.dataRiparimit = dataRiparimit;
     }
 }

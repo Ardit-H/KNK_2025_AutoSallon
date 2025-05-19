@@ -44,8 +44,8 @@
 
             <HBox alignment="CENTER" spacing="10">
                 <Button onAction="#handleCreate" text="%Shto" />
-                <Button onAction="#handleUpdate" text="%Përditëso" />
-                <Button onAction="#handleDelete" text="%Fshij" />
+                <Button onAction="#handleUpdat" text="%Përditëso" />
+                <Button onAction="#handleDelet" text="%Fshij" />
             </HBox>
         </VBox>
     </left>

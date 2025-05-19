@@ -44,7 +44,7 @@ public class RezervimetRepositoryTest {
 
         UpdateRezervimetDto update = new UpdateRezervimetDto();
 
-        //update.setStatusi("anuluar"); // shembull
+        //update.setStatus("anuluar"); // shembull
         rezervimetRepository.update(update);
 
 

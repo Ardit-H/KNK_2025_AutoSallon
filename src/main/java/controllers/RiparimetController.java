@@ -2,18 +2,15 @@ package controllers;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import models.dto.Riparimet.CreateRiparimetDto;
 import models.dto.Riparimet.Riparimet;
 import models.dto.Riparimet.UpdateRiparimetDto;
 import services.RiparimetService;
-import services.LanguageManager;
-import services.SceneManager;
 
 import java.util.List;
-import java.util.Locale;
 
 public class RiparimetController {
     @FXML private TextField txtVeturaId;
@@ -24,51 +21,62 @@ public class RiparimetController {
     @FXML private TextField searchField;
 
     @FXML private TableView<Riparimet> riparimetTableView;
+    @FXML private TableColumn<Riparimet, String> colId;
     @FXML private TableColumn<Riparimet, String> colVeturaId;
     @FXML private TableColumn<Riparimet, String> colSherbimiId;
     @FXML private TableColumn<Riparimet, String> colStatusi;
     @FXML private TableColumn<Riparimet, String> colKostoRiparimit;
     @FXML private TableColumn<Riparimet, String> colDataRiparimit;
+
     @FXML private Label messageLabel;
 
-    private RiparimetService riparimetService;
-    private LanguageManager languageManager;
-
-    public RiparimetController() {
-        this.riparimetService = new RiparimetService();
-        this.languageManager = LanguageManager.getInstance();
-    }
+    private final RiparimetService riparimetService = new RiparimetService();
+    private final ObservableList<Riparimet> riparimetList = FXCollections.observableArrayList();
+    private final ObservableList<Riparimet> originalList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-        searchField.textProperty().addListener((observable, oldVal, newVal) -> {
+        // Inicializimi i kolonave të tabelës
+        colId.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getId())));
+        colVeturaId.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getVeturaId())));
+        colSherbimiId.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getSherbimiId())));
+        colStatusi.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getStatusi()));
+        colKostoRiparimit.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().getKostoRiparimit())));
+        colDataRiparimit.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDataRiparimit()));
+
+        riparimetTableView.setItems(riparimetList);
+
+        searchField.textProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal == null || newVal.trim().isEmpty()) {
-                riparimetTableView.setItems(FXCollections.observableArrayList(riparimetService.getAll()));
+                riparimetList.setAll(originalList);
             } else {
-                List<Riparimet> filtruar = riparimetService.kerkoSipasStatusit(newVal);
-                riparimetTableView.setItems(FXCollections.observableArrayList(filtruar));
+                String keyword = newVal.toLowerCase();
+                ObservableList<Riparimet> filtered = originalList.filtered(r ->
+                        String.valueOf(r.getId()).toLowerCase().contains(keyword) ||
+                                String.valueOf(r.getVeturaId()).toLowerCase().contains(keyword) ||
+                                String.valueOf(r.getSherbimiId()).toLowerCase().contains(keyword) ||
+                                r.getStatusi().toLowerCase().contains(keyword) ||
+                                String.valueOf(r.getKostoRiparimit()).toLowerCase().contains(keyword) ||
+                                r.getDataRiparimit().toLowerCase().contains(keyword)
+                );
+                riparimetList.setAll(filtered);
             }
         });
-
-        colVeturaId.setCellValueFactory(cell -> new SimpleStringProperty(String.valueOf(cell.getValue().getVeturaId())));
-        colSherbimiId.setCellValueFactory(cell -> new SimpleStringProperty(String.valueOf(cell.getValue().getSherbimiId())));
-        colStatusi.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getStatusi()));
-        colKostoRiparimit.setCellValueFactory(cell -> new SimpleStringProperty(String.valueOf(cell.getValue().getKostoRiparimit())));
-        colDataRiparimit.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getDataRiparimit()));
 
         loadRiparimet();
     }
 
     private void loadRiparimet() {
         List<Riparimet> lista = riparimetService.getAll();
-        riparimetTableView.getItems().setAll(lista);
+        originalList.setAll(lista);
+        riparimetList.setAll(lista);
     }
 
     @FXML
-    private void handleCreate(MouseEvent event) {
+    private void handleCreate() {
         try {
-            Integer veturaId = Integer.parseInt(txtVeturaId.getText());
-            Integer sherbimiId = Integer.parseInt(txtSherbimiId.getText());
+            int veturaId = Integer.parseInt(txtVeturaId.getText());
+            int sherbimiId = Integer.parseInt(txtSherbimiId.getText());
             String statusi = txtStatusi.getText();
             Double kostoRiparimit = Double.parseDouble(txtKostoRiparimit.getText());
 
@@ -89,15 +97,25 @@ public class RiparimetController {
     }
 
     @FXML
-    private void handleUpdate(MouseEvent event) {
+    private void handleUpdat() {
         try {
-            int selectedId = getSelectedRiparimiId();
-            if (selectedId == -1) return;
+            Riparimet selected = riparimetTableView.getSelectionModel().getSelectedItem();
+            if (selected == null) {
+                messageLabel.setText("Zgjidh një riparim.");
+                return;
+            }
 
             UpdateRiparimetDto dto = new UpdateRiparimetDto();
-            dto.setId(selectedId);
-            dto.setStatusi(txtStatusi.getText());
-            dto.setKostoRiparimit(Double.parseDouble(txtKostoRiparimit.getText()));
+            dto.setId(selected.getId());
+
+            if (!txtStatusi.getText().trim().isEmpty())
+                dto.setStatusi(txtStatusi.getText().trim());
+
+            if (!txtKostoRiparimit.getText().trim().isEmpty())
+                dto.setKostoRiparimit(Double.parseDouble(txtKostoRiparimit.getText().trim()));
+
+            if (!txtDataRiparimit.getText().trim().isEmpty())
+                dto.setDataRiparimit(txtDataRiparimit.getText().trim());
 
             riparimetService.update(dto);
             messageLabel.setText("Riparimi u përditësua me sukses.");
@@ -109,26 +127,20 @@ public class RiparimetController {
     }
 
     @FXML
-    private void handleDelete(MouseEvent event) {
+    private void handleDelet() {
         try {
-            int selectedId = getSelectedRiparimiId();
-            if (selectedId == -1) return;
+            Riparimet selected = riparimetTableView.getSelectionModel().getSelectedItem();
+            if (selected == null) {
+                messageLabel.setText("Zgjidh një riparim.");
+                return;
+            }
 
-            riparimetService.delete(selectedId);
+            riparimetService.delete(selected.getId());
             messageLabel.setText("Riparimi u fshi me sukses.");
             loadRiparimet();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
-    }
-
-    private int getSelectedRiparimiId() {
-        Riparimet selected = riparimetTableView.getSelectionModel().getSelectedItem();
-        if (selected == null) {
-            messageLabel.setText("Zgjidh një riparim në tabelë.");
-            return -1;
-        }
-        return selected.getId();
     }
 
     private void clearForm() {
@@ -137,20 +149,5 @@ public class RiparimetController {
         txtStatusi.clear();
         txtKostoRiparimit.clear();
         txtDataRiparimit.clear();
-    }
-
-    @FXML
-    private void handleLanguageEnglishClick() throws Exception {
-        loadLanguage(Locale.ENGLISH);
-    }
-
-    @FXML
-    private void handleLanguageAlbanianClick() throws Exception {
-        loadLanguage(new Locale("sq"));
-    }
-
-    private void loadLanguage(Locale locale) throws Exception {
-        languageManager.setLocale(locale);
-        SceneManager.reload();
     }
 }

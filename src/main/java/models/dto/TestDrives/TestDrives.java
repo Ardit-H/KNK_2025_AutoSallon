@@ -7,30 +7,27 @@ public class TestDrives {
     private int id;
     private int kid;
     private int vid;
-    private String statusi;
+    private String status;
     private String feedback;
     private int duration;
-    private String location;
 
-    public TestDrives(int id, int kid, int vid, String statusi, String feedback, int duration, String location) {
+    public TestDrives(int id, int kid, int vid, String status, String feedback, int duration) {
         this.id = id;
         this.kid = kid;
         this.vid = vid;
-        this.statusi = statusi;
+        this.status = status;
         this.feedback = feedback;
         this.duration = duration;
-        this.location = location;
     }
 
     public static TestDrives getInstance(ResultSet resultSet)throws SQLException{
         int id=resultSet.getInt("id");
         int kid=resultSet.getInt("kid");
         int vid=resultSet.getInt("vid");
-        String statusi=resultSet.getString("statusi");
+        String status=resultSet.getString("status");
         String feedback=resultSet.getString("feedback");
-        int duration=resultSet.getInt("kohezgjatja");
-        String location=resultSet.getString("location");
-        return new TestDrives(id,kid,vid,statusi,feedback,duration,location);
+        int duration=resultSet.getInt("duration");
+        return new TestDrives(id,vid,kid,status,feedback,duration);
     }
 
     public int getId() {
@@ -45,8 +42,8 @@ public class TestDrives {
         return vid;
     }
 
-    public String getStatusi() {
-        return statusi;
+    public String getStatus() {
+        return status;
     }
 
     public String getFeedback() {
@@ -57,7 +54,4 @@ public class TestDrives {
         return duration;
     }
 
-    public String getLocation() {
-        return location;
-    }
 }
