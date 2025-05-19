@@ -1,28 +1,26 @@
 package models.dto.TestDrives;
 
 public class CreateTestDrivesDto {
-    private int vid;
     private int kid;
-    private String statusi;
+    private int vid;
+    private String status;
     private String feedback;
     private int duration;
-    private String location;
 
-    public CreateTestDrivesDto(int kid, int vid, String statusi, String feedback, int duration, String location) {
+    public CreateTestDrivesDto(int kid, int vid, String status, String feedback, int duration) {
         this.kid = kid;
         this.vid = vid;
-        this.statusi = statusi;
+        this.status = status;
         this.feedback = feedback;
         this.duration = duration;
-        this.location = location;
     }
 
-    public String getStatusi() {
-        return statusi;
+    public String getStatus() {
+        return status;
     }
 
-    public void setStatusi(String statusi) {
-        this.statusi = statusi;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getFeedback() {
@@ -39,14 +37,6 @@ public class CreateTestDrivesDto {
 
     public void setDuration(int duration) {
         this.duration = duration;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public int getVid() {

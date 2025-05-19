@@ -24,7 +24,7 @@ public class SceneLocator {
     public static final String VETURAT_USER = "/Views/veturat_user.fxml";
     public static final String SHTO_VLERESIM="/Views/shto_vleresim_per_veturen.fxml";
     public static final String FATURAT="/Views/faturat.fxml";
-    public static final String TESTDRIVES="/Views/testdrives.fxml";
+    public static final String TESTDRIVES="/Views/testd.fxml";
     public static final String GARANCIA="/Views/garancia.fxml";
     public static final String SHITJET= "/Views/shitjet.fxml";
     public static final String POROSIA= "/Views/porosia.fxml";
@@ -39,5 +39,6 @@ public class SceneLocator {
     public static final String REZERVIMET = "/Views/rezervimet.fxml";
     public static final String REZERVIMET_USER= "/Views/rezervimetUser.fxml";
     public static final String PUNETORET = "/Views/punetoret.fxml";
+    public static final String RIPARIMET = "/Views/riparimet.fxml";
 }
 

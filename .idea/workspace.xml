@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="workspace.xml">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_10_32.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_10_32/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2025_11_04.xml" beforeDir="false" />
@@ -14,6 +14,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2025_10_13_AM_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2025_10_13_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/RiparimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/RiparimetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/riparimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/riparimet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +41,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "a3187b7a-c112-4f16-a232-35cfff71446e"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -78,15 +82,17 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/resources/languages/messages_en.properties&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/resources/languages/messages_en.properties&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -506,15 +512,39 @@
       <option name="project" value="LOCAL" />
       <updated>1747592639674</updated>
     </task>
-    <task id="LOCAL-00041" summary="workspace.xml">
+    <task id="LOCAL-00041" summary="Ndryshimet e te dhenave ne tabelen Riparimet">
       <option name="closed" value="true" />
-      <created>1747596375713</created>
+      <created>1747600320402</created>
       <option name="number" value="00041" />
       <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1747596375713</updated>
+      <updated>1747600320402</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Ndryshime nr RiparimetController dhe riparimet.fxml si dhe ne perkthime">
+      <option name="closed" value="true" />
+      <created>1747608201292</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608201292</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Rregullimi i butonit ne admin_dashboard.fxml dhe Admin_DashboardController">
+      <option name="closed" value="true" />
+      <created>1747609260298</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1747609260298</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController">
+      <option name="closed" value="true" />
+      <created>1747612504186</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1747612504186</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,10 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Organizimi i dto brenda models" />
-    <MESSAGE value="Shtova tabelen Veturat ne databaze" />
-    <MESSAGE value="Krijimi i klases Veturat" />
-    <MESSAGE value="Krijimi i klases UpdateKlientetEmailDto" />
     <MESSAGE value="Ndryshim ne klasen CreateKlientetDto" />
     <MESSAGE value="Krijimi i klases KlientetRepository" />
     <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
@@ -552,8 +578,12 @@
     <MESSAGE value="changes" />
     <MESSAGE value="perdorimi i shumegjuhesise ne shto_vleresim_per_veturen.fxml" />
     <MESSAGE value="permiresim ne dizajnin e shto_vleresim_per_veturen.fxml" />
-    <MESSAGE value="permiresim ne messages_sq.properties" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="permiresim ne messages_sq.properties" />
+    <MESSAGE value="Ndryshimet e te dhenave ne tabelen Riparimet" />
+    <MESSAGE value="Ndryshime nr RiparimetController dhe riparimet.fxml si dhe ne perkthime" />
+    <MESSAGE value="Rregullimi i butonit ne admin_dashboard.fxml dhe Admin_DashboardController" />
+    <MESSAGE value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shtimi i metodes getDataRiparimit() dhe ndryshime te tjera ne RiparimetController" />
   </component>
 </project>

@@ -54,7 +54,9 @@
                 <Text layoutX="40.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblServicesU" wrappingWidth="635.8700256347656" />
                 <Text layoutX="43.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblRatingsU" wrappingWidth="636.9366455078125" />
                 <Text layoutX="38.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblUserProfile" wrappingWidth="634.8033752441406" />
-            <Text layoutX="40.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblMyRatings" wrappingWidth="636.9366455078125" />
+                <Text layoutX="38.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblVeturatUser" wrappingWidth="634.8033752441406" />
+
+                <Text layoutX="40.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblMyRatings" wrappingWidth="636.9366455078125" />
             </children>
         </AnchorPane>
     </children>

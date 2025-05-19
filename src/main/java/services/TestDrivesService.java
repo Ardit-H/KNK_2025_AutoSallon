@@ -6,7 +6,6 @@ import models.dto.TestDrives.UpdateTestDrivesDto;
 import repository.TestDrivesRepository;
 
 import java.util.List;
-import java.util.regex.Pattern;
 
 public class TestDrivesService {
     private TestDrivesRepository testDrivesRepository;
@@ -36,14 +35,11 @@ public class TestDrivesService {
     }
 
     private void validateCreateDto(CreateTestDrivesDto dto) {
-        if (isNullOrShort(dto.getStatusi(), 3)) {
+        if (isNullOrShort(dto.getStatus(), 3)) {
             throw new IllegalArgumentException("Statusi duhet të ketë të paktën 3 karaktere!");
         }
         if (dto.getDuration() <= 0) {
             throw new IllegalArgumentException("Kohëzgjatja duhet të jetë pozitive!");
-        }
-        if (isNullOrShort(dto.getLocation(), 3)) {
-            throw new IllegalArgumentException("Lokacioni duhet të ketë të paktën 3 karaktere!");
         }
     }
 
@@ -59,8 +55,8 @@ public class TestDrivesService {
 
         boolean hasChanges = false;
 
-        if (dto.getStatusi() != null) {
-            if (dto.getStatusi().trim().length() < 3) {
+        if (dto.getStatus() != null) {
+            if (dto.getStatus().trim().length() < 3) {
                 throw new IllegalArgumentException("Statusi duhet të ketë të paktën 3 karaktere.");
             }
             hasChanges = true;
@@ -69,13 +65,6 @@ public class TestDrivesService {
         if (dto.getFeedback() != null) {
             if (dto.getFeedback().trim().length() < 3) {
                 throw new IllegalArgumentException("Feedback-u duhet të ketë të paktën 3 karaktere.");
-            }
-            hasChanges = true;
-        }
-
-        if (dto.getLocation() != null) {
-            if (dto.getLocation().trim().length() < 3) {
-                throw new IllegalArgumentException("Lokacioni duhet të ketë të paktën 3 karaktere.");
             }
             hasChanges = true;
         }
@@ -112,4 +101,14 @@ public class TestDrivesService {
     private boolean isNullOrShort(String s, int minLength) {
         return s == null || s.trim().length() < minLength;
     }
+
+    public List<TestDrives> kerkoTestDrives(String search) {
+        if (search == null || search.trim().isEmpty()) {
+            return testDrivesRepository.getAll(); //
+        }
+
+        return testDrivesRepository.kerkoSipasStatusit(search.trim());
+    }
+
+
 }
