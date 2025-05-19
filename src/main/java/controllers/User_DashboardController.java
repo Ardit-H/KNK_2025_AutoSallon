@@ -73,7 +73,7 @@ public class User_DashboardController {
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_LOKACIONET);
         SceneManager.load(SceneLocator.USER_LOKACIONET, centerPane);
     }
-    @FXML private void handleLoadVeturatUser()throws Exception{
+    @FXML private void handleLoadVeturat()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.VETURAT_USER);
         SceneManager.load(SceneLocator.VETURAT_USER,centerPane);
     }
