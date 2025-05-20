@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime ne fushen e kerkimit te tabeles" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="zhvendosja e shfaqjes se mesazhit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/faturat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/faturat.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -554,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747693037538</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="zhvendosja e shfaqjes se mesazhit">
+      <option name="closed" value="true" />
+      <created>1747693394715</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1747693394715</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -569,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Krijimi i klases KlientRepositoryTest per testimin e KlientetRepository" />
     <MESSAGE value="Krijimi i modelit Sherbimet me dto perkatese" />
     <MESSAGE value="Shtimi i tabeles tek resources" />
     <MESSAGE value="Krijimi i tabeles faturat" />
@@ -594,6 +605,7 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Ndryshme ne RiparimetController per funksionimin e butonave" />
     <MESSAGE value="Ndryshime ne fushen e kerkimit te tabeles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ndryshime ne fushen e kerkimit te tabeles" />
+    <MESSAGE value="zhvendosja e shfaqjes se mesazhit" />
+    <option name="LAST_COMMIT_MESSAGE" value="zhvendosja e shfaqjes se mesazhit" />
   </component>
 </project>
