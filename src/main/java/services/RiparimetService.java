@@ -108,7 +108,7 @@ public class RiparimetService {
         return riparimetRepository.searchByStatus(statusi);
     }
 
-    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String statusi, Double kosto, String data) {
-        return riparimetRepository.findByAllFields(veturaId, sherbimiId, statusi, kosto, data);
+    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String statusi, Double kosto) {
+        return riparimetRepository.findByAllFields(veturaId, sherbimiId, statusi, kosto);
     }
 }

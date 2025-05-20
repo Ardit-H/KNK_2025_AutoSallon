@@ -359,17 +359,17 @@ VALUES
 (10, 10, '2025-05-10', 'aktiv');
 
 
-INSERT INTO riparimet (veturaid, sherbimiid, statusi, kostoriparimit, datariparimit) VALUES
-(1, 1, 'Ne proces', 150.00, '2025-05-01'),
-(2, 2, 'Perfunduar', 300.00, '2025-04-20'),
-(3, 3, 'Ne pritje', 100.50, '2025-05-10'),
-(4, 4, 'Ne proces', 220.00, '2025-05-12'),
-(5, 5, 'Perfunduar', 450.75, '2025-03-28'),
-(6, 2, 'Ne proces', 175.00, '2025-05-13'),
-(7, NULL, 'Ne pritje', 80.00, '2025-05-02'),
-(8, 1, 'Perfunduar', 260.00, '2025-04-15'),
-(9, NULL, 'Ne proces', 95.00, '2025-05-07'),
-(10, 3, 'Ne pritje', 130.00, '2025-05-14');
+INSERT INTO riparimet (veturaid, sherbimiid, statusi, kostoriparimit) VALUES
+(1, 1, 'Ne proces', 150.00),
+(2, 2, 'Perfunduar', 300.00),
+(3, 3, 'Ne pritje', 100.50),
+(4, 4, 'Ne proces', 220.00),
+(5, 5, 'Perfunduar', 450.75),
+(6, 2, 'Ne proces', 175.00),
+(7, NULL, 'Ne pritje', 80.00),
+(8, 1, 'Perfunduar', 260.00),
+(9, NULL, 'Ne proces', 95.00),
+(10, 3, 'Ne pritje', 130.00);
 
 
 ALTER TABLE Riparimet

@@ -22,8 +22,8 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
     @Override
     public Riparimet create(CreateRiparimetDto dto) {
         String query = """
-            INSERT INTO riparimet (veturaId, sherbimiId, status, kostoRiparimit, dataRiparimit)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO riparimet (veturaId, sherbimiId, statusi, kostoRiparimit)
+            VALUES (?, ?, ?, ?)
         """;
 
         try {
@@ -51,7 +51,7 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
         ArrayList<Object> params = new ArrayList<>();
 
         if (dto.getStatusi() != null) {
-            query.append("status = ?, ");
+            query.append("statusi = ?, ");
             params.add(dto.getStatusi());
         }
         if (dto.getKostoRiparimit() != 0.0) {
@@ -88,14 +88,13 @@ public class RiparimetRepository extends BaseRepository<Riparimet, CreateRiparim
         return searchWithCustomWhere(where, searchValue);
     }
 
-    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String status, Double kostoRiparimit, String dataRiparimit) {
-        String sql = "SELECT * FROM riparimet WHERE vetura_id = ? AND sherbimi_id = ? AND status = ? AND kosto_riparimit = ? AND data_riparimit = ?";
+    public Riparimet findByAllFields(Integer veturaId, Integer sherbimiId, String status, Double kostoRiparimit) {
+        String sql = "SELECT * FROM riparimet WHERE vetura_id = ? AND sherbimi_id = ? AND statusi = ? AND kosto_riparimit = ?";
         try (PreparedStatement stmt = this.connection.prepareStatement(sql)) {
             stmt.setInt(1, veturaId);
             stmt.setInt(2, sherbimiId);
             stmt.setString(3, status);
             stmt.setDouble(4, kostoRiparimit);
-            stmt.setString(5, dataRiparimit);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 return Riparimet.getInstance(rs);

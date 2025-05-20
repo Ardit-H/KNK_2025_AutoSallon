@@ -20,11 +20,11 @@ public class Lokacionet {
     }
 
     public static Lokacionet getInstance(ResultSet rs) throws SQLException {
-        int lokacionet_id = rs.getInt("lokacionet_id");
+        int lokacionet_id = rs.getInt("id");
         String emri_lokacionit = rs.getString("emri_lokacionit");
         String adresa = rs.getString("adresa");
         String qyteti = rs.getString("qyteti");
-        String nrtelefonit = rs.getString("nrtelefonit");
+        String nrtelefonit = rs.getString("nr_telefonit");
         return new Lokacionet(lokacionet_id, emri_lokacionit, adresa, qyteti, nrtelefonit);
     }
 

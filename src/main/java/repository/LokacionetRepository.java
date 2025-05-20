@@ -18,7 +18,7 @@ public class LokacionetRepository extends BaseRepository<Lokacionet, CreateLokac
     public Lokacionet create(CreateLokacionetDto lokacionetDto){
         String query = """
                 INSERT INTO LOKACIONET(emri, adresa, qyteti, nrtelefonit)
-                VALUES(?,?,?,?,?)
+                VALUES(?,?,?,?)
                 """;
         try{
             PreparedStatement ps = this.connection.prepareStatement(
@@ -52,6 +52,10 @@ public class LokacionetRepository extends BaseRepository<Lokacionet, CreateLokac
             query.append("Qyteti = ?, ");
             params.add(lokacionetDto.getQyteti());
         }
+        if(lokacionetDto.getNrtelefonit() != null){
+            query.append("nrtelefonit = ?, ");
+            params.add(lokacionetDto.getNrtelefonit());
+        }
         if(params.isEmpty()){
             return getById(lokacionetDto.getId());
         }
@@ -74,10 +78,13 @@ public class LokacionetRepository extends BaseRepository<Lokacionet, CreateLokac
         }
         return null;
     }
-    public List<Lokacionet> searchByFullName(String fullName){
-        String where = "LOWER(CONCAT(emri LIKE  ?";
+    public List<Lokacionet> searchByFullName(String fullName) {
+        if (fullName == null || fullName.trim().isEmpty()) {
+            return this.getAll();
+        }
+        String where = "LOWER(emri_lokacionit) LIKE ?";
         String searchValue = "%" + fullName.toLowerCase() + "%";
-        return searchWithCustomWhere(where, searchValue);
+        return this.searchWithCustomWhere(where, searchValue);
     }
     public boolean existsByPhoneNumber(String nrTelefonit){
         String query = "SELECT COUNT(*) FROM lokacionet WHERE nrTelefonit = ?";
