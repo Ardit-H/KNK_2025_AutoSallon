@@ -137,9 +137,9 @@ public class FaturatController {
                 return;
             }
 
-            faturatService.delete(selected.getId());  // Fshini faturën nga databaza
+            faturatService.delete(selected.getId());
             messageLabel.setText("Fatura u fshi me sukses.");
-            loadFaturat();  // Rifreskoni tabelën pas fshirjes
+            loadFaturat();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }

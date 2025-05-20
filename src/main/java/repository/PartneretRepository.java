@@ -62,11 +62,16 @@ public class PartneretRepository extends BaseRepository<Partneret, CreatePartner
             query.append("adresa = ?, ");
             params.add(dto.getAdresa());
         }
+        if (dto.getPersonKontakti() != null) {
+            query.append("person_kontakti = ?, ");
+            params.add(dto.getPersonKontakti());
+        }
 
         if (params.isEmpty()) {
             return getById(dto.getId());
         }
 
+        // Hiq presjen e fundit dhe shto pjesën WHERE
         query.setLength(query.length() - 2);
         query.append(" WHERE id = ?");
         params.add(dto.getId());
@@ -85,6 +90,7 @@ public class PartneretRepository extends BaseRepository<Partneret, CreatePartner
         }
         return null;
     }
+
 
     public List<Partneret> searchByCompanyName(String name) {
         String where = "LOWER(emri_kompanise) LIKE ?";
