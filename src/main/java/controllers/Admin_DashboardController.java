@@ -31,6 +31,7 @@ public class Admin_DashboardController {
     @FXML public Button btn_vleresimet;
     @FXML public Button btn_faturat;
     @FXML public Button btn_riparimet;
+    @FXML public Button btn_partneret;
     @FXML public Button btn_statistikat;
     @FXML public Button btn_perdoruesit;
     @FXML public Button btn_garancia;
@@ -102,6 +103,10 @@ public class Admin_DashboardController {
     @FXML private void handleLoadRiparimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.RIPARIMET);
         SceneManager.load(SceneLocator.RIPARIMET, centerPane);
+    }
+    @FXML private void handleLoadPartneret()throws Exception {
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.PARTNERET);
+        SceneManager.load(SceneLocator.PARTNERET, centerPane);
     }
     @FXML private void handleLoadShitjet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.SHITJET);

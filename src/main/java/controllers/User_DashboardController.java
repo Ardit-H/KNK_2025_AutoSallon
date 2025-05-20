@@ -18,7 +18,6 @@ import java.util.Locale;
 
 public class User_DashboardController {
     public Button btn_userLokacionet;
-    public Button btn_faturat;
     public Button btn_sherbimet;
     public Button btn_rezervimetUser;
     public Button btn_automjetet;
