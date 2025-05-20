@@ -24,7 +24,6 @@ public class RiparimetRepositoryTest {
                 Riparimet riparimi = Riparimet.getInstance(result);
                 System.out.println("ID: " + riparimi.getId());
                 System.out.println("Statusi: " + riparimi.getStatusi());
-                System.out.println("Data Riparimit: " + riparimi.getDataRiparimit());
             }
         } catch (SQLException e) {
             e.printStackTrace();
