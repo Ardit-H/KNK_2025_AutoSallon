@@ -31,13 +31,13 @@ public class PagesatDashboardController {
     @FXML
     private TableColumn<Pagesa, Integer> dataPagesesColumn;
     @FXML
-    public TextField txtShumaPageses;
+    private TextField txtShumaPageses;
     @FXML
-    public DatePicker dataPageses;
+    private DatePicker dataPageses;
     @FXML
-    public ComboBox<String> comboMetodaPageses;
+    private ComboBox<String> comboMetodaPageses;
     @FXML
-    public TextField txtPorosia;
+    private TextField txtPorosia;
     @FXML
     public Button btnKrijo;
     @FXML
