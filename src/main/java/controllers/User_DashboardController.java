@@ -24,6 +24,7 @@ public class User_DashboardController {
     public Button btn_automjetet;
     public Button btn_dashboard;
     public Button btn_vleresimet;
+    public Button btn_partneret;
     @FXML private AnchorPane centerPane;
     @FXML private VBox sideMenu;
     @FXML private Button btn_vleresimetemia;
@@ -66,6 +67,10 @@ public class User_DashboardController {
     @FXML private void handleLoadUserSherbimet()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_SHERBIMET);
         SceneManager.load(SceneLocator.USER_SHERBIMET,centerPane);
+    }
+    @FXML private void handleLoadPartneretUser()throws Exception{
+        SceneManager.getInstance().setCenterPanePath(SceneLocator.PARTNERET_USER);
+        SceneManager.load(SceneLocator.PARTNERET_USER,centerPane);
     }
     @FXML private void handleLoadUserProfili()throws Exception{
         SceneManager.getInstance().setCenterPanePath(SceneLocator.USER_PROFILE);
