@@ -19,10 +19,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class UserLokacionitController {
-    @FXML private TextField txtEmriLokacionit;
-    @FXML private TextField txtAdresa;
-    @FXML private TextField txtQyteti;
-    @FXML private TextField txtNrTelefonit;
     @FXML private TextField searchField;
 
     @FXML private TableView<Lokacionet> lokacionetTableView;
@@ -73,12 +69,5 @@ public class UserLokacionitController {
             return -1;
         }
         return selected.getLokacionet_id();
-    }
-
-    private void clearForm() {
-        txtEmriLokacionit.clear();
-        txtAdresa.clear();
-        txtQyteti.clear();
-        txtNrTelefonit.clear();
     }
 }
