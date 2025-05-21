@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim tek PerdoruesitRepository.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,12 +30,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
-    &quot;accountId&quot;: &quot;a3187b7a-c112-4f16-a232-35cfff71446e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
+    "accountId": "1a27c557-b5be-42f9-b474-82829f4c391b"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -68,7 +71,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;,
@@ -177,46 +180,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Krijimi i DBConnector">
-      <option name="closed" value="true" />
-      <created>1742753111762</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742753111762</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Testimi i lidhjes me Database">
-      <option name="closed" value="true" />
-      <created>1742753439946</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742753439946</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Krijimi i paketave models and dto">
-      <option name="closed" value="true" />
-      <created>1742939837885</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1742939837885</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Krijimi i klases User">
-      <option name="closed" value="true" />
-      <created>1743085212146</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1743085212146</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Krijimi i klases Klientet">
-      <option name="closed" value="true" />
-      <created>1743086060632</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743086060632</updated>
     </task>
     <task id="LOCAL-00010" summary="Organizimi i dto brenda models">
       <option name="closed" value="true" />
@@ -562,15 +525,55 @@
       <option name="project" value="LOCAL" />
       <updated>1747782387032</updated>
     </task>
-    <task id="LOCAL-00053" summary="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml">
+    <task id="LOCAL-00053" summary="Workspace">
       <option name="closed" value="true" />
-      <created>1747782686408</created>
+      <created>1747828286231</created>
       <option name="number" value="00053" />
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1747782686408</updated>
+      <updated>1747828286231</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Workspace">
+      <option name="closed" value="true" />
+      <created>1747829084822</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1747829084822</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Ndryshime ne madhesi te tabelave">
+      <option name="closed" value="true" />
+      <created>1747832612958</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1747832612958</updated>
+    </task>
+    <task id="LOCAL-00056" summary="ndryshime ne dizajn">
+      <option name="closed" value="true" />
+      <created>1747836728423</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1747836728423</updated>
+    </task>
+    <task id="LOCAL-00057" summary="ndryshime ne dizajn">
+      <option name="closed" value="true" />
+      <created>1747836937788</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1747836937788</updated>
+    </task>
+    <task id="LOCAL-00058" summary="permiresim tek PerdoruesitRepository.java">
+      <option name="closed" value="true" />
+      <created>1747841615919</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1747841615920</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -585,9 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Perkthimi" />
-    <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
-    <MESSAGE value="ndryshime ne SceneLocator.java" />
     <MESSAGE value="workspace" />
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
@@ -609,7 +609,10 @@
     <MESSAGE value="Krijimi i partneret_user.fxml dhe Partneret_UserController" />
     <MESSAGE value="Krijimi i partneret.fxml dhe PartneretController" />
     <MESSAGE value="Vendosja e butonit ne UserDashboard" />
-    <MESSAGE value="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml" />
+    <MESSAGE value="Workspace" />
+    <MESSAGE value="Ndryshime ne madhesi te tabelave" />
+    <MESSAGE value="ndryshime ne dizajn" />
+    <MESSAGE value="permiresim tek PerdoruesitRepository.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim tek PerdoruesitRepository.java" />
   </component>
 </project>

@@ -165,7 +165,7 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         }
         return results;
     }
-    public List<Vleresimet> searchByVehicleOrDate(String keyword) {
+    public List<Vleresimet> searchByVehicleOrDate(String keyword, int userId) {
         List<Vleresimet> results = new ArrayList<>();
         String query = """
         SELECT v.*, 
@@ -174,14 +174,16 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
         FROM Vleresimet v
         JOIN Veturat ve ON v.vetura_id = ve.id
         JOIN perdoruesi p ON v.perdoruesi_id = p.id
-        WHERE LOWER(ve.prodhuesi || ' ' || ve.modeli) LIKE ? 
-           OR TO_CHAR(v.data_vleresimit, 'YYYY-MM-DD') LIKE ?
+        WHERE v.perdoruesi_id = ?
+          AND (LOWER(ve.prodhuesi || ' ' || ve.modeli) LIKE ? 
+               OR TO_CHAR(v.data_vleresimit, 'YYYY-MM-DD') LIKE ?)
     """;
 
         try (PreparedStatement pstm = this.connection.prepareStatement(query)) {
             String searchKeyword = "%" + keyword.toLowerCase() + "%";
-            pstm.setString(1, searchKeyword);
+            pstm.setInt(1, userId);
             pstm.setString(2, searchKeyword);
+            pstm.setString(3, searchKeyword);
             ResultSet rs = pstm.executeQuery();
 
             while (rs.next()) {
@@ -190,7 +192,7 @@ public class VleresimetRepository extends BaseRepository<Vleresimet, CreateVlere
                 results.add(v);
             }
         } catch (SQLException e) {
-            e.printStackTrace(); // ose log.error(...) nëse ke logging
+            e.printStackTrace();
         }
         return results;
     }

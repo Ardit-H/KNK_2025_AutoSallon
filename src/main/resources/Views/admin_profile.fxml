@@ -84,7 +84,7 @@
                                     </style>
                                 </Label>
                             </HBox>
-                            <BarChart fx:id="shitjetChart" prefHeight="248.0" prefWidth="390.0" title="Shitjet Mujore">
+                            <BarChart fx:id="shitjetChart" prefHeight="248.0" prefWidth="390.0" title="%ShitjetMujore">
                                 <xAxis>
                                     <CategoryAxis label="Muaji" />
                                 </xAxis>

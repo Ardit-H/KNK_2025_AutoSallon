@@ -44,16 +44,16 @@
                         <DatePicker fx:id="dataMbarimit" prefHeight="26.0" prefWidth="138.0" promptText="%DataMbarimit" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="210.0" prefWidth="678.0">
+                  <HBox alignment="CENTER" prefHeight="344.0" prefWidth="1315.0">
                      <children>
-                        <TableView fx:id="ofertaTable" prefHeight="210.0" prefWidth="518.0">
+                        <TableView fx:id="ofertaTable" prefHeight="335.0" prefWidth="878.0">
                           <columns>
-                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-                            <TableColumn fx:id="veturaIdColumn" prefWidth="75.0" text="%VeturaID" />
-                              <TableColumn fx:id="zbritjaIdColumn" prefWidth="75.0" text="%Zbritja" />
-                              <TableColumn fx:id="cmimiFinalColumn" prefWidth="91.199951171875" text="%CmimiFinal" />
-                              <TableColumn fx:id="dataFillimitColumn" prefWidth="99.199951171875" text="%DataFillimit" />
-                              <TableColumn fx:id="dataMbarimitColumn" prefWidth="102.39999389648438" text="%DataMbarimit" />
+                            <TableColumn fx:id="idColumn" prefWidth="139.99997556209564" text="ID" />
+                            <TableColumn fx:id="veturaIdColumn" prefWidth="172.80001831054688" text="%VeturaID" />
+                              <TableColumn fx:id="zbritjaIdColumn" prefWidth="124.79998779296875" text="%Zbritja" />
+                              <TableColumn fx:id="cmimiFinalColumn" prefWidth="149.60000610351562" text="%CmimiFinal" />
+                              <TableColumn fx:id="dataFillimitColumn" prefWidth="143.2000732421875" text="%DataFillimit" />
+                              <TableColumn fx:id="dataMbarimitColumn" prefWidth="151.20001220703125" text="%DataMbarimit" />
                           </columns>
                         </TableView>
                      </children>

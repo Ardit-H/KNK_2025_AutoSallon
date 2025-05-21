@@ -17,13 +17,13 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <TableView fx:id="VleresimetTableView" layoutX="168.0" layoutY="221.0" prefHeight="484.0" prefWidth="990.0">
+      <TableView fx:id="VleresimetTableView" layoutX="152.0" layoutY="222.0" prefHeight="399.0" prefWidth="1025.0">
          <columns>
             <TableColumn fx:id="colPerdoruesi" prefWidth="144.26663208007812" text="%UserName" />
             <TableColumn fx:id="colVetura" prefWidth="143.7333984375" text="%CarName" />
             <TableColumn fx:id="colVleresimi" prefWidth="111.73336791992188" text="%Rating" />
             <TableColumn fx:id="colKomenti" prefWidth="434.933349609375" text="%Comment" />
-            <TableColumn fx:id="colDataVleresimit" prefWidth="159.466796875" text="%DateOfRating" />
+            <TableColumn fx:id="colDataVleresimit" prefWidth="188.00006103515625" text="%DateOfRating" />
          </columns>
       </TableView>
       <Label alignment="CENTER" layoutX="-2.0" layoutY="98.0" prefHeight="30.0" prefWidth="1332.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbluservleresimet" textAlignment="CENTER" />

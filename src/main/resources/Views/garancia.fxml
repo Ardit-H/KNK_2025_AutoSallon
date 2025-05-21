@@ -58,7 +58,7 @@
             <Font name="System Bold" size="14.0" />
          </font></Button>
 
-        <TableView fx:id="garanciaTableView" layoutX="307.0" layoutY="377.0" onMouseClicked="#onTableClicked" prefHeight="350.0" prefWidth="697.0" style="-fx-background-color: #AFDCF8; -fx-border-color: #27435c;">
+        <TableView fx:id="garanciaTableView" layoutX="307.0" layoutY="377.0" onMouseClicked="#onTableClicked" prefHeight="327.0" prefWidth="698.0" style="-fx-background-color: #AFDCF8; -fx-border-color: #27435c;">
             <columns>
                 <TableColumn fx:id="colLlojiGarancise" prefWidth="132.79995727539062" text="%Lloji_i_Garancise" />
                 <TableColumn fx:id="colDataFillimit" prefWidth="164.79998779296875" text="%Data_e_Fillimit" />

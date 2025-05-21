@@ -87,6 +87,14 @@ public class PerdoruesitRepository extends BaseRepository<Perdoruesit, CreatePer
             query.append("ROLI = ?, ");
             params.add(perdoruesitDto.getRoli());
         }
+        if (perdoruesitDto.getNrtelefonit() != null) {
+            query.append("NRTELEFONIT = ?, ");
+            params.add(perdoruesitDto.getNrtelefonit());
+        }
+        if (perdoruesitDto.getAdresa() != null) {
+            query.append("ADRESA = ?, ");
+            params.add(perdoruesitDto.getAdresa());
+        }
 
         if(params.isEmpty()){
             return getById(perdoruesitDto.getId());
