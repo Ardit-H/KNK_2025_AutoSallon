@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim tek PerdoruesitRepository.java">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,14 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Organizimi i dto brenda models">
-      <option name="closed" value="true" />
-      <created>1743086495133</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1743086495133</updated>
     </task>
     <task id="LOCAL-00011" summary="Shtova tabelen Veturat ne databaze">
       <option name="closed" value="true" />
@@ -573,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747841615920</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java">
+      <option name="closed" value="true" />
+      <created>1747842762691</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1747842762691</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -588,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="workspace" />
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
@@ -613,6 +611,7 @@
     <MESSAGE value="Ndryshime ne madhesi te tabelave" />
     <MESSAGE value="ndryshime ne dizajn" />
     <MESSAGE value="permiresim tek PerdoruesitRepository.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="permiresim tek PerdoruesitRepository.java" />
+    <MESSAGE value="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java" />
   </component>
 </project>
