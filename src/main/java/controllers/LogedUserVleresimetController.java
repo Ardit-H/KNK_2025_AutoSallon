@@ -78,6 +78,7 @@ public class LogedUserVleresimetController {
             vleresimetService.update(dto);
             messageLabel.setText("Vlerësimi u përditësua me sukses.");
             loadVleresimet();
+            clearForm();
         } catch (Exception e) {
             messageLabel.setText("Gabim: " + e.getMessage());
         }
@@ -102,5 +103,9 @@ public class LogedUserVleresimetController {
             return -1;
         }
         return selected.getVleresimiId();
+    }
+    private void clearForm() {
+        vleresimi.getValueFactory().setValue(1);
+        komenti.clear();
     }
 }
