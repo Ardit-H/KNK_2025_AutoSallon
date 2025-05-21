@@ -13,7 +13,7 @@
 
         <Label alignment="CENTER" layoutY="38.0" prefHeight="30.0" prefWidth="1330.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="%lbllogeduservleresimet" textAlignment="CENTER" />
 
-        <TableView fx:id="vleresimetTable" layoutX="164.0" layoutY="230.0" prefHeight="493.0" prefWidth="998.0">
+        <TableView fx:id="vleresimetTable" layoutX="164.0" layoutY="230.0" prefHeight="376.0" prefWidth="998.0">
             <columns>
                 <TableColumn fx:id="colVetura" prefWidth="219.20001220703125" text="%CarName" />
                 <TableColumn fx:id="colVleresimi" prefWidth="66.39990234375" text="%Rating" />

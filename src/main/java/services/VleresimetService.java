@@ -170,7 +170,8 @@ public class VleresimetService {
         return vleresimetRepository.searchByVehicleOrUserNameOrDate(keyword);
     }
     public List<Vleresimet> searchByVeturaOrDate(String keyword) {
-        return vleresimetRepository.searchByVehicleOrDate(keyword);
+        int userId = SessionManager.getInstance().getcurrentUser().getPid();
+        return vleresimetRepository.searchByVehicleOrDate(keyword, userId);
     }
 
 }

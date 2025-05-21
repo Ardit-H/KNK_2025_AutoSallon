@@ -70,13 +70,13 @@
             <children>
                 <Button fx:id="btn_dashboard" alignment="CENTER" layoutY="373.0" mnemonicParsing="false" onAction="#handleLoadDashboard_Home" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Dashboard" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="btn_automjetet" mnemonicParsing="false" onAction="#handleLoadVeturatUser" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Vehicles" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="btn_rezervimetUser" onAction="#handleLoadRezervimetUser" mnemonicParsing="false" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Reservations" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="btn_rezervimetUser" mnemonicParsing="false" onAction="#handleLoadRezervimetUser" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Reservations" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="btn_sherbimet" mnemonicParsing="false" onAction="#handleLoadUserSherbimet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Services" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                <Button fx:id="btn_vleresimetemia" mnemonicParsing="false" onAction="#handleLoadUserVleresimet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%MyRating" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="btn_vleresimet" mnemonicParsing="false" onAction="#handleLoadVleresimet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Ratingmenubtn" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="btn_partneret" mnemonicParsing="false" onAction="#handleLoadPartneretUser" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Partner" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="btn_userLokacionet" mnemonicParsing="false" onAction="#handleLoadUserLokacionet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%Locations" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                 <Button fx:id="btn_profili" mnemonicParsing="false" onAction="#handleLoadUserProfili" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%UserProfile" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="btn_vleresimetemia" mnemonicParsing="false" onAction="#handleLoadUserVleresimet" prefHeight="32.0" prefWidth="179.0" style="-fx-font-weight: bold; -fx-background-color: #34495e; -fx-border-width: 0 0 1 0; -fx-border-color: gray;" text="%MyRating" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
 
             </children>
         </VBox>
@@ -84,7 +84,7 @@
 
     <!-- CENTER CONTENT -->
     <center>
-        <AnchorPane fx:id="centerPane" style="-fx-background-color: #ecf0f1;">
+        <AnchorPane fx:id="centerPane" prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: #ecf0f1;">
             <children>
                 <!-- Foto Kryesore -->
                 <ImageView fitHeight="94.0" fitWidth="430.0" layoutX="463.0" layoutY="256.0">
