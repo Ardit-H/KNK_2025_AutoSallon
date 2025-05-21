@@ -8,12 +8,15 @@ import models.dto.Ofertat.CreateOfertaDto;
 import models.dto.Ofertat.Oferta;
 import models.dto.Ofertat.UpdateOfertaDto;
 import services.OfertaService;
+import services.VeturatService;
+
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class OfertaDashboardController {
 
     private final OfertaService ofertaService = new OfertaService();
+    private final VeturatService veturaService = new VeturatService();
 
     @FXML
     private TableView<Oferta> ofertaTable;
@@ -63,8 +66,13 @@ public class OfertaDashboardController {
     @FXML
     public void handleCreate() {
         try {
+            int veturaId = Integer.parseInt(txtVeturaId.getText());
+
+
+            veturaService.getById(veturaId);
+
             CreateOfertaDto dto = new CreateOfertaDto(
-            Integer.parseInt(txtVeturaId.getText()),
+            veturaId,
             Double.parseDouble(txtZbritja.getText()),
             Double.parseDouble(txtCmimiFinal.getText()),
             dataFillimit.getValue().format(formatter),
