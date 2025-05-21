@@ -99,6 +99,13 @@ public class PartneretService {
             hasChanges = true;
         }
 
+        if (dto.getPersonKontakti() != null) {
+            if (dto.getPersonKontakti().trim().length() < 3) {
+                throw new InvalidInputException("Emri i personit kontaktues duhet të ketë të paktën 3 karaktere.");
+            }
+            hasChanges = true;
+        }
+
         if (!hasChanges) {
             throw new InvalidInputException("Duhet të përditësohet të paktën një fushë.");
         }
@@ -109,6 +116,7 @@ public class PartneretService {
         }
         return updated;
     }
+
 
     public boolean delete(int id) throws Exception {
         if (id <= 0) {

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Rregullimi i testdrives butonit">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne UserDashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +32,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
-    "accountId": "2d6d65ad-ffa2-49c9-a718-00ca1d5f76f3"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+    &quot;accountId&quot;: &quot;a3187b7a-c112-4f16-a232-35cfff71446e&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -73,14 +76,14 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/resources/languages/messages_en.properties&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/resources/languages/messages_en.properties&quot;
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -179,30 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00001" summary="init commit">
-      <option name="closed" value="true" />
-      <created>1742648196946</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1742648196946</updated>
-    </task>
-    <task id="LOCAL-00002" summary="krijimi i folderit per vendosjen e tabelave te sql">
-      <option name="closed" value="true" />
-      <created>1742666318222</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742666318222</updated>
-    </task>
-    <task id="LOCAL-00003" summary="shtimi i tabeles Klientet">
-      <option name="closed" value="true" />
-      <created>1742681857316</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1742681857316</updated>
     </task>
     <task id="LOCAL-00004" summary="shtimi i tabeles Klientet">
       <option name="closed" value="true" />
@@ -572,7 +551,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747664661579</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Krijimi i partneret_user.fxml dhe Partneret_UserController">
+      <option name="closed" value="true" />
+      <created>1747767844962</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1747767844962</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Krijimi i partneret.fxml dhe PartneretController">
+      <option name="closed" value="true" />
+      <created>1747781487433</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1747781487434</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Vendosja e butonit ne UserDashboard">
+      <option name="closed" value="true" />
+      <created>1747782387032</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1747782387032</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -587,9 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Shtimi i tabeles tek resources" />
-    <MESSAGE value="Krijimi i tabeles faturat" />
-    <MESSAGE value="Krimi i logjikes,qe nese perdoruesi qe kyçet ne sistem eshte aktualisht klient i yni, atehere tek klientet te mos krijohet nje rekord i ri, mirepo atij klienti vetem ti shtohet id qe e ka tek tabela perdoruesi" />
     <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
@@ -612,6 +612,9 @@
     <MESSAGE value="shtimi i onAction tek butoni garancia" />
     <MESSAGE value="koment" />
     <MESSAGE value="Rregullimi i testdrives butonit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rregullimi i testdrives butonit" />
+    <MESSAGE value="Krijimi i partneret_user.fxml dhe Partneret_UserController" />
+    <MESSAGE value="Krijimi i partneret.fxml dhe PartneretController" />
+    <MESSAGE value="Vendosja e butonit ne UserDashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vendosja e butonit ne UserDashboard" />
   </component>
 </project>
