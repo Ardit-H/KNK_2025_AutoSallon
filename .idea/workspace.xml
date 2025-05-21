@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Workspace">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/garancia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/garancia.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/help_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/help_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/help_user.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/help_user.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/lokacionet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/lokacionet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/overall_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/overall_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/shitjet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/shitjet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/statistikat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/statistikat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_lokacionit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_lokacionit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/user_vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/veturat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/veturat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/vleresimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/vleresimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/languages/messages_sq.properties" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime ne madhesi te tabelave" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,33 +54,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.KlientRepositoryTest.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.PerdoruesitRepositoryTest.executor": "Run",
-    "Application.Porosite.executor": "Run",
-    "Application.PunetoretServiceTest.executor": "Run",
-    "Application.RezervimetServiceTest.executor": "Run",
-    "Application.Vleresimet.executor": "Run",
-    "Application.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "two.files.diff.last.used.file": "C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PerdoruesitRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Porosite.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PunetoretServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RezervimetServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Vleresimet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
@@ -195,22 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Krijimi i DBConnector">
-      <option name="closed" value="true" />
-      <created>1742753111762</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742753111762</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Testimi i lidhjes me Database">
-      <option name="closed" value="true" />
-      <created>1742753439946</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742753439946</updated>
     </task>
     <task id="LOCAL-00007" summary="Krijimi i paketave models and dto">
       <option name="closed" value="true" />
@@ -588,7 +554,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747828286231</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Workspace">
+      <option name="closed" value="true" />
+      <created>1747829084822</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1747829084822</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Ndryshime ne madhesi te tabelave">
+      <option name="closed" value="true" />
+      <created>1747832612958</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1747832612958</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -603,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
     <MESSAGE value="workspace" />
@@ -628,6 +609,7 @@
     <MESSAGE value="Krijimi i partneret.fxml dhe PartneretController" />
     <MESSAGE value="Vendosja e butonit ne UserDashboard" />
     <MESSAGE value="Workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
+    <MESSAGE value="Ndryshime ne madhesi te tabelave" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshime ne madhesi te tabelave" />
   </component>
 </project>

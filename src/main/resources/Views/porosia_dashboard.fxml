@@ -25,7 +25,7 @@
       </AnchorPane>
       <AnchorPane layoutX="16.0" layoutY="63.0" prefHeight="499.0" prefWidth="1287.0">
          <children>
-            <VBox layoutX="394.0" layoutY="52.0" prefHeight="394.0" prefWidth="506.0">
+            <VBox layoutX="261.0" layoutY="51.0" prefHeight="487.0" prefWidth="779.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="79.0" prefWidth="506.0" spacing="10.0" style="-fx-background-color: lightblue; -fx-border-radius: 10;">
                      <children>
@@ -39,15 +39,15 @@
                         <ComboBox fx:id="comboStatusi" prefHeight="26.0" prefWidth="147.0" promptText="%ZgjidhStatusin" />
                      </children>
                   </HBox>
-                  <HBox prefHeight="219.0" prefWidth="506.0">
+                  <HBox prefHeight="334.0" prefWidth="790.0">
                      <children>
-                        <TableView fx:id="porosiaTable" prefHeight="218.0" prefWidth="507.0">
+                        <TableView fx:id="porosiaTable" prefHeight="286.0" prefWidth="788.0">
                           <columns>
-                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-                            <TableColumn fx:id="kidColumn" prefWidth="75.0" text="%KlientiID" />
-                              <TableColumn fx:id="veturaIdColumn" prefWidth="100.00006103515625" text="%VeturaID" />
-                              <TableColumn fx:id="cmimiColumn" prefWidth="132.7999267578125" text="%CmimiOfruar" />
-                              <TableColumn fx:id="statusColumn" prefWidth="123.20004272460938" text="%StatusiPorosise" />
+                            <TableColumn fx:id="idColumn" prefWidth="113.60000610351562" text="ID" />
+                            <TableColumn fx:id="kidColumn" prefWidth="131.199951171875" text="%KlientiID" />
+                              <TableColumn fx:id="veturaIdColumn" prefWidth="154.4000244140625" text="%VeturaID" />
+                              <TableColumn fx:id="cmimiColumn" prefWidth="162.39996337890625" text="%CmimiOfruar" />
+                              <TableColumn fx:id="statusColumn" prefWidth="216.0" text="%StatusiPorosise" />
                           </columns>
                         </TableView>
                      </children>
@@ -56,9 +56,9 @@
             </VBox>
          </children>
       </AnchorPane>
-      <VBox alignment="CENTER" layoutX="410.0" layoutY="492.0" prefHeight="262.0" prefWidth="506.0">
+      <VBox alignment="CENTER" layoutX="410.0" layoutY="564.0" prefHeight="190.0" prefWidth="506.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="202.0" prefWidth="506.0" spacing="10.0">
+            <HBox alignment="TOP_CENTER" prefHeight="62.0" prefWidth="506.0" spacing="10.0">
                <children>
                   <Button fx:id="btnPerditeso" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="26.0" prefWidth="77.0" text="%Perditso" />
                   <Button fx:id="btnFshije" mnemonicParsing="false" onAction="#handleDelete" prefHeight="26.0" prefWidth="77.0" text="%Fshije" />
