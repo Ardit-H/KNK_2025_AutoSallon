@@ -66,7 +66,7 @@
             </padding>
             <HBox alignment="CENTER_LEFT" spacing="10">
                 <Label text="%Kërko_" />
-                <TextField fx:id="searchField" prefHeight="26.0" prefWidth="208.0" promptText="%Kërko_emrin_ose_llojin_e_partnerit" />
+                <TextField fx:id="searchField" prefHeight="26.0" prefWidth="230.0" promptText="%Kërko_emrin_ose_llojin_e_partnerit" />
             </HBox>
 
             <TableView fx:id="partneretTableView" prefHeight="600.0">
@@ -77,7 +77,7 @@
                     <TableColumn fx:id="colPersonKontakti" prefWidth="152.0" text="%Personi_Kontaktues" />
                     <TableColumn fx:id="colEmail" prefWidth="176.80007934570312" text="%Email" />
                     <TableColumn fx:id="colTelefoni" prefWidth="130.39996337890625" text="%Telefoni" />
-                    <TableColumn fx:id="colAdresa" prefWidth="192.800048828125" text="%Adresa" />
+                    <TableColumn fx:id="colAdresa" prefWidth="189.5999755859375" text="%Adresa" />
                 </columns>
             </TableView>
         </VBox>
