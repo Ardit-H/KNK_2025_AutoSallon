@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne UserDashboard">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Admin_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/User_DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/admin_dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,14 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00004" summary="shtimi i tabeles Klientet">
-      <option name="closed" value="true" />
-      <created>1742682136278</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742682136278</updated>
     </task>
     <task id="LOCAL-00005" summary="Krijimi i DBConnector">
       <option name="closed" value="true" />
@@ -575,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747782387032</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml">
+      <option name="closed" value="true" />
+      <created>1747782686408</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1747782686408</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -590,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
@@ -615,6 +609,7 @@
     <MESSAGE value="Krijimi i partneret_user.fxml dhe Partneret_UserController" />
     <MESSAGE value="Krijimi i partneret.fxml dhe PartneretController" />
     <MESSAGE value="Vendosja e butonit ne UserDashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vendosja e butonit ne UserDashboard" />
+    <MESSAGE value="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vendosja e butonit ne Admin_DashboardController dhe admin_dashboard.fxml" />
   </component>
 </project>
