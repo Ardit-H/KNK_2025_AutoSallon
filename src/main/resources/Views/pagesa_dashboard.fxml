@@ -72,7 +72,7 @@
             </HBox>
          </children>
       </VBox>
-      <HBox alignment="CENTER" layoutX="389.0" layoutY="620.0" prefHeight="79.0" prefWidth="596.0" spacing="10.0">
+      <HBox alignment="CENTER" layoutX="389.0" layoutY="620.0" prefHeight="112.0" prefWidth="596.0" spacing="10.0">
          <children>
             <Button fx:id="btnKrijo" mnemonicParsing="false" onAction="#handleCreate" prefHeight="26.0" prefWidth="62.0" text="%Krijo" />
             <Button fx:id="btnPerditso" mnemonicParsing="false" onAction="#handleUpdate" text="%Perditso" />

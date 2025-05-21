@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Workspace">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/oferta_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/pagesa_dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/porosia_dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Ndryshime ne madhesi te tabelave" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,14 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Testimi i lidhjes me Database">
-      <option name="closed" value="true" />
-      <created>1742753439946</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742753439946</updated>
     </task>
     <task id="LOCAL-00007" summary="Krijimi i paketave models and dto">
       <option name="closed" value="true" />
@@ -575,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747829084822</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Ndryshime ne madhesi te tabelave">
+      <option name="closed" value="true" />
+      <created>1747832612958</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1747832612958</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -590,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
     <MESSAGE value="workspace" />
@@ -615,6 +609,7 @@
     <MESSAGE value="Krijimi i partneret.fxml dhe PartneretController" />
     <MESSAGE value="Vendosja e butonit ne UserDashboard" />
     <MESSAGE value="Workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
+    <MESSAGE value="Ndryshime ne madhesi te tabelave" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ndryshime ne madhesi te tabelave" />
   </component>
 </project>
