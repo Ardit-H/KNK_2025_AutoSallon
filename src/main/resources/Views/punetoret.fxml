@@ -1,52 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.PunetoretController">
-    <VBox spacing="10" style="-fx-padding: 20;" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
-        <Label text="%title_label" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" style="-fx-background-color: #f5f9fc;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PunetoretController">
+
+    <VBox alignment="TOP_CENTER" layoutX="304.0" layoutY="39.0" prefHeight="646.0" prefWidth="732.0" spacing="20" AnchorPane.leftAnchor="304.0" AnchorPane.rightAnchor="295.20000000000005" AnchorPane.topAnchor="39.0">
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="%title_label" />
 
         <GridPane hgap="10" vgap="10">
             <columnConstraints>
-                <ColumnConstraints prefWidth="100"/>
-                <ColumnConstraints prefWidth="200"/>
+                <ColumnConstraints halignment="RIGHT" prefWidth="100" />
+                <ColumnConstraints hgrow="ALWAYS" />
             </columnConstraints>
 
-            <Label text="%label_emri" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtEmri" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="%label_emri" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtEmri" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-            <Label text="%label_mbiemri" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtMbiemri" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="%label_mbiemri" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtMbiemri" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-            <Label text="%label_pozita" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtPozita" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="%label_pozita" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPozita" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-            <Label text="%label_telefoni" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtTelefoni" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="%label_telefoni" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtTelefoni" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-            <Label text="%label_email" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtEmail" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="%label_email" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-            <Label text="%label_paga" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtPaga" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            <Label text="%label_paga" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="txtPaga" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
-            <Label text="%label_data_punesimit" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
-            <TextField fx:id="txtDataPunesimit" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            <Label text="%label_data_punesimit" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="txtDataPunesimit" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
         </GridPane>
 
-        <HBox spacing="10" alignment="CENTER">
-            <Button text="%button_add" onMouseClicked="#handleCreate" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
-            <Button text="%button_update" onMouseClicked="#handleUpdate" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
-            <Button text="%button_delete" onMouseClicked="#handleDelete" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+        <HBox alignment="CENTER" spacing="15">
+            <Button onMouseClicked="#handleCreate" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" text="%button_add" />
+            <Button onMouseClicked="#handleUpdate" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold;" text="%button_update" />
+            <Button onMouseClicked="#handleDelete" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-weight: bold;" text="%button_delete" />
         </HBox>
 
-        <Label fx:id="messageLabel" style="-fx-text-fill: red; -fx-font-weight: bold;"/>
+        <Label fx:id="messageLabel" style="-fx-text-fill: red; -fx-font-weight: bold;" />
 
-        <Label text="%list_punetoret" style="-fx-font-weight: bold;"/>
-        <ListView fx:id="txtPunetoretList" onMouseClicked="#handleSelect" style="-fx-pref-height: 200;"/>
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="%list_punetoret" />
+        <ListView fx:id="txtPunetoretList" onMouseClicked="#handleSelect" prefWidth="1280.0" style="-fx-pref-height: 200; -fx-border-color: #ccc; -fx-border-radius: 5;" VBox.vgrow="ALWAYS" />
     </VBox>
 </AnchorPane>

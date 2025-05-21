@@ -20,10 +20,10 @@ public class StatistikatEShitjeve {
     }
 
     public static StatistikatEShitjeve getInstance(ResultSet rs) throws SQLException {
-        int statistika_id = rs.getInt("Statistikat_id");
-        String muaji = rs.getString("Muaji");
-        Double fitimi = rs.getDouble("Fitimi_total");
-        Double shpenzimet = rs.getDouble("Shpenzimet_total");
+        int statistika_id = rs.getInt("id");
+        String muaji = rs.getString("muaji");
+        Double fitimi = rs.getDouble("fitimi");
+        Double shpenzimet = rs.getDouble("shpenzimet");
         Double totali_shitjeve = rs.getDouble("totali_shitjeve");
         return new StatistikatEShitjeve(statistika_id, muaji, fitimi, shpenzimet, totali_shitjeve);
     }

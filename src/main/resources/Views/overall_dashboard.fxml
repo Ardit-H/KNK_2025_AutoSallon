@@ -27,20 +27,20 @@
                         <Font size="14.0" />
                     </font>
                 </Text>
-                <Hyperlink layoutX="90.0" layoutY="5.0" onAction="#handleAutoSalloni" style="-fx-opacity: 0.7; -fx-font-weight: 700;" text="%email" textFill="WHITE" />
+                <Hyperlink layoutX="90.0" layoutY="5.0" onAction="#handleAutoSalloni" style="-fx-opacity: 0.7; -fx-font-weight: 700;" text="info@premiumautosallon.com" textFill="WHITE" />
                 <Line endX="1048.066650390625" endY="-0.9999923706054688" fill="WHITE" layoutX="373.0" layoutY="26.0" startX="-318.0" startY="-1.0" stroke="WHITE" strokeLineCap="ROUND" />
                 <ImageView fitHeight="23.0" fitWidth="15.0" layoutX="75.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.7;">
                     <image>
                         <Image url="@../Images/emailIcon.png" />
                     </image>
                 </ImageView>
-                <Text fill="WHITE" layoutX="1297.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 0.7; -fx-font-weight: 700;" text="+383 38 244 183 " />
+                <Text fill="WHITE" layoutX="1297.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 0.7; -fx-font-weight: 700;" text="+383 38 162 354" />
                 <ImageView fitHeight="23.0" fitWidth="15.0" layoutX="1282.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.7;">
                     <image>
                         <Image url="@../Images/phone-call-white-icon.png" />
                     </image>
                 </ImageView>
-                <ImageView fx:id="infoimg" fitHeight="26.0" fitWidth="24.0" onMouseClicked="#handleLoadInfo" layoutX="1461.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="infoimg" fitHeight="26.0" fitWidth="24.0" layoutX="1461.0" layoutY="5.0" onMouseClicked="#handleLoadInfo" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Images/infoIcon.png" />
                     </image>
@@ -92,7 +92,7 @@
                 </Text>
                 <AnchorPane layoutX="-9.0" layoutY="641.0" prefHeight="67.0" prefWidth="1542.0" style="-fx-background-color: linear-gradient(to top, #19316C 2.8%, #01B3C9 97.8%);">
                     <children>
-                        <Text fill="WHITE" layoutX="638.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 800;" text="%txtRights">
+                        <Text fill="WHITE" layoutX="580.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 800;" text="%txtRights">
                             <font>
                                 <Font size="14.0" />
                             </font>

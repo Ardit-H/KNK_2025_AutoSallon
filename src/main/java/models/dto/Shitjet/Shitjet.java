@@ -22,7 +22,7 @@ public class Shitjet {
     }
 
     public static Shitjet getInstance(ResultSet Rs)throws SQLException{
-        int shitje_id = Rs.getInt("shitje_id");
+        int shitje_id = Rs.getInt("id");
         int kid = Rs.getInt("kid");
         int vetura_id = Rs.getInt("vetura_id");
         int punetor_id = Rs.getInt("punetor_id");

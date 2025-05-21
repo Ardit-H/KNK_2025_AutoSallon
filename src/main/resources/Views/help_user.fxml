@@ -31,7 +31,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Text layoutX="45.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%logoutbutton" wrappingWidth="638.0033569335938" />
+                <Text layoutX="21.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%logoutbutton" wrappingWidth="675.2" />
                 <ImageView fx:id="closeIcon" fitHeight="55.0" fitWidth="44.0" layoutX="642.0" layoutY="25.0" onMouseClicked="#handleCloseInfo" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Images/close.png" />
@@ -50,13 +50,13 @@
                         <Font size="13.0" />
                     </font>
                 </Label>
-                <Text layoutX="41.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%languagebutton" wrappingWidth="635.8700256347656" />
-                <Text layoutX="40.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblServicesU" wrappingWidth="635.8700256347656" />
-                <Text layoutX="43.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblRatingsU" wrappingWidth="636.9366455078125" />
-                <Text layoutX="38.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblUserProfile" wrappingWidth="634.8033752441406" />
-                <Text layoutX="38.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblVeturatUser" wrappingWidth="634.8033752441406" />
+                <Text layoutX="20.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%languagebutton" wrappingWidth="675.2" />
+                <Text layoutX="21.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblServicesU" wrappingWidth="675.2" />
+                <Text layoutX="21.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblRatingsU" wrappingWidth="675.2" />
+                <Text layoutX="20.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblUserProfile" wrappingWidth="675.2" />
+                <Text layoutX="20.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblVeturatUser" wrappingWidth="675.2" />
 
-                <Text layoutX="40.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblMyRatings" wrappingWidth="636.9366455078125" />
+                <Text layoutX="21.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%lblMyRatings" wrappingWidth="675.2" />
             </children>
         </AnchorPane>
     </children>

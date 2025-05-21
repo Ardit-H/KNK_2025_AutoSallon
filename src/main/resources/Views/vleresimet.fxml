@@ -25,16 +25,16 @@
       <AnchorPane layoutY="205.0" prefHeight="539.0" prefWidth="1330.0">
          <children>
             <Label fx:id="messageLabel" layoutX="217.0" layoutY="12.0" prefHeight="18.0" prefWidth="949.0" text="" />
-            <TableView fx:id="VleresimetTableView" layoutX="135.0" layoutY="46.0" prefHeight="477.0" prefWidth="1034.0">
+            <TableView fx:id="VleresimetTableView" layoutX="120.0" layoutY="44.0" prefHeight="407.0" prefWidth="1090.0">
                <columns>
                   <TableColumn fx:id="colPerdoruesi" prefWidth="164.8000030517578" text="%UserName" />
                   <TableColumn fx:id="colVetura" prefWidth="169.60003662109375" text="%CarName" />
                   <TableColumn fx:id="colVleresimi" prefWidth="80.79998779296875" text="%Rating" />
                   <TableColumn fx:id="colKomenti" prefWidth="441.86669921875" text="%Comment" />
-                  <TableColumn fx:id="colDataVleresimit" prefWidth="180.26654052734375" text="%DateOfRating" />
+                  <TableColumn fx:id="colDataVleresimit" prefWidth="229.60009765625" text="%DateOfRating" />
                </columns>
             </TableView>
-            <Label layoutX="133.0" layoutY="11.0" text="%Comment1" />
+            <Label layoutX="120.0" layoutY="12.0" text="%Comment1" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-3.0" prefHeight="42.0" prefWidth="1330.0" style="-fx-background-color: lightblue;" text="%Ratings_Managment" textAlignment="CENTER">
