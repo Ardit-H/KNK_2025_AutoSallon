@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,14 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Shtova tabelen Veturat ne databaze">
-      <option name="closed" value="true" />
-      <created>1743104267212</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1743104267212</updated>
     </task>
     <task id="LOCAL-00012" summary="Krijimi i klases Veturat">
       <option name="closed" value="true" />
@@ -572,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747842762691</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="permiresim i kodit sql te cilin e kemi perdorur per krijimin e tabelave">
+      <option name="closed" value="true" />
+      <created>1747847790742</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1747847790742</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -587,7 +587,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
     <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
@@ -612,6 +611,7 @@
     <MESSAGE value="ndryshime ne dizajn" />
     <MESSAGE value="permiresim tek PerdoruesitRepository.java" />
     <MESSAGE value="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java" />
+    <MESSAGE value="permiresim i kodit sql te cilin e kemi perdorur per krijimin e tabelave" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim i kodit sql te cilin e kemi perdorur per krijimin e tabelave" />
   </component>
 </project>
