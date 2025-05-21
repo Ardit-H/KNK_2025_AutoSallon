@@ -22,7 +22,7 @@ public class Pagesa {
         int pagesaId = rs.getInt("id");
         int porosiaId = rs.getInt("porosiaId");
         String metodaPageses = rs.getString("metodaPageses");
-        double shuma = rs.getFloat("shuma");
+        double shuma = rs.getDouble("shuma");
         String dataPageses = rs.getString("dataPageses");
         return new Pagesa(pagesaId, porosiaId, metodaPageses, shuma, dataPageses);
     }

@@ -81,7 +81,7 @@ public class PorosiaDashboardController {
             loadPorosite();
             clearForm();
         } catch (Exception e) {
-            showError("Ne fushen cmimi i perditesuar lejohen vetem vlera numerike!");
+            showError("Ne fushen cmimi i perditesuar lejohen vetem vlera numerike pozitive!");
         }
     }
 

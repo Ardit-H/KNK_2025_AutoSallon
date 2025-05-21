@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StatistikatEShitjeveRepository extends BaseRepository<StatistikatEShitjeve, CreateStatistikatEShitjeveDto, UpdateStatistikatEShitjeveDto> {
-    public StatistikatEShitjeveRepository(){super("statistikatEshitjeve");}
+    public StatistikatEShitjeveRepository(){super("statistikat_e_shitjeve");}
 
     public StatistikatEShitjeve fromResultSet(ResultSet rs) throws SQLException {
         return StatistikatEShitjeve.getInstance(rs);
@@ -17,7 +17,7 @@ public class StatistikatEShitjeveRepository extends BaseRepository<StatistikatES
 
     public StatistikatEShitjeve create(CreateStatistikatEShitjeveDto statistikatEShitjeveDto){
         String query = """
-                INSERT INTO STATISTIKATESHITJEVE(muaji, fitimi, shpenzimet, totali_shitjeve)
+                INSERT INTO statistikat_e_shitjeve(muaji, fitimi, shpenzimet, totali_shitjeve)
                 VALUES(?,?,?,?)
                 """;
         try{
@@ -40,7 +40,7 @@ public class StatistikatEShitjeveRepository extends BaseRepository<StatistikatES
     }
 
     public StatistikatEShitjeve update(UpdateStatistikatEShitjeveDto statistikatEShitjeveDto){
-        StringBuilder query = new StringBuilder("UPDATE STATISTIKAT_E_SHITJEVE SET ");
+        StringBuilder query = new StringBuilder("UPDATE statistikat_e_shitjeve SET ");
         ArrayList<Object> params = new ArrayList<>();
 
 

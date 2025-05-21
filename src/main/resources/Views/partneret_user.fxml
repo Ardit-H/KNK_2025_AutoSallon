@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Partneret_UserController">
+    <children>
+        <!-- Titulli sipër -->
+        <Label alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="75.0" prefWidth="1330.0" style="-fx-font-weight: bold;" text="%titleUserPartneret" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <!-- Fusha e kërkimit -->
+        <AnchorPane layoutX="415.0" layoutY="110.0" prefHeight="82.0" prefWidth="498.0" style="-fx-background-color: lightblue; -fx-background-radius: 10;">
+            <children>
+                <Label layoutX="89.0" layoutY="29.0" text="%lblSearchPartner" />
+                <TextField fx:id="searchField" layoutX="223.0" layoutY="24.0" onAction="#onSearch" prefHeight="26.0" prefWidth="197.0" promptText="%WritePartnerName" />
+            </children>
+        </AnchorPane>
+
+        <!-- Tabela e partnerëve -->
+        <TableView fx:id="partneretTableView" layoutX="100.0" layoutY="232.0" prefHeight="459.0" prefWidth="1130.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="161.42857142857142" text="%PartnerId" />
+                <TableColumn fx:id="colEmriKompanise" prefWidth="161.42857142857142" text="%CompanyName" />
+                <TableColumn fx:id="colLlojiPartnerit" prefWidth="161.42857142857142" text="%PartnerType" />
+                <TableColumn fx:id="colPersonKontakti" prefWidth="161.42857142857142" text="%ContactPerson" />
+                <TableColumn fx:id="colEmail" prefWidth="161.42857142857142" text="%Email" />
+                <TableColumn fx:id="colTelefoni" prefWidth="161.42857142857142" text="%Phone" />
+                <TableColumn fx:id="colAdresa" prefWidth="159.9999755859376" text="%Address" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

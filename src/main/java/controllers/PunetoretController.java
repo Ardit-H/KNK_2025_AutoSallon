@@ -1,5 +1,7 @@
 package controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -8,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import models.dto.Punetoret.CreatePunetoretDto;
 import models.dto.Punetoret.UpdatePunetoretDto;
 import models.dto.Punetoret.Punetoret;
+import models.dto.Rezervimet.Rezervimet;
 import services.LanguageManager;
 import services.PerdoruesitService;
 import services.PunetoretService;
@@ -52,12 +55,13 @@ public class PunetoretController {
         loadPunetoret();
     }
 
-    private void loadPunetoret(){
+    public void loadPunetoret(){
         txtPunetoretList.getItems().clear();
         List<Punetoret> punetoret = punetoretService.getAll();
         for(Punetoret p : punetoret) {
             txtPunetoretList.getItems().add(p.getPunetor_id() + "-" + p.getEmri() + " " + p.getMbiemri());
         }}
+
     @FXML
     private void handleSelect() {
         String selected = txtPunetoretList.getSelectionModel().getSelectedItem();
