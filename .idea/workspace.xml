@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne UserDashboard">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Workspace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PorosiaDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PorosiaDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OfertaDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OfertaDashboardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,14 +180,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00004" summary="shtimi i tabeles Klientet">
-      <option name="closed" value="true" />
-      <created>1742682136278</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742682136278</updated>
     </task>
     <task id="LOCAL-00005" summary="Krijimi i DBConnector">
       <option name="closed" value="true" />
@@ -574,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747782387032</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Workspace">
+      <option name="closed" value="true" />
+      <created>1747828286231</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1747828286231</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -589,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ndryshime tek vleresimet te cilat shihen nga adminet si dhe shtimi i KomentetDto.java" />
     <MESSAGE value="Perkthimi" />
     <MESSAGE value="Pjesa Shitjet dhe Lokacionet tek languages" />
     <MESSAGE value="ndryshime ne SceneLocator.java" />
@@ -614,6 +612,7 @@
     <MESSAGE value="Krijimi i partneret_user.fxml dhe Partneret_UserController" />
     <MESSAGE value="Krijimi i partneret.fxml dhe PartneretController" />
     <MESSAGE value="Vendosja e butonit ne UserDashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vendosja e butonit ne UserDashboard" />
+    <MESSAGE value="Workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
   </component>
 </project>
