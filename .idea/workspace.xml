@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/partneret.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/partneret.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +30,12 @@
     &quot;assignee&quot;: &quot;Ardit-H&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ardit-H/KNK_2025_AutoSallon.git",
-    "accountId": "1a27c557-b5be-42f9-b474-82829f4c391b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ardit-H/KNK_2025_AutoSallon.git&quot;,
+    &quot;accountId&quot;: &quot;1a27c557-b5be-42f9-b474-82829f4c391b&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -56,33 +57,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KlientRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PerdoruesitRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Porosite.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PunetoretServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RezervimetServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Vleresimet.executor&quot;: &quot;Run&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.KlientRepositoryTest.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PerdoruesitRepositoryTest.executor": "Run",
+    "Application.Porosite.executor": "Run",
+    "Application.PunetoretServiceTest.executor": "Run",
+    "Application.RezervimetServiceTest.executor": "Run",
+    "Application.Vleresimet.executor": "Run",
+    "Application.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "two.files.diff.last.used.file": "C:/Users/Admin/Documents/GitHub/KNK_2025_AutoSallon/src/main/java/controllers/Partneret_UserController.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\KNK_2025_AutoSallon\src\main\resources\Images" />
@@ -179,6 +180,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Shtova tabelen Veturat ne databaze">
+      <option name="closed" value="true" />
+      <created>1743104267212</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743104267212</updated>
     </task>
     <task id="LOCAL-00012" summary="Krijimi i klases Veturat">
       <option name="closed" value="true" />
@@ -564,15 +573,7 @@
       <option name="project" value="LOCAL" />
       <updated>1747842762691</updated>
     </task>
-    <task id="LOCAL-00060" summary="permiresim i kodit sql te cilin e kemi perdorur per krijimin e tabelave">
-      <option name="closed" value="true" />
-      <created>1747847790742</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1747847790742</updated>
-    </task>
-    <option name="localTasksCounter" value="61" />
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -587,6 +588,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
     <MESSAGE value="Ndryshimi i tabeles riparimet" />
     <MESSAGE value="shtimi i pjeses per te bere vleresim per nje veture tek Veturat_UserController.java" />
@@ -611,7 +613,6 @@
     <MESSAGE value="ndryshime ne dizajn" />
     <MESSAGE value="permiresim tek PerdoruesitRepository.java" />
     <MESSAGE value="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java" />
-    <MESSAGE value="permiresim i kodit sql te cilin e kemi perdorur per krijimin e tabelave" />
-    <option name="LAST_COMMIT_MESSAGE" value="permiresim i kodit sql te cilin e kemi perdorur per krijimin e tabelave" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim tek LogedUserVleresimetController.java,VleresimetRepository.java dhe VleresimetService.java" />
   </component>
 </project>
