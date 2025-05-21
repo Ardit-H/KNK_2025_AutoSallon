@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne UserDashboard">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/rezervimet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/rezervimet.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Views/rezervimetUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Views/rezervimetUser.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="Vendosja e butonit ne UserDashboard" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,11 +153,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Porosite" />
       <item itemvalue="Application.PunetoretServiceTest" />
       <item itemvalue="Application.RezervimetServiceTest" />
       <item itemvalue="Application.Vleresimet" />
-      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
