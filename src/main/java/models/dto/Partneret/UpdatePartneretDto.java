@@ -2,6 +2,7 @@ package models.dto.Partneret;
 
 public class UpdatePartneretDto {
     private int id;
+    private String personKontakti;
     private String email;
     private String telefoni;
     private String adresa;
@@ -14,6 +15,14 @@ public class UpdatePartneretDto {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getPersonKontakti() {
+        return personKontakti;
+    }
+
+    public void setPersonKontakti(String personKontakti) {
+        this.personKontakti = personKontakti;
     }
 
     public String getEmail() {
