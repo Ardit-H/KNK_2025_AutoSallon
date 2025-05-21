@@ -116,14 +116,14 @@ ALTER COLUMN data_vleresimit SET DEFAULT CURRENT_TIMESTAMP;
 CREATE TABLE testDrives (
     id SERIAL PRIMARY KEY,
     kid INT NOT NULL,
-    vetura_id INT NOT NULL,
+    vid INT NOT NULL,
     status VARCHAR(50),
     feedback TEXT,
     duration INT,
     location VARCHAR(255),
     CONSTRAINT fk_klient FOREIGN KEY (id)
         REFERENCES Klientet(id) ON DELETE CASCADE,
-    CONSTRAINT fk_vetura FOREIGN KEY (id)
+    CONSTRAINT fk_vetura FOREIGN KEY (vid)
         REFERENCES Veturat(id) ON DELETE CASCADE
 );
 
@@ -179,7 +179,7 @@ CREATE TABLE Partneret (
 );
 
 CREATE TABLE Lokacionet (
-    lokacionet_id     SERIAL PRIMARY KEY,
+    id     SERIAL PRIMARY KEY,
     emri_lokacionit   VARCHAR(100),
     adresa            VARCHAR(150),
     qyteti            VARCHAR(50),
@@ -187,7 +187,7 @@ CREATE TABLE Lokacionet (
 );
 
 CREATE TABLE Statistikat_e_shitjeve (
-    statistika_id   SERIAL PRIMARY KEY,
+    id   SERIAL PRIMARY KEY,
     muaji           VARCHAR(20),
     totali_shitjeve INTEGER,
     fitimi          NUMERIC(10,2) CHECK (fitimi >= 0),
