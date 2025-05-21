@@ -40,7 +40,7 @@
                         <Image url="@../Images/phone-call-white-icon.png" />
                     </image>
                 </ImageView>
-                <ImageView fx:id="infoimg" fitHeight="26.0" fitWidth="24.0" onMouseClicked="#handleLoadInfo" layoutX="1461.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="infoimg" fitHeight="26.0" fitWidth="24.0" layoutX="1461.0" layoutY="5.0" onMouseClicked="#handleLoadInfo" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Images/infoIcon.png" />
                     </image>
@@ -92,7 +92,7 @@
                 </Text>
                 <AnchorPane layoutX="-9.0" layoutY="641.0" prefHeight="67.0" prefWidth="1542.0" style="-fx-background-color: linear-gradient(to top, #19316C 2.8%, #01B3C9 97.8%);">
                     <children>
-                        <Text fill="WHITE" layoutX="638.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 800;" text="%txtRights">
+                        <Text fill="WHITE" layoutX="580.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 800;" text="%txtRights">
                             <font>
                                 <Font size="14.0" />
                             </font>

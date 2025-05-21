@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="740.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShitjetController">
 
-    <HBox layoutX="22.0" layoutY="26.0" prefHeight="78.0" prefWidth="754.0" style="-fx-background-color: #370C93;">
+    <HBox alignment="CENTER" layoutX="8.0" layoutY="16.0" prefHeight="78.0" prefWidth="1311.0" style="-fx-background-color: #370C93;">
         <ImageView fitHeight="79.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../Images/buy.jpeg" />
         </ImageView>
@@ -26,7 +26,7 @@
         </Text>
     </HBox>
 
-    <VBox layoutX="450.0" layoutY="143.0" prefHeight="78.0" prefWidth="320.0" style="-fx-background-color: #370C93;">
+    <VBox layoutX="694.0" layoutY="198.0" prefHeight="78.0" prefWidth="320.0" style="-fx-background-color: #370C93;">
         <children>
             <Label text="%Kërko_sipas_Klient_ID" textFill="#fdf5d5">
                 <font>
@@ -37,7 +37,7 @@
         </children>
     </VBox>
 
-    <VBox layoutX="37.0" layoutY="145.0" prefHeight="260.0" prefWidth="391.0" style="-fx-background-color: #370C93;">
+    <VBox layoutX="155.0" layoutY="137.0" prefHeight="260.0" prefWidth="391.0" style="-fx-background-color: #370C93;">
         <children>
             <Label text="%Klient_ID" textFill="#fdf5d5"><font><Font name="System Bold" size="15.0" /></font></Label>
             <TextField fx:id="txtKlientId" />
@@ -52,20 +52,20 @@
             <TextField fx:id="txtCmimiFinal" />
         </children>
     </VBox>
-    <Button fx:id="btn_shto" layoutX="461.0" layoutY="258.0" onAction="#handleCreateShitjet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE">
+    <Button fx:id="btn_shto" layoutX="624.0" layoutY="348.0" onAction="#handleCreateShitjet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Shto" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_perditeso" layoutX="644.0" layoutY="302.0" onAction="#handleUpdateShitjet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Përditëso" textFill="WHITE">
+    <Button fx:id="btn_perditeso" layoutX="784.0" layoutY="349.0" onAction="#handleUpdateShitjet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Përditëso" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
-    <Button fx:id="btn_fshij" layoutX="461.0" layoutY="346.0" onAction="#handleDeleteShitjet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE">
+    <Button fx:id="btn_fshij" layoutX="940.0" layoutY="348.0" onAction="#handleDeleteShitjet" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #370C93;" text="%Fshij" textFill="WHITE">
         <font>
             <Font name="System Bold" size="14.0" />
         </font></Button>
 
-    <TableView id="shitjetTableView" fx:id="shitjetTableView" layoutX="37.0" layoutY="483.0" prefHeight="231.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView id="shitjetTableView" fx:id="shitjetTableView" layoutX="224.0" layoutY="479.0" prefHeight="231.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn id="colKlientId" fx:id="colKlientId" prefWidth="146.39999389648438" text="%Klient_ID" />
             <TableColumn id="colVeturaId" fx:id="colVeturaId" prefWidth="134.4000244140625" text="%Vetura_ID" />
@@ -74,6 +74,6 @@
             <TableColumn id="colCmimiFinal" fx:id="colCmimiFinal" prefWidth="148.800048828125" text="%Cmimi_final" />
         </columns>
     </TableView>
-    <Label fx:id="messageLabel" layoutX="43.0" layoutY="442.0" prefHeight="18.0" prefWidth="439.0" textFill="red" />
+    <Label fx:id="messageLabel" layoutX="383.0" layoutY="442.0" prefHeight="18.0" prefWidth="439.0" textFill="red" />
 
 </AnchorPane>
