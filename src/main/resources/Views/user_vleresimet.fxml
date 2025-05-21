@@ -17,7 +17,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <TableView fx:id="VleresimetTableView" layoutX="168.0" layoutY="221.0" prefHeight="484.0" prefWidth="990.0">
+      <TableView fx:id="VleresimetTableView" layoutX="168.0" layoutY="221.0" prefHeight="399.0" prefWidth="990.0">
          <columns>
             <TableColumn fx:id="colPerdoruesi" prefWidth="144.26663208007812" text="%UserName" />
             <TableColumn fx:id="colVetura" prefWidth="143.7333984375" text="%CarName" />

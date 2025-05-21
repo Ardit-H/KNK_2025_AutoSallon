@@ -68,7 +68,7 @@
     </Label>
     <TextField fx:id="searchField" layoutX="193.0" layoutY="425.0" prefHeight="26.0" prefWidth="221.0" />
 
-    <TableView fx:id="statistikatEShitjeveTableView" layoutX="22.0" layoutY="502.0" prefHeight="310.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView fx:id="statistikatEShitjeveTableView" layoutX="22.0" layoutY="502.0" prefHeight="209.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn fx:id="colMuaji" prefWidth="166.39999389648438" text="%Muaji" />
             <TableColumn fx:id="colFitimi" prefWidth="171.20001220703125" text="%Fitimi" />
@@ -76,7 +76,7 @@
             <TableColumn fx:id="colTotaliShitjeve" prefWidth="152.00006103515625" text="%Totali_shitjeve" />
         </columns>
     </TableView>
-    <Label fx:id="messageLabel" layoutX="43.0" layoutY="457.0" prefHeight="26.0" prefWidth="574.0" textFill="red" />
+    <Label fx:id="messageLabel" layoutX="22.0" layoutY="465.0" prefHeight="26.0" prefWidth="574.0" textFill="red" />
 
 
 </AnchorPane>

@@ -58,7 +58,7 @@
         </font></Button>
 
 
-    <TableView fx:id="lokacionetTableView" layoutX="30.0" layoutY="514.0" prefHeight="406.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView fx:id="lokacionetTableView" layoutX="30.0" layoutY="487.0" prefHeight="231.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn fx:id="colEmriLokacionit" prefWidth="166.39999389648438" text="%Emri_Lokacionit" />
             <TableColumn fx:id="colAdresa" prefWidth="198.4000244140625" text="%Adresa_lokacionit" />
@@ -66,6 +66,6 @@
             <TableColumn fx:id="colNrTelefonit" prefWidth="203.20001220703125" text="%Nr_telefonit" />
         </columns>
     </TableView>
-    <Label fx:id="messageLabel" layoutX="43.0" layoutY="457.0" prefHeight="26.0" prefWidth="574.0" textFill="red" />
+    <Label fx:id="messageLabel" layoutX="30.0" layoutY="438.0" prefHeight="26.0" prefWidth="574.0" textFill="red" />
 
 </AnchorPane>

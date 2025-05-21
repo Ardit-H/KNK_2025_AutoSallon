@@ -65,7 +65,7 @@
             <Font name="System Bold" size="14.0" />
         </font></Button>
 
-    <TableView id="shitjetTableView" fx:id="shitjetTableView" layoutX="30.0" layoutY="491.0" prefHeight="309.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView id="shitjetTableView" fx:id="shitjetTableView" layoutX="37.0" layoutY="483.0" prefHeight="231.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn id="colKlientId" fx:id="colKlientId" prefWidth="146.39999389648438" text="%Klient_ID" />
             <TableColumn id="colVeturaId" fx:id="colVeturaId" prefWidth="134.4000244140625" text="%Vetura_ID" />

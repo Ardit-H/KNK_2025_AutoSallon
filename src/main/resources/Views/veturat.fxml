@@ -35,7 +35,7 @@
                 </Text>
             </children>
         </HBox>
-        <TableView id="veturatTableView" fx:id="veturatTableView" layoutX="258.0" layoutY="507.0" prefHeight="288.0" prefWidth="832.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
+        <TableView id="veturatTableView" fx:id="veturatTableView" layoutX="258.0" layoutY="507.0" prefHeight="196.0" prefWidth="832.0" style="-fx-border-style: solid; -fx-background-color: #42719c;">
             <columns>
                 <TableColumn id="colProdhuesi" fx:id="colProdhuesi" prefWidth="90.39998626708984" text="%Prodhuesi" />
                 <TableColumn id="colModeli" fx:id="colModeli" prefWidth="111.20000457763672" text="%Modeli" />

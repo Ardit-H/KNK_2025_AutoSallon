@@ -27,7 +27,7 @@
     <TextField fx:id="searchField" layoutX="105.0" layoutY="131.0" prefHeight="26.0" prefWidth="250.0" />
 
 
-    <TableView fx:id="lokacionetTableView" layoutX="30.0" layoutY="192.0" prefHeight="728.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
+    <TableView fx:id="lokacionetTableView" layoutX="30.0" layoutY="192.0" prefHeight="456.0" prefWidth="740.0" style="-fx-background-color: #EFFDFE; -fx-border-color: black;">
         <columns>
             <TableColumn fx:id="colEmriLokacionit" prefWidth="175.19998168945312" text="%Emri_Lokacionit" />
             <TableColumn fx:id="colAdresa" prefWidth="174.4000244140625" text="%Adresa_lokacionit" />
