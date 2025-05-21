@@ -34,7 +34,7 @@ public class LogedUserVleresimetController {
     public void initialize() {
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == null || newValue.trim().isEmpty()) {
-                vleresimetTable.setItems(FXCollections.observableArrayList(vleresimetService.getVleresimetWithJoins()));
+               loadVleresimet();
             } else {
                 List<Vleresimet> filtruar = vleresimetService.searchByVeturaOrDate(newValue);
                 vleresimetTable.setItems(FXCollections.observableArrayList(filtruar));

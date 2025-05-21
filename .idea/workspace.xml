@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="ndryshime ne dizajn">
+    <list default="true" id="1437fe98-bfee-40af-a69b-ea5044c9094c" name="Changes" comment="permiresim tek PerdoruesitRepository.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/PerdoruesitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LogedUserVleresimetController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,14 +180,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742648026444</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Krijimi i klases Klientet">
-      <option name="closed" value="true" />
-      <created>1743086060632</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743086060632</updated>
     </task>
     <task id="LOCAL-00010" summary="Organizimi i dto brenda models">
       <option name="closed" value="true" />
@@ -573,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747836937788</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="permiresim tek PerdoruesitRepository.java">
+      <option name="closed" value="true" />
+      <created>1747841615919</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1747841615920</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -588,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ndryshime ne SceneLocator.java" />
     <MESSAGE value="workspace" />
     <MESSAGE value="Shtimi i butonave ne dashboard" />
     <MESSAGE value="ndryshime" />
@@ -613,6 +612,7 @@
     <MESSAGE value="Workspace" />
     <MESSAGE value="Ndryshime ne madhesi te tabelave" />
     <MESSAGE value="ndryshime ne dizajn" />
-    <option name="LAST_COMMIT_MESSAGE" value="ndryshime ne dizajn" />
+    <MESSAGE value="permiresim tek PerdoruesitRepository.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="permiresim tek PerdoruesitRepository.java" />
   </component>
 </project>
